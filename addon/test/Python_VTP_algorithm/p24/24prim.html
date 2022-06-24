@@ -1,0 +1,82 @@
+<h2 id="statement">24</h2>
+Fill in Blanks 
+<h2 id="code">The Source Code</h2>
+<pre class="prettyprint" id="scoring-res"># A quick-demo of  Prim's Minimum Spanning Tree (MST) algorithm Usage
+# The program is for adjacency matrix representation of the graph
+# Part of Cosmos by OpenGenus Foundation
+
+class Graph():
+    def __init__(self, vertices):
+        self.V = vertices
+        self.graph = [[0 for column in range(vertices)] 
+                      for row in range(vertices)]
+        
+    # Function to print the constructed MST stored in parent[]
+    def printMST(self, parent):
+        print ("Edge \t\tWeight")
+        for i in range(1,self.V):
+            print (parent[i],"-",i,"\t\t",self.graph[i][ parent[i] ])
+            
+    # Function to find the vertex with minimum distance value, from
+    # the set of vertices not yet included in shortest path tree
+    def minKey(self, key, mstSet):
+        # Initilaize min value
+        min = 1000000
+        for v in range(self.V):
+            if key[v] < min and mstSet[v] == False:
+                min = key[v]
+                min_index = v
+        return min_index
+    
+    # Function to construct and print MST for a graph represented using adjacency matrix representation
+    def primMST(self):
+        #Key values used to pick minimum weight edge in cut
+        key = [1000000] * self.V
+        parent = [None] * self.V # Array to store constructed MST
+        key[0] = 0   # Make key 0 so that this vertex is picked as first vertex
+        mstSet = [False] * self.V
+        parent[0] = -1  # First node is always the root of
+        for cout in range(self.V):
+            # Pick the minimum distance vertex from the set of vertices not
+            # yet processed. u is always equal to src in first iteration
+            u = self.minKey(key, mstSet)
+            # Put the minimum distance vertex in the shortest path tree
+            mstSet[u] = True
+            # Update dist value of the adjacent vertices of the picked vertex
+            # only if the current distance is greater than new distance and
+            # the vertex in not in the shotest path tree
+            for v in range(self.V):
+                # graph[u][v] is non zero only for adjacent vertices of m
+                # mstSet[v] is false for vertices not yet included in MST
+                # Update the key only if graph[u][v] is smaller than key[v]
+                if self.graph[u][v] > 0 and mstSet[v] == False and key[v] > self.graph[u][v]:
+                        key[v] = self.graph[u][v]
+                        parent[v] = u
+        self.printMST(parent)
+        
+g  = Graph(5)
+g.graph = [ [0, 2, 0, 6, 0],
+             [2, 0, 3, 8, 5],
+             [0, 3, 0, 0, 7],
+             [6, 8, 0, 0, 9],
+             [0, 5, 7, 9, 0],
+           ]
+g.primMST();
+ 
+The output of this program are:
+Edge 	 	Weight
+0 - 1 	 	<input size=2 ans="3b731d7620bf723f5df5cb3dc1ab0c3f452db716712cc14379a4dfd92d19182f" placeholder=1></input>
+1 - 2 	        <input size=2 ans="c7d86cb26af8d4344b7d1fc85fe37600940312901528d0977702f129cddf49ff" placeholder=2></input>
+<input size=2 ans="38b8f8f8fc441a717cf6ba41a3e3af6aa5234ac3d23b88e33f7c00209bdedac4" placeholder=3></input>- 3 	 6
+1 - <input size=2 ans="d6b905bd0b0fdb7bb999d9fc4cac64fafc566755ad2801448bf652febd869610" placeholder=4></input> 	 5
+
+
+
+</pre>
+<h2 id="answer">Answer</h2>
+<a class="btn" href="javascript:newScoring('Python_VTP_algorithm')">Answer</a>
+<script type="text/javascript">
+$(function(){
+ prettyPrint();
+});
+</script>

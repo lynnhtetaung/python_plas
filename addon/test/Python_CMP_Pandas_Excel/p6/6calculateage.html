@@ -1,0 +1,145 @@
+<style type="text/css">
+            textarea, iframe {
+                border: 1px solid grey;
+                height: 500px;
+                width: 98%;
+                resize: none;   
+            }
+             div.form-popup {
+        background-color: #fed9ff;
+        width: 900px;
+        height: 600px;
+        overflow-x: hidden;
+        overflow-y: auto;
+        padding: 20px;
+      }
+ .form-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px dotted #f1f1f1;
+  text-align:justify;  
+  text-justify:initial;
+
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 900px;
+  padding: 20px;
+  background-color: lightyellow;
+}
+
+
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 10%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: mediumvioletred;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+</style>
+<h2 id="statement">6</h2>
+<table >
+  <tr>
+     
+
+<td>Input excel file to the source code<br><figure> <img src="img/calculateage.JPG" alt="Elephant at sunset"> 
+</figure></td>
+     
+  </tr>  
+ 
+ <tr>
+     
+
+<td>Output excel file from the source code<br><figure> <img src="img/calculateage1.JPG" alt="Elephant at sunset"> 
+</figure></td></tr>
+<tr>
+     <td>Output excel file from the modified source code<br><figure> <img src="img/calculateage2.JPG" alt="Elephant at sunset"> 
+</figure></td>
+  </tr>  
+</table>
+
+<a href="source_codes/Problem6.zip" download> Click Here To Download Source Code</a>
+<br> Please modify the following source code!
+<h4 id="code">Source Code</h4>
+<pre class="prettyprint" id="scoring-res" >01:from datetime import date
+02:import pandas as pd
+03:def calculateAge(Date):
+04:	today = date.today()
+05:	age = today.year - Date.year -((today.month, today.day) < (Date.month, Date.day))
+06:	return age
+07:data = pd.read_excel(&#39;D:\calculateAge.xlsx&#39;)
+08:df=pd.DataFrame(data)#create dataframe to make operations
+09:df[&#39;Age&#39;] = None#create a new column
+10:index_date = df.columns.get_loc(&#39;Birth_Date&#39;)#get index column location in excel file
+11:index_age = df.columns.get_loc(&#39;Age&#39;)#get index column location in excel file
+12:for row in range(0, len(df)):
+13:		df.iat[row, index_age] = calculateAge(df.iat[row, index_date])
+14:df = df[[&#39;Customer&#39;,&#39;Birth_Date&#39;,&#39;Age&#39;,&#39;Product&#39;,&#39;Origin_Year_Product&#39;]].copy()
+15:df.to_excel(&#39;D:\calculateAge1.xlsx&#39;, index=True, header=True)
+
+</pre>
+<h4 id="code1">the output</h4>
+<pre class = "prettyprint" id = "scoring-res" <h2 id="code1"></h2>
+01<input type="text" name="intext" id="mytext1" 0 size=95 ansHint='from datetime import date^import pandas as pd^def calculateAge(Date):^	today = date.today()^	age = today.year - Date.year -((today.month, today.day) < (Date.month, Date.day))^	return age^data = pd.read_excel('D:\calculateAge.xlsx')^df=pd.DataFrame(data)#create dataframe to make operations^df['Product_Lifetime'] = None#create a new column^index_date = df.columns.get_loc('Origin_Year_Product')#get index column location in excel file^index_age = df.columns.get_loc('Product_Lifetime')#get index column location in excel file^for row in range(0, len(df)):^		df.iat[row, index_age] = calculateAge(df.iat[row, index_date])^df = df[['Customer','Birth_Date','Product','Origin_Year_Product','Product_Lifetime']].copy()^df.to_excel('D:\calculateAge2.xlsx', index=True, header=True)' missingele="calculateAge2.xlsx^Product_Lifetime"  ansSpace="6a682bf73a0fdec0d9664f133cb308da11ddb6c13848ddf3ab4f572dec987bd9" ans="cb5e23f0958674a44bea03367eda11a7ad993ab7ac8adcaaeaedb2934d9e5681" value='from datetime import date' onkeydown="myFunction()">  </input>
+02<input type="text" name="intext" id="mytext2" 1 size=95 ansHint='from datetime import date^import pandas as pd^def calculateAge(Date):^	today = date.today()^	age = today.year - Date.year -((today.month, today.day) < (Date.month, Date.day))^	return age^data = pd.read_excel('D:\calculateAge.xlsx')^df=pd.DataFrame(data)#create dataframe to make operations^df['Product_Lifetime'] = None#create a new column^index_date = df.columns.get_loc('Origin_Year_Product')#get index column location in excel file^index_age = df.columns.get_loc('Product_Lifetime')#get index column location in excel file^for row in range(0, len(df)):^		df.iat[row, index_age] = calculateAge(df.iat[row, index_date])^df = df[['Customer','Birth_Date','Product','Origin_Year_Product','Product_Lifetime']].copy()^df.to_excel('D:\calculateAge2.xlsx', index=True, header=True)' missingele="calculateAge2.xlsx^Product_Lifetime"  ansSpace="03ba5e247e5618ffa5cf820aac4cdb92280d859844e9e98bfde18e8a5a9bcb21" ans="eaeeaf759dda29b3e8a5b2fbcf2ea989ee565b8241e885fab99a084156616715" value='import pandas as pd' onkeydown="myFunction()">  </input>
+03<input type="text" name="intext" id="mytext3" 2 size=95 ansHint='from datetime import date^import pandas as pd^def calculateAge(Date):^	today = date.today()^	age = today.year - Date.year -((today.month, today.day) < (Date.month, Date.day))^	return age^data = pd.read_excel('D:\calculateAge.xlsx')^df=pd.DataFrame(data)#create dataframe to make operations^df['Product_Lifetime'] = None#create a new column^index_date = df.columns.get_loc('Origin_Year_Product')#get index column location in excel file^index_age = df.columns.get_loc('Product_Lifetime')#get index column location in excel file^for row in range(0, len(df)):^		df.iat[row, index_age] = calculateAge(df.iat[row, index_date])^df = df[['Customer','Birth_Date','Product','Origin_Year_Product','Product_Lifetime']].copy()^df.to_excel('D:\calculateAge2.xlsx', index=True, header=True)' missingele="calculateAge2.xlsx^Product_Lifetime"  ansSpace="e25d2e0813fcf8d969f2d8a92431a52d56386b1cde5a39a0688ccc8f065a8238" ans="3970aaf51b4c0debee205b273c225159818a8dff02d169a750b1117a089ca1c1" value='def calculateAge(Date):' onkeydown="myFunction()">  </input>
+04<input type="text" name="intext" id="mytext4" 3 size=95 ansHint='from datetime import date^import pandas as pd^def calculateAge(Date):^	today = date.today()^	age = today.year - Date.year -((today.month, today.day) < (Date.month, Date.day))^	return age^data = pd.read_excel('D:\calculateAge.xlsx')^df=pd.DataFrame(data)#create dataframe to make operations^df['Product_Lifetime'] = None#create a new column^index_date = df.columns.get_loc('Origin_Year_Product')#get index column location in excel file^index_age = df.columns.get_loc('Product_Lifetime')#get index column location in excel file^for row in range(0, len(df)):^		df.iat[row, index_age] = calculateAge(df.iat[row, index_date])^df = df[['Customer','Birth_Date','Product','Origin_Year_Product','Product_Lifetime']].copy()^df.to_excel('D:\calculateAge2.xlsx', index=True, header=True)' missingele="calculateAge2.xlsx^Product_Lifetime"  ansSpace="fc24b1120597a1096e5a4ba1a288d5ccd94c3d70b0fd25ed2793a8f4a4a76e8e" ans="278353b26faf88a7721b0d8851af0498aadd2624fa0a28b56dc637fd7ca95e6e" value='	today = date.today()' onkeydown="myFunction()">  </input>
+05<input type="text" name="intext" id="mytext5" 4 size=95 ansHint='from datetime import date^import pandas as pd^def calculateAge(Date):^	today = date.today()^	age = today.year - Date.year -((today.month, today.day) < (Date.month, Date.day))^	return age^data = pd.read_excel('D:\calculateAge.xlsx')^df=pd.DataFrame(data)#create dataframe to make operations^df['Product_Lifetime'] = None#create a new column^index_date = df.columns.get_loc('Origin_Year_Product')#get index column location in excel file^index_age = df.columns.get_loc('Product_Lifetime')#get index column location in excel file^for row in range(0, len(df)):^		df.iat[row, index_age] = calculateAge(df.iat[row, index_date])^df = df[['Customer','Birth_Date','Product','Origin_Year_Product','Product_Lifetime']].copy()^df.to_excel('D:\calculateAge2.xlsx', index=True, header=True)' missingele="calculateAge2.xlsx^Product_Lifetime"  ansSpace="2a0a2e59a4345151827e0e3e25dcdf9963bdb93b5c45d59d3446654ebab50aaf" ans="9701966d05c6f36e69b6d4abdfea71eb45871c70b073194f9567cc115918d85f" value='	age = today.year - Date.year -((today.month, today.day) < (Date.month, Date.day))' onkeydown="myFunction()">  </input>
+06<input type="text" name="intext" id="mytext6" 5 size=95 ansHint='from datetime import date^import pandas as pd^def calculateAge(Date):^	today = date.today()^	age = today.year - Date.year -((today.month, today.day) < (Date.month, Date.day))^	return age^data = pd.read_excel('D:\calculateAge.xlsx')^df=pd.DataFrame(data)#create dataframe to make operations^df['Product_Lifetime'] = None#create a new column^index_date = df.columns.get_loc('Origin_Year_Product')#get index column location in excel file^index_age = df.columns.get_loc('Product_Lifetime')#get index column location in excel file^for row in range(0, len(df)):^		df.iat[row, index_age] = calculateAge(df.iat[row, index_date])^df = df[['Customer','Birth_Date','Product','Origin_Year_Product','Product_Lifetime']].copy()^df.to_excel('D:\calculateAge2.xlsx', index=True, header=True)' missingele="calculateAge2.xlsx^Product_Lifetime"  ansSpace="8eb463c81ecf171478442fce3138c6c36449f433d0e177df2d2d48f9a4edd9e5" ans="00258d7ccabb7df671458fa8222e90a53bf79f458303708f4fb0e2afe6b945f5" value='	return age' onkeydown="myFunction()">  </input>
+07<input type="text" name="intext" id="mytext7" 6 size=95 ansHint='from datetime import date^import pandas as pd^def calculateAge(Date):^	today = date.today()^	age = today.year - Date.year -((today.month, today.day) < (Date.month, Date.day))^	return age^data = pd.read_excel('D:\calculateAge.xlsx')^df=pd.DataFrame(data)#create dataframe to make operations^df['Product_Lifetime'] = None#create a new column^index_date = df.columns.get_loc('Origin_Year_Product')#get index column location in excel file^index_age = df.columns.get_loc('Product_Lifetime')#get index column location in excel file^for row in range(0, len(df)):^		df.iat[row, index_age] = calculateAge(df.iat[row, index_date])^df = df[['Customer','Birth_Date','Product','Origin_Year_Product','Product_Lifetime']].copy()^df.to_excel('D:\calculateAge2.xlsx', index=True, header=True)' missingele="calculateAge2.xlsx^Product_Lifetime"  ansSpace="09ec8e313410e56f6953b922b102093e4742a4ba4139ba3bdb5abd49084695ba" ans="0d7c8881ab861124f97f13667f005b71fb3fb86c6cebe7184c17ee132d8e54b9" value='data = pd.read_excel(&#39;D:\calculateAge.xlsx&#39;)' onkeydown="myFunction()">  </input>
+08<input type="text" name="intext" id="mytext8" 7 size=95 ansHint='from datetime import date^import pandas as pd^def calculateAge(Date):^	today = date.today()^	age = today.year - Date.year -((today.month, today.day) < (Date.month, Date.day))^	return age^data = pd.read_excel('D:\calculateAge.xlsx')^df=pd.DataFrame(data)#create dataframe to make operations^df['Product_Lifetime'] = None#create a new column^index_date = df.columns.get_loc('Origin_Year_Product')#get index column location in excel file^index_age = df.columns.get_loc('Product_Lifetime')#get index column location in excel file^for row in range(0, len(df)):^		df.iat[row, index_age] = calculateAge(df.iat[row, index_date])^df = df[['Customer','Birth_Date','Product','Origin_Year_Product','Product_Lifetime']].copy()^df.to_excel('D:\calculateAge2.xlsx', index=True, header=True)' missingele="calculateAge2.xlsx^Product_Lifetime"  ansSpace="107ba46be9004ea57656b6f5346780af19848b66409b12460c94f511113d0d86" ans="fcda8bc60a0da55e14152eb1df486974f0155b8c40f96e7b756647b05448ea27" value='df=pd.DataFrame(data)#create dataframe to make operations' onkeydown="myFunction()">  </input>
+09<input type="text" name="intext" id="mytext9" 8 size=95 ansHint='from datetime import date^import pandas as pd^def calculateAge(Date):^	today = date.today()^	age = today.year - Date.year -((today.month, today.day) < (Date.month, Date.day))^	return age^data = pd.read_excel('D:\calculateAge.xlsx')^df=pd.DataFrame(data)#create dataframe to make operations^df['Product_Lifetime'] = None#create a new column^index_date = df.columns.get_loc('Origin_Year_Product')#get index column location in excel file^index_age = df.columns.get_loc('Product_Lifetime')#get index column location in excel file^for row in range(0, len(df)):^		df.iat[row, index_age] = calculateAge(df.iat[row, index_date])^df = df[['Customer','Birth_Date','Product','Origin_Year_Product','Product_Lifetime']].copy()^df.to_excel('D:\calculateAge2.xlsx', index=True, header=True)' missingele="calculateAge2.xlsx^Product_Lifetime"  ansSpace="7bfd046e2569f6b7fa16bfc3d9efc88407f3a628d35f4fca43ff43f6ab71f57c" ans="1c123090744aa483e0612b4ee675c4a13d0a2c3f9c010dab935089b8ab3917b3" value='df[&#39;Age&#39;] = None#create a new column' onkeydown="myFunction()">  </input>
+10<input type="text" name="intext" id="mytext10" 9 size=95 ansHint='from datetime import date^import pandas as pd^def calculateAge(Date):^	today = date.today()^	age = today.year - Date.year -((today.month, today.day) < (Date.month, Date.day))^	return age^data = pd.read_excel('D:\calculateAge.xlsx')^df=pd.DataFrame(data)#create dataframe to make operations^df['Product_Lifetime'] = None#create a new column^index_date = df.columns.get_loc('Origin_Year_Product')#get index column location in excel file^index_age = df.columns.get_loc('Product_Lifetime')#get index column location in excel file^for row in range(0, len(df)):^		df.iat[row, index_age] = calculateAge(df.iat[row, index_date])^df = df[['Customer','Birth_Date','Product','Origin_Year_Product','Product_Lifetime']].copy()^df.to_excel('D:\calculateAge2.xlsx', index=True, header=True)' missingele="calculateAge2.xlsx^Product_Lifetime" ansSpace="f3d004495d4acaf7b2fbcb4c29b5e0c1e36e8487ef2cad29a3597f7234d58d49" ans="d4ce165365f7ee5910b19a086039b5dd088ac52b2e18e93908523a124c028cab" value='index_date = df.columns.get_loc(&#39;Birth_Date&#39;)#get index column location in excel file' onkeydown="myFunction()"></input>
+11<input type="text" name="intext" id="mytext11" 10 size=95 ansHint='from datetime import date^import pandas as pd^def calculateAge(Date):^	today = date.today()^	age = today.year - Date.year -((today.month, today.day) < (Date.month, Date.day))^	return age^data = pd.read_excel('D:\calculateAge.xlsx')^df=pd.DataFrame(data)#create dataframe to make operations^df['Product_Lifetime'] = None#create a new column^index_date = df.columns.get_loc('Origin_Year_Product')#get index column location in excel file^index_age = df.columns.get_loc('Product_Lifetime')#get index column location in excel file^for row in range(0, len(df)):^		df.iat[row, index_age] = calculateAge(df.iat[row, index_date])^df = df[['Customer','Birth_Date','Product','Origin_Year_Product','Product_Lifetime']].copy()^df.to_excel('D:\calculateAge2.xlsx', index=True, header=True)' missingele="calculateAge2.xlsx^Product_Lifetime" ansSpace="5e26ba5ef79450325c686568b757e42b17dabe514d911dcf531d41d207ecc41e" ans="b2dedeb98db81cc23fc1fff4c6b130b8356e78aeb0ad178c6e40451d6501e481" value='index_age = df.columns.get_loc(&#39;Age&#39;)#get index column location in excel file' onkeydown="myFunction()"></input>
+12<input type="text" name="intext" id="mytext12" 11 size=95 ansHint='from datetime import date^import pandas as pd^def calculateAge(Date):^	today = date.today()^	age = today.year - Date.year -((today.month, today.day) < (Date.month, Date.day))^	return age^data = pd.read_excel('D:\calculateAge.xlsx')^df=pd.DataFrame(data)#create dataframe to make operations^df['Product_Lifetime'] = None#create a new column^index_date = df.columns.get_loc('Origin_Year_Product')#get index column location in excel file^index_age = df.columns.get_loc('Product_Lifetime')#get index column location in excel file^for row in range(0, len(df)):^		df.iat[row, index_age] = calculateAge(df.iat[row, index_date])^df = df[['Customer','Birth_Date','Product','Origin_Year_Product','Product_Lifetime']].copy()^df.to_excel('D:\calculateAge2.xlsx', index=True, header=True)' missingele="calculateAge2.xlsx^Product_Lifetime" ansSpace="7baad14ac225403dc687f8f3dce38e7d4a9650a31de5cd85e3156b45df8a2830" ans="6b5491f9d5a8c8e7aec99b649058f557faa293d6141a3e896f1d7fb480daeba1" value='for row in range(0, len(df)):' onkeydown="myFunction()"></input>
+13<input type="text" name="intext" id="mytext13" 12 size=95 ansHint='from datetime import date^import pandas as pd^def calculateAge(Date):^	today = date.today()^	age = today.year - Date.year -((today.month, today.day) < (Date.month, Date.day))^	return age^data = pd.read_excel('D:\calculateAge.xlsx')^df=pd.DataFrame(data)#create dataframe to make operations^df['Product_Lifetime'] = None#create a new column^index_date = df.columns.get_loc('Origin_Year_Product')#get index column location in excel file^index_age = df.columns.get_loc('Product_Lifetime')#get index column location in excel file^for row in range(0, len(df)):^		df.iat[row, index_age] = calculateAge(df.iat[row, index_date])^df = df[['Customer','Birth_Date','Product','Origin_Year_Product','Product_Lifetime']].copy()^df.to_excel('D:\calculateAge2.xlsx', index=True, header=True)' missingele="calculateAge2.xlsx^Product_Lifetime" ansSpace="0c5ea39eee54d85817b073fd472cdcaca955c116f1b66efc18e5082dbca0ce02" ans="13ebc6128a1fd8847a4c0c4d18aa55f2030ff35ff6527a25d5c0cc9899477124" value='		df.iat[row, index_age] = calculateAge(df.iat[row, index_date])' onkeydown="myFunction()"></input>
+14<input type="text" name="intext" id="mytext14" 13 size=95 ansHint='from datetime import date^import pandas as pd^def calculateAge(Date):^	today = date.today()^	age = today.year - Date.year -((today.month, today.day) < (Date.month, Date.day))^	return age^data = pd.read_excel('D:\calculateAge.xlsx')^df=pd.DataFrame(data)#create dataframe to make operations^df['Product_Lifetime'] = None#create a new column^index_date = df.columns.get_loc('Origin_Year_Product')#get index column location in excel file^index_age = df.columns.get_loc('Product_Lifetime')#get index column location in excel file^for row in range(0, len(df)):^		df.iat[row, index_age] = calculateAge(df.iat[row, index_date])^df = df[['Customer','Birth_Date','Product','Origin_Year_Product','Product_Lifetime']].copy()^df.to_excel('D:\calculateAge2.xlsx', index=True, header=True)' missingele="calculateAge2.xlsx^Product_Lifetime" ansSpace="7c91b9a804e074d168cbae962583cc28a092090fb2f46119d2e69bc1bb5ab642" ans="4bf8357b8bb22d4919461dc135357e7a20353e84182329e8b117242c9a511300" value='df = df[[&#39;Customer&#39;,&#39;Birth_Date&#39;,&#39;Age&#39;,&#39;Product&#39;,&#39;Origin_Year_Product&#39;]].copy()' onkeydown="myFunction()"></input>
+15<input type="text" name="intext" id="mytext15" 14 size=95 ansHint='from datetime import date^import pandas as pd^def calculateAge(Date):^	today = date.today()^	age = today.year - Date.year -((today.month, today.day) < (Date.month, Date.day))^	return age^data = pd.read_excel('D:\calculateAge.xlsx')^df=pd.DataFrame(data)#create dataframe to make operations^df['Product_Lifetime'] = None#create a new column^index_date = df.columns.get_loc('Origin_Year_Product')#get index column location in excel file^index_age = df.columns.get_loc('Product_Lifetime')#get index column location in excel file^for row in range(0, len(df)):^		df.iat[row, index_age] = calculateAge(df.iat[row, index_date])^df = df[['Customer','Birth_Date','Product','Origin_Year_Product','Product_Lifetime']].copy()^df.to_excel('D:\calculateAge2.xlsx', index=True, header=True)' missingele="calculateAge2.xlsx^Product_Lifetime" ansSpace="17b5b3da725227b2c417cb63f6249731ed1b006db27bd064ee01157069b3e9e3" ans="b3852c5b52e2c2ba86d947ea0158768f6d00ec707adb47537e3c98ba70590f84" value='df.to_excel(&#39;D:\calculateAge1.xlsx&#39;, index=True, header=True)' onkeydown="myFunction()"></input>
+<script src="myScript.js"></script></div></pre><h2 id="answer">Answer</h2>
+<a class="btn" href="javascript:newScoring()">Answer</a>
+<a class="btn btn-success" onclick="ansFileSave()">File Save</a>
+<input onclick="openForm();" type="button" value="Hint" class="btn" style="float: right;">
+<div class="form-popup" id="myForm">
+  <form class="form-container">
+    <h1>Hint</h1>
+       <p>1. Read the input excel file:<b>calculateAge.xlsx</b>.<br>
+		2. Then, <b>create pandas data frame</b> to calculate current age from the date data in the excel file.<br>
+		3. Create the new column<b> Product_Lifetime </b>to calculate current age from the Origin_Year_Product column.<br>
+		4. Calculate current age for each date from Origin_Year_Product column by calling the function <b>calculateAge</b>.<br>	
+		5. Finally, write the modified values into new excel file:<b>calculateAge2.xlsx</b>.
+        <br> If you want to study more about calculating current age, please visit this link.<a href="source_codes/Python program to calculate age in year - GeeksforGeeks.html" download> Click Here</a>		
+    
+        <br>
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+  </form>
+</div>
+<script type="text/javascript">
+            
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+</script>
+<a id="dldlink"></a>
+<script type="text/javascript" src="allowtab.js"></script>

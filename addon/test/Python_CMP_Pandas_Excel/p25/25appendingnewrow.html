@@ -1,0 +1,132 @@
+<style type="text/css">
+            textarea, iframe {
+                border: 1px solid grey;
+                height: 500px;
+                width: 98%;
+                resize: none;   
+            }
+             div.form-popup {
+        background-color: #fed9ff;
+        width: 900px;
+        height: 600px;
+        overflow-x: hidden;
+        overflow-y: auto;
+        padding: 20px;
+      }
+ .form-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px dotted #f1f1f1;
+  text-align:justify;  
+  text-justify:initial;
+
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 900px;
+  padding: 20px;
+  background-color: lightyellow;
+}
+
+
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 10%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: mediumvioletred;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+</style>
+<h2 id="statement">25</h2>
+<table >
+  <tr>
+     
+
+<td>Input csv file<br><figure> <img src="img/P25_1.JPG" alt="Elephant at sunset"> 
+</figure></td>
+   </tr>  
+   
+ <tr>
+     
+
+<td>Output csv file from the source code<br><figure> <img src="img/P25_2.JPG" alt="Elephant at sunset"> 
+</figure></td>
+     
+  </tr>  
+
+<tr>    
+<td>Output csv file from the modified source code<br>
+<figure> <img src="img/P25_3.JPG" alt="Elephant at sunset"> 
+</figure></td>
+        
+     </tr>
+</table>
+
+<a href="source_codes/Problem25.zip" download> Click Here To Download Source Code</a>
+<br> Please modify the following source code! 
+<h4 id="code">Source Code</h4>
+<pre class="prettyprint" id="scoring-res" >01:# import writer class from csv module
+02:List=[&#39;William&#39;, 6, 55, 32, 61] # List to append new row in existing csv file
+03:with open(&#39;D:\input.csv&#39;, &#39;a&#39;) as f_object:   # Create a file object for the existing csv file
+04:    writer_object = writer(f_object) # Create a file object for this file and get a writer object
+05:    writer_object.writerow(List) # Pass the list as an argument into the writerow()
+06:    f_object.close()#Close the file object
+
+</pre>
+<h4 id="code1">the output</h4>
+<pre class = "prettyprint" id = "scoring-res" <h2 id="code1"></h2>
+01<input type="text" name="intext" id="mytext1" 0 size=95 ansHint='# import writer class from csv module^List=['Alenza', 9, 78, 52, 40] # List to append new row in existing csv file^with open('D:\input.csv', 'a') as f_object:   # Create a file object for the existing csv file^    writer_object = writer(f_object) # Create a file object for this file and get a writer object^    writer_object.writerow(List) # Pass the list as an argument into the writerow()^    f_object.close()#Close the file object' missingele="Alenza^9^78^52^40"  ansSpace="1bbac32cea3b90154d873d6c577a5cada3544aa94b1be2fa7bfcc735830fc591" ans="eded4257a7a0fc616d89315b251e1ad9fa76ad08b15eea5689a91edc1967b00e" value='# import writer class from csv module' onkeydown="myFunction()">  </input>
+02<input type="text" name="intext" id="mytext2" 1 size=95 ansHint='# import writer class from csv module^List=['Alenza', 9, 78, 52, 40] # List to append new row in existing csv file^with open('D:\input.csv', 'a') as f_object:   # Create a file object for the existing csv file^    writer_object = writer(f_object) # Create a file object for this file and get a writer object^    writer_object.writerow(List) # Pass the list as an argument into the writerow()^    f_object.close()#Close the file object' missingele="Alenza^9^78^52^40"  ansSpace="99578f1f26d16d0efd49a237b4988b32b8eaf764c32d38b38f72cc164655768f" ans="8d2e5a6ecbe6546f251c2010da614914ba4a98958053f6ce54f0795b358518a0" value='List=[&#39;William&#39;, 6, 55, 32, 61] # List to append new row in existing csv file' onkeydown="myFunction()">  </input>
+03<input type="text" name="intext" id="mytext3" 2 size=95 ansHint='# import writer class from csv module^List=['Alenza', 9, 78, 52, 40] # List to append new row in existing csv file^with open('D:\input.csv', 'a') as f_object:   # Create a file object for the existing csv file^    writer_object = writer(f_object) # Create a file object for this file and get a writer object^    writer_object.writerow(List) # Pass the list as an argument into the writerow()^    f_object.close()#Close the file object' missingele="Alenza^9^78^52^40"  ansSpace="00047046559d096f28481a4dbcd227bf016ac81707b0ea9335f40d1bf6d1ba66" ans="34efff0abc0cd8aa0c4d388e10f9d8090ac5ad7b3942ab102d91785ce0cecf0b" value='with open(&#39;D:\input.csv&#39;, &#39;a&#39;) as f_object:   # Create a file object for the existing csv file' onkeydown="myFunction()">  </input>
+04<input type="text" name="intext" id="mytext4" 3 size=95 ansHint='# import writer class from csv module^List=['Alenza', 9, 78, 52, 40] # List to append new row in existing csv file^with open('D:\input.csv', 'a') as f_object:   # Create a file object for the existing csv file^    writer_object = writer(f_object) # Create a file object for this file and get a writer object^    writer_object.writerow(List) # Pass the list as an argument into the writerow()^    f_object.close()#Close the file object' missingele="Alenza^9^78^52^40"  ansSpace="db7c553036d2094714daa0b9afdfffa7ce9192d53f154cb77e74b5a43f094054" ans="2e9e2b2b7ab7bd76dfab9e460a6ab5cc895159814b073b50f743208bbdb1ce78" value='    writer_object = writer(f_object) # Create a file object for this file and get a writer object' onkeydown="myFunction()">  </input>
+05<input type="text" name="intext" id="mytext5" 4 size=95 ansHint='# import writer class from csv module^List=['Alenza', 9, 78, 52, 40] # List to append new row in existing csv file^with open('D:\input.csv', 'a') as f_object:   # Create a file object for the existing csv file^    writer_object = writer(f_object) # Create a file object for this file and get a writer object^    writer_object.writerow(List) # Pass the list as an argument into the writerow()^    f_object.close()#Close the file object' missingele="Alenza^9^78^52^40"  ansSpace="9f8a64474f12926ad276fcac7adb46016c6c11bfb840dfb3bfc5c0f042d30690" ans="3cfb182a176b65db738404fc9a3b93e2335cb69bfa15c8e2d107fa22acda1993" value='    writer_object.writerow(List) # Pass the list as an argument into the writerow()' onkeydown="myFunction()">  </input>
+06<input type="text" name="intext" id="mytext6" 5 size=95 ansHint='# import writer class from csv module^List=['Alenza', 9, 78, 52, 40] # List to append new row in existing csv file^with open('D:\input.csv', 'a') as f_object:   # Create a file object for the existing csv file^    writer_object = writer(f_object) # Create a file object for this file and get a writer object^    writer_object.writerow(List) # Pass the list as an argument into the writerow()^    f_object.close()#Close the file object' missingele="Alenza^9^78^52^40"  ansSpace="4b227e76d661cc75d7173fa4714c1bffcb8ea0d1f154eb15769d9b31b35e40bd" ans="720359e1816a77f4b0e6cdf735766cc3e33e39c8dbfa6322cfdeb3b5d9118bfc" value='    f_object.close()#Close the file object' onkeydown="myFunction()">  </input>
+<script src="myScript.js"></script></div></pre><h2 id="answer">Answer</h2>
+<a class="btn" href="javascript:newScoring()">Answer</a>
+<a class="btn btn-success" onclick="ansFileSave()">File Save</a>
+
+<input onclick="openForm();" type="button" value="Hint" class="btn" style="float: right;">
+<div class="form-popup" id="myForm">
+  <form class="form-container">
+    <h1>Hint</h1>
+       <p>1. Create a list to append a new row to the existing csv file.<br>
+		2. Then, open the <b>input.csv</b> file and create the writer object.<br>
+		3. After that, you can append the list to the opened csv file as the new row.	<br>	
+		4. Finally, close the file object.</b>.
+        <br> If you want to study more about appending new row to an existing csv file, please visit this link.<a href="source_codes/How to append a new row to an existing csv file  - GeeksforGeeks.html" download> Click Here</a>		
+    
+        <br>
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+  </form>
+</div>
+<script type="text/javascript">
+            
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+</script>
+
+<a id="dldlink"></a>
+<script type="text/javascript" src="allowtab.js"></script>

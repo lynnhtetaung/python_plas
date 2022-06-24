@@ -1,0 +1,139 @@
+<style type="text/css">
+            textarea, iframe {
+                border: 1px solid grey;
+                height: 500px;
+                width: 98%;
+                resize: none;   
+            }
+             div.form-popup {
+        background-color: #fed9ff;
+        width: 900px;
+        height: 600px;
+        overflow-x: hidden;
+        overflow-y: auto;
+        padding: 20px;
+      }
+ .form-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px dotted #f1f1f1;
+  text-align:justify;  
+  text-justify:initial;
+
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 900px;
+  padding: 20px;
+  background-color: lightyellow;
+}
+
+
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 10%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: mediumvioletred;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+</style>
+<h2 id="statement">24</h2>
+<table >
+  <tr>
+     
+
+<td>Input text file to the source code<br><figure> <img src="img/P24_1.JPG" alt="Elephant at sunset"> 
+</figure></td>
+   </tr>  
+   
+ <tr>
+ <tr><td>
+ Output csv file from the source code<br>  
+<figure> <img src="img/P24_3.JPG" alt="Elephant at sunset"> 
+</figure></td>
+        
+     </tr>
+     
+
+<td>Input text file to the modified source code<br><figure> <img src="img/P24_2.JPG" alt="Elephant at sunset"> 
+</figure></td>
+     
+  </tr>  
+
+<tr>    
+<td>Output csv file from the modified source code<br>
+<figure> <img src="img/P24_4.JPG" alt="Elephant at sunset"> 
+</figure></td>
+        
+     </tr>
+</table>
+
+<a href="source_codes/Problem24.zip" download> Click Here To Download Source Code</a>
+<br> Please modify the following source code! 
+<h4 id="code">Source Code</h4>
+<pre class="prettyprint" id="scoring-res" >01:# importing pandas library
+02:import pandas as pd
+03:# reading  the given csv file
+04:data = pd.read_csv(&#39;D:\studentdata.txt&#39;,header = None)
+05:# adding column headings
+06:data.columns = [&#39;Name&#39;, &#39;Age&#39;, &#39;Blood&#39;, &#39;Major&#39;, &#39;Email&#39;]
+07:# store dataframe into csv file
+08:data.to_csv(&#39;D:\studentdata.csv&#39;,index = None)
+
+</pre>
+<h4 id="code1">the output</h4>
+<pre class = "prettyprint" id = "scoring-res" <h2 id="code1"></h2>
+01<input type="text" name="intext" id="mytext1" 0 size=95 ansHint='# importing pandas library^import pandas as pd^# reading  the given csv file^data = pd.read_csv('D:\employeedata.txt',header = None)^# adding column headings^data.columns = ['Name', 'Address', 'Email', 'Phone_No', 'Position']^# store dataframe into csv file^data.to_csv('D:\employeedata.csv',index = None)' missingele="employeedata^Address^Email^Phone_No^Position"  ansSpace="b8e092b314b0e47e4efdb5266f9fb62b15ecd3aee7aae4a4480794889d7ca6dd" ans="06d47a42c872b0bd71d96a11b5841997d6f2456ea1910714d985d7f771bd3f37" value='# importing pandas library' onkeydown="myFunction()">  </input>
+02<input type="text" name="intext" id="mytext2" 1 size=95 ansHint='# importing pandas library^import pandas as pd^# reading  the given csv file^data = pd.read_csv('D:\employeedata.txt',header = None)^# adding column headings^data.columns = ['Name', 'Address', 'Email', 'Phone_No', 'Position']^# store dataframe into csv file^data.to_csv('D:\employeedata.csv',index = None)' missingele="employeedata^Address^Email^Phone_No^Position"  ansSpace="8b6b9dc006ae1b0041d610635fccf8b73f1965d11283dbc290ab0ead03400e7c" ans="5fe6e6381af4041996d62bd727eec5477a9917ce6988307e8186303191db5331" value='import pandas as pd' onkeydown="myFunction()">  </input>
+03<input type="text" name="intext" id="mytext3" 2 size=95 ansHint='# importing pandas library^import pandas as pd^# reading  the given csv file^data = pd.read_csv('D:\employeedata.txt',header = None)^# adding column headings^data.columns = ['Name', 'Address', 'Email', 'Phone_No', 'Position']^# store dataframe into csv file^data.to_csv('D:\employeedata.csv',index = None)' missingele="employeedata^Address^Email^Phone_No^Position"  ansSpace="7abb6a992ff59b1756b3538da3b1ced2a6c4c008d5dc726a5fc1175caf8a2b73" ans="5e402d25da0ef1f703a16d643d266dafe804e3b4adf43e1ad8b934c72bb2342a" value='# reading  the given csv file' onkeydown="myFunction()">  </input>
+04<input type="text" name="intext" id="mytext4" 3 size=95 ansHint='# importing pandas library^import pandas as pd^# reading  the given csv file^data = pd.read_csv('D:\employeedata.txt',header = None)^# adding column headings^data.columns = ['Name', 'Address', 'Email', 'Phone_No', 'Position']^# store dataframe into csv file^data.to_csv('D:\employeedata.csv',index = None)' missingele="employeedata^Address^Email^Phone_No^Position"  ansSpace="c7ed62f6f98ab1ca769ebe2d12d8ff689cbdfb4dcb7de8b176ae8254e591dfc4" ans="71a06f60249b0b9693b93ff8548ec95e9fb81d9b6b9b1d123bc3afedec6e2dc7" value='data = pd.read_csv(&#39;D:\studentdata.txt&#39;,header = None)' onkeydown="myFunction()">  </input>
+05<input type="text" name="intext" id="mytext5" 4 size=95 ansHint='# importing pandas library^import pandas as pd^# reading  the given csv file^data = pd.read_csv('D:\employeedata.txt',header = None)^# adding column headings^data.columns = ['Name', 'Address', 'Email', 'Phone_No', 'Position']^# store dataframe into csv file^data.to_csv('D:\employeedata.csv',index = None)' missingele="employeedata^Address^Email^Phone_No^Position"  ansSpace="d66f67f647ca1498c2e7628218a39b48612b60a3258badb6fb263ce613c13a22" ans="dc700a56b6a359e655e8c7836fa3ece1e6128603f132f631f82d3362ac683e87" value='# adding column headings' onkeydown="myFunction()">  </input>
+06<input type="text" name="intext" id="mytext6" 5 size=95 ansHint='# importing pandas library^import pandas as pd^# reading  the given csv file^data = pd.read_csv('D:\employeedata.txt',header = None)^# adding column headings^data.columns = ['Name', 'Address', 'Email', 'Phone_No', 'Position']^# store dataframe into csv file^data.to_csv('D:\employeedata.csv',index = None)' missingele="employeedata^Address^Email^Phone_No^Position"  ansSpace="01cebf83427f0636126d9c55dada818d82c68dee064d919dc1d1f2e9c69e0100" ans="8e4a01c8d3334a0229465c6b9be23baefb7bfadcba7cd7feebbc4161612bf940" value='data.columns = [&#39;Name&#39;, &#39;Age&#39;, &#39;Blood&#39;, &#39;Major&#39;, &#39;Email&#39;]' onkeydown="myFunction()">  </input>
+07<input type="text" name="intext" id="mytext7" 6 size=95 ansHint='# importing pandas library^import pandas as pd^# reading  the given csv file^data = pd.read_csv('D:\employeedata.txt',header = None)^# adding column headings^data.columns = ['Name', 'Address', 'Email', 'Phone_No', 'Position']^# store dataframe into csv file^data.to_csv('D:\employeedata.csv',index = None)' missingele="employeedata^Address^Email^Phone_No^Position"  ansSpace="ff83e1494112dff3d135b97bc2df77e2a84172377d836ce7e50a2ae9c2f524ba" ans="0d3c62bc6e23ee969f2d94a17a89231498e24c6f203edc16f7cbfa4ececce04d" value='# store dataframe into csv file' onkeydown="myFunction()">  </input>
+08<input type="text" name="intext" id="mytext8" 7 size=95 ansHint='# importing pandas library^import pandas as pd^# reading  the given csv file^data = pd.read_csv('D:\employeedata.txt',header = None)^# adding column headings^data.columns = ['Name', 'Address', 'Email', 'Phone_No', 'Position']^# store dataframe into csv file^data.to_csv('D:\employeedata.csv',index = None)' missingele="employeedata^Address^Email^Phone_No^Position"  ansSpace="2be416407b391ccdbbf92af19eb4acbea0e374b4451e97f4511ca7d48e086bfa" ans="57c75918ca2c4063ee1f3de3c797b448068e8bc133fb788fb6590d402e2017e5" value='data.to_csv(&#39;D:\studentdata.csv&#39;,index = None)' onkeydown="myFunction()">  </input>
+<script src="myScript.js"></script></div></pre><h2 id="answer">Answer</h2>
+<a class="btn" href="javascript:newScoring()">Answer</a>
+<a class="btn btn-success" onclick="ansFileSave()">File Save</a>
+<input onclick="openForm();" type="button" value="Hint" class="btn" style="float: right;">
+<div class="form-popup" id="myForm">
+  <form class="form-container">
+    <h1>Hint</h1>
+       <p>1. Read the input text file:<b>employeedata.txt</b>.<br>
+		2. Then, carefully add <b> the column names</b> according to the resulted csv file: <b> employeedata.csv</b>.<br>			
+		3. Finally, write the data values into new csv file:<b>employeedata.csv</b>.
+        <br> If you want to study more about converting text file to csv file, please visit this link.<a href="source_codes/Convert Text File to CSV using Python Pandas - GeeksforGeeks.html" download> Click Here</a>		
+    
+        <br>
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+  </form>
+</div>
+<script type="text/javascript">
+            
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+</script>
+<a id="dldlink"></a>
+<script type="text/javascript" src="allowtab.js"></script>

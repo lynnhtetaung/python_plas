@@ -1,0 +1,6 @@
+Manifest-Version: 1.0
+Rsrc-Class-Path: ./ commons-io-2.6.jar json-20200518.jar
+Class-Path: .
+Rsrc-Main-Class: validator.JplasValidator
+Main-Class: org.eclipse.jdt.internal.jarinjarloader.JarRsrcLoader
+

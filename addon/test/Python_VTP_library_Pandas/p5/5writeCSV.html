@@ -1,0 +1,37 @@
+<h2 id="statement">5</h2>
+Fill in Blanks 
+<h2 id="code">The Source Code</h2>
+<pre class="prettyprint" id="scoring-res"># A quick-demo of writing CSV
+import pandas as pd
+import csv
+
+# create data frame
+city = pd.DataFrame([['Sacramento', 'California'], ['Miami', 'Florida']], columns=['City', 'State'])
+
+# data writing to csv file
+city.to_csv('D:\city.csv')
+
+# print the csv file
+print(city)
+
+# another way to write as csv file
+myData = [[1, 2, 3], ['Good Morning', 'Good Evening', 'Good Afternoon']]
+myFile = open('D:\Greeting.csv', 'w')
+with myFile:
+   writer = csv.writer(myFile)
+   writer.writerows(myData)
+   
+What is the output of the program?
+    City      <input size=2 ans="6368f4ee552b14d7505297e0584445d56062cabc103d3c31c4258326cb87bbd6" placeholder=1></input>
+0  <input size=2 ans="a2a272ed234e99de3e22c49d166c2a6f92f5fc75e182cdcc94654ca1bd358177" placeholder=2></input> California
+1  Miami      <input size=2 ans="725aebd5b2d53918bb082988d89cbe31c4a810eb1a07543ee313c109711d89d2" placeholder=3></input>
+
+
+</pre>
+<h2 id="answer">Answer</h2>
+<a class="btn" href="javascript:newScoring()">Answer</a>
+<script type="text/javascript">
+$(function(){
+ prettyPrint();
+});
+</script>

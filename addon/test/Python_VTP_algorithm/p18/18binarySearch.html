@@ -1,0 +1,46 @@
+<h2 id="statement">18</h2>
+Fill in Blanks 
+<h2 id="code">The Source Code</h2>
+<pre class="prettyprint" id="scoring-res">#A quick demo of Binary Search
+
+def binarySearch(alist, item):
+    
+    first = 0
+    last = len(alist)-1
+    found = False
+    
+    while first<=last and not found:
+        midpoint = (first + last)//2
+        if alist[midpoint] == item:
+            found = True
+        else:
+            if item < alist[midpoint]:
+                last = midpoint-1
+                print("What is last value", last)
+            else:
+                first = midpoint+1
+                print("What is first value", first)
+	
+    return found
+	
+	
+testlist = [1, 2, 8, 13, 48]
+print(binarySearch(testlist, 3))
+print(binarySearch(testlist, 13))
+
+What is <input size=2 ans="a5839d6b89c5d846fa34b549477330482fdafb4801048308a1d1ed61b01c977d" placeholder=1></input> value <input size=2 ans="c7b96125d8bb1b5ac26f057909f1a29dcd87d00ced1a9b563f3220b6d6038d66" placeholder=2></input>
+What is <input size=2 ans="1047e0c85b17a323d5e1dbaa3051355fb6c1024a1d27af561e591576dcf560e2" placeholder=3></input> value <input size=2 ans="d40535ac09aac0ef32f8a23b8bb8e04bc2e8f9d6b0981fa98a16d0382f558d83" placeholder=4></input>
+What is <input size=2 ans="19dbfb6d7409730aa1ec024ee160ee1b231d394e5c810cd4d716239d3daf88fc" placeholder=5></input> value <input size=2 ans="ec3f1e361fe23b5ec31edc081aef4c1d6e9bdd184a7b92df4b7111745fa3a164" placeholder=6></input>
+3 is found?<input size=2 ans="9c2d93dc50164a8bd81bbf4a1fb1e84f7c18696a8604d5effc71fda35106a2a4" placeholder=7></input>
+What is <input size=2 ans="62fbb834c51bb430d787124c6688517ca12cfac3fd6958ef3a67bb4f582b691f" placeholder=8></input> value <input size=2 ans="ca0f11ca98da8843c3ceaa6af48e7c9389e52f0f056f4e75f904a7888b71ed9f" placeholder=9></input>
+13 is found?<input size=2 ans="f461cd0a760c6024038015ceb035b92ab312c3de5f85ee8a46d903714097ee2b" placeholder=10></input>
+
+
+</pre>
+<h2 id="answer">Answer</h2>
+<a class="btn" href="javascript:newScoring('Python_VTP_algorithm')">Answer</a>
+<script type="text/javascript">
+$(function(){
+ prettyPrint();
+});
+</script>

@@ -1,0 +1,48 @@
+<h2 id="statement">5</h2>
+Fill in Blanks 
+<h2 id="code">The Source Code</h2>
+<pre class="prettyprint" id="scoring-res"># A quick-demo of numpy.reshape() method:Shapes an array without changing data of array.
+ 
+import numpy as np
+ 
+array = np.arange(8)
+print("Original array : \n", array)
+ 
+# shape array with 2 rows and 4 columns
+array = np.arange(8).reshape(2, 4)
+print("array reshaped with 2 rows and 4 columns : \n", array)
+ 
+# shape array with 4 rows and 2 columns
+array = np.arange(8).reshape(4 ,2)
+print("array reshaped with 4 rows and 2 columns : \n", array)
+ 
+# Constructs 3D array
+array = np.arange(8).reshape(2, 2, 2)
+print("Original array reshaped to 3D : \n", array)
+
+Original array : 
+[0 1 2 3 <input size=2 ans="b0f15498e8f018d4f4b558b01bd296e0398b12e4377706fe0d695ec3fa3ea013" placeholder=1></input>
+array reshaped with 2 rows and 4 columns : 
+[<input size=2 ans="d36f2ba06e71b927865fbaac8e20156889d9735378ae8d4e3734f95ffeffda85" placeholder=2></input>
+[4 5 6 7]]
+array reshaped with 4 rows and 2 columns : 
+[[0 1]
+<input size=2 ans="06fa7d5f53e27909a2395f9885733187099dff73a75e8d80bbc3298c0c8a7a78" placeholder=3></input>
+[4 5]
+<input size=2 ans="e12ec04f57368e8ae4d9d973120f5fdac6e684a35c5c44d7c51f586ce68f5d4b" placeholder=4></input>]
+Original array reshaped to 3D : 
+[[[0 1]
+<input size=2 ans="d29de0f23b8d61656202cd73a0b94ba3a88227fc85210f7392afb353a7a9a307" placeholder=5></input>]
+
+[<input size=2 ans="f85dbdd7d0c8e29596581e7be981fbebb841a7d8f0e72de47b7376b8b9367888" placeholder=6></input>
+[6 7]]]
+
+
+</pre>
+<h2 id="answer">Answer</h2>
+<a class="btn" href="javascript:newScoring()">Answer</a>
+<script type="text/javascript">
+$(function(){
+ prettyPrint();
+});
+</script>

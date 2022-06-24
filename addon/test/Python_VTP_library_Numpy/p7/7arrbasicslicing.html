@@ -1,0 +1,46 @@
+<h2 id="statement">7</h2>
+Fill in Blanks 
+<h2 id="code">The Source Code</h2>
+<pre class="prettyprint" id="scoring-res"># A quick-demo of basic slicing Usage
+
+import numpy as np
+ 
+# Arrange elements from 0 to 10
+a = np.arange(10)
+print("\n Array is:\n ",a)
+ 
+# a[start:stop:step], if a[-4:8:1], the output will be printed like [6 7]
+print("\n a[-4:9:1]  = ",a[-4:9:1])
+ 
+# The : operator means all elements till the end with the format like [9 4 7 5 9]
+print("\n a[5:]  = ",a[5:])
+
+# A 3 dimensional array.
+b = np.array([[[1, 2, 3],[4, 5, 6]],
+              [[7, 8, 9],[10, 11, 12]]])
+ 
+# Equivalent to b[: ,: ,1 ] and it will print values from every row and column in index 1 
+# using basic slicing with ellipsis
+print("\n b: \n ",b[...,1]) 
+
+Array is:
+[0 1 2 3 4 5 6 7 8 9]
+
+a[-4:9:1]  = <input size=2 ans="8d27e9fcc8073832aca1a4ed1bc74cd38a75ca7ef1af43b77c21cc5c79c202ac" placeholder=1></input>
+
+a[5:]  = <input size=2 ans="1c4d40934b25fa3aebc3443338db653f86f3d4a5660af98d9978f99a82a6b927" placeholder=2></input>
+
+b: 
+[[<input size=2 ans="303c8bd55875dda240897db158acf70afe4226f300757f3518b86e6817c00022" placeholder=3></input>  5]
+[ 8 <input size=2 ans="973d94870ea2543da0aed1ebb95f8224c63bacbdf218b0e3793b24bc4d405d2c" placeholder=4></input>]]
+
+
+
+</pre>
+<h2 id="answer">Answer</h2>
+<a class="btn" href="javascript:newScoring()">Answer</a>
+<script type="text/javascript">
+$(function(){
+ prettyPrint();
+});
+</script>

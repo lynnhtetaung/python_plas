@@ -1,0 +1,56 @@
+<h2 id="statement">26</h2>
+Fill in Blanks 
+<h2 id="code">The Source Code</h2>
+<pre class="prettyprint" id="scoring-res"># A quick-demo of numpy.variance() method
+# numpy.var(arr, axis = None) : Compute the variance of the given data (array elements) along the specified axis(if any).
+# axis : axis along which we want to calculate the arithmetic mean. axis = 0 means along the column and axis = 1 means working along the row.
+''' x = 1 1 1 1 1
+Standard Deviation = 0 . Variance = 0
+y = 9, 2, 5, 4, 12, 7, 8, 11, 9, 3, 7, 4, 12, 5, 4, 10, 9, 6, 9, 4
+Step 1 : Mean of distribution 4 = 7
+Step 2 : Summation of (x ? x.mean())**2 = 178
+Step 3 : Finding Mean = 178 /20 = 8.9
+This Result is Variance.'''
+
+import numpy as np 
+	
+# 1D array 
+arr = [20, 2, 7, 1, 34] 
+
+print("arr : ", arr) 
+print("Variance of arr : ", np.var(arr)) 
+
+# 2D array  
+arr = [[2, 2, 2, 2, 2],  
+    [15, 6, 27, 8, 2],  
+    [23, 2, 54, 1, 2, ],  
+    [11, 44, 34, 7, 2]]  
+        
+# var of the flattened array  
+print("\nvar of arr, axis = None : ", np.var(arr))  
+      
+# var along the axis = 0  
+print("\nvar of arr, axis = 0 : ", np.var(arr, axis = 0))  
+  
+# var along the axis = 1  
+print("\nvar of arr, axis = 1 : ", np.var(arr, axis = 1))
+
+arr :  [20, 2, 7, 1, 34]
+Variance of arr :  158.16
+
+var of arr, axis = None : <input size=2 ans="10f582fb66b722ee9a6f9139a9e428b077437326c1c458d47ce7d216f3f6c834" placeholder=1></input>
+
+var of arr, axis = 0 :  [  57.1875  312.75   345.6875  <input size=2 ans="a63a197af9f975a8e0e38941d590f266cdbe7a9f6632e47bd53906f608db76c9" placeholder=2></input>     0.  ]
+
+var of arr, axis = 1 :  [   0.    <input size=2 ans="d6b84f862e354ecf539d007fa91e850a6966b027601d2d3ce834e06daac8e23a" placeholder=3></input>  421.84  269.04]
+
+
+
+</pre>
+<h2 id="answer">Answer</h2>
+<a class="btn" href="javascript:newScoring()">Answer</a>
+<script type="text/javascript">
+$(function(){
+ prettyPrint();
+});
+</script>

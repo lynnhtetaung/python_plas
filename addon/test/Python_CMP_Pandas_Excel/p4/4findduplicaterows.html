@@ -1,0 +1,131 @@
+<style type="text/css">
+            textarea, iframe {
+                border: 1px solid grey;
+                height: 500px;
+                width: 98%;
+                resize: none;   
+            }
+             div.form-popup {
+        background-color: #fed9ff;
+        width: 900px;
+        height: 600px;
+        overflow-x: hidden;
+        overflow-y: auto;
+        padding: 20px;
+      }
+ .form-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px dotted #f1f1f1;
+  text-align:justify;  
+  text-justify:initial;
+
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 900px;
+  padding: 20px;
+  background-color: lightyellow;
+}
+
+
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 10%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: mediumvioletred;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+</style>
+<h2 id="statement">4</h2>
+<table >
+  <tr>
+     
+
+<td>Input excel file to the source code<figure> <img src="img/P41.JPG" alt="Elephant at sunset"> 
+</figure></td>
+      </tr>  
+ <tr>    
+
+<td>Output excel file from the source code<br><figure> <img src="img/P42.JPG" alt="Elephant at sunset"> 
+</figure></td></tr>
+<tr>
+     <td>Output excel file from the modified source code<br><figure> <img src="img/P43.JPG" alt="Elephant at sunset"> 
+</figure></td>
+  </tr>  
+</table>
+<a href="source_codes/Problem4.zip" download> Click Here To Download Source Code</a>
+<br> Please modify the following source code!
+<h4 id="code">Source Code</h4>
+<pre class="prettyprint" id="scoring-res" >01:# Import pandas library
+02:import pandas as pd
+03:# Create the excel file
+04:data = pd.read_excel(&#39;D:\duplicaterow.xlsx&#39;)
+05:# Create the dataframe
+06:df = pd.DataFrame(data)
+07:# Selecting duplicate rows based on list of column names
+08:df = df[df.duplicated([&#39;Name&#39;, &#39;Age&#39;])]
+09:#save to new excel file
+10:df.to_excel(&#39;D:\duplicaterow1.xlsx&#39;, index=True, header=True)
+
+</pre>
+<h4 id="code1">the output</h4>
+<pre class = "prettyprint" id = "scoring-res" <h2 id="code1"></h2>
+01<input type="text" name="intext" id="mytext1" 0 size=95 ansHint='# Import pandas library^import pandas as pd^# Create the excel file^data = pd.read_excel('D:\duplicaterow.xlsx')^# Create the dataframe^df = pd.DataFrame(data)^# Selecting duplicate rows based on list of column names^df = df[df.duplicated(['Name', 'Age', 'Location'])]^#save to new excel file^df.to_excel('D:\duplicaterow2.xlsx', index=True, header=True)' missingele="duplicaterow2^Age^Location"  ansSpace="583ab8e6f07f5456f3c0cefc39caa0be98f094ded4d9ab2be4a8d3ea596b892b" ans="4639b942d870939bdd62cfa22dea60baf0e807a2337a9a727cbe837fd93a27c3" value='# Import pandas library' onkeydown="myFunction()">  </input>
+02<input type="text" name="intext" id="mytext2" 1 size=95 ansHint='# Import pandas library^import pandas as pd^# Create the excel file^data = pd.read_excel('D:\duplicaterow.xlsx')^# Create the dataframe^df = pd.DataFrame(data)^# Selecting duplicate rows based on list of column names^df = df[df.duplicated(['Name', 'Age', 'Location'])]^#save to new excel file^df.to_excel('D:\duplicaterow2.xlsx', index=True, header=True)' missingele="duplicaterow2^Age^Location"  ansSpace="6d90ae8182e04207262b17ec54d20e8469066a116240b903858f0b11e47b3213" ans="1c8b8a71eaaac9800000a0ff43019df974b3e8eaa0cceb9b4a095ddc9b3cd1dc" value='import pandas as pd' onkeydown="myFunction()">  </input>
+03<input type="text" name="intext" id="mytext3" 2 size=95 ansHint='# Import pandas library^import pandas as pd^# Create the excel file^data = pd.read_excel('D:\duplicaterow.xlsx')^# Create the dataframe^df = pd.DataFrame(data)^# Selecting duplicate rows based on list of column names^df = df[df.duplicated(['Name', 'Age', 'Location'])]^#save to new excel file^df.to_excel('D:\duplicaterow2.xlsx', index=True, header=True)' missingele="duplicaterow2^Age^Location"  ansSpace="a6321e039e2d472416f58ef1b98fd562075b56fad29603c47c116d5f0136fc87" ans="91328d364d3fe9ec5682785ec6636b66844acccd736993eb7be406c94dcab7a8" value='# Create the excel file' onkeydown="myFunction()">  </input>
+04<input type="text" name="intext" id="mytext4" 3 size=95 ansHint='# Import pandas library^import pandas as pd^# Create the excel file^data = pd.read_excel('D:\duplicaterow.xlsx')^# Create the dataframe^df = pd.DataFrame(data)^# Selecting duplicate rows based on list of column names^df = df[df.duplicated(['Name', 'Age', 'Location'])]^#save to new excel file^df.to_excel('D:\duplicaterow2.xlsx', index=True, header=True)' missingele="duplicaterow2^Age^Location"  ansSpace="637f82421e427cd1940b3231c9f108b54dcaf36cba5a9df2a4286923b612f937" ans="de44d30492a3446cca1e3d5772fcb1476ee5c2dd254ad7d97baccb9240744821" value='data = pd.read_excel(&#39;D:\duplicaterow.xlsx&#39;)' onkeydown="myFunction()">  </input>
+05<input type="text" name="intext" id="mytext5" 4 size=95 ansHint='# Import pandas library^import pandas as pd^# Create the excel file^data = pd.read_excel('D:\duplicaterow.xlsx')^# Create the dataframe^df = pd.DataFrame(data)^# Selecting duplicate rows based on list of column names^df = df[df.duplicated(['Name', 'Age', 'Location'])]^#save to new excel file^df.to_excel('D:\duplicaterow2.xlsx', index=True, header=True)' missingele="duplicaterow2^Age^Location"  ansSpace="856b5be60f0cebe33934a2296d7a9178d3ac23bf58bfb635880e49451da5adea" ans="cf0242aa3359abb6ef7bc52e800371151f850a4639755e6c81d7958f9f06bbdf" value='# Create the dataframe' onkeydown="myFunction()">  </input>
+06<input type="text" name="intext" id="mytext6" 5 size=95 ansHint='# Import pandas library^import pandas as pd^# Create the excel file^data = pd.read_excel('D:\duplicaterow.xlsx')^# Create the dataframe^df = pd.DataFrame(data)^# Selecting duplicate rows based on list of column names^df = df[df.duplicated(['Name', 'Age', 'Location'])]^#save to new excel file^df.to_excel('D:\duplicaterow2.xlsx', index=True, header=True)' missingele="duplicaterow2^Age^Location"  ansSpace="dcb14670b364621b9821987a53fca58ce6fc8147db3c5383f2521abd1b768574" ans="fb0e4c45e937691f04c40d9140ba1f6449edfc8e526c10cb16ac849200d8ba0f" value='df = pd.DataFrame(data)' onkeydown="myFunction()">  </input>
+07<input type="text" name="intext" id="mytext7" 6 size=95 ansHint='# Import pandas library^import pandas as pd^# Create the excel file^data = pd.read_excel('D:\duplicaterow.xlsx')^# Create the dataframe^df = pd.DataFrame(data)^# Selecting duplicate rows based on list of column names^df = df[df.duplicated(['Name', 'Age', 'Location'])]^#save to new excel file^df.to_excel('D:\duplicaterow2.xlsx', index=True, header=True)' missingele="duplicaterow2^Age^Location"  ansSpace="300c41f3c3b4297245c53b07ec4f6053ba4682b44371360b61ce70e0292796d7" ans="6c0fb5ab955094cbdfa276c46de420f7fbf020d9f0c6c39062f7ce8036ed3c8c" value='# Selecting duplicate rows based on list of column names' onkeydown="myFunction()">  </input>
+08<input type="text" name="intext" id="mytext8" 7 size=95 ansHint='# Import pandas library^import pandas as pd^# Create the excel file^data = pd.read_excel('D:\duplicaterow.xlsx')^# Create the dataframe^df = pd.DataFrame(data)^# Selecting duplicate rows based on list of column names^df = df[df.duplicated(['Name', 'Age', 'Location'])]^#save to new excel file^df.to_excel('D:\duplicaterow2.xlsx', index=True, header=True)' missingele="duplicaterow2^Age^Location"  ansSpace="e44a18cb2a1b24fdda924183329969920f62ac9152d7f96c0636c9dd9b2bf181" ans="0efbb74a9d6f6c21a8a3719b6498b4d122750f6c0a663b73996dec576b285765" value='df = df[df.duplicated([&#39;Name&#39;, &#39;Age&#39;])]' onkeydown="myFunction()">  </input>
+09<input type="text" name="intext" id="mytext9" 8 size=95 ansHint='# Import pandas library^import pandas as pd^# Create the excel file^data = pd.read_excel('D:\duplicaterow.xlsx')^# Create the dataframe^df = pd.DataFrame(data)^# Selecting duplicate rows based on list of column names^df = df[df.duplicated(['Name', 'Age', 'Location'])]^#save to new excel file^df.to_excel('D:\duplicaterow2.xlsx', index=True, header=True)' missingele="duplicaterow2^Age^Location"  ansSpace="23e472ec5c65e6dde2efbf9326c255f6dd2ea7a9c8d43758ae13d81a76c7378b" ans="420eccd86ee386d5d7bca82f09cce5f305dc81e6b487622aa709a37da975d0c3" value='#save to new excel file' onkeydown="myFunction()">  </input>
+10<input type="text" name="intext" id="mytext10" 9 size=95 ansHint='# Import pandas library^import pandas as pd^# Create the excel file^data = pd.read_excel('D:\duplicaterow.xlsx')^# Create the dataframe^df = pd.DataFrame(data)^# Selecting duplicate rows based on list of column names^df = df[df.duplicated(['Name', 'Age', 'Location'])]^#save to new excel file^df.to_excel('D:\duplicaterow2.xlsx', index=True, header=True)' missingele="duplicaterow2^Age^Location" ansSpace="c8d025140c9e2a040f3f2af1c77bc61269c58db8cf443acee7523119f989d1c1" ans="d5a004739908aa7a9150f9eda2621fe746c3848f8e0dc19d44f9c55f3275513f" value='df.to_excel(&#39;D:\duplicaterow1.xlsx&#39;, index=True, header=True)' onkeydown="myFunction()"></input>
+<script src="myScript.js"></script></div></pre><h2 id="answer">Answer</h2>
+<a class="btn" href="javascript:newScoring()">Answer</a>
+<a class="btn btn-success" onclick="ansFileSave()">File Save</a>
+<input onclick="openForm();" type="button" value="Hint" class="btn" style="float: right;">
+<div class="form-popup" id="myForm">
+  <form class="form-container">
+    <h1>Hint</h1>
+       <p>1. Read the input excel file:<b>duplicaterow.xlsx</b>.<br>
+		2. Then, <b>create pandas data frame</b> to find duplicated rows from the excel file.<br>
+		3. Select duplicated rows depending on<b> Name, Age, and Location</b>.<br>		
+		4. Finally, write the modified values into new excel file:<b>duplicaterow2.xlsx</b>.
+        <br> If you want to study more about finding duplicated rows, please visit this link.<a href="source_codes/Find duplicate rows in a Dataframe based on all or selected columns - GeeksforGeeks.html" download> Click Here</a>		
+    
+        <br>
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+  </form>
+</div>
+<script type="text/javascript">
+            
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+</script>
+
+<a id="dldlink"></a>
+<script type="text/javascript" src="allowtab.js"></script>

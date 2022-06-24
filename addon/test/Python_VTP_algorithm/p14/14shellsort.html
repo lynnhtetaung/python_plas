@@ -1,0 +1,51 @@
+<h2 id="statement">14</h2>
+Fill in Blanks 
+<h2 id="code">The Source Code</h2>
+<pre class="prettyprint" id="scoring-res"># A quick-demo of shell sort
+
+def shellSort(alist):
+    sublistcount = len(alist)//2
+    while sublistcount > 0:
+    
+        for startposition in range(sublistcount):
+          gapInsertionSort(alist,startposition,sublistcount)
+    
+        print("After increments of size",sublistcount,
+                                       "The list is",alist)
+    
+        sublistcount = sublistcount // 2
+    
+def gapInsertionSort(alist,start,gap):
+    for i in range(start+gap,len(alist),gap):
+    
+        currentvalue = alist[i]
+        position = i
+    
+        while position>=gap and alist[position-gap]>currentvalue:
+            alist[position]=alist[position-gap]
+            position = position-gap
+    
+        alist[position]=currentvalue
+    
+alist = [54,26,93,17]
+shellSort(alist)
+print(alist)
+
+After increments of size <input size=2 ans="1744784df13e160509c06d101c96cb212fe482375338f537e65c2d41b5d8d548" placeholder=1></input> The list is<input size=2 ans="4317436f01588e0656b0eda16e19677ecd2239bdde042c264df8cd5f2ff308e2" placeholder=2></input>,<input size=2 ans="3286f64992780fd42a97cfee2295e4f252b11bdb231abf1d79929929aa441a13" placeholder=3></input>,<input size=2 ans="816b4e209fd546137c4aa08bef9078da89d3d49698588ebceafce4788448c0a6" placeholder=4></input>,<input size=2 ans="bf260b46f46250be5c508008a7f1c31cd45ba6fabd74c34098567a500919d97c" placeholder=5></input>
+After increments of size<input size=2 ans="0b36980af5c0346a818b88693526bc0deb1e8ed19cba03824cc6db1110c331db" placeholder=6></input> The list is<input size=2 ans="70800fc2dca051d6e149328d3c2a693894a97886d58fe9cc5711e30f456bac07" placeholder=7></input>,<input size=2 ans="da494b4136d2ad8c278ce77e9829252f4c165c46c0b1223200b6a66c0c9e6b59" placeholder=8></input>,<input size=2 ans="06c4201cce7b99ea7ccc57c639eff6e9373a9f356ee05592aad8e80cafffc6b6" placeholder=9></input>,<input size=2 ans="c5b8d5c2832bdd2f6bf2ebab106cf30a4589bf496a1af139adfcfe3ef671e034" placeholder=10></input>
+[17,<input size=2 ans="ffce6605e2a1f91dfb51b94a3977db99212b402f6556f18a81ba725b084640f2" placeholder=11></input>,<input size=2 ans="e31c05a6bcc4b5b2f49e8abafc1770cf631397356e7b8e421363a99139d1b118" placeholder=12></input>, 93]
+
+
+
+
+
+
+
+</pre>
+<h2 id="answer">Answer</h2>
+<a class="btn" href="javascript:newScoring('Python_VTP_algorithm')">Answer</a>
+<script type="text/javascript">
+$(function(){
+ prettyPrint();
+});
+</script>

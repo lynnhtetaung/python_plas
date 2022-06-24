@@ -1,0 +1,144 @@
+<style type="text/css">
+            textarea, iframe {
+                border: 1px solid grey;
+                height: 500px;
+                width: 98%;
+                resize: none;   
+            }
+             div.form-popup {
+        background-color: #fed9ff;
+        width: 900px;
+        height: 600px;
+        overflow-x: hidden;
+        overflow-y: auto;
+        padding: 20px;
+      }
+ .form-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px dotted #f1f1f1;
+  text-align:justify;  
+  text-justify:initial;
+
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 900px;
+  padding: 20px;
+  background-color: lightyellow;
+}
+
+
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 10%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: mediumvioletred;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+</style>
+<h2 id="statement">19</h2>
+<table >
+  <tr>
+     
+
+<td>First input excel file to the source code<br><figure> <img src="img/P201.JPG" alt="Elephant at sunset"> 
+</figure></td>
+   </tr>  
+   
+ <tr>
+     
+
+<td>Second input excel file to the source code<br><figure> <img src="img/P202.JPG" alt="Elephant at sunset"> 
+</figure></td>
+     
+  </tr>  
+<tr><td>
+ Output excel file from the source code<br>  
+<figure> <img src="img/P203.JPG" alt="Elephant at sunset"> 
+</figure></td>
+        
+     </tr>
+<tr>    
+<td>Output excel file from the modified source code<br>
+<figure> <img src="img/P204.JPG" alt="Elephant at sunset"> 
+</figure></td>
+        
+     </tr>
+</table>
+
+<a href="source_codes/Problem19.zip" download> Click Here To Download Source Code</a>
+<br> Please modify the following source code!
+<h4 id="code">Source Code</h4>
+<pre class="prettyprint" id="scoring-res" >01:import pandas as pd
+02:import openpyxl
+03:if __name__ == "__main__":
+04:    # creating first dataframe by reading excel data
+05:    data1 = pd.read_excel(&#39;D:\Basedcolname1.xlsx&#39;)
+06:    df1 = pd.DataFrame(data1)
+07:    data2 = pd.read_excel(&#39;D:\Basedcolname2.xlsx&#39;)
+08:    df2 = pd.DataFrame(data2)
+09:    df = pd.merge(df1, df2, on="ID")#combine two dataframes based on specific column
+10:    df.to_excel(&#39;D:\Basedcolname3.xlsx&#39;, index=True, header=True)
+
+</pre>
+<h4 id="code1">the output</h4>
+<pre class = "prettyprint" id = "scoring-res" <h2 id="code1"></h2>
+01<input type="text" name="intext" id="mytext1" 0 size=95 ansHint='import pandas as pd^import openpyxl^if __name__ == "__main__":^    # creating first dataframe by reading excel data^    data1 = pd.read_excel('D:\Basedcolname1.xlsx')^    df1 = pd.DataFrame(data1)^    data2 = pd.read_excel('D:\Basedcolname2.xlsx')^    df2 = pd.DataFrame(data2)^    df = pd.merge(df1, df2, on="Name")#combine two dataframes based on specific column^    df.to_excel('D:\Basedcolname4.xlsx', index=True, header=True)' missingele="Name^Basedcolname4"  ansSpace="a8ac159d6086f32e0e87af8586732d5e4a03d59a1fb6e57a637588919529350c" ans="efc83d1d2142df084590acdf4892841648fc3f462724648b7a92e1cd2ca79f73" value='import pandas as pd' onkeydown="myFunction()">  </input>
+02<input type="text" name="intext" id="mytext2" 1 size=95 ansHint='import pandas as pd^import openpyxl^if __name__ == "__main__":^    # creating first dataframe by reading excel data^    data1 = pd.read_excel('D:\Basedcolname1.xlsx')^    df1 = pd.DataFrame(data1)^    data2 = pd.read_excel('D:\Basedcolname2.xlsx')^    df2 = pd.DataFrame(data2)^    df = pd.merge(df1, df2, on="Name")#combine two dataframes based on specific column^    df.to_excel('D:\Basedcolname4.xlsx', index=True, header=True)' missingele="Name^Basedcolname4"  ansSpace="b8f0882ff98564f0001d927bdb1ec32cd86215a818dd407402aadeeff3d8ddef" ans="5716158c5c2a642bf7956b3d196cff504c0f6267d3aa11e2b9eef8f4dfb9b9a4" value='import openpyxl' onkeydown="myFunction()">  </input>
+03<input type="text" name="intext" id="mytext3" 2 size=95 ansHint='import pandas as pd^import openpyxl^if __name__ == "__main__":^    # creating first dataframe by reading excel data^    data1 = pd.read_excel('D:\Basedcolname1.xlsx')^    df1 = pd.DataFrame(data1)^    data2 = pd.read_excel('D:\Basedcolname2.xlsx')^    df2 = pd.DataFrame(data2)^    df = pd.merge(df1, df2, on="Name")#combine two dataframes based on specific column^    df.to_excel('D:\Basedcolname4.xlsx', index=True, header=True)' missingele="Name^Basedcolname4"  ansSpace="bb41f734aaa87a881d2fb2370d034fd61f6699585d909c7d88a1d1f786bcfbe7" ans="242f43ecfead11efffc171f372612b47e1ec356414c14071a2cf07877502eafa" value='if __name__ == "__main__":' onkeydown="myFunction()">  </input>
+04<input type="text" name="intext" id="mytext4" 3 size=95 ansHint='import pandas as pd^import openpyxl^if __name__ == "__main__":^    # creating first dataframe by reading excel data^    data1 = pd.read_excel('D:\Basedcolname1.xlsx')^    df1 = pd.DataFrame(data1)^    data2 = pd.read_excel('D:\Basedcolname2.xlsx')^    df2 = pd.DataFrame(data2)^    df = pd.merge(df1, df2, on="Name")#combine two dataframes based on specific column^    df.to_excel('D:\Basedcolname4.xlsx', index=True, header=True)' missingele="Name^Basedcolname4"  ansSpace="646f2b4488b49167b9d7e91a2ce16223c37b3c9f307b5ef0cf5ab638bb62b332" ans="31ea9dcea308144e9187c6f898dc1c993f5bf590ff7bd8cad10d690c89eb2f97" value='    # creating first dataframe by reading excel data' onkeydown="myFunction()">  </input>
+05<input type="text" name="intext" id="mytext5" 4 size=95 ansHint='import pandas as pd^import openpyxl^if __name__ == "__main__":^    # creating first dataframe by reading excel data^    data1 = pd.read_excel('D:\Basedcolname1.xlsx')^    df1 = pd.DataFrame(data1)^    data2 = pd.read_excel('D:\Basedcolname2.xlsx')^    df2 = pd.DataFrame(data2)^    df = pd.merge(df1, df2, on="Name")#combine two dataframes based on specific column^    df.to_excel('D:\Basedcolname4.xlsx', index=True, header=True)' missingele="Name^Basedcolname4"  ansSpace="fbb2325c05a419a6eb484878b17f4f3de016c6b185494dff2eebb92fc6d5dda3" ans="f32756be9542df6f33b278356936fbc50ac189e6bff8ffcbcea09ca759484d10" value='    data1 = pd.read_excel(&#39;D:\Basedcolname1.xlsx&#39;)' onkeydown="myFunction()">  </input>
+06<input type="text" name="intext" id="mytext6" 5 size=95 ansHint='import pandas as pd^import openpyxl^if __name__ == "__main__":^    # creating first dataframe by reading excel data^    data1 = pd.read_excel('D:\Basedcolname1.xlsx')^    df1 = pd.DataFrame(data1)^    data2 = pd.read_excel('D:\Basedcolname2.xlsx')^    df2 = pd.DataFrame(data2)^    df = pd.merge(df1, df2, on="Name")#combine two dataframes based on specific column^    df.to_excel('D:\Basedcolname4.xlsx', index=True, header=True)' missingele="Name^Basedcolname4"  ansSpace="3f55e5780f1dd1596feb7725b73cd32d88630ad7f1a3eca56e187f929ed047a1" ans="a11099e73027db9f36353e9b19adee50004fa79a7345a34f97ff7d8ddf0598dc" value='    df1 = pd.DataFrame(data1)' onkeydown="myFunction()">  </input>
+07<input type="text" name="intext" id="mytext7" 6 size=95 ansHint='import pandas as pd^import openpyxl^if __name__ == "__main__":^    # creating first dataframe by reading excel data^    data1 = pd.read_excel('D:\Basedcolname1.xlsx')^    df1 = pd.DataFrame(data1)^    data2 = pd.read_excel('D:\Basedcolname2.xlsx')^    df2 = pd.DataFrame(data2)^    df = pd.merge(df1, df2, on="Name")#combine two dataframes based on specific column^    df.to_excel('D:\Basedcolname4.xlsx', index=True, header=True)' missingele="Name^Basedcolname4"  ansSpace="243ef0181c006960a5095fc8057beeb44aa0b32583ac8f271e623014fdb42f2b" ans="115057f51eefc18cde2e8b5a3225a99b01ff0cd4e71ca00ce0a56e1c08d8e4bb" value='    data2 = pd.read_excel(&#39;D:\Basedcolname2.xlsx&#39;)' onkeydown="myFunction()">  </input>
+08<input type="text" name="intext" id="mytext8" 7 size=95 ansHint='import pandas as pd^import openpyxl^if __name__ == "__main__":^    # creating first dataframe by reading excel data^    data1 = pd.read_excel('D:\Basedcolname1.xlsx')^    df1 = pd.DataFrame(data1)^    data2 = pd.read_excel('D:\Basedcolname2.xlsx')^    df2 = pd.DataFrame(data2)^    df = pd.merge(df1, df2, on="Name")#combine two dataframes based on specific column^    df.to_excel('D:\Basedcolname4.xlsx', index=True, header=True)' missingele="Name^Basedcolname4"  ansSpace="051bff9dd68c3f564aa0a1522a0fe29daa1e55eacfcacf8f6e5b75c7e666be61" ans="9727e016dd7fa42d44acde671878826e040e033037da9b7467b4e618cf0b4cb2" value='    df2 = pd.DataFrame(data2)' onkeydown="myFunction()">  </input>
+09<input type="text" name="intext" id="mytext9" 8 size=95 ansHint='import pandas as pd^import openpyxl^if __name__ == "__main__":^    # creating first dataframe by reading excel data^    data1 = pd.read_excel('D:\Basedcolname1.xlsx')^    df1 = pd.DataFrame(data1)^    data2 = pd.read_excel('D:\Basedcolname2.xlsx')^    df2 = pd.DataFrame(data2)^    df = pd.merge(df1, df2, on="Name")#combine two dataframes based on specific column^    df.to_excel('D:\Basedcolname4.xlsx', index=True, header=True)' missingele="Name^Basedcolname4"  ansSpace="41d2b0660c9527db341de99689f257b591bf78a461f6592b805041caf1365489" ans="dacecf51dee16533e25ed1362590451a7ee62e05407990d308c844f33c523881" value='    df = pd.merge(df1, df2, on="ID")#combine two dataframes based on specific column' onkeydown="myFunction()">  </input>
+10<input type="text" name="intext" id="mytext10" 9 size=95 ansHint='import pandas as pd^import openpyxl^if __name__ == "__main__":^    # creating first dataframe by reading excel data^    data1 = pd.read_excel('D:\Basedcolname1.xlsx')^    df1 = pd.DataFrame(data1)^    data2 = pd.read_excel('D:\Basedcolname2.xlsx')^    df2 = pd.DataFrame(data2)^    df = pd.merge(df1, df2, on="Name")#combine two dataframes based on specific column^    df.to_excel('D:\Basedcolname4.xlsx', index=True, header=True)' missingele="Name^Basedcolname4" ansSpace="ce46274fe7b5e01824cdd62e6d1831717a3faae2aa2892a35e92fae311ff15ec" ans="39ab6810ca0fe8b4b231df93d17777580fc1148eaf2270501c19097a4cbde74b" value='    df.to_excel(&#39;D:\Basedcolname3.xlsx&#39;, index=True, header=True)' onkeydown="myFunction()"></input>
+<script src="myScript.js"></script></div></pre><h2 id="answer">Answer</h2>
+<a class="btn" href="javascript:newScoring()">Answer</a>
+<a class="btn btn-success" onclick="ansFileSave()">File Save</a>
+<input onclick="openForm();" type="button" value="Hint" class="btn" style="float: right;">
+<div class="form-popup" id="myForm">
+  <form class="form-container">
+    <h1>Hint</h1>
+       <p>1. Read the input excel files:<b>Basedcolname1.xlsx and Basedcolname2.xlsx</b>.<br>
+		2. Then, <b>create pandas data frame</b> to make merge operations on two excel files.<br>
+		3. Merge input two excel files based on the column:<b> Name</b>.<br>		
+		4. Finally, write the modified values into new excel file:<b>Basedcolname4.xlsx</b>.
+        <br> If you want to study more about merging data frames, please visit this link.<a href="source_codes/Merge two Pandas dataframes by matched ID number - GeeksforGeeks.html" download> Click Here</a>		
+    
+        <br>
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+  </form>
+</div>
+<script type="text/javascript">
+            
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+</script>
+
+<a id="dldlink"></a>
+<script type="text/javascript" src="allowtab.js"></script>

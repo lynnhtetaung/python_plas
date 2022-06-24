@@ -1,0 +1,114 @@
+<h2 id="statement">19</h2>
+Fill in Blanks 
+<h2 id="code">The Source Code</h2>
+<pre class="prettyprint" id="scoring-res">#A quick demo of Hash Table Usage
+
+class HashTable:
+    
+    def __init__(self):
+        
+        self.size = 11
+        self.slots = [None] * self.size
+        self.data = [None] * self.size
+
+    def put(self,key,data):
+        
+        hashvalue = self.hashfunction(key,len(self.slots))
+
+        if self.slots[hashvalue] == None:
+          
+          self.slots[hashvalue] = key
+          self.data[hashvalue] = data
+        
+        else:
+          
+           if self.slots[hashvalue] == key:
+               self.data[hashvalue] = data  #replace
+          
+           else:
+            
+               nextslot = self.rehash(hashvalue,len(self.slots))
+          
+           while self.slots[nextslot] != None and \
+                          self.slots[nextslot] != key:
+               
+               nextslot = self.rehash(nextslot,len(self.slots))
+
+               if self.slots[nextslot] == None:
+                   self.slots[nextslot]=key
+                   self.data[nextslot]=data
+               else:
+                  self.data[nextslot] = data #replace
+
+    def hashfunction(self,key,size):
+        
+        return key%size
+
+    def rehash(self,oldhash,size):
+        
+        return (oldhash+1)%size
+
+    def get(self,key):
+        
+        startslot = self.hashfunction(key,len(self.slots))
+
+        data = None
+        stop = False
+        found = False
+        position = startslot
+      
+        while self.slots[position] != None and  \
+                           not found and not stop:
+            if self.slots[position] == key:
+                found = True
+                data = self.data[position]
+            else:
+                position=self.rehash(position,len(self.slots))
+                
+                if position == startslot:
+                    stop = True
+        return data
+
+    def __getitem__(self,key):
+        
+        return self.get(key)
+
+    def __setitem__(self,key,data):
+        
+        self.put(key,data)
+
+H=HashTable()
+H[54]="cat"
+H[26]="dog"
+H[93]="lion"
+H[17]="tiger"
+H[77]="bird"
+H[31]="cow"
+H[44]="goat"
+H[55]="pig"
+H[20]="chicken"
+print(H.slots)
+print(H.data)
+print(H[20])
+print(H[17])
+H[20]='duck'
+print(H[20])
+print(H[99])
+
+The output of this program are:
+[77, 20, None, None, 26, 93, 17, None, None, 31, 54]
+['chicken', 'chicken', None, None, 'dog', 'lion', 'tiger', None, None, 'cow', 'cat']
+<input size=2 ans="5244159c9344c50b976d8d9c8688ee743afd51789c72fffcbb3e77aae8a5fe26" placeholder=1></input>
+<input size=2 ans="d0c853c4ef6545d33989559c805b9bd4def3b979af94a0879ded9c9114d32491" placeholder=2></input>
+<input size=2 ans="a8ebe685c464b71fed4f59916ec2914089b48050c668776306014613a08e2f2a" placeholder=3></input>
+<input size=2 ans="ec4ce8737c9d0bea17de845f15c7edd6f004c354ae98aaf0f66dbf50d45f8789" placeholder=4></input>
+
+
+</pre>
+<h2 id="answer">Answer</h2>
+<a class="btn" href="javascript:newScoring('Python_VTP_algorithm')">Answer</a>
+<script type="text/javascript">
+$(function(){
+ prettyPrint();
+});
+</script>

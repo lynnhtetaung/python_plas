@@ -1,0 +1,44 @@
+<h2 id="statement">5</h2>
+Fill in Blanks 
+<h2 id="code">The Source Code</h2>
+<pre class="prettyprint" id="scoring-res"># A quick-demo of Converting Decimal Numbers to any Based Numbers using stack
+
+from pythonds.basic import Stack
+    
+def baseConverter(decNumber,base):
+     digits = "0123456789ABCDEF"
+     anyString1 = ""
+            
+     remstack = Stack()
+            
+     while decNumber > 0:
+          rem = decNumber % base
+          remstack.push(rem)
+          anyString1 = anyString1 + str(remstack.peek())
+          decNumber = decNumber // base
+                    
+     print("The push data in the stack is", anyString1)
+            
+     newString = ""
+     while not remstack.isEmpty():
+          newString = newString + digits[remstack.pop()]
+            
+     return newString
+            
+print("The first converting value is:", baseConverter(88,3))
+print("The second converting value is:", baseConverter(30,16))
+
+The push data in the stack is <input size=2 ans="61db004747c85854abfd4f3dc286e66e5b59ce8abf9ada694a15832616cc322d" placeholder=1></input>
+The first converting value is: <input size=2 ans="645b43385524db5f63230c9bbc51d7a0d01929259fb92b8859f3f47cfedbe519" placeholder=2></input>
+The push data in the stack is <input size=2 ans="e2c1a5cc10bd89430cc59df1d41a6f6480caad6b4a7ae0c861359fc239f896e0" placeholder=3></input>
+The second converting value is: <input size=2 ans="8d63c0b46e9b82df5e910892fa4dc83a768c184e30dab2c5545160fc38edda1b" placeholder=4></input>
+
+
+</pre>
+<h2 id="answer">Answer</h2>
+<a class="btn" href="javascript:newScoring('Python_VTP_algorithm')">Answer</a>
+<script type="text/javascript">
+$(function(){
+ prettyPrint();
+});
+</script>

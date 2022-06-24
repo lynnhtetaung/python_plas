@@ -1,0 +1,93 @@
+<h2 id="statement">20</h2>
+Fill in Blanks 
+<h2 id="code">The Source Code</h2>
+<pre class="prettyprint" id="scoring-res"># A quick-demo of Graph abstract data type usage
+
+class Graph:
+    def __init__(self):
+        self.vertList = {}
+        self.numVertices = 0
+
+    def addVertex(self,key):
+        self.numVertices = self.numVertices + 1
+        newVertex = Vertex(key)
+        self.vertList[key] = newVertex
+        return newVertex
+
+    def getVertex(self,n):
+        if n in self.vertList:
+            return self.vertList[n]
+        else:
+            return None
+
+    def __contains__(self,n):
+        return n in self.vertList
+
+    def addEdge(self,f,t,weight=0):
+        if f not in self.vertList:
+            nv = self.addVertex(f)
+        if t not in self.vertList:
+            nv = self.addVertex(t)
+        self.vertList[f].addNeighbor(self.vertList[t], weight)
+
+    def getVertices(self):
+        return self.vertList.keys()
+
+    def __iter__(self):
+        return iter(self.vertList.values())
+    
+class Vertex:
+    def __init__(self,key):
+        self.id = key
+        self.connectedTo = {}
+
+    def addNeighbor(self,nbr,weight=0):
+        self.connectedTo[nbr] = weight
+
+    def __str__(self):
+        return str(self.id) + ' connectedTo: ' + str([x.id for x in self.connectedTo])
+
+    def getConnections(self):
+        return self.connectedTo.keys()
+
+    def getId(self):
+        return self.id
+
+    def getWeight(self,nbr):
+        return self.connectedTo[nbr]
+    
+g = Graph(); 
+for i in range(6):
+    g.addVertex(i)  
+g.addEdge(0,1,5)
+g.addEdge(0,5,2)
+g.addEdge(1,2,4)
+g.addEdge(2,3,9)
+g.addEdge(3,4,7)
+g.addEdge(3,5,3)
+g.addEdge(4,0,1)
+g.addEdge(5,4,8)
+g.addEdge(5,2,1)    
+for v in g:
+    for w in v.getConnections():
+        print((v.getId(), w.getId()))
+
+What is the output of this program?<input size=2 ans="2e88ac80ccbb9122467d5d3e0550bc26dbf86bc06632d9ab93bfc40b32a9cdf9" placeholder=1></input>,<input size=2 ans="3d244eb4b09e5683ac60b4a20b6166ec378a062ff75f5c8d9dee8e9c28d97709" placeholder=2></input>
+                                   (0, 1)
+                                   <input size=2 ans="832e753d3950ed57920ae5a05198159d13d5c78b3248c5367845d738fa1fa1db" placeholder=3></input>,<input size=2 ans="000a7eefeca536f30c4bf20f716470e99a01bd26090c31366f40eeae3c0efc60" placeholder=4></input>
+                                   <input size=2 ans="750f849d38262781470460847aa48e81c45b03935ab02792845ab6109266d45a" placeholder=5></input>,<input size=2 ans="847e89fd6cab8d79b3371bd4961f5b71644c69bf6838df4e1a3b7eaa87d8940c" placeholder=6></input>
+                                   <input size=2 ans="cfa12ef94e01699f76c78967f5ac5d54c982dfc31c4567ca28bff400e1a7e7e8" placeholder=7></input>,<input size=2 ans="c36f80105aca0c23f86859429d3fe8333a80045421f16a001eeb05432c980471" placeholder=8></input>
+                                   (3, 4)
+                                   <input size=2 ans="fcf6de19da2e7234944e91b81f53ec7b96ad4fb660e93171ce8455777d03b6d3" placeholder=9></input>,<input size=2 ans="74de48e3d4dbc07e135a24dc8c960bdb9b4757b68b0b8e15678d1b9c37f3a8d8" placeholder=10></input>
+                                   <input size=2 ans="6318db563dacd30a9fb82e496dfdbf7f0d921bad715592ce3594a7a9a4d29f7e" placeholder=11></input>,<input size=2 ans="7e8771a7ee6a2555a300f421236d74159d4fd979b915445e95f975d80593bdc2" placeholder=12></input>
+                                   (5, 2)
+
+
+</pre>
+<h2 id="answer">Answer</h2>
+<a class="btn" href="javascript:newScoring('Python_VTP_algorithm')">Answer</a>
+<script type="text/javascript">
+$(function(){
+ prettyPrint();
+});
+</script>

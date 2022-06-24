@@ -1,0 +1,42 @@
+<h2 id="statement">11</h2>
+Fill in Blanks 
+<h2 id="code">The Source Code</h2>
+<pre class="prettyprint" id="scoring-res"># A quick-demo of bubble sort
+
+def shortBubbleSort(alist):
+    exchanges = True
+    passnum = len(alist)-1
+    while passnum > 0 and exchanges:
+        exchanges = False
+        for i in range(passnum):
+            if alist[i]>alist[i+1]:
+                exchanges = True
+                alist[i], alist[i+1] = alist[i+1], alist[i]
+                print(alist)
+                   
+        passnum = passnum-1
+          
+alist=[20,30,40,90,50,60,70]
+shortBubbleSort(alist)
+print(alist)
+
+What is the output of this program? 
+[20, 30, 40,<input size=2 ans="90f7594dd12b872492bb740bf0c4d1e19b8319528562ab866fe928a709cf8713" placeholder=1></input>,<input size=2 ans="0bafb139d0d1b8b084b23e549ca8938c3a1bee50dfeaa2941429e98c9d1ba11f" placeholder=2></input>, 60, 70]
+[20, 30, 40, 50, 60,<input size=2 ans="14be53bf5908525a18fa38bad5288d3b0d48af755bf56d7934e15e0e32c4d348" placeholder=3></input>,<input size=2 ans="976070de7129ef58d54b08df90157c9c838d801951dc5aac7a0934d39f688ada" placeholder=4></input>
+[20, 30, 40, 50, 60,<input size=2 ans="7a0927bd1fb96adda70aa449286266005443237f32cb418890176946a16654ce" placeholder=5></input>,<input size=2 ans="a10baf0e1905efdd230ebf43fd49a9ec3fedd6b1d5584dbb0d91f267fcb17a27" placeholder=6></input>
+<input size=2 ans="ee19f804536bcf9d71495876ba7ff5cc6dacb09e600dacf32fb674dbf72d5adf" placeholder=7></input>,<input size=2 ans="22c13d6252077475654729000bc8bb4b7021060ebd1e38de285be9e183e75e21" placeholder=8></input>,<input size=2 ans="3550d90cfe08113c73f7d164b4f1d7e5a5a6d99884a50a6318bd8e951901fb0e" placeholder=9></input>,<input size=2 ans="138438ed87800f5e9b9b984029984b9e295a58eea323751cca18ca74b189c8c3" placeholder=10></input>,<input size=2 ans="5d24dcc99c41c5e7f9b92174e83fffb3bc59968d59459d3d6881d51c849c787f" placeholder=11></input>,<input size=2 ans="3552ee6cf500ce69d898a90a9b5d36f6caf57eeab36323d3009abd15bc9abfc5" placeholder=12></input>,<input size=2 ans="47fab5b6b84c2d18bb7c8e0f95203eac93119c2c44904fb732302f7ec7ebf638" placeholder=13></input>
+
+
+
+
+
+
+
+</pre>
+<h2 id="answer">Answer</h2>
+<a class="btn" href="javascript:newScoring('Python_VTP_algorithm')">Answer</a>
+<script type="text/javascript">
+$(function(){
+ prettyPrint();
+});
+</script>

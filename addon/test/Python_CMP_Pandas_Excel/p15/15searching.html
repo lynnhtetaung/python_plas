@@ -1,0 +1,128 @@
+<style type="text/css">
+            textarea, iframe {
+                border: 1px solid grey;
+                height: 500px;
+                width: 98%;
+                resize: none;   
+            }
+             div.form-popup {
+        background-color: #fed9ff;
+        width: 900px;
+        height: 600px;
+        overflow-x: hidden;
+        overflow-y: auto;
+        padding: 20px;
+      }
+ .form-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px dotted #f1f1f1;
+  text-align:justify;  
+  text-justify:initial;
+
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 900px;
+  padding: 20px;
+  background-color: lightyellow;
+}
+
+
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 10%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: mediumvioletred;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+</style>
+<h2 id="statement">15</h2> 
+ <table >
+  <tr>
+     
+
+<td>Input excel file to the source code<br><figure> <img src="img/P161.JPG" alt="Elephant at sunset"> 
+</figure></td>
+   </tr>  
+   
+ <tr>
+     
+
+<td>Output excel file from the source code<br><figure> <img src="img/P162.JPG" alt="Elephant at sunset"> 
+</figure></td>
+     
+  </tr>  
+<tr>      
+          <td>Output excel file from the modified source code<br><figure> <img src="img/P163.JPG" alt="Elephant at sunset"> 
+</figure></td>
+        
+     </tr>
+</table>
+
+<a href="source_codes/Problem15.zip" download> Click Here To Download Source Code</a>
+<br> Please modify the following source code!
+<h4 id="code">Source Code</h4>
+<pre class="prettyprint" id="scoring-res" >01:import pandas as pd
+02:# reading excel file
+03:data = pd.read_excel(&#39;D:\Searching.xlsx&#39;)
+04:df=pd.DataFrame(data)
+05:df = df[&#39;Python_Score&#39;].where(df[&#39;First_Name&#39;] == &#39;John&#39;)
+06:df.to_excel(&#39;D:\Searching1.xlsx&#39;, index=True, header=True)
+
+</pre>
+<h4 id="code1">the output</h4>
+<pre class = "prettyprint" id = "scoring-res" <h2 id="code1"></h2>
+01<input type="text" name="intext" id="mytext1" 0 size=95 ansHint='import pandas as pd^# reading excel file^data = pd.read_excel('D:\Searching.xlsx')^df=pd.DataFrame(data)^df = df['First_Name'].where(df['Location'] == 'Japan')^df.to_excel('D:\Searching2.xlsx', index=True, header=True)' missingele="Searching2.xlsx^Location^Japan"  ansSpace="541dd5c9e5970fdfcbc8e5bb77f0c884c82bd565ffe2855910a8a979494a45d1" ans="aaee19d903abfd584d044be4626f7bf9ffceb0cf149d2919cff5d5b592f77037" value='import pandas as pd' onkeydown="myFunction()">  </input>
+02<input type="text" name="intext" id="mytext2" 1 size=95 ansHint='import pandas as pd^# reading excel file^data = pd.read_excel('D:\Searching.xlsx')^df=pd.DataFrame(data)^df = df['First_Name'].where(df['Location'] == 'Japan')^df.to_excel('D:\Searching2.xlsx', index=True, header=True)' missingele="Searching2.xlsx^Location^Japan"  ansSpace="2cff63a31d58395671d498a147b6991f0a3de77d4cb6255b5ebb011f2fdcc528" ans="0e85bdbe45c6272744d4df395beb8d79325e2b032d29f3059ccc3530be0f90d8" value='# reading excel file' onkeydown="myFunction()">  </input>
+03<input type="text" name="intext" id="mytext3" 2 size=95 ansHint='import pandas as pd^# reading excel file^data = pd.read_excel('D:\Searching.xlsx')^df=pd.DataFrame(data)^df = df['First_Name'].where(df['Location'] == 'Japan')^df.to_excel('D:\Searching2.xlsx', index=True, header=True)' missingele="Searching2.xlsx^Location^Japan"  ansSpace="a6ff79f2cecb56e8e4ff5055e77e8c3d265ca18d6fbc205bfc29eacaf0833fd5" ans="849c671243deb95db8aab447c2fb80e6157a89a49d07a9d9846fe2df4bcabd64" value='data = pd.read_excel(&#39;D:\Searching.xlsx&#39;)' onkeydown="myFunction()">  </input>
+04<input type="text" name="intext" id="mytext4" 3 size=95 ansHint='import pandas as pd^# reading excel file^data = pd.read_excel('D:\Searching.xlsx')^df=pd.DataFrame(data)^df = df['First_Name'].where(df['Location'] == 'Japan')^df.to_excel('D:\Searching2.xlsx', index=True, header=True)' missingele="Searching2.xlsx^Location^Japan"  ansSpace="8da646b3ce804285da55064f62d3e3f62ad91d2ac57363db9267877f5fbcf9c7" ans="8da646b3ce804285da55064f62d3e3f62ad91d2ac57363db9267877f5fbcf9c7" value='df=pd.DataFrame(data)' onkeydown="myFunction()">  </input>
+05<input type="text" name="intext" id="mytext5" 4 size=95 ansHint='import pandas as pd^# reading excel file^data = pd.read_excel('D:\Searching.xlsx')^df=pd.DataFrame(data)^df = df['First_Name'].where(df['Location'] == 'Japan')^df.to_excel('D:\Searching2.xlsx', index=True, header=True)' missingele="Searching2.xlsx^Location^Japan"  ansSpace="7c6235ca0e1d0c331a5e68aa82a29e491bd84999abe4e26fb5e615e9daba1b1f" ans="fc28774b1ef4a2ca78b7a5185bda1fd8512842d2fcb85760c69937a516bd0636" value='df = df[&#39;Python_Score&#39;].where(df[&#39;First_Name&#39;] == &#39;John&#39;)' onkeydown="myFunction()">  </input>
+06<input type="text" name="intext" id="mytext6" 5 size=95 ansHint='import pandas as pd^# reading excel file^data = pd.read_excel('D:\Searching.xlsx')^df=pd.DataFrame(data)^df = df['First_Name'].where(df['Location'] == 'Japan')^df.to_excel('D:\Searching2.xlsx', index=True, header=True)' missingele="Searching2.xlsx^Location^Japan"  ansSpace="d0e8471e9c2df62d3aba4282734ade8f56d2c0e9e9b85826c6cfb62f053fa6e0" ans="95a9dfc6b39d0783b22b054a2e0e03fb990c91fb57640bd62bebd2862fbe920d" value='df.to_excel(&#39;D:\Searching1.xlsx&#39;, index=True, header=True)' onkeydown="myFunction()">  </input>
+<script src="myScript.js"></script></div></pre><h2 id="answer">Answer</h2>
+<a class="btn" href="javascript:newScoring()">Answer</a>
+<a class="btn btn-success" onclick="ansFileSave()">File Save</a>
+<input onclick="openForm();" type="button" value="Hint" class="btn" style="float: right;">
+<div class="form-popup" id="myForm">
+  <form class="form-container">
+    <h1>Hint</h1>
+       <p>1. Read the input excel file:<b>Searching.xlsx</b>.<br>
+		2. Then, <b>create pandas data frame</b> to use searching function for excel file.<br>
+		3. Search the <b> First_Name </b>who lives in Japan. <br>
+		4. Finally, write the founded values into new excel file:<b>Searching2.xlsx</b>.
+            
+        <br>
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+  </form>
+</div>
+<script type="text/javascript">
+            
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+</script>
+
+<a id="dldlink"></a>
+<script type="text/javascript" src="allowtab.js"></script>

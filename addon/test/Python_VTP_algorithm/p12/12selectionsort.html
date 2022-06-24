@@ -1,0 +1,39 @@
+<h2 id="statement">12</h2>
+Fill in Blanks 
+<h2 id="code">The Source Code</h2>
+<pre class="prettyprint" id="scoring-res"># A quick-demo of selection sort
+
+def selectionSort(alist):
+    for fillslot in range(len(alist)-1,0,-1):
+        positionOfMax=0
+        for location in range(1,fillslot+1):
+            if alist[location]>alist[positionOfMax]:
+                positionOfMax = location
+    
+        alist[fillslot], alist[positionOfMax] = alist[positionOfMax], alist[fillslot]
+        print(alist)
+    
+alist = [90,50,60,70]
+selectionSort(alist)
+print(alist)
+
+What is the output of this program? 
+<input size=2 ans="771fcf2c8261ce88a96f2905300319ba26e0336b0256a3a874cacd3c93d9cd3b" placeholder=1></input>,<input size=2 ans="543aa4c224fad453ef59df5faefe7945f3ab3bdf7a42c9bf2654e127df9d299a" placeholder=2></input>,<input size=2 ans="32a38103d7267a9c967bc9d7870400b920a0d0c26e4753bde6d0c9e451d6b3f5" placeholder=3></input>,<input size=2 ans="fb6542a0cefb2fc4a0d3503eb757164f3e577706c8a016e39240d08dd274256a" placeholder=4></input>
+<input size=2 ans="0158a51ff1101bfe577f28157c0dbf1c7b7a541eda48f7bab44879345e2d85d3" placeholder=5></input>, 50,<input size=2 ans="4235b2d34f8ba45f2e912a8e8cc544f1c51a31664c008e20b55c0ba67301995a" placeholder=6></input>, 90]
+[50,<input size=2 ans="438554ee32d5ddac1aa65a8a2f27c8d021165b9619fcd89ca99ebea0a61a903c" placeholder=7></input>,<input size=2 ans="19fa93ae9cd35216c0e9452d01c0170575938e2d5f810e3d620ff524492adb09" placeholder=8></input>, 90]
+<input size=2 ans="1b9767647f4d315d427c64de680fd0f3f4f30d72785776aa224657a8acddd4a5" placeholder=9></input>,<input size=2 ans="b14a29809a68ac24230b10a4d07ea73792bc63459cf85c3d1591511123a02954" placeholder=10></input>,<input size=2 ans="4a516bba45cfda34fb9a971d338096953ddb9008bec8776056c3fc57c5e378ef" placeholder=11></input>,<input size=2 ans="eeeffa8619fca71a587fec4096065a36fe84c8bc7b15054c6a375b18af5df449" placeholder=12></input>
+
+
+
+
+
+
+
+</pre>
+<h2 id="answer">Answer</h2>
+<a class="btn" href="javascript:newScoring('Python_VTP_algorithm')">Answer</a>
+<script type="text/javascript">
+$(function(){
+ prettyPrint();
+});
+</script>

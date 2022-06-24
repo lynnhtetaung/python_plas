@@ -1,0 +1,41 @@
+<h2 id="statement">17</h2>
+Fill in Blanks 
+<h2 id="code">The Source Code</h2>
+<pre class="prettyprint" id="scoring-res">#A quick demo of Sequential Search
+
+def sequentialSearch(alist, item):
+    pos = 0
+    found = False
+	
+    while pos < len(alist) and not found:
+        if alist[pos] == item:
+            found = True
+        else:
+            pos = pos+1
+            print(pos)
+            
+    return found
+
+testlist = [1, 2, 32, 8]
+print(sequentialSearch(testlist, 8))
+print(sequentialSearch(testlist, 13))
+
+What is the output of this program?<input size=2 ans="e361ec1ff521cfdb913fbfeb831a2ae6d8f46d505d9c0286db8682a32ca2aaf4" placeholder=1></input>
+                                   <input size=2 ans="77334823791bea53e508ba59387c1287c8da962026769657b4686756db4b7bc8" placeholder=2></input>
+                                   <input size=2 ans="46957db596ec41cc39bbfe0083740a488c59970b13e4b39e7937edb518696e3b" placeholder=3></input>
+                                   <input size=2 ans="ae2fe14f09d88325eebbd59a56973b971748e37990a0fac7ededd780fad26c20" placeholder=4></input>
+                                   <input size=2 ans="56626ff45dd863da4148044fe8f8dd459490a17b4fbb835be9408bde0e0fa3c1" placeholder=5></input>
+                                   <input size=2 ans="396b8e65a84afe48d62b470e74299638c2d9144bafba47b6027bf1b388010dbd" placeholder=6></input>
+                                   <input size=2 ans="61d8c465a85f889fd0d3a1d9d243dfa3fd2ef0282bc59b36499ccc63d92c1b47" placeholder=7></input>
+                                   <input size=2 ans="fadb90c1c496f050cefd944c8b563eb41fd49d0446dcde257a16d311d5b2a81e" placeholder=8></input>
+                                   <input size=2 ans="683205c11514efdb6d4e8fe392117e17aba5740d1df822b4d9f0bf132ea9c522" placeholder=9></input>
+
+
+</pre>
+<h2 id="answer">Answer</h2>
+<a class="btn" href="javascript:newScoring('Python_VTP_algorithm')">Answer</a>
+<script type="text/javascript">
+$(function(){
+ prettyPrint();
+});
+</script>

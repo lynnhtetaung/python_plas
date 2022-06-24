@@ -1,0 +1,45 @@
+<h2 id="statement">4</h2>
+Fill in Blanks 
+<h2 id="code">The Source Code</h2>
+<pre class="prettyprint" id="scoring-res"># A quick-demo of Class and Objects
+
+class Human:
+    # instance attributes
+    def __init__(self, name, height, weight):
+        self.name = name
+        self.height = height
+        self.weight = weight
+
+    # instance methods (behaviours)
+    def eating(self, food):
+        return "{} is eating {}".format(self.name, food)
+
+# creating objects of class Human
+ram = Human("Ram", 6, 60)
+steve = Human("Steve", 7, 56.3)
+
+# accessing object information
+print("Height of {} is {}".format(ram.name, ram.height))
+print('Weight of ' + ram.name + ' is ' + str (ram.weight))
+print(ram.eating("Pizza"))
+
+print("Height of %s is %d" % (steve.name,steve.height))
+print("Weight of %s is %.1f" % (steve.name,steve.weight))
+print(steve.eating("Big Kahuna Burger"))
+
+Height of <input size=2 ans="0580ec7600f0794965150a45f948cab06c14b47d8518d55a38d209d3835e75de" placeholder=1></input> is <input size=2 ans="68fcd1eb684859a314bbf7f7c99037cead480f5bb209ccd4725bd319423e832f" placeholder=2></input>
+Weight of Ram is <input size=2 ans="ca035471109dbb0be40c600c8b9a03d2a0ddf1eb2ed6a846db5307fc5f49052b" placeholder=3></input>
+<input size=2 ans="403a51f07dbb3c0a55de3a9cce6943a2fa864a533c0a3e8dffbce273c8180bd1" placeholder=4></input> is eating<input size=2 ans="c96d9a40fafa8db45135d8d7ce7d945381c0b13fa22cbad65dd47acba35e5940" placeholder=5></input>
+Height of <input size=2 ans="2812a4694b14943798d7d3649ba95bae343ca9e08669872b1af9e0b44530e4cb" placeholder=6></input> is 7
+Weight of Steve is<input size=2 ans="cb07602bcc8b27a3ca5ed83e35b73bf02bb467fa939ba589b6e9cf11f5071cc7" placeholder=7></input>
+Steve is eating<input size=2 ans="e7234f5793c7609ca397bfd5d8c62fdb7c5c5b3e4750f2cf09deda4803a8f412" placeholder=8></input>
+
+
+</pre>
+<h2 id="answer">Answer</h2>
+<a class="btn" href="javascript:newScoring('Python_VTP_advance')">Answer</a>
+<script type="text/javascript">
+$(function(){
+ prettyPrint();
+});
+</script>

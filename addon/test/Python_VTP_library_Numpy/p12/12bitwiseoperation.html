@@ -1,0 +1,56 @@
+<h2 id="statement">12</h2>
+Fill in Blanks 
+<h2 id="code">The Source Code</h2>
+<pre class="prettyprint" id="scoring-res"># A quick-demo of bitwise_and(),bitwise_or(),bitwise_xor() function usage
+# bitwise_and() function is used to Compute the bit-wise AND of two array element-wise. 
+# bitwise_or() function is used to Compute the bit-wise OR of two array element-wise. 
+# bitwise_xor() function is used to Compute the bit-wise XOR of two array element-wise. 
+
+import numpy as np
+
+in_num1 = 10
+in_num2 = 11
+ 
+print ("Input  number1 : ", in_num1)
+print ("Input  number2 : ", in_num2) 
+   
+out_num = np.bitwise_and(in_num1, in_num2) 
+print ("bitwise_and of 10 and 11 : ", out_num) 
+
+in_num3 = 10
+in_num4 = 11
+ 
+print ("Input  number3 : ", in_num3)
+print ("Input  number4 : ", in_num4) 
+   
+out_num = np.bitwise_or(in_num3, in_num4) 
+print ("bitwise_or of 10 and 11 : ", out_num) 
+
+in_num5 = 10
+in_num6 = 11
+ 
+print ("Input  number5 : ", in_num5)
+print ("Input  number6 : ", in_num6) 
+   
+out_num = np.bitwise_xor(in_num5, in_num6) 
+print ("bitwise_xor of 10 and 11 : ", out_num) 
+
+Input  number1 :  10
+Input  number2 :  11
+bitwise_and of 10 and 11 : <input size=2 ans="9e00969ffaf4e70f0adb51f6bfe541fad2291a30cd34801eef73477240887298" placeholder=1></input>
+Input  number3 :  10
+Input  number4 :  11
+bitwise_or of 10 and 11 : <input size=2 ans="8e3309ee6bb115d603ccf77649dcf1898d25ebd86635b35bb137dda002b0116a" placeholder=2></input>
+Input  number5 :  10
+Input  number6 :  11
+bitwise_xor of 10 and 11 : <input size=2 ans="4739ee3bd29e4f415da8ba9298a087e0fdc9c61378420ba8fbbab298bd74c4df" placeholder=3></input>
+
+
+</pre>
+<h2 id="answer">Answer</h2>
+<a class="btn" href="javascript:newScoring()">Answer</a>
+<script type="text/javascript">
+$(function(){
+ prettyPrint();
+});
+</script>

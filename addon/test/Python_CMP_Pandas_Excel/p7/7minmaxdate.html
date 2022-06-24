@@ -1,0 +1,139 @@
+<style type="text/css">
+            textarea, iframe {
+                border: 1px solid grey;
+                height: 500px;
+                width: 98%;
+                resize: none;   
+            }
+             div.form-popup {
+        background-color: #fed9ff;
+        width: 900px;
+        height: 600px;
+        overflow-x: hidden;
+        overflow-y: auto;
+        padding: 20px;
+      }
+ .form-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px dotted #f1f1f1;
+  text-align:justify;  
+  text-justify:initial;
+
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 900px;
+  padding: 20px;
+  background-color: lightyellow;
+}
+
+
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 10%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: mediumvioletred;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+</style>
+<h2 id="statement">7</h2>
+ <table >
+  <tr>
+     
+
+<td>Input excel file to the source code<figure> <img src="img/maxmindate.JPG" alt="Elephant at sunset"> 
+</figure></td>
+       </tr>  
+ <tr>
+          <td>Output excel file from the source code<br><figure> <img src="img/maxmindate1.JPG" alt="Elephant at sunset"> 
+</figure></td>
+         
+     </tr>  
+ <tr>
+     
+
+<td>Output excel file from the modified source code<br><figure> <img src="img/maxmindate2.JPG" alt="Elephant at sunset"> 
+</figure></td>
+     
+  </tr>  
+</table>
+
+<a href="source_codes/Problem7.zip" download> Click Here To Download Source Code</a>
+<br> Please modify the following source code!
+<h4 id="code">Source Code</h4>
+<pre class="prettyprint" id="scoring-res" >01:import pandas as pd
+02:import numpy as np
+03:# read the excel file
+04:data = pd.read_excel(&#39;D:\maxmindate.xlsx&#39;)
+05:# Create the dataframe
+06:df = pd.DataFrame(data)
+07:# using groupby() function on Group column
+08:df = df.groupby([&#39;Group&#39;])
+09:# using agg() function on Date column
+10:df1 = df.agg(Minimum_Date=(&#39;Date&#39;, np.min))
+11:df1.to_excel(&#39;D:\maxmin1.xlsx&#39;, index=True, header=True)
+
+</pre>
+<h4 id="code1">the output</h4>
+<pre class = "prettyprint" id = "scoring-res" <h2 id="code1"></h2>
+01<input type="text" name="intext" id="mytext1" 0 size=95 ansHint='import pandas as pd^import numpy as np^# read the excel file^data = pd.read_excel('D:\maxmindate.xlsx')^# Create the dataframe^df = pd.DataFrame(data)^# using groupby() function on Group column^df = df.groupby(['Group'])^# using agg() function on Date column^df1 = df.agg(Maximum_Date=('Date', np.max))^df1.to_excel('D:\maxmin2.xlsx', index=True, header=True)' missingele="maxmin2^np.max"  ansSpace="ef8bd55bd9d997a3b8da475abcdc4d716e75148c16391cc5084f55bac1cf5a61" ans="488e9ee8baeed53d0d0b1089ac413c3a2915fefb062d38ff8a717d100546d140" value='import pandas as pd' onkeydown="myFunction()">  </input>
+02<input type="text" name="intext" id="mytext2" 1 size=95 ansHint='import pandas as pd^import numpy as np^# read the excel file^data = pd.read_excel('D:\maxmindate.xlsx')^# Create the dataframe^df = pd.DataFrame(data)^# using groupby() function on Group column^df = df.groupby(['Group'])^# using agg() function on Date column^df1 = df.agg(Maximum_Date=('Date', np.max))^df1.to_excel('D:\maxmin2.xlsx', index=True, header=True)' missingele="maxmin2^np.max"  ansSpace="3d383c145d6d62237affe9f0bc367408b9b97f3cd6215c9b2848db1d655434c1" ans="75b6401788e9fb0e94324c9b40b44058f24934ebf66fa8690de070e0c3f166c0" value='import numpy as np' onkeydown="myFunction()">  </input>
+03<input type="text" name="intext" id="mytext3" 2 size=95 ansHint='import pandas as pd^import numpy as np^# read the excel file^data = pd.read_excel('D:\maxmindate.xlsx')^# Create the dataframe^df = pd.DataFrame(data)^# using groupby() function on Group column^df = df.groupby(['Group'])^# using agg() function on Date column^df1 = df.agg(Maximum_Date=('Date', np.max))^df1.to_excel('D:\maxmin2.xlsx', index=True, header=True)' missingele="maxmin2^np.max"  ansSpace="c66137bc23c98fb830aa2010e066d8eda8ed39639979d2e77a0658439fcbb363" ans="de4bb40a0d8227ff41bfde7ef64f8ef0241f3c17c58b4ab1733baeb491faf9e7" value='# read the excel file' onkeydown="myFunction()">  </input>
+04<input type="text" name="intext" id="mytext4" 3 size=95 ansHint='import pandas as pd^import numpy as np^# read the excel file^data = pd.read_excel('D:\maxmindate.xlsx')^# Create the dataframe^df = pd.DataFrame(data)^# using groupby() function on Group column^df = df.groupby(['Group'])^# using agg() function on Date column^df1 = df.agg(Maximum_Date=('Date', np.max))^df1.to_excel('D:\maxmin2.xlsx', index=True, header=True)' missingele="maxmin2^np.max"  ansSpace="5ff2c0a0d786766e1f3ee9f7e1bf82952fa51c009203635f876855dcae0899d4" ans="abdfc452012debc008748ee8f07c4ba6b34fb66bff48e19615c65a8ed02306f9" value='data = pd.read_excel(&#39;D:\maxmindate.xlsx&#39;)' onkeydown="myFunction()">  </input>
+05<input type="text" name="intext" id="mytext5" 4 size=95 ansHint='import pandas as pd^import numpy as np^# read the excel file^data = pd.read_excel('D:\maxmindate.xlsx')^# Create the dataframe^df = pd.DataFrame(data)^# using groupby() function on Group column^df = df.groupby(['Group'])^# using agg() function on Date column^df1 = df.agg(Maximum_Date=('Date', np.max))^df1.to_excel('D:\maxmin2.xlsx', index=True, header=True)' missingele="maxmin2^np.max"  ansSpace="3bb41d52a479a0839d774b2c3c6ac08aae222bc3d63e1f7dc377b9d86d392b79" ans="950709617bc738f92a9be4ef92e786f12948372bd5daa87133160adc95bb5a2e" value='# Create the dataframe' onkeydown="myFunction()">  </input>
+06<input type="text" name="intext" id="mytext6" 5 size=95 ansHint='import pandas as pd^import numpy as np^# read the excel file^data = pd.read_excel('D:\maxmindate.xlsx')^# Create the dataframe^df = pd.DataFrame(data)^# using groupby() function on Group column^df = df.groupby(['Group'])^# using agg() function on Date column^df1 = df.agg(Maximum_Date=('Date', np.max))^df1.to_excel('D:\maxmin2.xlsx', index=True, header=True)' missingele="maxmin2^np.max"  ansSpace="1d4a616f47448cc2390de9500acdfacdc9b4c2ccf0dbf8430b2f1da77acf6eb2" ans="dbb4d97a81c1c3f57a53636e871e21f62e1bc99febb3d84ebdc3de913f8ef352" value='df = pd.DataFrame(data)' onkeydown="myFunction()">  </input>
+07<input type="text" name="intext" id="mytext7" 6 size=95 ansHint='import pandas as pd^import numpy as np^# read the excel file^data = pd.read_excel('D:\maxmindate.xlsx')^# Create the dataframe^df = pd.DataFrame(data)^# using groupby() function on Group column^df = df.groupby(['Group'])^# using agg() function on Date column^df1 = df.agg(Maximum_Date=('Date', np.max))^df1.to_excel('D:\maxmin2.xlsx', index=True, header=True)' missingele="maxmin2^np.max"  ansSpace="c21641d3c5c74c731e75352b005f3741b2ba0eac0afed58723f94301d9397d0a" ans="6eccde5a905551bf8fc458d45abb5c1654fb7d3ede2655f41472a066b373104d" value='# using groupby() function on Group column' onkeydown="myFunction()">  </input>
+08<input type="text" name="intext" id="mytext8" 7 size=95 ansHint='import pandas as pd^import numpy as np^# read the excel file^data = pd.read_excel('D:\maxmindate.xlsx')^# Create the dataframe^df = pd.DataFrame(data)^# using groupby() function on Group column^df = df.groupby(['Group'])^# using agg() function on Date column^df1 = df.agg(Maximum_Date=('Date', np.max))^df1.to_excel('D:\maxmin2.xlsx', index=True, header=True)' missingele="maxmin2^np.max"  ansSpace="85d873e063b32bff1f685a0b7b54ef7f73f7f04443735c889a79ceeb38b48f45" ans="11ad28331739943751aec5c4fa7fcc2201fb010b6f2d4d010740eea2da23fc18" value='df = df.groupby([&#39;Group&#39;])' onkeydown="myFunction()">  </input>
+09<input type="text" name="intext" id="mytext9" 8 size=95 ansHint='import pandas as pd^import numpy as np^# read the excel file^data = pd.read_excel('D:\maxmindate.xlsx')^# Create the dataframe^df = pd.DataFrame(data)^# using groupby() function on Group column^df = df.groupby(['Group'])^# using agg() function on Date column^df1 = df.agg(Maximum_Date=('Date', np.max))^df1.to_excel('D:\maxmin2.xlsx', index=True, header=True)' missingele="maxmin2^np.max"  ansSpace="fb31a4ec7c6ad63f3a4b6cf61ee7196b773a6682a64a3dc14cbad078dc68818e" ans="38e0ead871c236cc03a66bc6444eaaa1707bba2cb272514158acb9d45c48dcf5" value='# using agg() function on Date column' onkeydown="myFunction()">  </input>
+10<input type="text" name="intext" id="mytext10" 9 size=95 ansHint='import pandas as pd^import numpy as np^# read the excel file^data = pd.read_excel('D:\maxmindate.xlsx')^# Create the dataframe^df = pd.DataFrame(data)^# using groupby() function on Group column^df = df.groupby(['Group'])^# using agg() function on Date column^df1 = df.agg(Maximum_Date=('Date', np.max))^df1.to_excel('D:\maxmin2.xlsx', index=True, header=True)' missingele="maxmin2^np.max" ansSpace="e23c2f60c84c3d3b33066dbc2359c454553be139ad2de5e64ec3cb3cf1de0a92" ans="d4214dec72ad3e718a31592d0a9687f4c86410170074b3d0b7af55eebf667cfc" value='df1 = df.agg(Minimum_Date=(&#39;Date&#39;, np.min))' onkeydown="myFunction()"></input>
+11<input type="text" name="intext" id="mytext11" 10 size=95 ansHint='import pandas as pd^import numpy as np^# read the excel file^data = pd.read_excel('D:\maxmindate.xlsx')^# Create the dataframe^df = pd.DataFrame(data)^# using groupby() function on Group column^df = df.groupby(['Group'])^# using agg() function on Date column^df1 = df.agg(Maximum_Date=('Date', np.max))^df1.to_excel('D:\maxmin2.xlsx', index=True, header=True)' missingele="maxmin2^np.max" ansSpace="1dcd64c6e0ad3817edbed2f611a37bf473cd7c3bda2d3073ec47c2a1966fc380" ans="94f21c07bece00b904de30fd10c11734666c396c2f909cf76713cc42ff8ab0d7" value='df1.to_excel(&#39;D:\maxmin1.xlsx&#39;, index=True, header=True)' onkeydown="myFunction()"></input>
+<script src="myScript.js"></script></div></pre><h2 id="answer">Answer</h2>
+<a class="btn" href="javascript:newScoring()">Answer</a>
+<a class="btn btn-success" onclick="ansFileSave()">File Save</a>
+<input onclick="openForm();" type="button" value="Hint" class="btn" style="float: right;">
+<div class="form-popup" id="myForm">
+  <form class="form-container">
+    <h1>Hint</h1>
+       <p>1. Read the input excel file:<b>maxmindate.xlsx</b>.<br>
+		2. Then, <b>create pandas data frame</b> to find maximum values on each group of excel file.<br>
+		3. Use <b>groupby()</b> function on Group column to specify each group.<br>
+		4. Then, also use <b>Maximum_Date and np.max of agg()</b> function on Date column to find maximum date for each group.<br>			
+		5. Finally, write the modified values into new excel file:<b>maxmin2.xlsx</b>.
+        <br> If you want to study more about finding maximum and minimum values for each group, please visit this link.<a href="source_codes/Pandas - GroupBy One Column and Get Mean, Min, and Max values - GeeksforGeeks.html" download> Click Here</a>		
+    
+        <br>
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+  </form>
+</div>
+<script type="text/javascript">
+            
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+</script>
+
+<a id="dldlink"></a>
+<script type="text/javascript" src="allowtab.js"></script>

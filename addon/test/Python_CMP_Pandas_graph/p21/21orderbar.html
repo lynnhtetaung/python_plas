@@ -1,0 +1,57 @@
+<style>.highlightme{background-color:#FF00FF;}</style><style>#inputholder span{background-color:#1E90FF;color:#FFFFFF;}</style><h2 id="statement">21</h2>Please modify the following source code in the output field to change from the left figure to the right figure!
+  <table >
+  <tr>
+     
+
+<td><figure> <img src="img/sortedbar1.JPG" alt="Elephant at sunset"> 
+</figure></td>
+     <td><figure> <img src="img/arrow2.JPG" alt="Elephant at sunset"> 
+</figure></td>
+    <td><figure> <img src="img/sortedbar2.JPG" alt="Elephant at sunset"> 
+</figure></td>
+  </tr>  
+</table>
+<table >
+  <tr>
+     
+
+<td><figure> <img src="img/data.JPG" alt="Elephant at sunset"> 
+</figure></td>
+       </tr>  
+</table>
+
+<a href="source_codes/Problem21.zip" download> Click Here To Download Source Code</a>
+
+<h4 id="code">Source Code</h4>
+<pre class="prettyprint" id="scoring-res" >01:import seaborn as sns
+02:import matplotlib.pyplot as plt
+03:import pandas as pd
+04:import json
+05:json_df = pd.read_json(r&#39;D:/data.json&#39;)
+06:df=pd.DataFrame(json_df)
+07:sns.barplot(x=df.Education,y=df.Salary,data=df,order=df.sort_values(&#39;Salary&#39;, ascending = True).Education)
+08:plt.xlabel("Education", size=15)
+09:plt.ylabel("Salary in US Dollars", size=15)
+10:plt.title("Sort Bars in Barplot in Ascending Order", size=18,color = &#39;blue&#39;)
+11:plt.savefig(&#39;D:/sortedbar1.JPG&#39;) # save the sortedbar chart as JPG
+
+</pre>
+<h4 id="code1">the output</h4>
+<pre class = "prettyprint" id = "scoring-res" <h2 id="code1"></h2>
+01<input type="text" name="intext" id="mytext1" 0 size=120 ansHint='import seaborn as sns^import matplotlib.pyplot as plt^import pandas as pd^import json^json_df = pd.read_json(r'D:/data.json')^df=pd.DataFrame(json_df)^sns.barplot(x=df.Education,y=df.Salary,data=df,order=df.sort_values('Salary', ascending = False).Education)^plt.xlabel("Education", size=15)^plt.ylabel("Salary in US Dollars", size=15)^plt.title("Sort Bars in Barplot in Descending Order", size=18,color = 'green')^plt.savefig('D:/sortedbar2.JPG') # save the sortedbar chart as JPG' missingele="False^green^sortedbar2"  ansSpace="732dfdaaa51e722736b77646b3f87dbc09826460b6da997c2ea0e19a4b89a7d6" ans="dac68b09a342f61677933c405f1eae666334de5f1c330a6a278b760743892650" value='import seaborn as sns' onkeydown="myFunction()">  </input>
+02<input type="text" name="intext" id="mytext2" 1 size=120 ansHint='import seaborn as sns^import matplotlib.pyplot as plt^import pandas as pd^import json^json_df = pd.read_json(r'D:/data.json')^df=pd.DataFrame(json_df)^sns.barplot(x=df.Education,y=df.Salary,data=df,order=df.sort_values('Salary', ascending = False).Education)^plt.xlabel("Education", size=15)^plt.ylabel("Salary in US Dollars", size=15)^plt.title("Sort Bars in Barplot in Descending Order", size=18,color = 'green')^plt.savefig('D:/sortedbar2.JPG') # save the sortedbar chart as JPG' missingele="False^green^sortedbar2"  ansSpace="7f56d3a99a2f729685a2cdf53254cef961d159d9cc01adc732ec5ffcd1c9753c" ans="57144135f5343ffcd94fe646b888266041b6f7e86d84d834576e49c1f3462917" value='import matplotlib.pyplot as plt' onkeydown="myFunction()">  </input>
+03<input type="text" name="intext" id="mytext3" 2 size=120 ansHint='import seaborn as sns^import matplotlib.pyplot as plt^import pandas as pd^import json^json_df = pd.read_json(r'D:/data.json')^df=pd.DataFrame(json_df)^sns.barplot(x=df.Education,y=df.Salary,data=df,order=df.sort_values('Salary', ascending = False).Education)^plt.xlabel("Education", size=15)^plt.ylabel("Salary in US Dollars", size=15)^plt.title("Sort Bars in Barplot in Descending Order", size=18,color = 'green')^plt.savefig('D:/sortedbar2.JPG') # save the sortedbar chart as JPG' missingele="False^green^sortedbar2"  ansSpace="f602c6a7db72bc14dd92a3e08279d8fa0b8989f149c98db3c8dfa1c06607eb80" ans="64d894253fdefec391999e75bbe6bb3f2c01c6a20fbc1a03ac2d81ba772b4bc8" value='import pandas as pd' onkeydown="myFunction()">  </input>
+04<input type="text" name="intext" id="mytext4" 3 size=120 ansHint='import seaborn as sns^import matplotlib.pyplot as plt^import pandas as pd^import json^json_df = pd.read_json(r'D:/data.json')^df=pd.DataFrame(json_df)^sns.barplot(x=df.Education,y=df.Salary,data=df,order=df.sort_values('Salary', ascending = False).Education)^plt.xlabel("Education", size=15)^plt.ylabel("Salary in US Dollars", size=15)^plt.title("Sort Bars in Barplot in Descending Order", size=18,color = 'green')^plt.savefig('D:/sortedbar2.JPG') # save the sortedbar chart as JPG' missingele="False^green^sortedbar2"  ansSpace="f87697a0410f7f175b3f7e7af2a26be728ad69c8ca7a1caa16b1aacd91033075" ans="b1764ca1fe579da0ac9d8db4b468dea0c8dba80bf6d78f21e7d6c049afea87cc" value='import json' onkeydown="myFunction()">  </input>
+05<input type="text" name="intext" id="mytext5" 4 size=120 ansHint='import seaborn as sns^import matplotlib.pyplot as plt^import pandas as pd^import json^json_df = pd.read_json(r'D:/data.json')^df=pd.DataFrame(json_df)^sns.barplot(x=df.Education,y=df.Salary,data=df,order=df.sort_values('Salary', ascending = False).Education)^plt.xlabel("Education", size=15)^plt.ylabel("Salary in US Dollars", size=15)^plt.title("Sort Bars in Barplot in Descending Order", size=18,color = 'green')^plt.savefig('D:/sortedbar2.JPG') # save the sortedbar chart as JPG' missingele="False^green^sortedbar2"  ansSpace="98032da48b12cd08088e7776556ee943773a22913e1bd443192a0d97d9071aac" ans="3b52ce2c067afeae6114ce037a45551b8495c70419b215be340a447a22aa2691" value='json_df = pd.read_json(r&#39;D:/data.json&#39;)' onkeydown="myFunction()">  </input>
+06<input type="text" name="intext" id="mytext6" 5 size=120 ansHint='import seaborn as sns^import matplotlib.pyplot as plt^import pandas as pd^import json^json_df = pd.read_json(r'D:/data.json')^df=pd.DataFrame(json_df)^sns.barplot(x=df.Education,y=df.Salary,data=df,order=df.sort_values('Salary', ascending = False).Education)^plt.xlabel("Education", size=15)^plt.ylabel("Salary in US Dollars", size=15)^plt.title("Sort Bars in Barplot in Descending Order", size=18,color = 'green')^plt.savefig('D:/sortedbar2.JPG') # save the sortedbar chart as JPG' missingele="False^green^sortedbar2"  ansSpace="fb27331784ca5f37619d009587b1026db385b47932dc83fbf49a3497a50824e9" ans="fb27331784ca5f37619d009587b1026db385b47932dc83fbf49a3497a50824e9" value='df=pd.DataFrame(json_df)' onkeydown="myFunction()">  </input>
+07<input type="text" name="intext" id="mytext7" 6 size=120 ansHint='import seaborn as sns^import matplotlib.pyplot as plt^import pandas as pd^import json^json_df = pd.read_json(r'D:/data.json')^df=pd.DataFrame(json_df)^sns.barplot(x=df.Education,y=df.Salary,data=df,order=df.sort_values('Salary', ascending = False).Education)^plt.xlabel("Education", size=15)^plt.ylabel("Salary in US Dollars", size=15)^plt.title("Sort Bars in Barplot in Descending Order", size=18,color = 'green')^plt.savefig('D:/sortedbar2.JPG') # save the sortedbar chart as JPG' missingele="False^green^sortedbar2"  ansSpace="dcef79d5cdcbfd35d0ef7b116c09d4443edafb849bfd66877ab75aaab59413ef" ans="a52707d0c815d747c5358b1f7a8a7bf50033c52ecdab5e17b62612df9ccc41da" value='sns.barplot(x=df.Education,y=df.Salary,data=df,order=df.sort_values(&#39;Salary&#39;, ascending = True).Education)' onkeydown="myFunction()">  </input>
+08<input type="text" name="intext" id="mytext8" 7 size=120 ansHint='import seaborn as sns^import matplotlib.pyplot as plt^import pandas as pd^import json^json_df = pd.read_json(r'D:/data.json')^df=pd.DataFrame(json_df)^sns.barplot(x=df.Education,y=df.Salary,data=df,order=df.sort_values('Salary', ascending = False).Education)^plt.xlabel("Education", size=15)^plt.ylabel("Salary in US Dollars", size=15)^plt.title("Sort Bars in Barplot in Descending Order", size=18,color = 'green')^plt.savefig('D:/sortedbar2.JPG') # save the sortedbar chart as JPG' missingele="False^green^sortedbar2"  ansSpace="38364c0a4678dab1c677ae58eda9e3ec5b46dddc4dcd0620ba38382d5a5ebed1" ans="7cc0b0e9f5acd4c91dbe091b079ede7f82e547fa610298e446208a0b666f1981" value='plt.xlabel("Education", size=15)' onkeydown="myFunction()">  </input>
+09<input type="text" name="intext" id="mytext9" 8 size=120 ansHint='import seaborn as sns^import matplotlib.pyplot as plt^import pandas as pd^import json^json_df = pd.read_json(r'D:/data.json')^df=pd.DataFrame(json_df)^sns.barplot(x=df.Education,y=df.Salary,data=df,order=df.sort_values('Salary', ascending = False).Education)^plt.xlabel("Education", size=15)^plt.ylabel("Salary in US Dollars", size=15)^plt.title("Sort Bars in Barplot in Descending Order", size=18,color = 'green')^plt.savefig('D:/sortedbar2.JPG') # save the sortedbar chart as JPG' missingele="False^green^sortedbar2"  ansSpace="3430efe19b15f4f70c9e40e85752412643f907e3118bb1bcc6ee4c8d67c84876" ans="81773ee3ea8783fbaa08acb28fd5568c78f4642c3c19b0d0677e43e270b3e1a3" value='plt.ylabel("Salary in US Dollars", size=15)' onkeydown="myFunction()">  </input>
+10<input type="text" name="intext" id="mytext10" 9 size=120 ansHint='import seaborn as sns^import matplotlib.pyplot as plt^import pandas as pd^import json^json_df = pd.read_json(r'D:/data.json')^df=pd.DataFrame(json_df)^sns.barplot(x=df.Education,y=df.Salary,data=df,order=df.sort_values('Salary', ascending = False).Education)^plt.xlabel("Education", size=15)^plt.ylabel("Salary in US Dollars", size=15)^plt.title("Sort Bars in Barplot in Descending Order", size=18,color = 'green')^plt.savefig('D:/sortedbar2.JPG') # save the sortedbar chart as JPG' missingele="False^green^sortedbar2" ansSpace="24b94919e15248b2b72f1fc62fae45613f93dd2a0d1abeecc66bdccbc467a224" ans="9b84bc90cc217a1d32a06c0f3ca84fee8628affdf5896d5c6158fb896462ec73" value='plt.title("Sort Bars in Barplot in Ascending Order", size=18,color = &#39;blue&#39;)' onkeydown="myFunction()"></input>
+11<input type="text" name="intext" id="mytext11" 10 size=120 ansHint='import seaborn as sns^import matplotlib.pyplot as plt^import pandas as pd^import json^json_df = pd.read_json(r'D:/data.json')^df=pd.DataFrame(json_df)^sns.barplot(x=df.Education,y=df.Salary,data=df,order=df.sort_values('Salary', ascending = False).Education)^plt.xlabel("Education", size=15)^plt.ylabel("Salary in US Dollars", size=15)^plt.title("Sort Bars in Barplot in Descending Order", size=18,color = 'green')^plt.savefig('D:/sortedbar2.JPG') # save the sortedbar chart as JPG' missingele="False^green^sortedbar2" ansSpace="43a177228def4bbf9fe94107008ec2c67e85788d569454cdb3d17502c2880167" ans="dbc9ca6fab09242cbd59b20f97136a655586272f77aff1a352feb5fd39c85903" value='plt.savefig(&#39;D:/sortedbar1.JPG&#39;) # save the sortedbar chart as JPG' onkeydown="myFunction()"></input>
+<script src="myScript.js"></script></div></pre><h2 id="answer">Answer</h2>
+<a class="btn" href="javascript:newScoring()">Answer</a>
+<a class="btn btn-success" onclick="ansFileSave()">File Save</a>
+
+<a id="dldlink"></a>
+<script type="text/javascript" src="allowtab.js"></script>

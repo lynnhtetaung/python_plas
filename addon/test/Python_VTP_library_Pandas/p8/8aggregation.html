@@ -1,0 +1,49 @@
+<h2 id="statement">8</h2>
+Fill in Blanks 
+<h2 id="code">The Source Code</h2>
+<pre class="prettyprint" id="scoring-res"># A quick-demo of aggregation in Pandas
+#.count(): This gives a count of the data in a column.
+#.sum(): This gives the sum of data in a column.
+#.min() and .max(): This helps to find the minimum value and maximum value, ina function, respectively.
+''' Assume the testCSV.csv includes the following data:
+         City          State         Capital      Population
+0     Philadelphia   Pennsylvania     No       1.581 Million
+1    Sacramento     California        Yes      0.5 Million
+2      New York       New York        No       8.623 Million
+3      Austin           Texas         Yes      0.95 Million
+4      Miami           Florida        No       0.463 Million  '''
+
+import pandas as pd
+#read the CSV file
+df = pd.read_csv(r'D:\testCSV.csv')
+print(df.count())
+
+# to find the sum of elements in a column
+df.sum()
+
+# for only one column
+print(df.City.sum())
+
+# find the minimum and maximum values of the dataset
+print(df.City.min())
+print(df.City.max())
+
+What is the output of the program?
+City           5
+ State        <input size=2 ans="4299da7466df09516d290f7a99c8b7a2fa94766eb94a61c24e1ce8f6ca80af44" placeholder=1></input>
+ Capital       5
+ Population    5
+dtype: int64
+PhiladelphiaSacramento<input size=2 ans="2cb858bcd6fd53e10c2c61fecf8c34e2bb9f9cdd42d963681bab3ee4d3577a9b" placeholder=2></input>AustinMiami
+Austin
+<input size=2 ans="befdb93059bb4a93c19d6f603bd3aceaa73af28e8febe1d6cba9547d729b2a85" placeholder=3></input>
+
+
+</pre>
+<h2 id="answer">Answer</h2>
+<a class="btn" href="javascript:newScoring()">Answer</a>
+<script type="text/javascript">
+$(function(){
+ prettyPrint();
+});
+</script>

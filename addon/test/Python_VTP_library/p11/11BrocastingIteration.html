@@ -1,0 +1,51 @@
+<h2 id="statement">11</h2>
+Fill in Blanks 
+<h2 id="code">The Source Code</h2>
+<pre class="prettyprint" id="scoring-res"># A quick-demo of Broadcasting Iteration on numpy array
+# If two arrays are broadcastable, a combined nditer object is able to iterate upon them concurrently.
+ 
+import numpy as np
+ 
+# creating an array using arrange 
+# method 
+a = np.arange(12)
+ 
+ # shape array with 3 rows and 
+# 4 columns 
+a = a.reshape(3,4) 
+ 
+print('First array is:') 
+print(a)
+print()  
+ 
+# Creating second array using 
+# array method
+print('Second array is:') 
+b = np.array([5, 6, 7, 8], dtype = int) 
+print(b)  
+print() 
+ 
+print('Modified array is:')
+for x,y in np.nditer([a,b]): 
+    print("%d:%d" % (x,y), end = ",")
+
+First array is:
+[[ 0  1  2  3]
+<input size=2 ans="9d3fb9c576c8f2dedb61bd8d8987ec799bc72732f32785d07c9f9b1edeae9c7b" placeholder=1></input>
+[ 8  9 10 11]]
+
+Second array is:
+[5 <input size=2 ans="cb7593a6adb4b6339f9b0d794acc8903819db9e7c57624a3f0961d085b231999" placeholder=2></input> 7 8]
+
+Modified array is:
+0:5,1:6,<input size=2 ans="e879a1f8b2426a6221ad840e72d01b10d6139fa159a69d20bf885b966062b1c5" placeholder=3></input>,3:8,<input size=2 ans="5e216300e15b8d4d0c399f11861b4ec61cc62619ae6f069da52e9a2f0ae23088" placeholder=4></input>,5:6,<input size=2 ans="eb4b7313a97f4830234adb15b9e26bf25528e6b2520bfbba6df1db76180b0bec" placeholder=5></input>,7:8,<input size=2 ans="babebfd26cd1c47b4794a15f6a4a9578e3291bc96aa0679df435e8391c85a35b" placeholder=6></input>,<input size=2 ans="f09234066265893b2c6179c365aef108a5e941a336b254a6d27691e16a03589a" placeholder=7></input>,<input size=2 ans="1a457a9f86227688b72824db38c0ea379081099484a9adad5c3c301eb290d428" placeholder=8></input>,<input size=2 ans="8b1ca1c56ed49fa28272bf24436a4464ede343abd65fdff12e1b3b423a73bafd" placeholder=9></input>,
+
+
+</pre>
+<h2 id="answer">Answer</h2>
+<a class="btn" href="javascript:newScoring()">Answer</a>
+<script type="text/javascript">
+$(function(){
+ prettyPrint();
+});
+</script>

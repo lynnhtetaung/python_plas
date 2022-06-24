@@ -1,0 +1,54 @@
+<h2 id="statement">9</h2>
+Fill in Blanks 
+<h2 id="code">The Source Code</h2>
+<pre class="prettyprint" id="scoring-res"># A quick-demo of deque operations
+
+class Deque:
+    def __init__(self):
+        self.items = []
+
+    def isEmpty(self):
+        return self.items == []
+
+    def addFront(self, item):
+        self.items.append(item)
+
+    def addRear(self, item):
+        self.items.insert(0,item)
+
+    def removeFront(self):
+        return self.items.pop()
+
+    def removeRear(self):
+        return self.items.pop(0)
+
+    def size(self):
+        return len(self.items)
+    
+d=Deque()
+print("Is the deque empty?", d.isEmpty())
+d.addRear(4)
+d.addRear('dog')
+d.addFront('cat')
+d.addFront(True)
+print("The size of the deque is", d.size())
+print("Is the deque empty?", d.isEmpty())
+d.addRear(8.4)
+print("The resulting element from removeRear operation", d.removeRear())
+print("The resulting element from removeFront operation", d.removeFront())    
+
+Is the deque empty? <input size=2 ans="d1b86be0bbb5078b032d9b07c03c2d319e85719e8465003747cbc0a3d2ab6e8d" placeholder=1></input>
+The size of the deque is <input size=2 ans="23e8b0175874e1bb3b4799e13a6634a8eddb456c1b8675b871e07ec09abc0c07" placeholder=2></input>
+Is the deque empty? <input size=2 ans="e8330100b771f30aa16ea6099aef34a5f9fc69c1634b0f2e8f383901fb4a4737" placeholder=3></input>
+The resulting element from removeRear operation <input size=2 ans="9655cd7565e79d515bf7280d1119ed3dc2adfd73832bacf8b44e06d9c08fcda4" placeholder=4></input>
+The resulting element from removeFront operation <input size=2 ans="334d4ea2b6026bccf2e2e8de09d52a4445a9d809aa59995ec6b8d07c8248567c" placeholder=5></input>
+
+
+</pre>
+<h2 id="answer">Answer</h2>
+<a class="btn" href="javascript:newScoring('Python_VTP_algorithm')">Answer</a>
+<script type="text/javascript">
+$(function(){
+ prettyPrint();
+});
+</script>

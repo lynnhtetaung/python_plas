@@ -1,0 +1,136 @@
+<style type="text/css">
+            textarea, iframe {
+                border: 1px solid grey;
+                height: 500px;
+                width: 98%;
+                resize: none;   
+            }
+             div.form-popup {
+        background-color: #fed9ff;
+        width: 900px;
+        height: 600px;
+        overflow-x: hidden;
+        overflow-y: auto;
+        padding: 20px;
+      }
+ .form-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px dotted #f1f1f1;
+  text-align:justify;  
+  text-justify:initial;
+
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 900px;
+  padding: 20px;
+  background-color: lightyellow;
+}
+
+
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 10%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: mediumvioletred;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+</style>
+<h2 id="statement">12</h2>
+ <table >
+  <tr>
+     
+
+<td>Input excel file to the source code<br><figure> <img src="img/P131.JPG" alt="Elephant at sunset"> 
+</figure></td>
+   </tr>  
+   
+ <tr>
+     
+
+<td>Output excel file from the source code<br><figure> <img src="img/P132.JPG" alt="Elephant at sunset"> 
+</figure></td>
+     
+  </tr>  
+<tr>
+        
+          <td>Output excel file from the modified source code<br><figure> <img src="img/P133.JPG" alt="Elephant at sunset"> 
+</figure></td>
+        
+     </tr>
+</table>
+
+<a href="source_codes/Problem12.zip" download> Click Here To Download Source Code</a>
+<br> Please modify the following source code!
+<h4 id="code">Source Code</h4>
+<pre class="prettyprint" id="scoring-res" >01:import pandas as pd
+02:# read excel file
+03:data = pd.read_excel(&#39;D:\Renamingcols.xlsx&#39;)
+04:df=pd.DataFrame(data)
+05:# renaming the specific columns
+06:df.rename(columns={&#39;Code_no&#39;:&#39;Zip Code&#39;}, inplace=True)
+07:df.rename(columns={&#39;Location&#39;:&#39;Place&#39;}, inplace=True)
+08:# saving to new excel file
+09:df.to_excel(&#39;D:\Renamingcols1.xlsx&#39;, index=True, header=True)
+
+</pre>
+<h4 id="code1">the output</h4>
+<pre class = "prettyprint" id = "scoring-res" <h2 id="code1"></h2>
+01<input type="text" name="intext" id="mytext1" 0 size=95 ansHint='import pandas as pd^# read excel file^data = pd.read_excel('D:\Renamingcols.xlsx')^df=pd.DataFrame(data)^# renaming the specific columns^df.rename(columns={'No':'ID'}, inplace=True)^df.rename(columns={'Position':'Occupation'}, inplace=True)^# saving to new excel file^df.to_excel('D:\Renamingcols2.xlsx', index=True, header=True)' missingele="No^ID^Position^Occupation^Renamingcols2"  ansSpace="afffcfbf9c4e94c9e4110bc3806c2ce7fb193c70b87395c8a0eaf77491c111d2" ans="681c228b58d33ae54a6a3675a3a5bd534d35047d392fca12147f9c4e302791f5" value='import pandas as pd' onkeydown="myFunction()">  </input>
+02<input type="text" name="intext" id="mytext2" 1 size=95 ansHint='import pandas as pd^# read excel file^data = pd.read_excel('D:\Renamingcols.xlsx')^df=pd.DataFrame(data)^# renaming the specific columns^df.rename(columns={'No':'ID'}, inplace=True)^df.rename(columns={'Position':'Occupation'}, inplace=True)^# saving to new excel file^df.to_excel('D:\Renamingcols2.xlsx', index=True, header=True)' missingele="No^ID^Position^Occupation^Renamingcols2"  ansSpace="9cf93498df041769de7732ae5e60acdf50487414f1845436e6362aa177f2ff47" ans="c54750d11d8b265765e48c3ddb9d2bdf22a53cdaea882ccd3551cb69d607ef3d" value='# read excel file' onkeydown="myFunction()">  </input>
+03<input type="text" name="intext" id="mytext3" 2 size=95 ansHint='import pandas as pd^# read excel file^data = pd.read_excel('D:\Renamingcols.xlsx')^df=pd.DataFrame(data)^# renaming the specific columns^df.rename(columns={'No':'ID'}, inplace=True)^df.rename(columns={'Position':'Occupation'}, inplace=True)^# saving to new excel file^df.to_excel('D:\Renamingcols2.xlsx', index=True, header=True)' missingele="No^ID^Position^Occupation^Renamingcols2"  ansSpace="ff44093ee6e97b91b903a0a9aa7b82d140fd58af38e0ff5377d08e9aeb866851" ans="5edc3bd97007202d686257332d856cae901732e7dfc421feee7de533f034acfc" value='data = pd.read_excel(&#39;D:\Renamingcols.xlsx&#39;)' onkeydown="myFunction()">  </input>
+04<input type="text" name="intext" id="mytext4" 3 size=95 ansHint='import pandas as pd^# read excel file^data = pd.read_excel('D:\Renamingcols.xlsx')^df=pd.DataFrame(data)^# renaming the specific columns^df.rename(columns={'No':'ID'}, inplace=True)^df.rename(columns={'Position':'Occupation'}, inplace=True)^# saving to new excel file^df.to_excel('D:\Renamingcols2.xlsx', index=True, header=True)' missingele="No^ID^Position^Occupation^Renamingcols2"  ansSpace="63ca0498d8d96e26f12b09daf47768a771a90161348637ab70edab34e110316d" ans="63ca0498d8d96e26f12b09daf47768a771a90161348637ab70edab34e110316d" value='df=pd.DataFrame(data)' onkeydown="myFunction()">  </input>
+05<input type="text" name="intext" id="mytext5" 4 size=95 ansHint='import pandas as pd^# read excel file^data = pd.read_excel('D:\Renamingcols.xlsx')^df=pd.DataFrame(data)^# renaming the specific columns^df.rename(columns={'No':'ID'}, inplace=True)^df.rename(columns={'Position':'Occupation'}, inplace=True)^# saving to new excel file^df.to_excel('D:\Renamingcols2.xlsx', index=True, header=True)' missingele="No^ID^Position^Occupation^Renamingcols2"  ansSpace="083800b5cbe44566dd021d05e7cb68566db3d57a6df36d0c13b00a90a8cbcee7" ans="514ea3594132cf52c1f84ec4b5a616162c0f48ad0b1bea714c63edc6bc64afa3" value='# renaming the specific columns' onkeydown="myFunction()">  </input>
+06<input type="text" name="intext" id="mytext6" 5 size=95 ansHint='import pandas as pd^# read excel file^data = pd.read_excel('D:\Renamingcols.xlsx')^df=pd.DataFrame(data)^# renaming the specific columns^df.rename(columns={'No':'ID'}, inplace=True)^df.rename(columns={'Position':'Occupation'}, inplace=True)^# saving to new excel file^df.to_excel('D:\Renamingcols2.xlsx', index=True, header=True)' missingele="No^ID^Position^Occupation^Renamingcols2"  ansSpace="9287d4886d0bc763fcb18d13638f5c3fbe3e8c21aeb1d01997bd5a4920b7408a" ans="8feb791584f22d6544e2b5946efbfbbf16e9d7265d6a0a7ca0657053e09b8d69" value='df.rename(columns={&#39;Code_no&#39;:&#39;Zip Code&#39;}, inplace=True)' onkeydown="myFunction()">  </input>
+07<input type="text" name="intext" id="mytext7" 6 size=95 ansHint='import pandas as pd^# read excel file^data = pd.read_excel('D:\Renamingcols.xlsx')^df=pd.DataFrame(data)^# renaming the specific columns^df.rename(columns={'No':'ID'}, inplace=True)^df.rename(columns={'Position':'Occupation'}, inplace=True)^# saving to new excel file^df.to_excel('D:\Renamingcols2.xlsx', index=True, header=True)' missingele="No^ID^Position^Occupation^Renamingcols2"  ansSpace="718adf4b13af2394d4e2a2339abd35151b0136d08409882698bfdf248fd9e995" ans="e52743c9712014ca62471c3f9fc95113cb4d5d6d10e14f174d01a69f0be98ddc" value='df.rename(columns={&#39;Location&#39;:&#39;Place&#39;}, inplace=True)' onkeydown="myFunction()">  </input>
+08<input type="text" name="intext" id="mytext8" 7 size=95 ansHint='import pandas as pd^# read excel file^data = pd.read_excel('D:\Renamingcols.xlsx')^df=pd.DataFrame(data)^# renaming the specific columns^df.rename(columns={'No':'ID'}, inplace=True)^df.rename(columns={'Position':'Occupation'}, inplace=True)^# saving to new excel file^df.to_excel('D:\Renamingcols2.xlsx', index=True, header=True)' missingele="No^ID^Position^Occupation^Renamingcols2"  ansSpace="0e3795344153681bc20fcf9ff73c21714303f334d81830728a270726cc27b2b0" ans="ba60d82ddb13e775068da8bc7a5be63226c7fa1b66835f7038f9d51c4dd6a76c" value='# saving to new excel file' onkeydown="myFunction()">  </input>
+09<input type="text" name="intext" id="mytext9" 8 size=95 ansHint='import pandas as pd^# read excel file^data = pd.read_excel('D:\Renamingcols.xlsx')^df=pd.DataFrame(data)^# renaming the specific columns^df.rename(columns={'No':'ID'}, inplace=True)^df.rename(columns={'Position':'Occupation'}, inplace=True)^# saving to new excel file^df.to_excel('D:\Renamingcols2.xlsx', index=True, header=True)' missingele="No^ID^Position^Occupation^Renamingcols2"  ansSpace="c0fdcd7038f7dfc81f892b187d77b0d30c4c45d4dc5b24a82c006e87d5172daa" ans="e64f209722b34b98478e5b170d485e9917ae0140849f7ea7d00c64515e3558be" value='df.to_excel(&#39;D:\Renamingcols1.xlsx&#39;, index=True, header=True)' onkeydown="myFunction()">  </input>
+<script src="myScript.js"></script></div></pre><h2 id="answer">Answer</h2>
+<a class="btn" href="javascript:newScoring()">Answer</a>
+<a class="btn btn-success" onclick="ansFileSave()">File Save</a>
+<input onclick="openForm();" type="button" value="Hint" class="btn" style="float: right;">
+<div class="form-popup" id="myForm">
+  <form class="form-container">
+    <h1>Hint</h1>
+       <p>1. Read the input excel file:<b>Renamingcols.xlsx</b>.<br>
+		2. Then, <b>create pandas data frame</b> to use rename function in excel file.<br>
+		3. Rename the columns <b>No and Position with ID and Occupation.</b><br>
+		4. Finally, write the renamed values into new excel file:<b>Renamingcols2.xlsx</b>.
+        <br> If you want to study more about the renaming, please visit this link.<a href="source_codes/How to rename columns in Pandas DataFrame - GeeksforGeeks.html" download> Click Here</a>		
+    
+        <br>
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+  </form>
+</div>
+<script type="text/javascript">
+            
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+</script>
+
+<a id="dldlink"></a>
+<script type="text/javascript" src="allowtab.js"></script>

@@ -1,0 +1,52 @@
+<h2 id="statement">8</h2>
+Fill in Blanks 
+<h2 id="code">The Source Code</h2>
+<pre class="prettyprint" id="scoring-res"># A quick-demo of elements removing in a Array 
+   
+# importing "array" for array operations 
+import array 
+   
+# initializing array with array values 
+# initializes array with signed integers 
+arr = array.array('f', [1.0, 2.0, 3.0, 1.0, 5.0])  
+  
+# printing original array 
+print ("The new created array is ", end =": ") 
+for i in range (0, 5): 
+    print (arr[i], end =",") 
+  
+print ("\r") 
+  
+# using pop() to remove element at 2nd position 
+print ("The popped element is ", end =": ") 
+print (arr.pop(2)) 
+  
+# printing array after popping 
+print ("The array after popping is ", end =": ") 
+for i in range (0, 4): 
+    print (arr[i], end =",") 
+  
+print("\r") 
+  
+# using remove() to remove 1st occurrence of 1 
+arr.remove(1) 
+  
+# printing array after removing 
+print ("The array after removing is ", end =": ") 
+for i in range (0, 3): 
+    print (arr[i], end =",")
+
+The new created array is : 1.0,2.0,3.0,<input size=2 ans="8360261cbdd39a9a182309d5f9a78dad54db918b284c64c92a257c05840aa197" placeholder=1></input>,<input size=2 ans="6037f37b66f3cbf2a8f5cbf59dc1a284dc549cd8149dfc1ef43dba2e11df41dc" placeholder=2></input>, 
+The popped element is :<input size=2 ans="b999d588575012379820f5690241d52f4ab91f808fc4e4672b5ae587b72647cd" placeholder=3></input>
+The array after popping is :<input size=2 ans="bf5e09c0b48c5767195b2d417bb680949af415ca8e85e8797327f92ca7304a21" placeholder=4></input>,<input size=2 ans="cb896d190ec63827abfb31f02fe8f7e56a7a46ff1828749e7e382eb619e29f72" placeholder=5></input>,<input size=2 ans="da6580edde9b25cafbd96be1772ab9ae0bed36666b21e9bafcc24b19f81637cd" placeholder=6></input>,<input size=2 ans="9e93057fff432888c6162a4eb3e0b3d55735defdc4bada399a35e4cee12b77fb" placeholder=7></input>, 
+The array after removing is :<input size=2 ans="a9ef92be11e9a58d158d0a1dd5f9f1a4b75dbbd43ebb79dc2ba5f24395ff25ee" placeholder=8></input>,<input size=2 ans="e8aea4de4721166cac6584f6ecb18bc08284a5c1cf615fb0593306fd4b59bf8c" placeholder=9></input>,<input size=2 ans="70a5ea6ec537d769bf091540fdeada342b26f4f2e16aefc3c6f727dd403f6f42" placeholder=10></input>, 
+
+
+</pre>
+<h2 id="answer">Answer</h2>
+<a class="btn" href="javascript:newScoring('Python_VTP_advance')">Answer</a>
+<script type="text/javascript">
+$(function(){
+ prettyPrint();
+});
+</script>

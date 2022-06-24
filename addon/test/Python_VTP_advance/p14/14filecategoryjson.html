@@ -1,0 +1,48 @@
+<h2 id="statement">14</h2>
+Fill in Blanks 
+<h2 id="code">The Source Code</h2>
+<pre class="prettyprint" id="scoring-res"># A quick-demo of json file reading usage for each category
+
+''' Assume keypoint.json includes as follow:
+{
+	"version":1.1,
+	"people":[
+		{
+			"pose_keypoints":[
+				17.7,71.6,0.92,74.8
+			],			
+                          "face_keypoints":[             
+				6,7,8,9
+			],
+		}
+	]
+} '''
+
+import json
+
+def json_read(file_name):
+   
+    with open(file_name) as f:
+        
+        dict_data = json.load(f)
+        for people in dict_data['people']:
+            print (people['pose_keypoints'])
+            
+        for people in dict_data['people']:
+            print (people['face_keypoints'])            
+    
+if __name__ == "__main__":
+    people = json_read("keypoint.json")
+
+What is the output of the program?  [17.7,<input size=2 ans="ca504b266c2d83a3cef61d23f71a80aa7c7534c2ed6a98a71f1816a1e7cba313" placeholder=1></input>,<input size=2 ans="c0c827df1b217c414facfbc7c97937decea7e5e5aea961e76d6f67c768fbbee8" placeholder=2></input>, 74.8]
+                                    <input size=2 ans="bb49d15366426c5b9c262474e91b992ce98c4d921401f90781b963923538826c" placeholder=3></input>,<input size=2 ans="5ee1e74f15eeeefa54347ba692ddfeb474dc6ad19ab9ffdecea0ed32bc6e0b3e" placeholder=4></input>,<input size=2 ans="740835d867b1f22477b8231975ecc7b640810450bb83c03892e2a1db72248147" placeholder=5></input>,<input size=2 ans="a96a096482bbf3cd00e40ab267c86acb79362fa34d800fb73d32cbc09bf17415" placeholder=6></input>
+
+
+</pre>
+<h2 id="answer">Answer</h2>
+<a class="btn" href="javascript:newScoring('Python_VTP_advance')">Answer</a>
+<script type="text/javascript">
+$(function(){
+ prettyPrint();
+});
+</script>

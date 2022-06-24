@@ -1,0 +1,54 @@
+<h2 id="statement">3</h2>
+Fill in Blanks 
+<h2 id="code">The Source Code</h2>
+<pre class="prettyprint" id="scoring-res"># A quick-demo of Using Parameterized Constructor for Object Creation of class
+
+class DemoClass:
+
+    num = 0
+    num1 = 200
+    
+    # parameterized constructor
+    def __init__(self, data = None):
+        
+        if data is None:
+            self.num = self.num1            
+        else:    
+            self.num = data
+
+    # a method
+    def read_number(self):
+        print(self.num)
+
+# creating object of the class
+# this will invoke parameterized constructor
+obj = DemoClass(55)
+
+# calling the instance method using the object obj
+obj.read_number()
+
+# creating another object of the class
+obj2 = DemoClass(66)
+
+# calling the instance method using the object obj
+obj2.read_number()
+
+# creating another object of the class
+obj3 = DemoClass()
+
+# calling the instance method using the object obj
+obj3.read_number()
+
+What is the output of this program? <input size=2 ans="bcd7dddaf951959ebf6076a3a594b426a246d3bffe13339b10d04e45f222e011" placeholder=1></input>
+                                    <input size=2 ans="e524d225a5a87cdb208cf8b9a4f04d21656ae4bed1556440f80a916ba7c0402c" placeholder=2></input>
+                                    <input size=2 ans="7b71704afda2fa21436eb876da59292b45d058551f4aad47d4dc4056a8276b3e" placeholder=3></input>
+
+
+</pre>
+<h2 id="answer">Answer</h2>
+<a class="btn" href="javascript:newScoring('Python_VTP_advance')">Answer</a>
+<script type="text/javascript">
+$(function(){
+ prettyPrint();
+});
+</script>

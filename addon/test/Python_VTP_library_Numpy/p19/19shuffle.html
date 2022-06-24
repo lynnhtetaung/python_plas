@@ -1,0 +1,53 @@
+<h2 id="statement">19</h2>
+Fill in Blanks 
+<h2 id="code">The Source Code</h2>
+<pre class="prettyprint" id="scoring-res"># The random.shuffle() is used to shuffle the list in place. i.e., it randomizes the order of items in a list
+import random
+import numpy as np
+
+number_list = [7, 14, 21, 28, 35]
+print("Original list:", number_list)
+
+random.shuffle(number_list)
+
+# Assume the output result after shuffle be [7, 35, 14, 21, 28] 
+print("List after shuffle:", number_list)
+
+#randomly shuffle a 1D array
+M = np.array([4,8,15,16,23,42])
+np.random.shuffle(M)
+
+#Assume the output result after shuffle be [ 8 16 23  4 42 15]
+print("After shuffling 1D array", M)
+
+# In the case of a 2D array the function shuffle is going to permute randomly the array rows
+M = np.array([[1,2,3],[4,5,6],[7,8,9]])
+print("Original 2D array \n",M)
+np.random.shuffle(M)
+
+''' Assume the output result after shuffle be [[1 2 3]
+                                               [7 8 9]
+                                               [4 5 6]]'''
+print("After shuffling 2D array \n",M)
+
+Original list: [7, 14, 21, 28, 35]
+List after shuffle:  [7,<input size=2 ans="0c3d4d23d9c8dc1e80e74f10756f867d89bac6b35335bc86562c705167fbe241" placeholder=1></input>, 14,<input size=2 ans="8c0d8aad755c4d3c0e40f41e898bdf3dda89af5959a3e687a043ae16ccaf9616" placeholder=2></input>, 28]
+After shuffling 1D array  [ 8 16 <input size=2 ans="4846b51c25e0ecca5138b7898f7b52aaa17a55e8a55b55b633bd29124f8bc8bd" placeholder=3></input>  4 42 <input size=2 ans="b97b827ef4ed253467b3b8bd7928d5885ec0481c498c60e1ba784cefa7a63926" placeholder=4></input>
+Original 2D array 
+[[1 2 3]
+[4 5 6]
+[7 8 9]]
+After shuffling 2D array 
+[[1 <input size=2 ans="5bc05e241527d767aae5d0921978e11918f632b8cefc1de520745e9b9ffd09c4" placeholder=5></input> 3]
+ [7 <input size=2 ans="0f7300765b0e2a1e5f6c0958561563255e2a4a6d151c5e118c64b920ba851989" placeholder=6></input> 9]
+[4 <input size=2 ans="66589a14ca0f7e3542cf6a155c5b43bb852322d7edce7b10aff107ff9a362cfc" placeholder=7></input> 6]]
+
+
+</pre>
+<h2 id="answer">Answer</h2>
+<a class="btn" href="javascript:newScoring()">Answer</a>
+<script type="text/javascript">
+$(function(){
+ prettyPrint();
+});
+</script>

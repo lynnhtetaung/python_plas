@@ -1,0 +1,39 @@
+<h2 id="statement">30</h2>
+Fill in Blanks 
+<h2 id="code">The Source Code</h2>
+<pre class="prettyprint" id="scoring-res"># numpy.sort() :This function returns a sorted copy of an array. 
+
+import numpy as np
+ 
+# sort along the first axis
+a = np.array([[12, 15], [10, 1]])
+print("original array is:\n",a)
+
+arr1 = np.sort(a, axis = 0)  
+# sorted values for each column with axis = 0
+print ("Along first axis = 0 : \n", arr1)        
+  
+a = np.array([[12, 15], [10, 1]])
+arr1 = np.sort(a, axis = None)        
+print ("\nAlong none axis : \n", arr1)
+
+The output is as follows:
+original array is:
+[[12 15]
+[10  1]]
+Along first axis = 0 : 
+[[10 <input size=2 ans="0f2cb44170f42cc966535f392a10dcd4499426df69dc476f1bf36609f7fa8c1e" placeholder=1></input>]
+[12  <input size=2 ans="72dbab0e0717addc37f7ba5ecebf15b6d76c6540a98f31142b22875e482ef5cd" placeholder=2></input>]]
+
+Along none axis : 
+[ 1 <input size=2 ans="6b404e387fbc5bc11368b86a5290f0688c2a730fae118c13afe5b73e16902d7d" placeholder=3></input> 12 <input size=2 ans="98edadaec07b07e0e1996d0365327a5ad850fe76f61b5c8a6044977a38eec97c" placeholder=4></input>]
+
+
+</pre>
+<h2 id="answer">Answer</h2>
+<a class="btn" href="javascript:newScoring()">Answer</a>
+<script type="text/javascript">
+$(function(){
+ prettyPrint();
+});
+</script>

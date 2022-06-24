@@ -1,0 +1,51 @@
+<h2 id="statement">2</h2>
+Fill in Blanks 
+<h2 id="code">The Source Code</h2>
+<pre class="prettyprint" id="scoring-res"># A quick-demo of checking balanced parentheses using stack operations
+
+from pythonds.basic import Stack
+    
+def parChecker(symbolString):
+    s = Stack()
+    balanced = True
+    index = 0
+    while index < len(symbolString) and balanced:
+        symbol = symbolString[index]
+        if symbol == "(":
+            s.push(symbol)
+            print(s.peek())
+        else:
+            if s.isEmpty():
+                balanced = False
+                   
+            else:
+                s.pop()
+                   
+        
+        index = index + 1
+        
+    if balanced and s.isEmpty():
+        return True
+    else:
+        return False
+        
+print(parChecker('((()))'))
+print(parChecker('(()'))
+
+The output of the program is<input size=2 ans="206ef17c6349cfcf87f0abafd6f8eff19ecdd5b53a2cfcd16ef161b8ea90e69c" placeholder=1></input>
+                            <input size=2 ans="cf46a2c11283a75b76207cdb0f8daa1fb518486003715bae2968fa49ce5ded64" placeholder=2></input>
+                            <input size=2 ans="b6b1c2f96eae1e1332b193ddb0482a40b3fbbff14474cae7067658f3a0b29274" placeholder=3></input>
+                            <input size=2 ans="c02ab12baef682a21659e57ed7d4d9ca6b590f51dc6fd9ccb3c093c422224675" placeholder=4></input>
+                            <input size=2 ans="1936b7de87f006eca3581c6389dc03b0fc295058b403de698179621c40e5692e" placeholder=5></input>
+                            <input size=2 ans="f3c6fadba3ac2302815d340b1212328219a8ea998a80f3161ee442783469f026" placeholder=6></input>
+                            <input size=2 ans="54750e46d785d0adf959f1f1c2cc7444c3f96727c9bb3a280d538a774a477276" placeholder=7></input>
+
+
+</pre>
+<h2 id="answer">Answer</h2>
+<a class="btn" href="javascript:newScoring('Python_VTP_algorithm')">Answer</a>
+<script type="text/javascript">
+$(function(){
+ prettyPrint();
+});
+</script>

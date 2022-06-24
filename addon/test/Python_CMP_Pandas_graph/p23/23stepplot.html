@@ -1,0 +1,54 @@
+<style>.highlightme{background-color:#FF00FF;}</style><style>#inputholder span{background-color:#1E90FF;color:#FFFFFF;}</style><h2 id="statement">23</h2>Please modify the following source code in the output field to change from the left figure to the right figure!
+  <table >
+  <tr>
+     
+
+<td><figure> <img src="img/stemplot1.JPG" alt="Elephant at sunset"> 
+</figure></td>
+     <td><figure> <img src="img/arrow2.JPG" alt="Elephant at sunset"> 
+</figure></td>
+    <td><figure> <img src="img/stemplot2.JPG" alt="Elephant at sunset"> 
+</figure></td>
+  </tr>  
+</table>
+<table >
+  <tr>
+     
+
+<td><figure> <img src="img/mark.JPG" alt="Elephant at sunset"> 
+</figure></td>
+       </tr>  
+</table><a href="source_codes/Problem23.zip" download> Click Here To Download Source Code</a>
+<h4 id="code">Source Code</h4>
+<pre class="prettyprint" id="scoring-res" >01:import matplotlib.pyplot as plt
+02:import pandas as pd
+03:marks_data = pd.read_csv(r&#39;D:\marks.csv&#39;)
+04:df=pd.DataFrame(marks_data)
+05:plt.xlim([0, 110])
+06:plt.ylim([0, 6])
+07:plt.stem(df.marks,df.C_results, &#39;-.&#39;)
+08:plt.title(&#39;Students Marks About C Programming(Stem Plot)&#39;,color = &#39;blue&#39;)
+09:plt.xlabel(&#39;Marks&#39;, color = &#39;green&#39;)
+10:plt.ylabel(&#39;Number of Students&#39;, color = &#39;green&#39;)
+11:plt.savefig(&#39;D:/stemplot1.JPG&#39;) # save the stemplot chart as JPG
+
+</pre>
+<h4 id="code1">the output</h4>
+<pre class = "prettyprint" id = "scoring-res" <h2 id="code1"></h2>
+01<input type="text" name="intext" id="mytext1" 0 size=120 ansHint='import matplotlib.pyplot as plt^import pandas as pd^marks_data = pd.read_csv(r'D:\marks.csv')^df=pd.DataFrame(marks_data)^plt.xlim([0, 110])^plt.ylim([0, 6])^plt.stem(df.marks,df.Python_results, '--')^plt.title('Students Marks About Python Programming(Stem Plot)',color = 'green')^plt.xlabel('Marks', color = 'blue')^plt.ylabel('Number of Students', color = 'blue')^plt.savefig('D:/stemplot2.JPG') # save the stemplot chart as JPG' missingele="stem2^Students Marks showing with Stem1(Stem Plot)^green^stemplot2"  ansSpace="2513b3a62983c5868f80760836e13c91c141917abed407257e7f15e70ed28020" ans="1e9d6c71a6b983d9c4bdd5ec1175dac9ccf864ce612a93d3308ac48aeb8c23be" value='import matplotlib.pyplot as plt' onkeydown="myFunction()">  </input>
+02<input type="text" name="intext" id="mytext2" 1 size=120 ansHint='import matplotlib.pyplot as plt^import pandas as pd^marks_data = pd.read_csv(r'D:\marks.csv')^df=pd.DataFrame(marks_data)^plt.xlim([0, 110])^plt.ylim([0, 6])^plt.stem(df.marks,df.Python_results, '--')^plt.title('Students Marks About Python Programming(Stem Plot)',color = 'green')^plt.xlabel('Marks', color = 'blue')^plt.ylabel('Number of Students', color = 'blue')^plt.savefig('D:/stemplot2.JPG') # save the stemplot chart as JPG' missingele="stem2^Students Marks showing with Stem1(Stem Plot)^green^stemplot2"  ansSpace="caaef2015a148e9f558ba14bf691abc894130b2c8df7e582a8eff1d08990f23b" ans="2c8ffa8fbb176e49566f233bbb0d5af345a7fbff27157fc1c77672d54341db15" value='import pandas as pd' onkeydown="myFunction()">  </input>
+03<input type="text" name="intext" id="mytext3" 2 size=120 ansHint='import matplotlib.pyplot as plt^import pandas as pd^marks_data = pd.read_csv(r'D:\marks.csv')^df=pd.DataFrame(marks_data)^plt.xlim([0, 110])^plt.ylim([0, 6])^plt.stem(df.marks,df.Python_results, '--')^plt.title('Students Marks About Python Programming(Stem Plot)',color = 'green')^plt.xlabel('Marks', color = 'blue')^plt.ylabel('Number of Students', color = 'blue')^plt.savefig('D:/stemplot2.JPG') # save the stemplot chart as JPG' missingele="stem2^Students Marks showing with Stem1(Stem Plot)^green^stemplot2"  ansSpace="8a891912612bc83a5d0b909eb177d365f27fda9be7d6e9ce198c7bcb3e21fdf0" ans="dff31331cde1d471f28870a21657299e6b2712d2089b887167500ef00e5fde70" value='marks_data = pd.read_csv(r&#39;D:\marks.csv&#39;)' onkeydown="myFunction()">  </input>
+04<input type="text" name="intext" id="mytext4" 3 size=120 ansHint='import matplotlib.pyplot as plt^import pandas as pd^marks_data = pd.read_csv(r'D:\marks.csv')^df=pd.DataFrame(marks_data)^plt.xlim([0, 110])^plt.ylim([0, 6])^plt.stem(df.marks,df.Python_results, '--')^plt.title('Students Marks About Python Programming(Stem Plot)',color = 'green')^plt.xlabel('Marks', color = 'blue')^plt.ylabel('Number of Students', color = 'blue')^plt.savefig('D:/stemplot2.JPG') # save the stemplot chart as JPG' missingele="stem2^Students Marks showing with Stem1(Stem Plot)^green^stemplot2"  ansSpace="2372ccba1f1dc131f72b87ed479cdf6365f4b2035f079e368a90e0b0a2e0405e" ans="2372ccba1f1dc131f72b87ed479cdf6365f4b2035f079e368a90e0b0a2e0405e" value='df=pd.DataFrame(marks_data)' onkeydown="myFunction()">  </input>
+05<input type="text" name="intext" id="mytext5" 4 size=120 ansHint='import matplotlib.pyplot as plt^import pandas as pd^marks_data = pd.read_csv(r'D:\marks.csv')^df=pd.DataFrame(marks_data)^plt.xlim([0, 110])^plt.ylim([0, 6])^plt.stem(df.marks,df.Python_results, '--')^plt.title('Students Marks About Python Programming(Stem Plot)',color = 'green')^plt.xlabel('Marks', color = 'blue')^plt.ylabel('Number of Students', color = 'blue')^plt.savefig('D:/stemplot2.JPG') # save the stemplot chart as JPG' missingele="stem2^Students Marks showing with Stem1(Stem Plot)^green^stemplot2"  ansSpace="243ed7d1d76ee7634e43650a48d5d95cc9e6a401a528b852ea0256ea4929b600" ans="3b31f9da7a7b53b981af4cada5c3856b5cf3e726eeb952b4fa7c0ff8ed9fb442" value='plt.xlim([0, 110])' onkeydown="myFunction()">  </input>
+06<input type="text" name="intext" id="mytext6" 5 size=120 ansHint='import matplotlib.pyplot as plt^import pandas as pd^marks_data = pd.read_csv(r'D:\marks.csv')^df=pd.DataFrame(marks_data)^plt.xlim([0, 110])^plt.ylim([0, 6])^plt.stem(df.marks,df.Python_results, '--')^plt.title('Students Marks About Python Programming(Stem Plot)',color = 'green')^plt.xlabel('Marks', color = 'blue')^plt.ylabel('Number of Students', color = 'blue')^plt.savefig('D:/stemplot2.JPG') # save the stemplot chart as JPG' missingele="stem2^Students Marks showing with Stem1(Stem Plot)^green^stemplot2"  ansSpace="2906960ef25a0da752c7c690434b212e19d28987cea45069490ab9aa2c02a0f6" ans="3961d0f37d444d1646b2bfcf0c2648549515da0708720b586864a7f9f258c7f8" value='plt.ylim([0, 6])' onkeydown="myFunction()">  </input>
+07<input type="text" name="intext" id="mytext7" 6 size=120 ansHint='import matplotlib.pyplot as plt^import pandas as pd^marks_data = pd.read_csv(r'D:\marks.csv')^df=pd.DataFrame(marks_data)^plt.xlim([0, 110])^plt.ylim([0, 6])^plt.stem(df.marks,df.Python_results, '--')^plt.title('Students Marks About Python Programming(Stem Plot)',color = 'green')^plt.xlabel('Marks', color = 'blue')^plt.ylabel('Number of Students', color = 'blue')^plt.savefig('D:/stemplot2.JPG') # save the stemplot chart as JPG' missingele="stem2^Students Marks showing with Stem1(Stem Plot)^green^stemplot2"  ansSpace="f2e1d30282bb760d71aab45d2475d596dd61330c7c534864864e862b5b34a2fd" ans="dc7bda9f774a90c7b245d3474bfa92050dbb2451180c34fc6290611797315768" value='plt.stem(df.marks,df.C_results, &#39;-.&#39;)' onkeydown="myFunction()">  </input>
+08<input type="text" name="intext" id="mytext8" 7 size=120 ansHint='import matplotlib.pyplot as plt^import pandas as pd^marks_data = pd.read_csv(r'D:\marks.csv')^df=pd.DataFrame(marks_data)^plt.xlim([0, 110])^plt.ylim([0, 6])^plt.stem(df.marks,df.Python_results, '--')^plt.title('Students Marks About Python Programming(Stem Plot)',color = 'green')^plt.xlabel('Marks', color = 'blue')^plt.ylabel('Number of Students', color = 'blue')^plt.savefig('D:/stemplot2.JPG') # save the stemplot chart as JPG' missingele="stem2^Students Marks showing with Stem1(Stem Plot)^green^stemplot2"  ansSpace="d55f36183a19abd0b9545d8c901946cedf97e3f630a8e86ac7a521051aca0bcd" ans="87175c71a438b389fa1471ded3aac1db886387ef6dda4a11748e1d8bba8a94c4" value='plt.title(&#39;Students Marks About C Programming(Stem Plot)&#39;,color = &#39;blue&#39;)' onkeydown="myFunction()">  </input>
+09<input type="text" name="intext" id="mytext9" 8 size=120 ansHint='import matplotlib.pyplot as plt^import pandas as pd^marks_data = pd.read_csv(r'D:\marks.csv')^df=pd.DataFrame(marks_data)^plt.xlim([0, 110])^plt.ylim([0, 6])^plt.stem(df.marks,df.Python_results, '--')^plt.title('Students Marks About Python Programming(Stem Plot)',color = 'green')^plt.xlabel('Marks', color = 'blue')^plt.ylabel('Number of Students', color = 'blue')^plt.savefig('D:/stemplot2.JPG') # save the stemplot chart as JPG' missingele="stem2^Students Marks showing with Stem1(Stem Plot)^green^stemplot2"  ansSpace="a4f4c7a745e9f8268e40a04f4e86c936d4aafc5c26ef906d295c8f4166bb47d5" ans="c8f1dc91b1847a65cfb3b1b546ec3bc560845a94cb1026bcb0d87a7cc24bdbef" value='plt.xlabel(&#39;Marks&#39;, color = &#39;green&#39;)' onkeydown="myFunction()">  </input>
+10<input type="text" name="intext" id="mytext10" 9 size=120 ansHint='import matplotlib.pyplot as plt^import pandas as pd^marks_data = pd.read_csv(r'D:\marks.csv')^df=pd.DataFrame(marks_data)^plt.xlim([0, 110])^plt.ylim([0, 6])^plt.stem(df.marks,df.Python_results, '--')^plt.title('Students Marks About Python Programming(Stem Plot)',color = 'green')^plt.xlabel('Marks', color = 'blue')^plt.ylabel('Number of Students', color = 'blue')^plt.savefig('D:/stemplot2.JPG') # save the stemplot chart as JPG' missingele="stem2^Students Marks showing with Stem1(Stem Plot)^green^stemplot2" ansSpace="9535cefbf6ed6da8515e849df4c0ca9f73af59d360eb4c3d0149d486573817c4" ans="6da1062ec81201a0847f52b774ade08e3d8ce7b2ee9e51403e32b75f50ea795e" value='plt.ylabel(&#39;Number of Students&#39;, color = &#39;green&#39;)' onkeydown="myFunction()"></input>
+11<input type="text" name="intext" id="mytext11" 10 size=120 ansHint='import matplotlib.pyplot as plt^import pandas as pd^marks_data = pd.read_csv(r'D:\marks.csv')^df=pd.DataFrame(marks_data)^plt.xlim([0, 110])^plt.ylim([0, 6])^plt.stem(df.marks,df.Python_results, '--')^plt.title('Students Marks About Python Programming(Stem Plot)',color = 'green')^plt.xlabel('Marks', color = 'blue')^plt.ylabel('Number of Students', color = 'blue')^plt.savefig('D:/stemplot2.JPG') # save the stemplot chart as JPG' missingele="stem2^Students Marks showing with Stem1(Stem Plot)^green^stemplot2" ansSpace="70fa21e8b6a41eaf3e3771b02cd566343578193ef60a9d2079ecdfe1a409b34c" ans="163a9edac2a2d527af46e3ff43a14be056b41d19340394994d2f8796251a67f0" value='plt.savefig(&#39;D:/stemplot1.JPG&#39;) # save the stemplot chart as JPG' onkeydown="myFunction()"></input>
+<script src="myScript.js"></script></div></pre><h2 id="answer">Answer</h2>
+<a class="btn" href="javascript:newScoring()">Answer</a>
+<a class="btn btn-success" onclick="ansFileSave()">File Save</a>
+
+<a id="dldlink"></a>
+<script type="text/javascript" src="allowtab.js"></script>

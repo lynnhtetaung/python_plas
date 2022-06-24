@@ -1,0 +1,76 @@
+<h2 id="statement">21</h2>
+Fill in Blanks 
+<h2 id="code">The Source Code</h2>
+<pre class="prettyprint" id="scoring-res"># A quick-demo of Breadth First Search Traversal
+# from a given source vertex. BFS(int s) 
+# traverses vertices reachable from s. 
+
+from collections import defaultdict 
+  
+# This class represents a directed graph using adjacency list representation 
+
+class Graph: 
+  
+    # Constructor 
+    def __init__(self): 
+  
+        # default dictionary to store graph 
+        self.graph = defaultdict(list) 
+  
+    # function to add an edge to graph 
+    def addEdge(self,u,v): 
+        self.graph[u].append(v) 
+  
+    # Function to print a BFS of graph 
+    def BFS(self, s): 
+  
+        # Mark all the vertices as not visited 
+        visited = [False] * (len(self.graph)) 
+  
+        # Create a queue for BFS 
+        queue = [] 
+  
+        # Mark the source node as visited and enqueue it 
+        queue.append(s) 
+        visited[s] = True
+  
+        while queue: 
+  
+            # Dequeue a vertex from queue and print it 
+            s = queue.pop(0) 
+            print (s, end = " ") 
+  
+            # Get all adjacent vertices of the dequeued vertex s. 
+            # If a adjacent has not been visited, then mark it visited and enqueue it 
+            for i in self.graph[s]: 
+                if visited[i] == False: 
+                    queue.append(i) 
+                    visited[i] = True
+  
+# Create a graph given in the above diagram 
+g = Graph() 
+g.addEdge(0, 1) 
+g.addEdge(0, 2) 
+g.addEdge(1, 2) 
+g.addEdge(2, 0) 
+g.addEdge(2, 3) 
+g.addEdge(3, 3) 
+  
+print ("Following is Breadth First Traversal"
+                  " (starting from vertex 2)") 
+g.BFS(2) 
+
+The output of this program is:
+Following is Breadth First Traversal (starting from vertex 2)
+<input size=2 ans="ac1964eb089654e01f7bfb4871e0cd31ea4d2aa6e6e48774b6b9917b1341dbf6" placeholder=1></input>,<input size=2 ans="b7ca93a0ea3d4b2d2330b5363aa251bf2c8bd184f3b4d8032b645064772ad214" placeholder=2></input>,<input size=2 ans="fe6340be87fd5e43b7f0cac5741e76205dd69a68b2024fda16c696848a720f7a" placeholder=3></input>,<input size=2 ans="585579aed1c5241bcec5569704f0863f09f42a230a3329daf11e8314025a0e28" placeholder=4></input>
+
+
+
+</pre>
+<h2 id="answer">Answer</h2>
+<a class="btn" href="javascript:newScoring('Python_VTP_algorithm')">Answer</a>
+<script type="text/javascript">
+$(function(){
+ prettyPrint();
+});
+</script>

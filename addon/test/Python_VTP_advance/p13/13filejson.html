@@ -1,0 +1,42 @@
+<h2 id="statement">13</h2>
+Fill in Blanks 
+<h2 id="code">The Source Code</h2>
+<pre class="prettyprint" id="scoring-res"># A quick-demo of json file reading usage
+
+''' Assume data.json includes as follow:
+{ "emp_details": [
+          { 
+             "emp_name" : "Shubham",
+             "email" : "ksingh.shubh@gmail.com",
+             "job_profile" : "Part Time"
+          }
+    ]
+} '''
+
+import json 
+
+# JSON file Loading
+f = open ('data.json', "r") 
+
+# Reading data from JSON file 
+data = json.loads(f.read()) 
+
+# Accessing the data inside the Json file by Iterating through the json list 
+for i in data['emp_details']: 
+    print(i) 
+
+# Closing the file 
+f.close() 
+
+#Please do not forget in the answer to include " " (space), " { " (curly bracket),  " ' " (single quotation).
+The output of the program is {'emp_name': <input size=2 ans="50a2856385ed39d4d7f5cb6e448b755b2b31239b1f72a084a31d40438ebaf3ee" placeholder=1></input>,<input size=2 ans="93ae91e55e38d3a74654aafc0ea3ca606e710601a17e9ed9b303ed056dc21813" placeholder=2></input> 'ksingh.shubh@gmail.com',<input size=2 ans="f7aa33620aa457930cae8101791eb9b3ae3887bbc3cb3d7bab358c401e60344a" placeholder=3></input> 'Part Time'}
+
+
+</pre>
+<h2 id="answer">Answer</h2>
+<a class="btn" href="javascript:newScoring('Python_VTP_advance')">Answer</a>
+<script type="text/javascript">
+$(function(){
+ prettyPrint();
+});
+</script>

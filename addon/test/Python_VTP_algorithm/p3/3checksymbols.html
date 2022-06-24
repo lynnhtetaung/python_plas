@@ -1,0 +1,56 @@
+<h2 id="statement">3</h2>
+Fill in Blanks 
+<h2 id="code">The Source Code</h2>
+<pre class="prettyprint" id="scoring-res"># A quick-demo of checking balanced symbols using stack operations
+
+from pythonds.basic import Stack
+    
+def parChecker(symbolString):
+    s = Stack()
+    balanced = True
+    index = 0
+    while index < len(symbolString) and balanced:
+        symbol = symbolString[index]
+        if symbol in "([{":
+            s.push(symbol)
+        else:
+            if s.isEmpty():
+                balanced = False
+            else:
+                top = s.pop()                    
+                if not matches(top,symbol):
+                    balanced = False
+        index = index + 1
+    if balanced and s.isEmpty():
+        return True
+    else:
+        return False
+                
+def matches(open,close):
+    opens = "([{"
+    closers = ")]}"
+    print (opens.index(open))
+    print (closers.index(close))
+    print (opens.index(open) == closers.index(close))
+    return opens.index(open) == closers.index(close)     
+                
+print(parChecker('[{()]'))
+
+The output of the program is<input size=2 ans="23c86fe0b82751dd26898101c795c448dc076f37ba10bd3d16e57f7e0a2c9d58" placeholder=1></input>
+                            <input size=2 ans="721574dd157b4459796a1e31a7077b4ff4826c6403782e5878ef989cf7c36d7a" placeholder=2></input>
+                            <input size=2 ans="2a6ca144a57ededd88bf6c83b20fd58546fa815dde7f4da74b6678e30814d09d" placeholder=3></input>
+                            <input size=2 ans="114bd151f8fb0c58642d2170da4ae7d7c57977260ac2cc8905306cab6b2acabc" placeholder=4></input>
+                            <input size=2 ans="13671077b66a29874a2578b5240319092ef2a1043228e433e9b006b5e53e7513" placeholder=5></input>
+                            <input size=2 ans="438ff3c9d66ab09d718eab741d209b6a37d115fc883949fc74335a0d6d64ae85" placeholder=6></input>
+                            <input size=2 ans="3a79e58cb8b127b2371646a9eda414c935275ff59af7545832814d44b203680c" placeholder=7></input>
+
+
+
+</pre>
+<h2 id="answer">Answer</h2>
+<a class="btn" href="javascript:newScoring('Python_VTP_algorithm')">Answer</a>
+<script type="text/javascript">
+$(function(){
+ prettyPrint();
+});
+</script>

@@ -1,0 +1,126 @@
+<style type="text/css">
+            textarea, iframe {
+                border: 1px solid grey;
+                height: 500px;
+                width: 98%;
+                resize: none;   
+            }
+             div.form-popup {
+        background-color: #fed9ff;
+        width: 900px;
+        height: 600px;
+        overflow-x: hidden;
+        overflow-y: auto;
+        padding: 20px;
+      }
+ .form-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px dotted #f1f1f1;
+  text-align:justify;  
+  text-justify:initial;
+
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 900px;
+  padding: 20px;
+  background-color: lightyellow;
+}
+
+
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 10%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: mediumvioletred;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+</style>
+<h2 id="statement">1</h2><table >
+    <tr><td> Input excel file to the source code<br>
+<figure> <img src="public/images/first.JPG" alt="Elephant at sunset"> 
+</figure></td>
+</tr>
+<tr><td> Output excel file from the source code<br>
+<figure> <img src="img/firstoutput.JPG" alt="Elephant at sunset"> 
+</figure></td>
+</tr>
+    <tr><td> Output excel file from the modified source code<br>
+<figure> <img src="img/secondoutput.JPG" alt="Elephant at sunset"> 
+</figure></td>
+</tr> 
+</table>
+
+<a href="source_codes/Problem1.zip" download> Click Here To Download Source Code</a>
+<br> Please modify the following source code!
+<h4 id="code">Source Code</h4>
+<pre class="prettyprint" id="scoring-res" >01:import pandas as pd
+02:import openpyxl
+03:if __name__ == "__main__":
+04:	data = pd.read_excel(&#39;D:\First.xlsx&#39;, sheet_name = 0)#read the empty excel file with the specifing the number
+05:	df=pd.DataFrame([[11, 21.3, &#39;x&#39;], [12, 25.7, &#39;y&#39;], [18, 30.3, &#39;z&#39;]], index=[&#39;one&#39;, &#39;two&#39;, &#39;three&#39;], columns=[&#39;a&#39;, &#39;b&#39;, &#39;c&#39;])#create pandas dataframe to make operations
+06:	df[&#39;d&#39;] = None#adding new column
+07:	df[&#39;d&#39;] = 50
+08:	df.to_excel(&#39;D:\First.xlsx&#39;, index=True, header=True)#writing data into excel file
+
+</pre>
+<h4 id="code1">the output</h4>
+<pre class = "prettyprint" id = "scoring-res" <h2 id="code1"></h2>
+01<input type="text" name="intext" id="mytext1" 0 size=95 ansHint='import pandas as pd^import openpyxl^if __name__ == "__main__":^	data = pd.read_excel('D:\Second.xlsx', sheet_name = 0)#read the empty excel file with the specifing the number^	df=pd.DataFrame([[21, 42, 30], [61.3, 12.5, 32.8], ['m', 'n', 'o']], index=['1', '2', '3'], columns=['A', 'B', 'C'])#create pandas dataframe to make operations^	df['D'] = None#adding new column^	df['D'] = 40^	df.to_excel('D:\Second.xlsx', index=True, header=True)#writing data into excel file' missingele="21^42^30^61.3^12.5^32.8^m^n^o^A^B^C^Second"  ansSpace="32e87b0ea7fbd8b94ed6f1fbbba30cbcb6113d23e52a9a5201ac8bfc3eb9d3ef" ans="9829f0fe0c4373f3303c2f0d31e43d946f93fdebd9a113d9fc811be4486b1a42" value='import pandas as pd' onkeydown="myFunction()">  </input>
+02<input type="text" name="intext" id="mytext2" 1 size=95 ansHint='import pandas as pd^import openpyxl^if __name__ == "__main__":^	data = pd.read_excel('D:\Second.xlsx', sheet_name = 0)#read the empty excel file with the specifing the number^	df=pd.DataFrame([[21, 42, 30], [61.3, 12.5, 32.8], ['m', 'n', 'o']], index=['1', '2', '3'], columns=['A', 'B', 'C'])#create pandas dataframe to make operations^	df['D'] = None#adding new column^	df['D'] = 40^	df.to_excel('D:\Second.xlsx', index=True, header=True)#writing data into excel file' missingele="21^42^30^61.3^12.5^32.8^m^n^o^A^B^C^Second"  ansSpace="1dbfd5e4adf03f95ce376521af4cd15fd5c8f39fb2df5c659abec7ef9c4ea269" ans="b7022b9042d3d3f1a0f802418fc89e0ebe772adee4313e03dcd24c374bdb2daf" value='import openpyxl' onkeydown="myFunction()">  </input>
+03<input type="text" name="intext" id="mytext3" 2 size=95 ansHint='import pandas as pd^import openpyxl^if __name__ == "__main__":^	data = pd.read_excel('D:\Second.xlsx', sheet_name = 0)#read the empty excel file with the specifing the number^	df=pd.DataFrame([[21, 42, 30], [61.3, 12.5, 32.8], ['m', 'n', 'o']], index=['1', '2', '3'], columns=['A', 'B', 'C'])#create pandas dataframe to make operations^	df['D'] = None#adding new column^	df['D'] = 40^	df.to_excel('D:\Second.xlsx', index=True, header=True)#writing data into excel file' missingele="21^42^30^61.3^12.5^32.8^m^n^o^A^B^C^Second"  ansSpace="61443d9075cd8d691c721f186643be149faf4faf1a157a1d68bcfa80742e59dd" ans="186319b42ee4a3468abcb82cd2031241d7adc3a18c7f301e767dfaf7e0033cc2" value='if __name__ == "__main__":' onkeydown="myFunction()">  </input>
+04<input type="text" name="intext" id="mytext4" 3 size=95 ansHint='import pandas as pd^import openpyxl^if __name__ == "__main__":^	data = pd.read_excel('D:\Second.xlsx', sheet_name = 0)#read the empty excel file with the specifing the number^	df=pd.DataFrame([[21, 42, 30], [61.3, 12.5, 32.8], ['m', 'n', 'o']], index=['1', '2', '3'], columns=['A', 'B', 'C'])#create pandas dataframe to make operations^	df['D'] = None#adding new column^	df['D'] = 40^	df.to_excel('D:\Second.xlsx', index=True, header=True)#writing data into excel file' missingele="21^42^30^61.3^12.5^32.8^m^n^o^A^B^C^Second"  ansSpace="9726027e02a35c19234e3847db8cefb22bbee8209dec07695a0225269c8f3d66" ans="53e5b071e1a2a3a2b13ff41e962cc392d281f0e36ad1a4c19213d50206ca41d3" value='	data = pd.read_excel(&#39;D:\First.xlsx&#39;, sheet_name = 0)#read the empty excel file with the specifing the number' onkeydown="myFunction()">  </input>
+05<input type="text" name="intext" id="mytext5" 4 size=95 ansHint='import pandas as pd^import openpyxl^if __name__ == "__main__":^	data = pd.read_excel('D:\Second.xlsx', sheet_name = 0)#read the empty excel file with the specifing the number^	df=pd.DataFrame([[21, 42, 30], [61.3, 12.5, 32.8], ['m', 'n', 'o']], index=['1', '2', '3'], columns=['A', 'B', 'C'])#create pandas dataframe to make operations^	df['D'] = None#adding new column^	df['D'] = 40^	df.to_excel('D:\Second.xlsx', index=True, header=True)#writing data into excel file' missingele="21^42^30^61.3^12.5^32.8^m^n^o^A^B^C^Second"  ansSpace="bd13ae990bf08221438d9d1a29717882ae42332e2ebe00a61a01068c728ed488" ans="ee1a4a690b07b8c31681e9d2523634785382153caa71b94e77252546e53fd726" value='	df=pd.DataFrame([[11, 21.3, &#39;x&#39;], [12, 25.7, &#39;y&#39;], [18, 30.3, &#39;z&#39;]], index=[&#39;one&#39;, &#39;two&#39;, &#39;three&#39;], columns=[&#39;a&#39;, &#39;b&#39;, &#39;c&#39;])#create pandas dataframe to make operations' onkeydown="myFunction()">  </input>
+06<input type="text" name="intext" id="mytext6" 5 size=95 ansHint='import pandas as pd^import openpyxl^if __name__ == "__main__":^	data = pd.read_excel('D:\Second.xlsx', sheet_name = 0)#read the empty excel file with the specifing the number^	df=pd.DataFrame([[21, 42, 30], [61.3, 12.5, 32.8], ['m', 'n', 'o']], index=['1', '2', '3'], columns=['A', 'B', 'C'])#create pandas dataframe to make operations^	df['D'] = None#adding new column^	df['D'] = 40^	df.to_excel('D:\Second.xlsx', index=True, header=True)#writing data into excel file' missingele="21^42^30^61.3^12.5^32.8^m^n^o^A^B^C^Second"  ansSpace="9b4d0f68d93554d5beb047cfb91fcd5d48e84de76d699f9f2890e82464cbdf53" ans="b6594703612da7d7b9cc20bce356f7028a57bacf2a35ec0970d3fe3cbe428ae8" value='	df[&#39;d&#39;] = None#adding new column' onkeydown="myFunction()">  </input>
+07<input type="text" name="intext" id="mytext7" 6 size=95 ansHint='import pandas as pd^import openpyxl^if __name__ == "__main__":^	data = pd.read_excel('D:\Second.xlsx', sheet_name = 0)#read the empty excel file with the specifing the number^	df=pd.DataFrame([[21, 42, 30], [61.3, 12.5, 32.8], ['m', 'n', 'o']], index=['1', '2', '3'], columns=['A', 'B', 'C'])#create pandas dataframe to make operations^	df['D'] = None#adding new column^	df['D'] = 40^	df.to_excel('D:\Second.xlsx', index=True, header=True)#writing data into excel file' missingele="21^42^30^61.3^12.5^32.8^m^n^o^A^B^C^Second"  ansSpace="d73630c653cdf7683ac8dba2a08b2f0dd7af76921729958862f148efa34f4aef" ans="e48bef89e963d5b58982af6c89fad06dd9d3950f3d340bbef05fa50423578098" value='	df[&#39;d&#39;] = 50' onkeydown="myFunction()">  </input>
+08<input type="text" name="intext" id="mytext8" 7 size=95 ansHint='import pandas as pd^import openpyxl^if __name__ == "__main__":^	data = pd.read_excel('D:\Second.xlsx', sheet_name = 0)#read the empty excel file with the specifing the number^	df=pd.DataFrame([[21, 42, 30], [61.3, 12.5, 32.8], ['m', 'n', 'o']], index=['1', '2', '3'], columns=['A', 'B', 'C'])#create pandas dataframe to make operations^	df['D'] = None#adding new column^	df['D'] = 40^	df.to_excel('D:\Second.xlsx', index=True, header=True)#writing data into excel file' missingele="21^42^30^61.3^12.5^32.8^m^n^o^A^B^C^Second"  ansSpace="c35cc25e417fc2fb6358c588f9429ef2fbc5f54d52de1e8fa4a19629f9fd1321" ans="a45ec78508199ad8f7cf736c758dedf74bd332f2b752fba5a874d93eab3e6b1e" value='	df.to_excel(&#39;D:\First.xlsx&#39;, index=True, header=True)#writing data into excel file' onkeydown="myFunction()">  </input>
+<script src="myScript.js"></script></div></pre>
+<h2 id="answer">Answer</h2>
+<a class="btn" href="javascript:newScoring()">Answer</a>
+<a class="btn btn-success" onclick="ansFileSave()">File Save</a>
+<input onclick="openForm();" type="button" value="Hint" class="btn" style="float: right;">
+<div class="form-popup" id="myForm">
+  <form class="form-container">
+    <h1>Hint</h1>
+       <p>1. Read the input excel file:<b>Second.xlsx</b>.<br>
+		2. Then, <b>create pandas data frame</b> to store data values to the excel file.<br>
+		3. Create column:<b> D with value 40</b>.<br>		
+		4. Finally, write the modified values again into the excel file:<b>Second.xlsx</b>.
+        <br> If you want to study more about reading and writing excel files, please visit this link.<a href="source_codes/readandwrite.html" download> Click Here</a>		
+    
+        <br>
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+  </form>
+</div>
+<script type="text/javascript">
+            
+function openForm() { 
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+</script>
+
+<a id="dldlink"></a>
+<script type="text/javascript" src="allowtab.js"></script>

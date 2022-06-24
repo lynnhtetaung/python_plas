@@ -1,0 +1,44 @@
+<h2 id="statement">6</h2>
+Fill in Blanks 
+<h2 id="code">The Source Code</h2>
+<pre class="prettyprint" id="scoring-res"># A quick-demo of index arrays Usage in Numpy
+
+import numpy as np
+ 
+# Create a sequence of integers from 10 to 3 with a step of -2
+a = np.arange(10, 3, -2) 
+
+# if np.arange(7, 2, -2),the ouput will be printed like [7  5  3]
+print("\n A sequential array with a negative step: \n",a)
+ 
+# Indexes are specified inside the np.array method.
+newarr = a[np.array([3, 1, 2 ])]
+
+# arr = [1  7  3  8] and arr[np.array([3, 1, 2 ])], the ouput will be printed like [8 7 3]
+print("\n Elements at these indices are:\n",newarr)
+
+# NumPy array with elements from 1 to 9
+x = np.array([1, 2, 3, 4, 5, 6, 7, 8, 9])
+ 
+# Index values can be negative and negative index starts from last as -1
+arr = x[np.array([1, 3, -3])]
+print("\n Elements are : \n",arr)
+
+A sequential array with a negative step: 
+<input size=2 ans="bd6ed013e3fc32d9f9a1ee03fe2a8bd528f0a930e41053c0ff99f37995f64f10" placeholder=1></input>
+
+Elements at these indices are:
+<input size=2 ans="f4afa0042f8f5df1007125a5b62220c2b6470fae51702324b069162465f1ae07" placeholder=2></input>
+
+Elements are : 
+<input size=2 ans="688abb1043efeb332d3a21159fa462c347635b6c2ef1136b965dcdc4fdb71b2d" placeholder=3></input> 
+
+
+</pre>
+<h2 id="answer">Answer</h2>
+<a class="btn" href="javascript:newScoring()">Answer</a>
+<script type="text/javascript">
+$(function(){
+ prettyPrint();
+});
+</script>
