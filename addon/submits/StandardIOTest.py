@@ -39,7 +39,7 @@ if __name__ == '__main__':
      #   main(f)
     
 
-    save_path1 = '/Users/soethandara/Desktop/PLAS_Node/Docker/NPLAS-All/addon/results'
+    save_path1 = 'addon/results'
     # completeName = os.path.join(save_path1, 'p1.result')
     completeName = os.path.join(save_path1,'@Python_CWP_basic@p1@' +today + ".result")
 

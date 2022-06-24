@@ -1,0 +1,32 @@
+test_AddOrUpdate (__main__.Test_Dictionary) ... ERROR
+test_delete (__main__.Test_Dictionary) ... ERROR
+test_get_dict (__main__.Test_Dictionary) ... ERROR
+
+======================================================================
+ERROR: test_AddOrUpdate (__main__.Test_Dictionary)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/soethandara/Desktop/PLAS/Ishihara/Python-NPLAS/routes/../addon/submits/DictionDataTypeTest.py", line 17, in test_AddOrUpdate
+    self.dictionary.AddOrUpdate({'StuName': 'Ajeet', 'StuAge': 30, 'StuCity': 'Agra'})
+AttributeError: Dictionary instance has no attribute 'AddOrUpdate'
+
+======================================================================
+ERROR: test_delete (__main__.Test_Dictionary)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/soethandara/Desktop/PLAS/Ishihara/Python-NPLAS/routes/../addon/submits/DictionDataTypeTest.py", line 23, in test_delete
+    self.dictionary.AddOrUpdate({'StuName':'Ajeet', 'StuAge': 30, 'StuCity': 'Agra'})
+AttributeError: Dictionary instance has no attribute 'AddOrUpdate'
+
+======================================================================
+ERROR: test_get_dict (__main__.Test_Dictionary)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/soethandara/Desktop/PLAS/Ishihara/Python-NPLAS/routes/../addon/submits/DictionDataTypeTest.py", line 30, in test_get_dict
+    self.dictionary.AddOrUpdate({'name': 'Ajeet', 'age': 30})
+AttributeError: Dictionary instance has no attribute 'AddOrUpdate'
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.000s
+
+FAILED (errors=3)

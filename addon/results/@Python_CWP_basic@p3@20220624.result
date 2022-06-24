@@ -1,0 +1,32 @@
+test_demo_membership1 (__main__.Test_demoMembership1) ... ERROR
+test_demo_membership2 (__main__.Test_demoMembership1) ... ERROR
+test_demo_membership3 (__main__.Test_demoMembership1) ... ERROR
+
+======================================================================
+ERROR: test_demo_membership1 (__main__.Test_demoMembership1)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/soethandara/Desktop/PLAS/Ishihara/Python-NPLAS/routes/../addon/submits/MembershipOperaTest.py", line 19, in test_demo_membership1
+    actual = self.membership_operators.demo_membership1(self.str1, self.str2)
+AttributeError: Membership_Operators instance has no attribute 'demo_membership1'
+
+======================================================================
+ERROR: test_demo_membership2 (__main__.Test_demoMembership1)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/soethandara/Desktop/PLAS/Ishihara/Python-NPLAS/routes/../addon/submits/MembershipOperaTest.py", line 24, in test_demo_membership2
+    actual = self.membership_operators.demo_membership2(self.str2, self.str3)
+AttributeError: Membership_Operators instance has no attribute 'demo_membership2'
+
+======================================================================
+ERROR: test_demo_membership3 (__main__.Test_demoMembership1)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/soethandara/Desktop/PLAS/Ishihara/Python-NPLAS/routes/../addon/submits/MembershipOperaTest.py", line 30, in test_demo_membership3
+    actual = self.membership_operators.demo_membership3(self.str3, self.str2)
+AttributeError: Membership_Operators instance has no attribute 'demo_membership3'
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.000s
+
+FAILED (errors=3)

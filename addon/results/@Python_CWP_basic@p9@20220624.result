@@ -1,0 +1,23 @@
+test_check_membership1 (__main__.Test_demoMember) ... ERROR
+test_check_membership2 (__main__.Test_demoMember) ... ERROR
+
+======================================================================
+ERROR: test_check_membership1 (__main__.Test_demoMember)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/soethandara/Desktop/PLAS/Ishihara/Python-NPLAS/routes/../addon/submits/MemberTupleTest.py", line 19, in test_check_membership1
+    actual = self.membership.check_membership1(self.member1, self.member2)
+AttributeError: Membership instance has no attribute 'check_membership1'
+
+======================================================================
+ERROR: test_check_membership2 (__main__.Test_demoMember)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/soethandara/Desktop/PLAS/Ishihara/Python-NPLAS/routes/../addon/submits/MemberTupleTest.py", line 23, in test_check_membership2
+    actual = self.membership.check_membership2(self.member1, self.member3)
+AttributeError: Membership instance has no attribute 'check_membership2'
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.001s
+
+FAILED (errors=2)

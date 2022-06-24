@@ -70,7 +70,8 @@ function onSubmit() {
     spinner.removeAttribute('hidden');
     fetch("/submitPython", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: { "Content-Type": "application/json", "Access-Control-Allow-Origin": "*",
+    },
         body: JSON.stringify(postBody)
     }).then(response => {
         console.log("Response", response);

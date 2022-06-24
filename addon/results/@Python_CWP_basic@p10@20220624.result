@@ -1,0 +1,32 @@
+test_delist (__main__.ListTestCases) ... ERROR
+test_get_list (__main__.ListTestCases) ... ERROR
+test_get_size (__main__.ListTestCases) ... ERROR
+
+======================================================================
+ERROR: test_delist (__main__.ListTestCases)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/soethandara/Desktop/PLAS/Ishihara/Python-NPLAS/routes/../addon/submits/ListDataTypeTest.py", line 14, in test_delist
+    self.list.enlist(5) # enlist function to add data
+AttributeError: List instance has no attribute 'enlist'
+
+======================================================================
+ERROR: test_get_list (__main__.ListTestCases)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/soethandara/Desktop/PLAS/Ishihara/Python-NPLAS/routes/../addon/submits/ListDataTypeTest.py", line 23, in test_get_list
+    self.list.enlist(4)
+AttributeError: List instance has no attribute 'enlist'
+
+======================================================================
+ERROR: test_get_size (__main__.ListTestCases)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/soethandara/Desktop/PLAS/Ishihara/Python-NPLAS/routes/../addon/submits/ListDataTypeTest.py", line 29, in test_get_size
+    self.list = List([4, 10, 3])
+TypeError: this constructor takes no arguments
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.001s
+
+FAILED (errors=3)

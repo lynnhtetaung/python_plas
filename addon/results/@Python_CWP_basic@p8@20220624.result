@@ -1,0 +1,23 @@
+test_connect (__main__.TupleTestCases) ... ERROR
+test_get_tuple (__main__.TupleTestCases) ... ERROR
+
+======================================================================
+ERROR: test_connect (__main__.TupleTestCases)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/soethandara/Desktop/PLAS/Ishihara/Python-NPLAS/routes/../addon/submits/TupleUsageTest.py", line 18, in test_connect
+    self.assertEqual(self.tuple.connect(self.tuple1, self.tuple2), (1, 2, 99, 'Kelvin'))
+AttributeError: Tuple instance has no attribute 'connect'
+
+======================================================================
+ERROR: test_get_tuple (__main__.TupleTestCases)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/soethandara/Desktop/PLAS/Ishihara/Python-NPLAS/routes/../addon/submits/TupleUsageTest.py", line 23, in test_get_tuple
+    self.tuple = Tuple((1, 2, 99, 'Kevin'))
+TypeError: this constructor takes no arguments
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.000s
+
+FAILED (errors=2)

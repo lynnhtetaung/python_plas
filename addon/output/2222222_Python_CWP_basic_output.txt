@@ -1,0 +1,39 @@
+2022-06-24 8:40:05 PM ===========================================================
+2022-06-24 8:40:05 PM 1. Preparing to test topic: Python_CWP_basic
+2022-06-24 8:40:05 PM ===========================================================
+
+2022-06-24 8:40:05 PM ---------------1.1. Start testing : Python_CWP_basic/p1/StandardIOTest---------------
+test_Add_Float (__main__.SumTest) ... ERROR
+test_Add_Int (__main__.SumTest) ... ERROR
+test_Add_Str (__main__.SumTest) ... ERROR
+
+======================================================================
+ERROR: test_Add_Float (__main__.SumTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/soethandara/Desktop/PLAS/Ishihara/Python-NPLAS/routes/../addon/submits/StandardIOTest.py", line 27, in test_Add_Float
+    self.standardIO_usage.Add(1.23)
+AttributeError: StandardIO_Usage instance has no attribute 'Add'
+
+======================================================================
+ERROR: test_Add_Int (__main__.SumTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/soethandara/Desktop/PLAS/Ishihara/Python-NPLAS/routes/../addon/submits/StandardIOTest.py", line 21, in test_Add_Int
+    self.standardIO_usage.Add(1)
+AttributeError: StandardIO_Usage instance has no attribute 'Add'
+
+======================================================================
+ERROR: test_Add_Str (__main__.SumTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/soethandara/Desktop/PLAS/Ishihara/Python-NPLAS/routes/../addon/submits/StandardIOTest.py", line 15, in test_Add_Str
+    self.standardIO_usage.Add("Google")
+AttributeError: StandardIO_Usage instance has no attribute 'Add'
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.000s
+
+FAILED (errors=3)
+
+2022-06-24 8:40:05 PM ---------------1.1. End testing : Python_CWP_basic/p1/StandardIOTest---------------

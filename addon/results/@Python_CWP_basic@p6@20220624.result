@@ -1,0 +1,41 @@
+test_display1 (__main__.display_Test) ... ERROR
+test_display2 (__main__.display_Test) ... ERROR
+test_display3 (__main__.display_Test) ... ERROR
+test_display4 (__main__.display_Test) ... ERROR
+
+======================================================================
+ERROR: test_display1 (__main__.display_Test)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/soethandara/Desktop/PLAS/Ishihara/Python-NPLAS/routes/../addon/submits/accessingStringTest.py", line 17, in test_display1
+    actual = self.accString.access_string1(0, self.str)
+AttributeError: Accessing_String instance has no attribute 'access_string1'
+
+======================================================================
+ERROR: test_display2 (__main__.display_Test)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/soethandara/Desktop/PLAS/Ishihara/Python-NPLAS/routes/../addon/submits/accessingStringTest.py", line 21, in test_display2
+    actual = self.accString.access_string2(2, self.str)
+AttributeError: Accessing_String instance has no attribute 'access_string2'
+
+======================================================================
+ERROR: test_display3 (__main__.display_Test)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/soethandara/Desktop/PLAS/Ishihara/Python-NPLAS/routes/../addon/submits/accessingStringTest.py", line 25, in test_display3
+    actual = self.accString.access_string3(-1, self.str)
+AttributeError: Accessing_String instance has no attribute 'access_string3'
+
+======================================================================
+ERROR: test_display4 (__main__.display_Test)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/soethandara/Desktop/PLAS/Ishihara/Python-NPLAS/routes/../addon/submits/accessingStringTest.py", line 29, in test_display4
+    actual = self.accString.access_string4(-2, self.str)
+AttributeError: Accessing_String instance has no attribute 'access_string4'
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.001s
+
+FAILED (errors=4)
