@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8" >
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	<link rel="shortcut icon" href="/images/okayama.png" type="image/png" />
+	<link rel="shortcut icon" href="/img/okayama.png" type="image/png" />
 	<meta name="apple-mobile-web-app-capable" content="yes" />
 	<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, width=device-width">
 
@@ -50,7 +50,7 @@
 </head>
 <body>
 
-<div class="bg-dark padding-y-20">
+<div class="bg-dark padding-y-10">
 	<div class="container text-center">
 		<h1>Offline JPLAS</h1>
 
@@ -61,14 +61,14 @@
 			</h1> -->
 			TOP
 		</a>
-		<a class="btn btn-info" onclick="window.open('about:blank','_self').close()">End</a>
+		<a class="btn btn-info" onclick="window.open('about:blank','_self').close()">END</a>
 		<!-- <div class="jplas" src="login/whoami.jsp"></div> -->
 	</div>
 	</div>
 
 <div class="container">
 	<div class="row">
-		<div class="col md-3">
+		 <div class="col md-3" style="display: none;">
 			<div class="sidemenu js-sidemenu">
 				<h5>Sidemenu</h5>
 				<div>
@@ -78,9 +78,9 @@
 
 				</div>
 			</div>
-		</div>
+		</div> 
 		
-		<div class="col md-9 float-right jplas">
+		<div class="col md-12 float-right jplas">
 			<%- question %>
 			<button class="btn float-right" id="next" value="Next" onclick="onRouteChange('Next')" >Next</button>
 			<button class="btn float-right margin-x-10" id="prev" value="Prev" onclick="onRouteChange('Prev')" >Prev</button>
@@ -92,6 +92,7 @@
 
 <script type="text/javascript" src="/javascripts/programming.general.js"></script>
 <script type="text/javascript" src="/javascripts/programming.python.js"></script>
+
 <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
 <script src="/javascripts/demo/js/jquery.sticky-kit.min.js"></script>
 <script src="/javascripts/demo/google-code-prettify/prettify.js"></script>

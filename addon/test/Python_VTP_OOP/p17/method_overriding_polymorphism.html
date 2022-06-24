@@ -1,0 +1,58 @@
+<h2 id="statement">17</h2>
+<pre class="pfpprettyprint" id="scoring-res">
+<DIV class="fl"># A quick-demo of method overriding(Polymorphism)
+class Vehicle:
+
+    def __init__(self, name, color, price):
+        self.name = name
+        self.color = color
+        self.price = price
+
+    def show(self):
+        print('Details:', self.name, self.color, self.price)
+
+    def max_speed(self):
+        print('Vehicle max speed is 150')
+
+    def change_gear(self):
+        print('Vehicle change 6 gear')
+
+# inherit from vehicle class
+class Car(Vehicle):
+    def max_speed(self):
+        print('Car max speed is 240')
+
+    def change_gear(self):
+        print('Car change 7 gear')
+
+# Car Object
+car = Car('Car x1', 'Red', 20000)
+car.show()
+# calls methods from Car class
+car.max_speed()
+car.change_gear()
+
+# Vehicle Object
+vehicle = Vehicle('Truck x1', 'white', 75000)
+vehicle.show()
+# calls method from a Vehicle class
+vehicle.max_speed()
+vehicle.change_gear()
+</DIV>
+<DIV class="fr">
+What is the output of the program!
+<input size=25 ans="87186b6a9e9ae0c486740b0d64035578349ea98d00ba88d50eb60f113421df75" placeholder=1></input>
+<input size=25 ans="a141765d70b1a6edd5aa788548950d93153aed51bcfae5103ad7acbeb3e3f45a" placeholder=2></input>
+<input size=25 ans="e025623142dd74f52e5a48769bbc71827405c52af28d594df762f109be14986f" placeholder=3></input>
+<input size=25 ans="9807b1ca31c25a6e1908d0a133521923290742ef31e4414abb81673dd06376b0" placeholder=4></input>
+<input size=25 ans="c6286bf7d7f87f7a84ddd1d0b7d77de99a41aabc8e0c2313d155babb35edfbfa" placeholder=5></input>
+<input size=25 ans="315b86e8d6f5de229ecd84f22003ad93227ab605f18fc90416d2cb22882f9b1b" placeholder=6></input>
+</DIV>
+</pre>
+<h2 id="answer">Answer</h2>
+<a class="btn" href="javascript:newScoring('Python_VTP_OOP')">Answer</a>
+<script type="text/javascript">
+$(function(){
+ prettyPrint();
+});
+</script>

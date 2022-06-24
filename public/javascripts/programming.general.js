@@ -43,9 +43,11 @@ window.onload = function () {
                     }
                 });
 
-            if (!(problemRoute.includes("java_pfp"))) {
-                if( (problemRoute.includes("ccp")) || (problemRoute.includes("cap"))) {
-                    console.log('CCP ->');
+            if (!(problemRoute.includes("python_vtp_oop"))) {
+                // if( (problemRoute.includes("ccp")) || (problemRoute.includes("cap"))) {
+
+                    if( (problemRoute.includes("cmp")) || (problemRoute.includes("cap"))) {
+                        console.log('CMP ->');
                     $(this).on('focus', function (e) {
                         $(this).attr('size', 150);
                     });

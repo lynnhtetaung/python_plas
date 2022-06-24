@@ -1,0 +1,59 @@
+<h2 id="statement">12</h2>
+<pre class="pfpprettyprint" id="scoring-res">
+<DIV class="fl"># A quick-demo of hybrid inheritance
+# Creating a Base class named Company:
+class Company:
+  def __init__(self):
+    # Initializing a class variable named comp to store company name:
+    self.comp = "Royal"
+  def display(self):  # Method to print the Company Name:
+    print("The company name is: ",self.comp)
+
+# 1st Derived or Child Class of University Class:
+class Department(Company):
+  def __init__(self):     
+    Company.__init__(self)
+    self.dept = "IT"
+  def display(self):  # Method to print the Department Name:
+    # using "class" name to access display method defined in the parent class:
+    print("The department name is: ",self.dept)
+    Company.display(self)
+
+# 2nd Derived or Child Class of Company Class:
+class Branch(Company):
+  def __init__(self):    
+    self.branch = "Data Science"
+  def display(self):  # Method to print the Branch Name:
+    print("The branch name is: ",self.branch)
+
+# Derived or Child Class of Class Course and Branch:
+class Employee(Department, Branch):
+  def __init__(self):    
+    self.name = "Brown"
+    Branch.__init__(self)
+    Department.__init__(self)
+  def display(self):
+    print("The name of the employee is: ",self.name)
+    Branch.display(self)
+    Department.display(self)
+    
+# Object Instantiation:
+ob = Employee()  # Object named ob of the class Employee.
+ob.display()    # Calling the display method of Employee class.
+</DIV>
+<DIV class="fr">
+What is the output of the program!
+<input size=25 ans="49aadddc131ea647c1b0e296b26983462d4f6db805eb660ac621d71a926b4dd2" placeholder=1></input>
+<input size=25 ans="5bcbe53ed8ff5be6475c4bbf9a560d8f6b3f9f683b5a02552e58c563446aa5fd" placeholder=2></input>
+<input size=25 ans="7acce79f5df78041f22fb579d38d4b84241f8e893bd875c0dbf7edc13012a3de" placeholder=3></input>
+<input size=25 ans="161b8b497aa9c265f62d6696f1520a8899364dfac846c5cf4c536902d9a37294" placeholder=4></input>
+</DIV>
+
+</pre>
+<h2 id="answer">Answer</h2>
+<a class="btn" href="javascript:newScoring('Python_VTP_OOP')">Answer</a>
+<script type="text/javascript">
+$(function(){
+ prettyPrint();
+});
+</script>

@@ -1,0 +1,31 @@
+<h2 id="statement">13</h2>
+<pre class="pfpprettyprint" id="scoring-res">
+<DIV class="fl"># A quick-demo of accessing private members via name mangling(encapsulation)
+class Student:
+    # constructor
+    def __init__(self, name, major):
+        # public data member
+        self.name = name
+        # private member
+        self.__major = major
+
+# creating object of a Student class
+stu = Student('Jessa', 'Business')
+
+print('Name:', stu.name)
+# direct access to private member using name mangling
+print('Major:', stu._Student__major)
+</DIV>
+<DIV class="fr">
+What is the output of the program!
+<input size=25 ans="34d43b1f999eb4b8969c9967ef9b26067d7a556e6d86f018b5732c78941a1c31" placeholder=1></input>
+<input size=25 ans="94eb80a5333b095453bdd511e252bce8dd100bc6418e6dc52370daa871493902" placeholder=2></input>
+</DIV>
+</pre>
+<h2 id="answer">Answer</h2>
+<a class="btn" href="javascript:newScoring('Python_VTP_OOP')">Answer</a>
+<script type="text/javascript">
+$(function(){
+ prettyPrint();
+});
+</script>

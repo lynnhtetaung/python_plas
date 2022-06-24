@@ -78,8 +78,10 @@ function newScoring(key) {
 
 }
 
-//for Code Completion
-function newScoringCCP(key) {
+//for Code Modification
+// function newScoringCCP(key) {
+	function newScoringCMP(key) {
+
 
 	let vstr = '';
 	let correctAnsCount = 0;

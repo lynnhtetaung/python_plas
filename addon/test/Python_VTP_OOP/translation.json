@@ -1,0 +1,20 @@
+{
+  "class_creation" : "class_creation",
+  "constru_noargu" : "constru_noargu",
+  "constru_parameterized" : "constru_parameterized",
+  "constructor_defaultargu" :  "constructor_defaultargu",
+  "deconstructor" : "deconstructor",
+  "class_instance_var" : "class_instance_var",
+  "class_instance_method" : "class_instance_method",
+  "single_inheritance" : "single_inheritance",
+  "multiple_inheritance" : "multiple_inheritance",
+  "multilevel_inheritance" : "multilevel_inheritance",
+  "hierarchical_inheritance" : "hierarchical_inheritance",
+  "hybrid" : "hybrid",
+  "encapsulation_name" : "encapsulation_name",
+  "encapsulation_method" : "encapsulation_method",
+  "encapsulation_protected" : "encapsulation_protected",
+  "getter_setter" : "getter_setter",
+  "method_overriding_polymorphism" : "method_overriding_polymorphism",
+  "method_overloading" : "method_overloading"
+}

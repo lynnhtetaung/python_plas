@@ -1,0 +1,38 @@
+<h2 id="statement">5</h2>
+<pre class="pfpprettyprint" id="scoring-res">
+<DIV class="fl"># A quick-demo of deconstructor usage to delete the objects
+class Student:
+
+    # constructor
+    def __init__(self, name):
+        print('Inside Constructor!')
+        self.name = name
+        
+    def show(self):
+        print('My name is', self.name)
+
+    # destructor
+    def __del__(self):
+        print('Object is destroyed within destructor!')
+        
+# create object
+s1 = Student('Emma')
+s1.show()
+
+# delete object
+del s1
+</DIV>
+<DIV class="fr">
+What is the output of the program!
+<input size=25 ans="c11decb4c3faebc710ddacb5a624f0dd56b34fbde3aedcdd1eefe3f9fa63c18c" placeholder=1></input>
+<input size=25 ans="137ffc9da428916a079d0ce23319c4fdf719786e1246b7e543aa299ed1a4a272" placeholder=2></input>
+<input size=25 ans="48f32f5791d44d5e1e62df2961419bc16d39a0868d1c0780cc6c38225f8e2650" placeholder=3></input>
+</DIV>
+</pre>
+<h2 id="answer">Answer</h2>
+<a class="btn" href="javascript:newScoring('Python_VTP_OOP')">Answer</a>
+<script type="text/javascript">
+$(function(){
+ prettyPrint();
+});
+</script>

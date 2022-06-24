@@ -1,0 +1,46 @@
+<h2 id="statement">6</h2>
+<pre class="pfpprettyprint" id="scoring-res">
+<DIV class="fl">
+# A quick-demo of class variables and instance variables
+class Student:
+    # class variables
+    school_name = 'Sakura School'
+
+    # constructor
+    def __init__(self, name, age):
+        # instance variables
+        self.name = name
+        self.age = age
+
+s1 = Student("John", 12)
+# access instance variables
+print('Student:', s1.name, s1.age)
+
+# access class variable
+print('School name:', Student.school_name)
+
+# Modify instance variables
+s1.name = 'Jessa'
+s1.age = 14
+print('Student:', s1.name, s1.age)
+
+# Modify class variables
+Student.school_name = 'Wisdom School'
+print('School name:', Student.school_name)
+</DIV>
+<DIV class="fr">
+What is the output of the program!
+<input size=25 ans="c477960ccfc39e435c66f3400082612e7118aa24b10736600182f288349b7ee9" placeholder=1></input>
+<input size=25 ans="4688acfff7d8c9a83ba3c15a6e75a92c68e751a0f6f33eae208ab426b7acaea1" placeholder=2></input>
+<input size=25 ans="e62b1789da252204a42f308661dcbb6795840449e7c3c8b73448d689c2d35bba" placeholder=3></input>
+<input size=25 ans="135a089b448863322838f26c6906f624289abc2715ae7af34f420aecfc5993a0" placeholder=4></input>
+
+</DIV>
+</pre>
+<h2 id="answer">Answer</h2>
+<a class="btn" href="javascript:newScoring('Python_VTP_OOP')">Answer</a>
+<script type="text/javascript">
+$(function(){
+ prettyPrint();
+});
+</script>

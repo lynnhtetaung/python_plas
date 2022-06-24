@@ -5,11 +5,11 @@ Please modify the following source code in the output field to change from the l
   <tr>
      
 
-<td><figure> <img src="img/bar1.JPG" alt="Elephant at sunset"> 
+<td><figure> <img src="/img/bar1.JPG" alt="Elephant at sunset"> 
 </figure></td>
-     <td><figure> <img src="img/arrow2.JPG" alt="Elephant at sunset"> 
+     <td><figure> <img src="/img/arrow2.JPG" alt="Elephant at sunset"> 
 </figure></td>
-    <td><figure> <img src="img/bar2.JPG" alt="Elephant at sunset"> 
+    <td><figure> <img src="/img/bar2.JPG" alt="Elephant at sunset"> 
 </figure></td>
   </tr>  
 </table>
@@ -54,7 +54,7 @@ Please modify the following source code in the output field to change from the l
 15<input type="text" name="intext" id="mytext15" 14 size=120 ansHint='import matplotlib.pyplot as plt^import pandas as pd^import numpy as np^data={'months':['Jan','Feb','Mar','Apr','May','June','July','Aug','Sep','Oct','Nov','Dec'],^       'temp':[13,14,16,22,25,20,18,21,20,19,15,12],^       'precipitation':[0.3,0.2,0.1,30,40,30,50,30,40,40,30,20]}^df=pd.DataFrame(data)^fig, ax = plt.subplots()^ax.set_ylim(0, 60)^index = np.arange(len(df['months'])) #numpy method that generates an array of sequential numbers^plt.bar(index, df['precipitation'], color=['green', 'red', 'black'])^plt.title('Pyin Oo Lwin City Precipitation(Bar Chart)')^plt.ylabel('Precipitation(mm)')^plt.xlabel('Month')^plt.xticks(index, df['months'],fontsize=10, rotation=30)^plt.savefig('D:/bar2.JPG') # save the bar as JPG' missingele="precipitation^Precipitation(mm)^bar2" ansSpace="9e5ce377f1c0690bc01c689711ea7c7a53ee1756e66c14454666b9a6b85d0e68" ans="6dcf1d306dd083a5d334889e6338f84f552a081d86fe20b72ddf58cfcee1a51f" value='plt.xticks(index, df[&#39;months&#39;],fontsize=10, rotation=30)' onkeydown="myFunction()"></input>
 16<input type="text" name="intext" id="mytext16" 15 size=120 ansHint='import matplotlib.pyplot as plt^import pandas as pd^import numpy as np^data={'months':['Jan','Feb','Mar','Apr','May','June','July','Aug','Sep','Oct','Nov','Dec'],^       'temp':[13,14,16,22,25,20,18,21,20,19,15,12],^       'precipitation':[0.3,0.2,0.1,30,40,30,50,30,40,40,30,20]}^df=pd.DataFrame(data)^fig, ax = plt.subplots()^ax.set_ylim(0, 60)^index = np.arange(len(df['months'])) #numpy method that generates an array of sequential numbers^plt.bar(index, df['precipitation'], color=['green', 'red', 'black'])^plt.title('Pyin Oo Lwin City Precipitation(Bar Chart)')^plt.ylabel('Precipitation(mm)')^plt.xlabel('Month')^plt.xticks(index, df['months'],fontsize=10, rotation=30)^plt.savefig('D:/bar2.JPG') # save the bar as JPG' missingele="precipitation^Precipitation(mm)^bar2" ansSpace="f35efd2d8a61ccdc2ae5c9af04d653ae15fbeb6d0f6311fe99b4d1e8b5338e08" ans="9dde09abe4b66507ebaf7b241a9d10fb00f17e929b0dc0007c3edfdb6128a0e5" value='plt.savefig(&#39;D:/bar1.JPG&#39;) # save the bar as JPG' onkeydown="myFunction()"></input>
 <script src="myScript.js"></script></div></pre><h2 id="answer">Answer</h2>
-<a class="btn" href="javascript:newScoring()">Answer</a>
+<a class="btn" href="javascript:newScoringCMP('Python_CMP_Pandas_graph')">Answer</a>
 <a class="btn btn-success" onclick="ansFileSave()">File Save</a>
 
 <a id="dldlink"></a>

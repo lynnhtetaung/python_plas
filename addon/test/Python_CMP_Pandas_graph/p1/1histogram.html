@@ -4,11 +4,12 @@ Please modify the following source code in the output field to change from the l
   <tr>
      
 
-<td><figure> <img src="img/histogram1.JPG" alt="Elephant at sunset"> 
+<td><figure> <img src="/img/histogram1.JPG" alt="Elephant at sunset"> 
+
 </figure></td>
-     <td><figure> <img src="img/arrow2.JPG" alt="Elephant at sunset"> 
+     <td><figure> <img src="/img/arrow2.JPG" alt="Elephant at sunset"> 
 </figure></td>
-    <td><figure> <img src="img/histogram2.JPG" alt="Elephant at sunset"> 
+    <td><figure> <img src="/img/histogram2.JPG" alt="Elephant at sunset"> 
 </figure></td>
   </tr>  
 </table>
@@ -54,7 +55,7 @@ Please modify the following source code in the output field to change from the l
 16<input type="text" name="intext" id="mytext16" 15 size=120 ansHint='#import library^import matplotlib.pyplot as plt^import numpy as np^#initialize the figure object and plotting^fig, ax = plt.subplots()^ax.set_ylim(0, 7)^# Text Watermark with corresponding attributes(width,height,text,etc)^fig.text(0.86, 0.15, 'Mathematics Marks Analysis', fontsize = 33, color = 'gray', ha = 'right', va = 'bottom', rotation = 30)^eng_marks = np.array([22,87,5,43,56,73,55,54,11,20,51,5,79,31,27])#create english marks numpy array^math_marks = np.array([22,77,35,43,15,73,45,54,11,30,51,51,79,31,27])#create maths marks numpy array^#calling the histogram plot method with consecutive, non-overlapping intervals^ax.hist(math_marks, bins = [0,25,50,75,100], color = 'blue', edgecolor = 'red')^ax.set_title('Analysis Results for Mathematics Score') # label title name^ax.set_xticks([0,25,50,75,100]) # horizontal data^ax.set_xlabel('marks') # labelling for x-axis^ax.set_ylabel('no. of students') # labelling for y-axis^plt.savefig('D:/histogram2.JPG') # save the histogram as JPG' missingele="mathematics^math_marks^blue^histogram2" ansSpace="3d339156562e10524004b95224ef69a20602a2fcd717f64839a8a1df665fc3eb" ans="d683a74d46b2bb600943f0cc73f2adf81d71780a57e5d366cd38a71c199113d1" value='ax.set_ylabel(&#39;no. of students&#39;) # labelling for y-axis' onkeydown="myFunction()"></input>
 17<input type="text" name="intext" id="mytext17" 16 size=120 ansHint='#import library^import matplotlib.pyplot as plt^import numpy as np^#initialize the figure object and plotting^fig, ax = plt.subplots()^ax.set_ylim(0, 7)^# Text Watermark with corresponding attributes(width,height,text,etc)^fig.text(0.86, 0.15, 'Mathematics Marks Analysis', fontsize = 33, color = 'gray', ha = 'right', va = 'bottom', rotation = 30)^eng_marks = np.array([22,87,5,43,56,73,55,54,11,20,51,5,79,31,27])#create english marks numpy array^math_marks = np.array([22,77,35,43,15,73,45,54,11,30,51,51,79,31,27])#create maths marks numpy array^#calling the histogram plot method with consecutive, non-overlapping intervals^ax.hist(math_marks, bins = [0,25,50,75,100], color = 'blue', edgecolor = 'red')^ax.set_title('Analysis Results for Mathematics Score') # label title name^ax.set_xticks([0,25,50,75,100]) # horizontal data^ax.set_xlabel('marks') # labelling for x-axis^ax.set_ylabel('no. of students') # labelling for y-axis^plt.savefig('D:/histogram2.JPG') # save the histogram as JPG' missingele="mathematics^math_marks^blue^histogram2" ansSpace="d638c87014fd135f7e00c5140d2d35ad1beccf75a19093c86b35a355cb589446" ans="d681082b33462da8cc5e1dfb2205a75dafd71c8f1e65c214412b11d82dd8632a" value='plt.savefig(&#39;D:/histogram1.JPG&#39;) # save the histogram as JPG' onkeydown="myFunction()"></input>
 <script src="myScript.js"></script></div></pre><h2 id="answer">Answer</h2>
-<a class="btn" href="javascript:newScoring()">Answer</a>
+<a class="btn" href="javascript:newScoringCMP('Python_CMP_Pandas_graph')">Answer</a>
 <a class="btn btn-success" onclick="ansFileSave()">File Save</a>
 
 <a id="dldlink"></a>

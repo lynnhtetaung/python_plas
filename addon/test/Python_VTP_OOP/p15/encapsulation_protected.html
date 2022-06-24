@@ -1,0 +1,39 @@
+<h2 id="statement">15</h2>
+<pre class="pfpprettyprint" id="scoring-res">
+<DIV class="fl"># A quick-demo of accessing protected members that can be accessible within the class and also available to its sub-classes(encapsulation)
+# base class
+class University:
+    def __init__(self):
+        # Protected member
+        self._department = "IT"
+
+# child class
+class Teacher(University):
+    def __init__(self, name):
+        self.name = name
+        University.__init__(self)
+
+    def show(self):
+        print("Teacher name :", self.name)
+        # Accessing protected member in child class
+        print("Working on department :", self._department)
+
+t = Teacher("Merry")
+t.show()
+# Direct access protected data member
+print('Department:', t._department)
+</DIV>
+<DIV class="fr">
+What is the output of the program!
+<input size=25 ans="1b5c7e3f4b641630fae2990d0c7497c8b237051caabb5edc5d73b7c266fe0f19" placeholder=1></input>
+<input size=25 ans="5f4641a7f7b5db9b175285fd33ea514ede1ed43b62c3f1e940db0a255f704d4c" placeholder=2></input>
+<input size=25 ans="0c4d199edf24439dca2d4b0f442befdc65bb133be5db343efea1f99ec23b22ac" placeholder=3></input>
+</DIV>
+</pre>
+<h2 id="answer">Answer</h2>
+<a class="btn" href="javascript:newScoring('Python_VTP_OOP')">Answer</a>
+<script type="text/javascript">
+$(function(){
+ prettyPrint();
+});
+</script>
