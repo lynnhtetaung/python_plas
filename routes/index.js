@@ -33,10 +33,14 @@ const files = fs.readdirSync(dirPath).map(name => {
 //**********************Python Start ********************/
 
 router.get("/python_programming", function (req, res, next) {
+  console.log("main python", req);
+
   res.render("programming/python-programming/main");
 });
 
 router.get("/python_programming/:title", function (req, res, next) {
+
+  console.log("aaaaaaaaaaaaaaaaa", req.params.title);
   var directoryPath = path.join(__dirname, `/../addon/test/${req.params.title}/`);
   var resultPath = path.join(__dirname + '/../addon/results/');
 
@@ -52,10 +56,15 @@ router.get("/python_programming/:title", function (req, res, next) {
   var problem_folders = getDirectories(directoryPath).filter((folder) => folder.startsWith("p")).sort(naturalSort);
   var problems = new Object();
   var generalProblems = [];
+  console.log("qwwwwwwwwwwwwwww");
+
   problem_folders.forEach(problem_folder => {
     fs.readdirSync(directoryPath + problem_folder).forEach(file => {
 
-      if (req.params.title.includes("CWP")) {
+      console.log("asdfghhhhhhhhhh");
+      if (req.params.title.includes("CWP") || req.params.title.includes("CDP")) {
+
+        console.log("coming");
       // Filter xxx.py file name and regard xxx as problem name
       if (file.split(".")[1] == "py" && !file.includes("Test") && !file.split(".")[0].includes(" ")) {
         problems[file.split(".")[0]] = ""
@@ -81,7 +90,7 @@ router.get("/python_programming/:title", function (req, res, next) {
     });
   });
 
-  res.render("programming/python-programming/" + req.params.title + "/home", { problems: req.params.title.includes("CWP") || translation == null ? problems : generalProblems });
+  res.render("programming/python-programming/" + req.params.title + "/home", { problems: req.params.title.includes("CWP") || req.params.title.includes("CDP") || translation == null ? problems : generalProblems });
 });
 
 // Get all directory list under path
@@ -108,7 +117,7 @@ router.get("/python_programming/:title/:p", function (req, res, next) {
   fs.readdirSync(directoryPath).forEach(file => {
     // Do whatever you want to do with the file
 
-    if (req.params.title.includes("CWP")) {
+    if (req.params.title.includes("CWP") || req.params.title.includes("CDP")) {
     if (file.split(".")[1] == "py") {
 
       if (file.includes("Test")) {
@@ -123,7 +132,7 @@ router.get("/python_programming/:title/:p", function (req, res, next) {
   });
   
   // sla (resultField)
-  if (req.params.title.includes("CWP")) {
+  if (req.params.title.includes("CWP") || req.params.title.includes("CDP")) {
   fs.readdirSync(resultPath).forEach(file => {
     if (file.split("@")[2] == req.params.p && file.split("@")[1] == req.params.title) {
       resultField = fs.readFileSync(__dirname + '/../addon/results/' + file, 'utf8');   
@@ -137,7 +146,7 @@ router.get("/python_programming/:title/:p", function (req, res, next) {
 
   var problemNumber = parseInt(req.params.p.split("p")[1]);
 
-  if (req.params.title.includes("CWP")) {
+  if (req.params.title.includes("CWP") || req.params.title.includes("CDP")) {
     res.render("programming/python-programming/" + req.params.title + "/index", { title: title, p1Source: p1Source, p1Test: p1Test, resultField: resultField, totalProblems: problem_folders.length, problemNumber: problemNumber });
   } else {
     res.render("programming/python-programming/" + req.params.title + "/index", { title: title, question: question, totalProblems: problem_folders.length, problemNumber: problemNumber });
@@ -171,6 +180,7 @@ router.post("/submitPython", async (req, res) => {
 const { spawn } = require('child_process');
 //const ls1 = spawn('python', ['C:\\Users\\Dell\\Downloads\\plas\\plas\\addon\\submits\\StandardIOTest.py']);
 
+
 const ls12 = spawn('python', [__dirname + '/../addon/submits/SetDataTypeTest.py']);
 const ls11 = spawn('python', [__dirname + '/../addon/submits/DictionDataTypeTest.py']);
 const ls10 = spawn('python', [__dirname + '/../addon/submits/ListDataTypeTest.py']);
@@ -183,6 +193,7 @@ const ls4 = spawn('python', [__dirname + '/../addon/submits/NumericDataTypeTest.
 const ls3 = spawn('python', [__dirname + '/../addon/submits/MembershipOperaTest.py']);
 const ls2 = spawn('python', [__dirname + '/../addon/submits/ArithmeticOperationTest.py']);
 const ls1 = spawn('python', [__dirname + '/../addon/submits/StandardIOTest.py']);
+
 
 ls1.stdout.on('data', (data) => {
   console.log(`stdout: ${data}`);
@@ -232,15 +243,19 @@ ls12.stdout.on('data', (data) => {
   console.log(`stdout: ${data}`);
 });
 
- let resultFile = '@' + folder1 + '@' + date + '.result';
+let resultFile = '@' + folder1 + '@' + date + '.result';
 //sla (change folder name)
-// let resultFile = folder + '.result';
+//let resultFile = folder + '.result';
 
   const watcher = fs.watch(__dirname + '/../addon/results/', "utf8", function (event, trigger) {
     console.log(`Result file directory Changed.`);
-
     while (result == "") {
+      try{
       result = fs.readFileSync(__dirname + '/../addon/results/' + resultFile, 'utf8');
+      }
+      catch(err){
+        console.log(``);
+      }
     }
     res.json(result)
     watcher.close();

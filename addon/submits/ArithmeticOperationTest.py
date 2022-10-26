@@ -61,11 +61,12 @@ def main(out=sys.stderr, verbosity=2):
 
 if __name__ == '__main__':
     #path = os.getcwd()
-    #completeName = os.path.join(path, 'p1.result')
+    #completeName = os.path.join(save_path1, 'p1.result')
     #with open(completeName, 'w') as f:
      #   main(f)
     
     save_path1 = 'addon/results'
+    #completeName = os.path.join(save_path1, 'p1.result')
     # completeName = os.path.join(save_path1, 'p2.result')
     completeName = os.path.join(save_path1,'@Python_CWP_basic@p2@' +today + ".result")
   
