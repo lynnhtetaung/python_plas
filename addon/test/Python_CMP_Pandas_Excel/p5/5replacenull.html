@@ -1,0 +1,132 @@
+<style type="text/css">
+            textarea, iframe {
+                border: 1px solid grey;
+                height: 500px;
+                width: 98%;
+                resize: none;   
+            }
+             div.form-popup {
+        background-color: #fed9ff;
+        width: 900px;
+        height: 600px;
+        overflow-x: hidden;
+        overflow-y: auto;
+        padding: 20px;
+      }
+ .form-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px dotted #f1f1f1;
+  text-align:justify;  
+  text-justify:initial;
+
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 900px;
+  padding: 20px;
+  background-color: lightyellow;
+}
+
+
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 10%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: mediumvioletred;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+</style>
+<h2 id="statement">5</h2>
+<table >
+    <tr><td> Input excel file to the source code<br>
+<figure> <img src="/img/studentinfo.JPG" alt="Elephant at sunset"> 
+</figure></td>
+</tr>
+<tr><td> Output excel file from the source code<br>
+<figure> <img src="/img/studentinfo1.JPG" alt="Elephant at sunset"> 
+</figure></td>
+</tr>
+<tr><td> Output excel file from the modified source code<br>
+<figure> <img src="/img/newstudentinfo2.JPG" alt="Elephant at sunset"> 
+</figure></td>
+</tr>
+ </table>
+
+<a href="source_codes/Problem5.zip" download> Click Here To Download Source Code</a>
+<br> Please modify the following source code!
+<h4 id="code">Source Code</h4>
+<pre class="prettyprint" id="scoring-res" >01:# importing libraries
+02:import pandas as pd
+03:import numpy as np
+04:# read the excel file
+05:data = pd.read_excel(&#39;D:\Studentinfo.xlsx&#39;)
+06:# Create the dataframe
+07:df = pd.DataFrame(data)
+08:# Apply the function with replace value
+09:df = df.replace(np.nan, 0)
+10:# save the DataFrame to excel file
+11:df.to_excel(&#39;D:\Studentinfo1.xlsx&#39;, index=True, header=True)
+
+</pre>
+<h4 id="code1">the output</h4>
+<pre class = "prettyprint" id = "scoring-res" <h2 id="code1"></h2>
+01<input type="text" name="intext" id="mytext1" 0 size=150 ansHint='# importing libraries^import pandas as pd^import numpy as np^# read the excel file^data = pd.read_excel('D:\Studentinfo.xlsx')^# Create the dataframe^df = pd.DataFrame(data)^# Apply the function with replace value^df = df.replace(np.nan, 'NULL')^# save the DataFrame to excel file^df.to_excel('D:\Studentinfo2.xlsx', index=True, header=True)' missingele="Studentinfo3.xlsx^NULL"  ansSpace="25e53e9bd40c1ef7a3f80be202ac494bbc2c893b52261440c4fc1bf44ca0b2e6" ans="840ce92afece518ebeb5e5f43399ee403af32216eefa5be5ababd72595612756" value='# importing libraries' onkeydown="myFunction()">  </input>
+02<input type="text" name="intext" id="mytext2" 1 size=150 ansHint='# importing libraries^import pandas as pd^import numpy as np^# read the excel file^data = pd.read_excel('D:\Studentinfo.xlsx')^# Create the dataframe^df = pd.DataFrame(data)^# Apply the function with replace value^df = df.replace(np.nan, 'NULL')^# save the DataFrame to excel file^df.to_excel('D:\Studentinfo2.xlsx', index=True, header=True)' missingele="Studentinfo3.xlsx^NULL"  ansSpace="1859eabefa560a6ed850f5b68aac8f96cd38b27506bf57bd8ee9ac9c50bee619" ans="9fafcb2bf11d58cb4e30eb7a2d7b0200171aa8f5eafcb9d24928ffedbfce91ae" value='import pandas as pd' onkeydown="myFunction()">  </input>
+03<input type="text" name="intext" id="mytext3" 2 size=150 ansHint='# importing libraries^import pandas as pd^import numpy as np^# read the excel file^data = pd.read_excel('D:\Studentinfo.xlsx')^# Create the dataframe^df = pd.DataFrame(data)^# Apply the function with replace value^df = df.replace(np.nan, 'NULL')^# save the DataFrame to excel file^df.to_excel('D:\Studentinfo2.xlsx', index=True, header=True)' missingele="Studentinfo3.xlsx^NULL"  ansSpace="4c6fa043aab020be39f84ebe15441f5d51454f29ed55b1df288676085df7f0ae" ans="5bf339a736d3fe3466114e600c238d3f750f387da4a966744ca276b3bb94944f" value='import numpy as np' onkeydown="myFunction()">  </input>
+04<input type="text" name="intext" id="mytext4" 3 size=150 ansHint='# importing libraries^import pandas as pd^import numpy as np^# read the excel file^data = pd.read_excel('D:\Studentinfo.xlsx')^# Create the dataframe^df = pd.DataFrame(data)^# Apply the function with replace value^df = df.replace(np.nan, 'NULL')^# save the DataFrame to excel file^df.to_excel('D:\Studentinfo2.xlsx', index=True, header=True)' missingele="Studentinfo3.xlsx^NULL"  ansSpace="d70a2c7c5f06656fd31dc607c7cbc8e4c129c1a333605087a0fdcd04a6e3f925" ans="9feea4eabfc99107400fbfc7805f4789f406d44f62197cbb5c8e72e1de9c8abb" value='# read the excel file' onkeydown="myFunction()">  </input>
+05<input type="text" name="intext" id="mytext5" 4 size=150 ansHint='# importing libraries^import pandas as pd^import numpy as np^# read the excel file^data = pd.read_excel('D:\Studentinfo.xlsx')^# Create the dataframe^df = pd.DataFrame(data)^# Apply the function with replace value^df = df.replace(np.nan, 'NULL')^# save the DataFrame to excel file^df.to_excel('D:\Studentinfo2.xlsx', index=True, header=True)' missingele="Studentinfo3.xlsx^NULL"  ansSpace="854d923a7e89b7ed6282b3a61bf0f2a8daab93f80e1d45aa904bd6be93e0dd0e" ans="6f314004f1bb9b46ce9ffadd4e19ccdc598be20d5c97401fd378c5de68dc5edb" value='data = pd.read_excel(&#39;D:\Studentinfo.xlsx&#39;)' onkeydown="myFunction()">  </input>
+06<input type="text" name="intext" id="mytext6" 5 size=150 ansHint='# importing libraries^import pandas as pd^import numpy as np^# read the excel file^data = pd.read_excel('D:\Studentinfo.xlsx')^# Create the dataframe^df = pd.DataFrame(data)^# Apply the function with replace value^df = df.replace(np.nan, 'NULL')^# save the DataFrame to excel file^df.to_excel('D:\Studentinfo2.xlsx', index=True, header=True)' missingele="Studentinfo3.xlsx^NULL"  ansSpace="5f8838f871e9caaeb83d880ca539c3695e95542033af96f72fa6df65d0ca503a" ans="52159b5ed8d28ad4d4e617310c3c5b5fd0bd1f4361d3f482e3593594f2d8f0ca" value='# Create the dataframe' onkeydown="myFunction()">  </input>
+07<input type="text" name="intext" id="mytext7" 6 size=150 ansHint='# importing libraries^import pandas as pd^import numpy as np^# read the excel file^data = pd.read_excel('D:\Studentinfo.xlsx')^# Create the dataframe^df = pd.DataFrame(data)^# Apply the function with replace value^df = df.replace(np.nan, 'NULL')^# save the DataFrame to excel file^df.to_excel('D:\Studentinfo2.xlsx', index=True, header=True)' missingele="Studentinfo3.xlsx^NULL"  ansSpace="801fc68b41c2181e85bf363b0cad31660f119abdd2da91a69428dfc651befda3" ans="bbac3f0e1b97e95c2b7d598ce1c6d0f956e8615f9a673289c473707b104b0a2c" value='df = pd.DataFrame(data)' onkeydown="myFunction()">  </input>
+08<input type="text" name="intext" id="mytext8" 7 size=150 ansHint='# importing libraries^import pandas as pd^import numpy as np^# read the excel file^data = pd.read_excel('D:\Studentinfo.xlsx')^# Create the dataframe^df = pd.DataFrame(data)^# Apply the function with replace value^df = df.replace(np.nan, 'NULL')^# save the DataFrame to excel file^df.to_excel('D:\Studentinfo2.xlsx', index=True, header=True)' missingele="Studentinfo3.xlsx^NULL"  ansSpace="c88084e0f9211d66931d36d9950fec8af99a2d448fded2a2ad5e3cbf3df0d70b" ans="bf4b8302bcb48074ca2ab27ca42f7623175db596c6a1eebf6627249def05bbb8" value='# Apply the function with replace value' onkeydown="myFunction()">  </input>
+09<input type="text" name="intext" id="mytext9" 8 size=150 ansHint='# importing libraries^import pandas as pd^import numpy as np^# read the excel file^data = pd.read_excel('D:\Studentinfo.xlsx')^# Create the dataframe^df = pd.DataFrame(data)^# Apply the function with replace value^df = df.replace(np.nan, 'NULL')^# save the DataFrame to excel file^df.to_excel('D:\Studentinfo2.xlsx', index=True, header=True)' missingele="Studentinfo3.xlsx^NULL"  ansSpace="92e0a4b9842565650120b5ddb456d6e4b326ce418a4e4e30c521213b9d820686" ans="929b91cdab3796a65d8d6a55311504e7f03b21889442c109934c07f0cb7a9845" value='df = df.replace(np.nan, 0)' onkeydown="myFunction()">  </input>
+10<input type="text" name="intext" id="mytext10" 9 size=150 ansHint='# importing libraries^import pandas as pd^import numpy as np^# read the excel file^data = pd.read_excel('D:\Studentinfo.xlsx')^# Create the dataframe^df = pd.DataFrame(data)^# Apply the function with replace value^df = df.replace(np.nan, 'NULL')^# save the DataFrame to excel file^df.to_excel('D:\Studentinfo2.xlsx', index=True, header=True)' missingele="Studentinfo3.xlsx^NULL" ansSpace="e2600f1c470b9124afeda27b7d877591c7b19ab29414f7496b123bc25956270f" ans="ef9a4fc2bf2fdbe92bb334659b09e4ef0ff32fae72f0b021a56e73c6a34ce3c7" value='# save the DataFrame to excel file' onkeydown="myFunction()"></input>
+11<input type="text" name="intext" id="mytext11" 10 size=150 ansHint='# importing libraries^import pandas as pd^import numpy as np^# read the excel file^data = pd.read_excel('D:\Studentinfo.xlsx')^# Create the dataframe^df = pd.DataFrame(data)^# Apply the function with replace value^df = df.replace(np.nan, 'NULL')^# save the DataFrame to excel file^df.to_excel('D:\Studentinfo2.xlsx', index=True, header=True)' missingele="Studentinfo3.xlsx^NULL" ansSpace="db1d9a7c2864d149a60079d2875c6ab02022cddbecf7275feff159e2bb7cf7f6" ans="1e6aefd1074f649196cd986587497abb4f750f4a667283a5febc43e7a4de8956" value='df.to_excel(&#39;D:\Studentinfo1.xlsx&#39;, index=True, header=True)' onkeydown="myFunction()"></input>
+<script src="myScript.js"></script></div></pre><h2 id="answer">Answer</h2>
+<a class="btn" href="javascript:newScoringCMP('Python_CMP_Pandas_Excel')">Answer</a>
+<a class="btn btn-success" onclick="ansFileSave()">File Save</a>
+<input onclick="openForm();" type="button" value="Hint" class="btn" style="float: right;">
+<div class="form-popup" id="myForm">
+  <form class="form-container">
+    <h1>Hint</h1>
+       <p>1. Read the input excel file:<b>Studentinfo.xlsx</b>.<br>
+		2. Then, <b>create pandas data frame</b> to replace nan values to the excel file.<br>
+		3. Replace<b> nan with NULL</b> values.<br>		
+		4. Finally, write the modified values into new excel file:<b>Studentinfo2.xlsx</b>.
+        <br> If you want to study more about replacing null values, please visit this link.<a href="source_codes/Replace NaN Values with Zeros in Pandas DataFrame - GeeksforGeeks.html" download> Click Here</a>		
+    
+        <br>
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+  </form>
+</div>
+<script type="text/javascript">
+            
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+</script>
+
+<a id="dldlink"></a>
+<script type="text/javascript" src="allowtab.js"></script>

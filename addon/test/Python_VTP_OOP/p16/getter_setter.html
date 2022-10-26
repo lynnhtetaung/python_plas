@@ -1,0 +1,42 @@
+<h2 id="statement">16</h2>
+<pre class="pfpprettyprint" id="scoring-res">
+<DIV class="fl"># A quick-demo of using getter and setter method to implement encapsulation properly
+class Employee:
+    def __init__(self, name, salary):
+        self.name = name
+       # private member
+        self.__salary = salary
+
+    # getter method
+    def get_salary(self):
+        return self.__salary
+
+    # setter method
+    def set_salary(self, salary):
+        self.__salary = salary
+
+emp = Employee('Jessa', 100000)
+
+# retrieving salary using getter
+print('Name:', emp.name, emp.get_salary())
+
+# changing age using setter
+emp.set_salary(200000)
+
+# retrieving age using getter
+print('Name:', emp.name, emp.get_salary())
+</DIV>
+<DIV class="fr">
+What is the output of the program!
+<input size=25 ans="060465c1100d2981f21b03212b6a0228b8bb790981eae3f236014748e414e052" placeholder=1></input>
+<input size=25 ans="31033ce802bcbc1850ecd801501d1fb6224f708f7eade566b08b46d9e4a45bc0" placeholder=2></input>
+</DIV>
+
+</pre>
+<h2 id="answer">Answer</h2>
+<a class="btn" href="javascript:newScoring('Python_VTP_OOP')">Answer</a>
+<script type="text/javascript">
+$(function(){
+ prettyPrint();
+});
+</script>

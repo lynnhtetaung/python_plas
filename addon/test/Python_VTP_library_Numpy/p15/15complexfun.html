@@ -1,0 +1,38 @@
+<h2 id="statement">15</h2>
+Fill in Blanks 
+<h2 id="code">The Source Code</h2>
+<pre class="prettyprint" id="scoring-res"># A quick-demo of Complex number Function Usage
+#numpy.isreal() method :Test element-wise whether it is a real number or not(not infinity or not Not a Number) and return the result as a boolean array.
+'''numpy.conj(x[, out] = ufunc ?conjugate?) : This function helps the user to conjugate any complex number.
+The conjugate of a complex number is obtained by changing the sign of its imaginary part. If the complex number is 2+5j then its conjugate is 2-5j.'''
+  
+import numpy as np 
+ 
+print("Is Real : ", np.isreal([1+1j, 0j]), "\n")
+ 
+print("Is Real : ", np.isreal([1, 0]), "\n")
+
+in_complx1 = 2+4j
+out_complx1 = np.conj(in_complx1)
+print ("Output conjugated complex number of  2+4j :", out_complx1)
+ 
+in_complx2 =5-8j
+out_complx2 = np.conj(in_complx2)
+print ("Output conjugated complex number of 5-8j :", out_complx2)
+
+Is Real :  [False  True] 
+
+Is Real : <input size=2 ans="74bba1cd4015ed06ecee27d74f5e8e16eb44cdaa2fec8a321209deed8dee9c96" placeholder=1></input> 
+
+Output conjugated complex number of  2+4j : (2-4j)
+Output conjugated complex number of 5-8j : <input size=2 ans="85f5fa8357f62575c3124a6a2f74bcef6db5e2a6572aa25561c024970b83615a" placeholder=2></input>
+
+
+</pre>
+<h2 id="answer">Answer</h2>
+<a class="btn" href="javascript:newScoring('Python_VTP_library_Numpy')">Answer</a>
+<script type="text/javascript">
+$(function(){
+ prettyPrint();
+});
+</script>

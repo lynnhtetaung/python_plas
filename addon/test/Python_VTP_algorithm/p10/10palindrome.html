@@ -1,0 +1,47 @@
+<h2 id="statement">10</h2>
+Fill in Blanks 
+<h2 id="code">The Source Code</h2>
+<pre class="prettyprint" id="scoring-res"># A quick-demo of palindrome checking using deque operations
+
+from pythonds.basic import Deque
+    
+def palchecker(aString):
+    chardeque = Deque()
+        
+    for ch in aString:
+        chardeque.addRear(ch)
+           
+    stillEqual = True
+        
+    while chardeque.size() > 1 and stillEqual:
+        first = chardeque.removeFront()
+        last = chardeque.removeRear()
+        print(first)
+        print(last)
+            
+        if first != last:
+            stillEqual = False
+        
+    return stillEqual
+        
+print(palchecker("lsdkjfskf"))
+print(palchecker("radar"))
+
+The output of the program is<input size=2 ans="2b4e129fe0253bbc7614116dcbec0fc15fac6f807e041f988267cc56e74b2fd7" placeholder=1></input>
+                            <input size=2 ans="ac5ff7823d632048dd4f2dba6bd79eb453b00b380b32821e0c824f8970533c32" placeholder=2></input>
+                            <input size=2 ans="75a2da48b94b0616cf5f22c5e8997c9783d000115131e35e9b16dd9b2eab6187" placeholder=3></input>
+                            <input size=2 ans="a5343fd9dfac23f6837b4f545929ffd11b28e0c3f751a5d0cf80d5698f027e5f" placeholder=4></input>
+                            <input size=2 ans="007ca71627248d5551c5e43e1eec577e73e0c132f69a99aa89c87a86cc3d6ce7" placeholder=5></input>
+                            <input size=2 ans="214f30831cfc13418215ec0c4b4ff8ed23ecf520509712ddca30dfdf9a0ad256" placeholder=6></input>
+                            <input size=2 ans="c1b74eb054f1d024c11739080fdc5d74774ffa93aac6976e81cc1611d2bde5fc" placeholder=7></input>
+                            <input size=2 ans="53cfab1ffd26c1c104bf1447eeca75032a9a30730203293d77985df368c962c1" placeholder=8></input>
+
+
+</pre>
+<h2 id="answer">Answer</h2>
+<a class="btn" href="javascript:newScoring('Python_VTP_algorithm')">Answer</a>
+<script type="text/javascript">
+$(function(){
+ prettyPrint();
+});
+</script>

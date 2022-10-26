@@ -1,0 +1,48 @@
+<h2 id="statement">7</h2>
+Fill in Blanks 
+<h2 id="code">The Source Code</h2>
+<pre class="prettyprint" id="scoring-res"># A quick-demo of Postfix Evaluation
+
+from pythonds.basic import Stack
+    
+def postfixEval(postfixExpr):
+    operandStack = Stack()
+    tokenList = postfixExpr.split()
+                
+    for token in tokenList:
+        if token in "0123456789":
+            operandStack.push(int(token))
+        else:
+            operand2 = operandStack.pop()
+            operand1 = operandStack.pop()
+            result = do_Math(token,operand1,operand2)
+            print("The operator is", token)
+            operandStack.push(result)
+    return operandStack.pop()
+                
+def do_Math(op, op1, op2):
+    if op == "*":
+        return op1 * op2
+    elif op == "/":
+        return op1 / op2
+    elif op == "+":
+        return op1 + op2
+    else:
+        return op1 - op2
+                
+print("The Postfix Evaluation result is", postfixEval('7 8 + 3 2 + /'))
+
+The operator is <input size=2 ans="2722939a125367efab078e724bd0f9ad4ebb4cffc56b22b7eb5c13e19096ecab" placeholder=1></input>
+The operator is <input size=2 ans="91db5f8928d17b517923c1ff701bce777eadc64f155c1417b20c8292441618fc" placeholder=2></input>
+The operator is <input size=2 ans="fc54264b3ae32ad8b69e9df5edec61b6f4b6477fe38c88c6325f08c0d6e4170b" placeholder=3></input>
+The Postfix Evaluation result is <input size=2 ans="cc0af9e5d4fb6eca20898e53fd7f6c0f5f0880b4fbe711d6a4b21a6742f7025b" placeholder=4></input>
+
+
+</pre>
+<h2 id="answer">Answer</h2>
+<a class="btn" href="javascript:newScoring('Python_VTP_algorithm')">Answer</a>
+<script type="text/javascript">
+$(function(){
+ prettyPrint();
+});
+</script>

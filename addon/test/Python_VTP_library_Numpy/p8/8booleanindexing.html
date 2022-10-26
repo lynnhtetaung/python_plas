@@ -1,0 +1,33 @@
+<h2 id="statement">8</h2>
+Fill in Blanks 
+<h2 id="code">The Source Code</h2>
+<pre class="prettyprint" id="scoring-res"># A quick-demo of boolean array indexing usage
+#Boolean Array Indexing:Elements are returned which satisfy that Boolean expression.
+#It is used for filtering the desired element values.
+
+import numpy as np
+ 
+a = np.array([10, 40, 80, 50, 100])
+
+# Select numbers greater than 50
+print("Select the numbers grater than 50 :",a[a>50])
+
+a = np.array([10, 40, 80, 50, 100])
+
+# print the squaring to the multiples of 40
+# if a[a%50==0]**2, the output will be printed like [2500 10000]
+
+print("Squaring the multiples of 40 :",a[a%40==0]**2)
+
+Select the numbers grater than 50 : [<input size=2 ans="a7fc04e4c6f7823a3ccbd1dd99a7300ded02962e8b259da67fe0af937903eed5" placeholder=1></input> <input size=2 ans="c0f7b70ab27168a34ec120988d463540f189b784dc438ee36050f1ea27a87fdf" placeholder=2></input>]
+Squaring the multiples of 40 : [<input size=2 ans="358250be2ad7c83004f15d0e768ea98ac3c312b61c3ed8756a2aa93d8769aef1" placeholder=3></input> <input size=2 ans="78b16f5c4335fd001037bc169f05ccd077bec800db0dc67ad7ff06070f3d349f" placeholder=4></input>]
+
+
+</pre>
+<h2 id="answer">Answer</h2>
+<a class="btn" href="javascript:newScoring('Python_VTP_library_Numpy')">Answer</a>
+<script type="text/javascript">
+$(function(){
+ prettyPrint();
+});
+</script>

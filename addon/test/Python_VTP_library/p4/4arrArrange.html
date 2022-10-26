@@ -1,0 +1,45 @@
+<h2 id="statement">4</h2>
+Fill in Blanks 
+<h2 id="code">The Source Code</h2>
+<pre class="prettyprint" id="scoring-res"># A quick-demo of numpy.arange method usage
+# arange returns evenly spaced values within a given interval. step size is specified.
+# arange([start,] stop[, step,][, dtype]) : Returns an array with evenly spaced elements as per the interval. 
+
+import numpy as np
+
+# create the array with values from 0 to 4
+array = np.arange(5)
+
+# The output will be printed like this format [8 7 2 3 5]
+print("First array : \n", array, "\n") 
+ 
+# if np.arrange(3, 7), then the output will be printed like this [3 4 5 6] 
+print("Second array :\n", np.arange(4, 10), "\n")
+ 
+# if np.arrange(3, 9, 3), then the output will be printed like this [3 6]
+print("Third array:\n", np.arange(4, 10, 3), "\n")
+
+# if np.arrange(3, 9, 3), then the output will be printed like this [ 3.  6.]
+print("Fourth array:\n", np.arange(4, 10, 2, float), "\n")
+
+First array : 
+<input size=2 ans="26472ef4494111f69ba0086fadc13e87606c3c113e04d8d6ad93bb2d7116b61e" placeholder=1></input>
+
+Second array :
+<input size=2 ans="68162d0e941b92af87c1ac4f3eea655df814119e711a8c17392c2b10ea1a8a8f" placeholder=2></input> 
+
+Third array:
+<input size=2 ans="df59fed32030223e33bb6cee800557f2c91c729b4b831fc2f0cc78b567f83c70" placeholder=3></input>
+
+Fourth array:
+<input size=2 ans="5eb4a251e6f25fa7a6826f96d62ed4b31c418b92d36eaa9ae2f0e0afaa6fbcfe" placeholder=4></input> 
+
+
+</pre>
+<h2 id="answer">Answer</h2>
+<a class="btn" href="javascript:newScoring('Python_VTP_library')">Answer</a>
+<script type="text/javascript">
+$(function(){
+ prettyPrint();
+});
+</script>

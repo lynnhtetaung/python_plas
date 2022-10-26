@@ -1,0 +1,72 @@
+<h2 id="statement">22</h2>
+Fill in Blanks 
+<h2 id="code">The Source Code</h2>
+<pre class="prettyprint" id="scoring-res"># A quick-demo of printing DFS traversal
+# from a given given graph 
+
+from collections import defaultdict 
+  
+# This class represents a directed graph using 
+# adjacency list representation 
+
+class Graph: 
+  
+    # Constructor 
+    def __init__(self): 
+  
+        # default dictionary to store graph 
+        self.graph = defaultdict(list) 
+  
+    # function to add an edge to graph 
+    def addEdge(self, u, v): 
+        self.graph[u].append(v) 
+  
+    # A function used by DFS 
+    def DFSUtil(self, v, visited): 
+  
+        # Mark the current node as visited and print it 
+        visited[v] = True
+        print(v, end = ' ') 
+  
+        # Recur for all the vertices adjacent to this vertex 
+
+        for i in self.graph[v]: 
+            if visited[i] == False: 
+                self.DFSUtil(i, visited) 
+  
+    # The function to do DFS traversal. It uses recursive DFSUtil() 
+
+    def DFS(self, v): 
+  
+        # Mark all the vertices as not visited 
+        visited = [False] * (max(self.graph)+1) 
+  
+        # Call the recursive helper function  to print DFS traversal 
+        self.DFSUtil(v, visited) 
+  
+# Create a graph given in the above diagram 
+g = Graph() 
+g.addEdge(0, 1) 
+g.addEdge(0, 2) 
+g.addEdge(1, 2) 
+g.addEdge(2, 0) 
+g.addEdge(2, 3) 
+g.addEdge(3, 3) 
+  
+print("Following is DFS from (starting from vertex 2)") 
+g.DFS(2) 
+  
+The output of this program is:
+Following is DFS from (starting from vertex 2)
+<input size=2 ans="0337d6fcd298bc6696a8cade92eb2bc0568f213653c0df0349aafaf285f524a4" placeholder=1></input>,<input size=2 ans="d1b54be1dd2d039d250fa063fe2170a9c15bc910769a697183c82960fb9645a9" placeholder=2></input>,<input size=2 ans="fa3cfb3f1bb823aa9501f88f1f95f732ee6fef2c3a48be7f1d38037b216a549f" placeholder=3></input>,<input size=2 ans="3e3176f322eb4627d86c602d96fe3877d035d2ea66c22feb7f7aeea339cf5530" placeholder=4></input>
+
+
+
+</pre>
+<h2 id="answer">Answer</h2>
+<a class="btn" href="javascript:newScoring('Python_VTP_algorithm')">Answer</a>
+<script type="text/javascript">
+$(function(){
+ prettyPrint();
+});
+</script>

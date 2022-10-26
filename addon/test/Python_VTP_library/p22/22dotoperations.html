@@ -1,0 +1,45 @@
+<h2 id="statement">22</h2>
+Fill in Blanks 
+<h2 id="code">The Source Code</h2>
+<pre class="prettyprint" id="scoring-res"># A quick-demo of numpy.dot() method 
+  
+import numpy as np 
+  
+# Scalars : in np.dot( 2,3), the output will be 6.
+product = np.dot(5, 4) 
+print("Dot Product of scalar values :", product) 
+  
+''' Vectors : in vector_a = 3 + 4j and vector_b = 2 + 5j,
+the dot product 
+= 3(2 + 5j) + 4j(2 ? 5j)
+= 6 + 15j + 8j ? 20
+= -14 + 23j
+'''
+vector_a = 2 + 3j
+vector_b = 4 + 5j
+
+product = np.dot(vector_a, vector_b) 
+print("Dot Product of scalar values :", product) 
+  
+# 2D array 
+arr_a = np.array([[1, 4], [5, 6]]) 
+arr_b = np.array([[2, 4], [5, 2]]) 
+  
+product = np.dot(arr_a, arr_b) 
+print("Dot Product in 2D array  : \n", product) 
+
+Dot Product of scalar values :<input size=2 ans="5168f166ecaf66e62ce5c859e54e06e615b86260677db25509f1fc19295ae465" placeholder=1></input>
+Dot Product of scalar values : (-7+<input size=2 ans="d34bd22a1b31a2b659badcdb92666f3b2b6daaca28df802f45becdad234d54c3" placeholder=2></input>)
+Dot Product in 2D array  : 
+ [[22 <input size=2 ans="f861f085b808d6d450f061a1346f338c7867c4700c24dc1b044b6651457bcd93" placeholder=3></input>]
+ [<input size=2 ans="f3d22368f47c10c68a9588c4ac2944377f9996134c19a731e8f38bbd5376039e" placeholder=4></input> 32]]
+
+
+</pre>
+<h2 id="answer">Answer</h2>
+<a class="btn" href="javascript:newScoring('Python_VTP_library')">Answer</a>
+<script type="text/javascript">
+$(function(){
+ prettyPrint();
+});
+</script>

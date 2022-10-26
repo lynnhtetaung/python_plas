@@ -1,0 +1,42 @@
+<h2 id="statement">32</h2>
+Fill in Blanks 
+<h2 id="code">The Source Code</h2>
+<pre class="prettyprint" id="scoring-res"># A quick-demo of mumpy.lexsort()
+# numpy.lexsort():This function returns an indirect stable sort using a sequence of keys.
+
+import numpy as np
+ 
+# Numpy array created
+# First column
+a = np.array([9, 3, 1, 3, 4, 3, 6])
+ 
+# Second column 
+b = np.array([4, 6, 9, 2, 1, 8, 7]) 
+print('column a, column b')
+for (i, j) in zip(a, b):
+    print(i, ' ', j)
+ 
+# Sort by a then by b
+ind = np.lexsort((b, a)) 
+print('Sorted indices->', ind)
+
+The output of this program is as follows:
+column a, column b
+9   4
+<input size=2 ans="eb9cf4c533aed16eebdc067ba1ef6a895e5098ec17a7a4aa8855d1cf496e6847" placeholder=1></input>  <input size=2 ans="8104df31701f5aad096d83f908c8db2f1bb48d2da2f91ddd574414b3ca1bbcd6" placeholder=2></input>
+1   9
+3   2
+<input size=2 ans="cfef26c8661f948f2c2a72ffa8e0eb07cf77bddd884b175a2c6d77fad8a5be64" placeholder=3></input>  <input size=2 ans="dd49477b0b970dde26d58606384cfedd0dc5740b719bffc06442e7d949849deb" placeholder=4></input>
+3   8
+6   7
+Sorted indices-> [2 3 <input size=2 ans="59c4d02848bada0d98508d51ff67b1a057ee8c537b90ab34873f61df7dc33c41" placeholder=5></input> 5 <input size=2 ans="cd2ed2d000e7d0e9826f8fa11e7910a8893afad851bd0f1dc1f845f032d654b6" placeholder=6></input> <input size=2 ans="c2db26c514cd4c02a97fdd745a6078f173a4bf3ef0dd0f64a8f9e4bb5e421034" placeholder=7></input> 0]
+
+
+</pre>
+<h2 id="answer">Answer</h2>
+<a class="btn" href="javascript:newScoring('Python_VTP_library')">Answer</a>
+<script type="text/javascript">
+$(function(){
+ prettyPrint();
+});
+</script>

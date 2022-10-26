@@ -1,0 +1,54 @@
+<h2 id="statement">2</h2>
+Fill in Blanks 
+<h2 id="code">The Source Code</h2>
+<pre class="prettyprint" id="scoring-res"># A quick demo of data reading from excel file
+''' Assume the Datafile.xlsx includes the following data:
+For Sheet1,
+        A   B   C
+one    11  12  13
+two    21  22  23
+three  31  32  33 and
+For Sheet2,
+        A   B   C
+one    77  88  99
+two    21  22  23
+three  31  32  33 '''
+
+import pandas as pd
+
+# read excel file
+df = pd.read_excel('D:\Datafile.xlsx')
+
+# Specify the sheet to read with the argument sheet_name by specifing the number (starting at 0)
+df_sheet_index = pd.read_excel('D:\Datafile.xlsx', sheet_name=0)
+print(df_sheet_index)
+
+# Specify the sheet by defining sheet name.
+df_sheet_name = pd.read_excel('D:\Datafile.xlsx', sheet_name='sheet2')
+print(df_sheet_name)
+
+# load multiple data by specifying a number of 0 starting or the sheet name.
+df_sheet_multi = pd.read_excel('D:\Datafile.xlsx', sheet_name=[0, 'sheet2'])
+
+# all sheets are read by specifying sheet_name argument is none.
+df_sheet_all = pd.read_excel('D:\Datafile.xlsx', sheet_name=None)
+
+What is the output of the program?         
+       A   B   C
+one   <input size=2 ans="3958de59a1ae60b4330e99d6a5b791897717cdd2347260d0f71df22d60b01062" placeholder=1></input>12 <input size=2 ans="6d62aa4b52071e39f064a930d190b85ab327eb1a5045a8050ac538666ee765ca" placeholder=2></input>
+two    21  22  23
+three  31  32  33
+       A    B    C
+one   <input size=2 ans="af07603d4da41233e1546f0dc1ceee1f3aaa9d53f5e6aeea5a4d79c8c2c7fbb3" placeholder=3></input><input size=2 ans="2b49bbd05b422da5f92c063ffe711afe0b8288af55ad471d2e39eeda251ea8ad" placeholder=4></input><input size=2 ans="ac5e940b94a51609788f38c6db70f39b7f5aa5b26ee14d59a9685dad43682d04" placeholder=5></input>
+two    21  22  23
+three  31  32  33
+
+
+</pre>
+<h2 id="answer">Answer</h2>
+<a class="btn" href="javascript:newScoring('Python_VTP_library_Pandas')">Answer</a>
+<script type="text/javascript">
+$(function(){
+ prettyPrint();
+});
+</script>

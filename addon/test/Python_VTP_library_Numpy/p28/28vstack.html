@@ -1,0 +1,64 @@
+<h2 id="statement">28</h2>
+Fill in Blanks 
+<h2 id="code">The Source Code</h2>
+<pre class="prettyprint" id="scoring-res"># A quick-demo of numpy.vstack() function
+# numpy.vstack() function is used to stack the sequence of input arrays vertically to make a single array.
+
+import numpy as np
+
+# input array 
+in_arr1 = np.array([ 1, 2, 3] ) 
+print ("1st Input array : \n", in_arr1) 
+
+in_arr2 = np.array([ 4, 5, 6] ) 
+print ("2nd Input array : \n", in_arr2) 
+
+# Stacking the two arrays vertically 
+out_arr = np.vstack((in_arr1, in_arr2)) 
+print ("Output vertically stacked array:\n ", out_arr) 
+
+# input array 
+in_arr1 = np.array([[ 1, 2, 3], [ -1, -2, -3]] ) 
+print ("1st Input array : \n", in_arr1) 
+
+in_arr2 = np.array([[ 4, 5, 6], [ -4, -5, -6]] ) 
+print ("2nd Input array : \n", in_arr2) 
+
+# Stacking the two arrays vertically 
+out_arr = np.vstack((in_arr1, in_arr2)) 
+print ("Output stacked array :\n ", out_arr) 
+
+1st Input array : 
+[1 2 3]
+2nd Input array : 
+[4 5 6]
+Output vertically stacked array:
+[[1 2 3]
+[4 5 6]]
+1st Input array : 
+[[ 1  2  3]
+[-1 -2 -3]]
+2nd Input array : 
+[[ 4  5  6]
+[-4 -5 -6]]
+Output stacked array :
+[[ 1  2  3]
+<input size=2 ans="4246f472dbb463086e3044efdd5e937681c385902b6320df103d13990fe75937" placeholder=1></input>
+<input size=2 ans="c92aa10a312359dd6462e30aed68635830c16e423dbcbaa3e6a7a7e6467b36a8" placeholder=2></input>
+[-4 -5 -6]]
+
+
+
+
+
+
+
+
+</pre>
+<h2 id="answer">Answer</h2>
+<a class="btn" href="javascript:newScoring('Python_VTP_library_Numpy')">Answer</a>
+<script type="text/javascript">
+$(function(){
+ prettyPrint();
+});
+</script>

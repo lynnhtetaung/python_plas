@@ -1,0 +1,54 @@
+<style>.highlightme{background-color:#FF00FF;}</style><style>#inputholder span{background-color:#1E90FF;color:#FFFFFF;}</style><h2 id="statement">22</h2>
+
+Please modify the following source code in the output field to change from the left figure to the right figure!
+  <table >
+  <tr>
+     
+
+<td><figure> <img src="/img/widgepie1.JPG" alt="Elephant at sunset"> 
+</figure></td>
+     <td><figure> <img src="/img/arrow2.JPG" alt="Elephant at sunset"> 
+</figure></td>
+    <td><figure> <img src="/img/widgepie2.JPG" alt="Elephant at sunset"> 
+</figure></td>
+  </tr>  
+</table>
+<table >
+  <tr>
+     
+
+<td><figure> <img src="/img/population.JPG" alt="Elephant at sunset"> 
+</figure></td>
+       </tr>  
+</table><a href="source_codes/Problem22.zip" download> Click Here To Download Source Code</a>
+<h4 id="code">Source Code</h4>
+<pre class="prettyprint" id="scoring-res" >01:import matplotlib.pyplot as plt
+02:import pandas as pd
+03:population_data = pd.read_csv(r&#39;D:\population.csv&#39;)
+04:df=pd.DataFrame(population_data)
+05:explodeTuple = (0.1, 0.0, 0.5, 0.0, 0.0, 0.0)
+06:fig, ax = plt.subplots()
+07:ax.axis(&#39;equal&#39;)
+08:ax.pie(df.populationShare,explode=explodeTuple,labels=df.location,autopct=&#39;%1.2f&#39;,startangle=90, colors= [&#39;blue&#39;,&#39;green&#39;,&#39;red&#39;,&#39;yellow&#39;,&#39;black&#39;,&#39;skyblue&#39;])
+09:plt.title(&#39;Total Population(Widge Pie Chart)&#39;, color = &#39;blue&#39;)
+10:plt.savefig(&#39;D:/widgepie1.JPG&#39;) # save the widgepie chart as JPG
+
+</pre>
+<h4 id="code1">the output</h4>
+<pre class = "prettyprint" id = "scoring-res" <h2 id="code1"></h2>
+01<input type="text" name="intext" id="mytext1" 0 size=120 ansHint='import matplotlib.pyplot as plt^import pandas as pd^population_data = pd.read_csv(r'D:\population.csv')^df=pd.DataFrame(population_data)^explodeTuple = (0.1, 0.5, 0.0, 0.0, 0.0, 0.0)^fig, ax = plt.subplots()^ax.axis('equal')^ax.pie(df.male_population,explode=explodeTuple,labels=df.location,autopct='%1.2f',startangle=90, colors= ['skyblue','black','yellow','red','green','blue'])^plt.title('Male Population(Widge Pie Chart)', color = 'green')^plt.savefig('D:/widgepie2.JPG') # save the widgepie chart as JPG' missingele="male_population^green^Male^widgepie2"  ansSpace="ace514fe68609bb881240adaccd4428946e31d2ca65114670f03a9d66ddfca25" ans="481c23c18903b8e1b527a298d25bcc55ca1711b485764401f69ea1b4610fe768" value='import matplotlib.pyplot as plt' onkeydown="myFunction()">  </input>
+02<input type="text" name="intext" id="mytext2" 1 size=120 ansHint='import matplotlib.pyplot as plt^import pandas as pd^population_data = pd.read_csv(r'D:\population.csv')^df=pd.DataFrame(population_data)^explodeTuple = (0.1, 0.5, 0.0, 0.0, 0.0, 0.0)^fig, ax = plt.subplots()^ax.axis('equal')^ax.pie(df.male_population,explode=explodeTuple,labels=df.location,autopct='%1.2f',startangle=90, colors= ['skyblue','black','yellow','red','green','blue'])^plt.title('Male Population(Widge Pie Chart)', color = 'green')^plt.savefig('D:/widgepie2.JPG') # save the widgepie chart as JPG' missingele="male_population^green^Male^widgepie2"  ansSpace="e920b764dea8e199a244cef61214da2bf26b95bdfae37010c0c1f20b8652baad" ans="bc1914b95187424ace3dbcca77d75aaf26ddeb6f529529787ea8ac9d278a0ec6" value='import pandas as pd' onkeydown="myFunction()">  </input>
+03<input type="text" name="intext" id="mytext3" 2 size=120 ansHint='import matplotlib.pyplot as plt^import pandas as pd^population_data = pd.read_csv(r'D:\population.csv')^df=pd.DataFrame(population_data)^explodeTuple = (0.1, 0.5, 0.0, 0.0, 0.0, 0.0)^fig, ax = plt.subplots()^ax.axis('equal')^ax.pie(df.male_population,explode=explodeTuple,labels=df.location,autopct='%1.2f',startangle=90, colors= ['skyblue','black','yellow','red','green','blue'])^plt.title('Male Population(Widge Pie Chart)', color = 'green')^plt.savefig('D:/widgepie2.JPG') # save the widgepie chart as JPG' missingele="male_population^green^Male^widgepie2"  ansSpace="c07b09048533a1a1ed3b77c2c39d32ad52880540170f338db013bc45946097ca" ans="44ba1e1b7ea9a51859db1163bc2aa78790ec076e4ba7a33ba1830b6d9f905a6e" value='population_data = pd.read_csv(r&#39;D:\population.csv&#39;)' onkeydown="myFunction()">  </input>
+04<input type="text" name="intext" id="mytext4" 3 size=120 ansHint='import matplotlib.pyplot as plt^import pandas as pd^population_data = pd.read_csv(r'D:\population.csv')^df=pd.DataFrame(population_data)^explodeTuple = (0.1, 0.5, 0.0, 0.0, 0.0, 0.0)^fig, ax = plt.subplots()^ax.axis('equal')^ax.pie(df.male_population,explode=explodeTuple,labels=df.location,autopct='%1.2f',startangle=90, colors= ['skyblue','black','yellow','red','green','blue'])^plt.title('Male Population(Widge Pie Chart)', color = 'green')^plt.savefig('D:/widgepie2.JPG') # save the widgepie chart as JPG' missingele="male_population^green^Male^widgepie2"  ansSpace="3f68db4ca372945e15d074eece893f442ca23a453782cfbcca878925a07cb1d4" ans="3f68db4ca372945e15d074eece893f442ca23a453782cfbcca878925a07cb1d4" value='df=pd.DataFrame(population_data)' onkeydown="myFunction()">  </input>
+05<input type="text" name="intext" id="mytext5" 4 size=120 ansHint='import matplotlib.pyplot as plt^import pandas as pd^population_data = pd.read_csv(r'D:\population.csv')^df=pd.DataFrame(population_data)^explodeTuple = (0.1, 0.5, 0.0, 0.0, 0.0, 0.0)^fig, ax = plt.subplots()^ax.axis('equal')^ax.pie(df.male_population,explode=explodeTuple,labels=df.location,autopct='%1.2f',startangle=90, colors= ['skyblue','black','yellow','red','green','blue'])^plt.title('Male Population(Widge Pie Chart)', color = 'green')^plt.savefig('D:/widgepie2.JPG') # save the widgepie chart as JPG' missingele="male_population^green^Male^widgepie2"  ansSpace="7339a888a3171650c09413936232918b710422797c3eedf1e9b84008c7312ef1" ans="34f94336114536408b0a0805407b3ef9cb23f0a0e1381f2895822eca887b05b7" value='explodeTuple = (0.1, 0.0, 0.5, 0.0, 0.0, 0.0)' onkeydown="myFunction()">  </input>
+06<input type="text" name="intext" id="mytext6" 5 size=120 ansHint='import matplotlib.pyplot as plt^import pandas as pd^population_data = pd.read_csv(r'D:\population.csv')^df=pd.DataFrame(population_data)^explodeTuple = (0.1, 0.5, 0.0, 0.0, 0.0, 0.0)^fig, ax = plt.subplots()^ax.axis('equal')^ax.pie(df.male_population,explode=explodeTuple,labels=df.location,autopct='%1.2f',startangle=90, colors= ['skyblue','black','yellow','red','green','blue'])^plt.title('Male Population(Widge Pie Chart)', color = 'green')^plt.savefig('D:/widgepie2.JPG') # save the widgepie chart as JPG' missingele="male_population^green^Male^widgepie2"  ansSpace="f478141d06652cc450aa50607078bd33941b2af4dc9477533bdbd6c09dd3863f" ans="6fe720bffab287b221163c84f2f1d92f96966b3acf3d65b523c639b592911c77" value='fig, ax = plt.subplots()' onkeydown="myFunction()">  </input>
+07<input type="text" name="intext" id="mytext7" 6 size=120 ansHint='import matplotlib.pyplot as plt^import pandas as pd^population_data = pd.read_csv(r'D:\population.csv')^df=pd.DataFrame(population_data)^explodeTuple = (0.1, 0.5, 0.0, 0.0, 0.0, 0.0)^fig, ax = plt.subplots()^ax.axis('equal')^ax.pie(df.male_population,explode=explodeTuple,labels=df.location,autopct='%1.2f',startangle=90, colors= ['skyblue','black','yellow','red','green','blue'])^plt.title('Male Population(Widge Pie Chart)', color = 'green')^plt.savefig('D:/widgepie2.JPG') # save the widgepie chart as JPG' missingele="male_population^green^Male^widgepie2"  ansSpace="137741b70d7df9a011e86e4dbf441f63847148af242913c14b9149bc6cbc0471" ans="137741b70d7df9a011e86e4dbf441f63847148af242913c14b9149bc6cbc0471" value='ax.axis(&#39;equal&#39;)' onkeydown="myFunction()">  </input>
+08<input type="text" name="intext" id="mytext8" 7 size=120 ansHint='import matplotlib.pyplot as plt^import pandas as pd^population_data = pd.read_csv(r'D:\population.csv')^df=pd.DataFrame(population_data)^explodeTuple = (0.1, 0.5, 0.0, 0.0, 0.0, 0.0)^fig, ax = plt.subplots()^ax.axis('equal')^ax.pie(df.male_population,explode=explodeTuple,labels=df.location,autopct='%1.2f',startangle=90, colors= ['skyblue','black','yellow','red','green','blue'])^plt.title('Male Population(Widge Pie Chart)', color = 'green')^plt.savefig('D:/widgepie2.JPG') # save the widgepie chart as JPG' missingele="male_population^green^Male^widgepie2"  ansSpace="4ec1bda99f318c1cd874eb5084ef2bcc3315bddb640bf648afb1a442344d60d9" ans="e16cc1b50e982ca717d1fe6db237aa87a4c4fbe9f301f13e7b963ac72664a3d9" value='ax.pie(df.populationShare,explode=explodeTuple,labels=df.location,autopct=&#39;%1.2f&#39;,startangle=90, colors= [&#39;blue&#39;,&#39;green&#39;,&#39;red&#39;,&#39;yellow&#39;,&#39;black&#39;,&#39;skyblue&#39;])' onkeydown="myFunction()">  </input>
+09<input type="text" name="intext" id="mytext9" 8 size=120 ansHint='import matplotlib.pyplot as plt^import pandas as pd^population_data = pd.read_csv(r'D:\population.csv')^df=pd.DataFrame(population_data)^explodeTuple = (0.1, 0.5, 0.0, 0.0, 0.0, 0.0)^fig, ax = plt.subplots()^ax.axis('equal')^ax.pie(df.male_population,explode=explodeTuple,labels=df.location,autopct='%1.2f',startangle=90, colors= ['skyblue','black','yellow','red','green','blue'])^plt.title('Male Population(Widge Pie Chart)', color = 'green')^plt.savefig('D:/widgepie2.JPG') # save the widgepie chart as JPG' missingele="male_population^green^Male^widgepie2"  ansSpace="3a219725534d179564b55ed7151e87fc7bd2126ca7e3380f80e14a5ee04f9337" ans="c5da23b237b600810b918f94f7461f3e953a591485ecd3b39397ca0996c66daa" value='plt.title(&#39;Total Population(Widge Pie Chart)&#39;, color = &#39;blue&#39;)' onkeydown="myFunction()">  </input>
+10<input type="text" name="intext" id="mytext10" 9 size=120 ansHint='import matplotlib.pyplot as plt^import pandas as pd^population_data = pd.read_csv(r'D:\population.csv')^df=pd.DataFrame(population_data)^explodeTuple = (0.1, 0.5, 0.0, 0.0, 0.0, 0.0)^fig, ax = plt.subplots()^ax.axis('equal')^ax.pie(df.male_population,explode=explodeTuple,labels=df.location,autopct='%1.2f',startangle=90, colors= ['skyblue','black','yellow','red','green','blue'])^plt.title('Male Population(Widge Pie Chart)', color = 'green')^plt.savefig('D:/widgepie2.JPG') # save the widgepie chart as JPG' missingele="male_population^green^Male^widgepie2" ansSpace="a45d28a9b025f94e233a92a1cead50699608ae63d95acad99546f21fe6cc68c0" ans="821488e0b80e85cc47ec7103a7a90196aec441aa9b956570ab1b565fcc6de8e3" value='plt.savefig(&#39;D:/widgepie1.JPG&#39;) # save the widgepie chart as JPG' onkeydown="myFunction()"></input>
+<script src="myScript.js"></script></div></pre><h2 id="answer">Answer</h2>
+<a class="btn" href="javascript:newScoringCMP('Python_CMP_Pandas_graph')">Answer</a>
+<a class="btn btn-success" onclick="ansFileSave()">File Save</a>
+
+<a id="dldlink"></a>
+<script type="text/javascript" src="allowtab.js"></script>

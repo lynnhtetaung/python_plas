@@ -1,0 +1,60 @@
+<h2 id="statement">6</h2>
+Fill in Blanks 
+<h2 id="code">The Source Code</h2>
+<pre class="prettyprint" id="scoring-res"># A quick-demo of Infix-to-Postfix Conversion using stack
+
+from pythonds.basic import Stack
+    
+def infixToPostfix(infixexpr):
+    prec = {}
+    prec["*"] = 3
+    prec["/"] = 3
+    prec["+"] = 2
+    prec["-"] = 2
+    prec["("] = 1
+    opStack = Stack()
+    postfixList = []
+    tokenList = infixexpr.split()
+            
+    for token in tokenList:
+        if token in "ABCDEFGHIJKLMNOPQRSTUVWXYZ" or token in "0123456789":
+            postfixList.append(token)
+        elif token == '(':
+            opStack.push(token)
+        elif token == ')':
+            topToken = opStack.pop()
+            while topToken != '(':
+                postfixList.append(topToken)
+                topToken = opStack.pop()
+        else:
+            while (not opStack.isEmpty()) and \
+                (prec[opStack.peek()] >= prec[token]):
+                   postfixList.append(opStack.pop())
+                              
+            opStack.push(token)
+            
+    while not opStack.isEmpty():
+        print(opStack.peek())
+        postfixList.append(opStack.pop())        
+                 
+    return "".join(postfixList)
+            
+print(infixToPostfix("A * B + C * D"))
+print(infixToPostfix("( A + B ) * C - ( D - E ) * ( F + G )"))
+    
+The output of the program is<input size=2 ans="7192597e131b8ac7f23d22ee1e4ce38f1ac6d20a73b784faef6f1607b8ff5d4d" placeholder=1></input>
+                            <input size=2 ans="acb8ec65ec86c9275c20b373b16fab598ac25af368d8623915bff937b032506d" placeholder=2></input>
+                            <input size=2 ans="17f9281c06f23c52ac2afb0088a7230acbbedaa7f799f6a071d5c9d9a149ff0a" placeholder=3></input>
+                            <input size=2 ans="df82020611093b0db2f8767835698dc147623228e9c7555f3aa8686e484c97f3" placeholder=4></input>
+                            <input size=2 ans="160bec246dab359da95722af2123941c117320e645e740bc1cfa83cb95ebae37" placeholder=5></input>
+                            <input size=2 ans="956db3d0307874c4999414506bf3d4a7cebacdc2adeb7183d2f85473a44f513d" placeholder=6></input>
+
+
+</pre>
+<h2 id="answer">Answer</h2>
+<a class="btn" href="javascript:newScoring('Python_VTP_algorithm')">Answer</a>
+<script type="text/javascript">
+$(function(){
+ prettyPrint();
+});
+</script>

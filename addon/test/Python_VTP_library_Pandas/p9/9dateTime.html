@@ -1,0 +1,44 @@
+<h2 id="statement">9</h2>
+Fill in Blanks 
+<h2 id="code">The Source Code</h2>
+<pre class="prettyprint" id="scoring-res"># A quick demo of creating Date Time object by using .date_range function with the following parameter:
+#First parameter: start= 'dd/mm/yyyy'.
+#Second parameter: periods= n, where n is no of periods or date time elements you need.
+#Third parameter: freq= 'x', where 'x' can be 'H'(hour), 'D'(days), 'W'(weeks), 'M'(month), 'Y'(years), etc.
+
+import pandas as pd
+
+# print date in yyyy-mm-dd format
+df_rng = pd.DataFrame() 
+df_rng['date'] = pd.date_range('1/1/2011', periods = 72, freq ='H')
+print(df_rng[:2])
+
+# breaking the time and date into separate features
+df_rng['year'] = df_rng['date'].dt.year  #creates 'year' column and extracts year 
+df_rng['day'] = df_rng['date'].dt.day  #creates 'day' column and extracts day
+df_rng['hour'] = df_rng['date'].dt.hour #creates 'hour' column and extracts hour
+print(df_rng.head(3))
+
+# to get the present time as a timestamp
+df_time = pd.Timestamp.now()
+print(df_time)
+
+What is the output of the program?
+                 date
+0 2011-01-01 00:00:00
+1 2011-01-01 01:00:00
+                 date  year     day      hour  
+0 2011-01-01 00:00:00 <input size=2 ans="777b4265c1783fd93bab858efa5cd0b1b4e1039456b143236c8c2193c79c16eb" placeholder=1></input>       1         0 
+1 2011-01-01 01:00:00  2011       <input size=2 ans="eb3be230bbd2844b1f5d8f2e4fab9ffba8ab22cfeeb69c4c1361993ba4f377b9" placeholder=2></input>    <input size=2 ans="684fe39f03758de6a882ae61fa62312b67e5b1e665928cbf3dc3d8f4f53e3562" placeholder=3></input>
+2 2011-01-01 02:00:00  2011       <input size=2 ans="7559ca4a957c8c82ba04781cd66a68d6022229fca0e8e88d8e487c96ee4446d0" placeholder=4></input>     2
+2021-01-23 13:26:09.243063
+
+
+</pre>
+<h2 id="answer">Answer</h2>
+<a class="btn" href="javascript:newScoring('Python_VTP_library_Pandas')">Answer</a>
+<script type="text/javascript">
+$(function(){
+ prettyPrint();
+});
+</script>

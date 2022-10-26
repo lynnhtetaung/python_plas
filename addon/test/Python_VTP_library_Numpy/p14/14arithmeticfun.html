@@ -1,0 +1,84 @@
+<h2 id="statement">14</h2>
+Fill in Blanks 
+<h2 id="code">The Source Code</h2>
+<pre class="prettyprint" id="scoring-res"># A quick-demo of Arithmetic Functions usage
+# divide() function: Array element from first array is divided by elements from second element
+# multiply() function: Multiply arguments element-wise.
+# numpy.add() function: Add arguments element-wise. 
+# numpy.subtract() function: Subtract arguments element-wise. 
+# numpy.negative() function: Numerical negative, element-wise.
+# power() function: First array elements raised to powers from second array, element-wise.
+
+import numpy as np
+ 
+# input_array
+arr1 = [2, 27, 2, 21, 23]
+arr2 = [2, 3, 4, 5, 6]
+print ("arr1 : ", arr1)
+print ("arr2 : ", arr2)
+ 
+# output_array for division
+out = np.divide(arr1, arr2)
+print ("\nOutput array after division: \n", out)
+
+# output_array for multiplication
+out = np.multiply(arr1, arr2)
+print ("\nOutput array after multiplication: \n", out)
+
+in_num1 = 30
+in_num2 = 15
+
+print ("1st Input number : ", in_num1) 
+print ("2nd Input number : ", in_num2) 
+	
+out_num = np.add(in_num1, in_num2) 
+print ("output number after addition : ", out_num) 
+
+out_num = np.subtract(in_num1, in_num2) 
+print ("output number after subtraction : ", out_num)
+
+
+in_num = 10
+  
+print ("Input  number : ", in_num) 
+    
+out_num = np.negative(in_num)  
+print ("negative of input number :", out_num) 
+
+# input_array 
+arr1 = [2, 2, 2, 2, 2] 
+arr2 = [2, 3, 4, 5, 6] 
+print ("arr1 : ", arr1) 
+print ("arr1 : ", arr2) 
+  
+# output_array 
+out = np.power(arr1, arr2) 
+print ("Output array : ", out) 
+
+arr1 :  [2, 27, 2, 21, 23]
+arr2 :  [2, 3, 4, 5, 6]
+
+Output array after division: 
+[ 1.         <input size=2 ans="fb12ada2507361af75be83487cb4ef1fe940957b6a2a9c7ab9382849875b63ee" placeholder=1></input>          0.5        <input size=2 ans="ac78d28a0ab5d793a259734e3a2663d4190cd686329471bb463a0b254e41687b" placeholder=2></input>         3.83333333]
+
+Output array after multiplication: 
+[  4 <input size=2 ans="fa359baa1cd64a8a312029805c3ac3f4e360ae48b0685a3a7cdacb9a2406522a" placeholder=3></input>   8 105 <input size=2 ans="c469323af86a136d1d53174fc8e256bd6783ce1ee1b68e64f377da99592f7933" placeholder=4></input> ]
+1st Input number :  30
+2nd Input number :  15
+output number after addition : <input size=2 ans="efa6a90307e68ef82eae446144eabf9b7c5ce0ab9cb1b0d004e3e81c8b1aa7a7" placeholder=5></input>
+output number after subtraction : <input size=2 ans="de792c950874e5725180d7eb1222504d46be42195b9786d1f7696834d3103dd0" placeholder=6></input>
+Input  number :  10
+negative of input number :<input size=2 ans="258f24203e30bef0ecdad34896c6f77fad182ec579cc5c46f9571451df359237" placeholder=7></input>
+arr1 :  [2, 2, 2, 2, 2]
+arr1 :  [2, 3, 4, 5, 6]
+Output array :  [ 4  8 <input size=2 ans="f3b7c26a0b7fdc3d01e19f8a06e9c521780696525c21277dc852fd38ed0cda59" placeholder=8></input> <input size=2 ans="07f8f32f6d2c6f4aca5ed02d1134b5ad5101257fd1e7de46dddc406f748e3617" placeholder=9></input>  64]
+
+
+</pre>
+<h2 id="answer">Answer</h2>
+<a class="btn" href="javascript:newScoring('Python_VTP_library_Numpy')">Answer</a>
+<script type="text/javascript">
+$(function(){
+ prettyPrint();
+});
+</script>

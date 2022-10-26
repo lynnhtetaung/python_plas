@@ -1,0 +1,50 @@
+<h2 id="statement">10</h2>
+<pre class="pfpprettyprint" id="scoring-res">
+<DIV class="fl"># A quick-demo of multilevel inheritance
+# Base class
+class Main_Company:
+
+	def __init__(self, companyname):
+		self.companyname = companyname
+
+# Intermediate class
+class Branch_Company(Main_Company):
+	def __init__(self, branchcompanyname, companyname):
+		self.branchcompanyname = branchcompanyname
+
+		# invoking constructor of Company class
+		Main_Company.__init__(self, companyname)
+
+# Derived class
+class Partnership(Branch_Company):
+	def __init__(self,partnername, branchcompanyname, companyname):
+		self.partnername = partnername
+
+		# invoking constructor of Branch_Company class
+		Branch_Company.__init__(self, branchcompanyname, companyname)
+
+	def print_name(self):
+		print('Main company name :', self.companyname)
+		print("Branch company name :", self.branchcompanyname)
+		print("Partnership company name :", self.partnername)
+
+# Driver code
+p1 = Partnership('Champion', 'Grand', 'Solutions Sign')
+print(p1.companyname)
+p1.print_name()
+</DIV>
+<DIV class="fr">
+What is the output of the program!
+<input size=25 ans="a6e4e4f443ee69de363c1d5ec0ff559a349b59b477ed6c8df2ea9f6536742fab" placeholder=1></input>
+<input size=25 ans="396c29ca9a6b3a774d1405fa67f2318d30dc1c750c48cbdb7a3a3f60a23a4b54" placeholder=2></input>
+<input size=25 ans="c634b199441b674ec5646b0fc847bb21a603f6cffaee6f936d3bad10709ab102" placeholder=3></input>
+<input size=25 ans="d459bbddd0542d77e448244b6346058f4c1811c77c16d2b5b218a3e926232188" placeholder=4></input>
+</DIV>
+</pre>
+<h2 id="answer">Answer</h2>
+<a class="btn" href="javascript:newScoring('Python_VTP_OOP')">Answer</a>
+<script type="text/javascript">
+$(function(){
+ prettyPrint();
+});
+</script>

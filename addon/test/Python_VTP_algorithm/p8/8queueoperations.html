@@ -1,0 +1,51 @@
+<h2 id="statement">8</h2>
+Fill in Blanks 
+<h2 id="code">The Source Code</h2>
+<pre class="prettyprint" id="scoring-res"># A quick-demo of using queue operations
+
+class Queue:
+    def __init__(self):
+        self.items = []
+	
+    def isEmpty(self):
+        return self.items == []
+	
+    def enqueue(self, item):
+        self.items.insert(0,item)
+	
+    def dequeue(self):
+        return self.items.pop()
+
+    def size(self):
+        return len(self.items)
+	
+q=Queue()	
+print("Is the queqe empty?", q.isEmpty())
+q.enqueue(4)
+print("The element for the first dequeue operation is ", q.dequeue())
+q.enqueue('dog')
+q.enqueue(True)
+print("The size of the queue is", q.size())
+print("Is the queqe empty?", q.isEmpty())
+q.enqueue(8.4)
+print("The element for the second dequeue operation is ", q.dequeue())
+print("The element for the third dequeue operation is ", q.dequeue())
+print("The size of the queue is", q.size())
+
+Is the queqe empty? <input size=2 ans="7724ed3f3ec99a55cf312adc7348efd10dfd60d0f1ae9e89a58b2cd36c9394f2" placeholder=1></input>
+The element for the first dequeue operation is  <input size=2 ans="d4679c618f1af07ee8570edd4b931e2e68e1c2d4b7d3c2f1033a9b597f85d4b0" placeholder=2></input>
+The size of the queue is <input size=2 ans="e0850a775c17a87060c0cf6efad1020e0cbef5a44ba942bef6add5776598de53" placeholder=3></input>
+Is the queqe empty? <input size=2 ans="34297759e3d413e90ca062590fa6cfea529e8c0e3553809f47d4b5ee116d843b" placeholder=4></input>
+The element for the second dequeue operation is <input size=2 ans="3a0f03caa475939553c8dab0cfbb94e375cb2bbe639992cd649af9fc10a1d87e" placeholder=5></input>
+The element for the third dequeue operation is <input size=2 ans="fef3dccb864cfd4955d4dde062388074b6d4900f284144cd24e1e584b1346215" placeholder=6></input>
+The size of the queue is <input size=2 ans="38b2d03f3256502b1e9db02b2d12aa27a46033ffe6d8c0ef0f2cf6b1530be9d8" placeholder=7></input>
+
+
+</pre>
+<h2 id="answer">Answer</h2>
+<a class="btn" href="javascript:newScoring('Python_VTP_algorithm')">Answer</a>
+<script type="text/javascript">
+$(function(){
+ prettyPrint();
+});
+</script>

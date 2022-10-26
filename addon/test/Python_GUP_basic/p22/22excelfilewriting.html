@@ -1,0 +1,28 @@
+<h2 id="statement">22</h2>
+Fill in Blanks 
+<h2 id="code">The Source Code</h2>
+<pre class="prettyprint" id="scoring-res">1 import pandas as pd 
+2 df = pd.DataFrame([[11, 21, 31], [12, 22; 32], [31, 32, 33]], index = ['one', 'two', 'three'], columns = ['a', 'b', 'c']) 
+3 df.to_excel('DataWrite.xlsx', index = True, header = False) 
+4 print(df) 
+5 df2 = df[['a', 'c']] 
+6 print(df2) 
+7 with pd.ExcelWriter('D:\pandas_to_excel.xlsx') as writer: 
+8       df.to_excel(writer, sheet_name = 'sheet1') 
+9       df2.to_excel(writer, sheet_name = 'sheet2') 
+
+Question
+Q1.  Which keyword is used to create an alias when importing a module?<input size=2 ans="0295d652ab5b502d9d0556cda172ab81b3e9d35f462a36e7cc697359fd59a399" placeholder=1></input>
+Q2.  Which function is used for creating two-dimensional data structure like a two-dimensional array, or a table with rows and columns?<input size=2 ans="c15369ac9c9005bcef08bd2c0c6b223c55bf8c113b5c2d84401f437c662aefea" placeholder=2></input>
+Q3.  Which function is used for writing multiple data frames to an excel file as sperate sheets? <input size=2 ans="846013380625c7863bd4ee6feb9f956771a8296c982b890e43cdf37be77bfa05" placeholder=3></input>
+Q4.  Which function is used to write a DataFrame object into the excel file data? <input size=2 ans="cdfa3da4cb578480ec94739360157d788f0c097da60aac4e7db04731be6488a2" placeholder=4></input>
+
+
+</pre>
+<h2 id="answer">Answer</h2>
+<a class="btn" href="javascript:newScoring('Python_GUP_basic')">Answer</a>
+<script type="text/javascript">
+$(function(){
+ prettyPrint();
+});
+</script>

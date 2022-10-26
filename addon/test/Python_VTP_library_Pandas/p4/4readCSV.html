@@ -1,0 +1,72 @@
+<h2 id="statement">4</h2>
+Fill in Blanks 
+<h2 id="code">The Source Code</h2>
+<pre class="prettyprint" id="scoring-res"># A quick demo of CSV file reading
+''' Assume testCSV.csv includes the following data:
+           City          State  Capital      Population
+0  Philadelphia   Pennsylvania       No   1.581 Million
+1    Sacramento     California      Yes     0.5 Million
+2      New York       New York       No   8.623 Million
+3        Austin          Texas      Yes    0.95 Million
+4         Miami        Florida       No   0.463 Million '''
+
+import pandas as pd
+
+# read the csv file
+titanic_data = pd.read_csv(r'D:\testCSV.csv')
+
+col_names = ['Id',
+             'Survived',
+             'Passenger Class',
+             'Full Name',
+             ]
+# default column headers is the first row of a CSV file. However, custom header names can be set by putting header = None as follows:
+titanic_data = pd.read_csv(r'D:\testCSV.csv', names=col_names, header=None)
+print(titanic_data)
+
+# data reading from the line specified by header
+df_header_2 = pd.read_csv(r'D:\testCSV.csv', header=2)
+print(df_header_2)
+
+# data reading by selecting necessary columns
+df = pd.read_csv(r'D:\testCSV.csv',index_col=0, usecols=[0, 1, 3])
+print(df) 
+
+# data reading by selecting necessary rows
+df = pd.read_csv(r'D:\testCSV.csv', index_col=0, skiprows=range(1, 5, 2))
+print(df)
+
+What is the ouput of the program? 
+             Id       Survived        <input size=2 ans="62f13c922a228ca42334a1b589afe624dd39c67d63668ac69260f015d6a0d86e" placeholder=1></input>         Full Name
+0          City          State         Capital      Population
+1  Philadelphia   Pennsylvania              No   1.581 Million
+2    Sacramento     California             Yes     0.5 Million
+3      New York       New York              No   8.623 Million
+4        Austin          Texas             Yes    0.95 Million
+5         Miami        Florida              No    0.463 Million
+  Sacramento  California   Yes     0.5 Million
+0   New York    New York    No   8.623 Million
+1     Austin       Texas   Yes    0.95 Million
+2     <input size=2 ans="c6c1d89043b18508db9bd5f42957ac0ce5d8a91044550acc58a81eb601041ade" placeholder=2></input>    Florida    No   0.463 Million
+                            
+City                 State      Population                  
+Philadelphia   Pennsylvania   1.581 Million
+Sacramento       California     0.5 Million
+New York           New York   8.623 Million
+Austin                Texas    0.95 Million
+Miami               Florida   0.463 Million
+                  
+City             State      Capital   <input size=2 ans="a9fd24254285aeb2152f29dfbb55bc2390e16712697d4df27a3f2651b471f2a6" placeholder=3></input>               
+Sacramento   California      Yes     0.5 Million
+Austin            Texas      Yes    0.95 Million
+Miami           Florida       No   0.463 Million
+
+
+</pre>
+<h2 id="answer">Answer</h2>
+<a class="btn" href="javascript:newScoring('Python_VTP_library_Pandas')">Answer</a>
+<script type="text/javascript">
+$(function(){
+ prettyPrint();
+});
+</script>

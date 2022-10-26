@@ -1,0 +1,42 @@
+<h2 id="statement">11</h2>
+<pre class="pfpprettyprint" id="scoring-res">
+<DIV class="fl"># A quick-demo of hierarchical inheritance
+# Base class
+class Electronic_Device:
+    def info(self):
+        print("This is electronic device.")
+
+# First child class
+class Laptop(Electronic_Device):
+    def laptop_info(self, name):
+        print("Laptop name is:", name)
+
+# Second child class
+class Phone(Electronic_Device):
+    def phone_info(self, name):
+        print("Phone name is:", name)
+
+# Driver code
+obj1 = Laptop()
+obj1.info()
+obj1.laptop_info('HP')
+
+obj2 = Phone()
+obj2.info()
+obj2.phone_info('Samsung')
+</DIV>
+<DIV class="fr">
+What is the output of the program!
+<input size=25 ans="acbca4301460e1fd856fdfd3ab99a2962fab82d526881f8d7b4ce9d7270446c9" placeholder=1></input>
+<input size=25 ans="33c238e38915cc63462c2afa8cd0cffee11dda37623e228cf198f6c4ef25ce08" placeholder=2></input>
+<input size=25 ans="ff666dec4e3e70deb13f4ea88ef9383a5fe65a40593f98f4abdf87a52de8b7bf" placeholder=3></input>
+<input size=25 ans="3e2b66d48057f523164ff72b81440b4d42bb3f7f4a9ef327521f46b0c414b8ef" placeholder=4></input>
+</DIV>
+</pre>
+<h2 id="answer">Answer</h2>
+<a class="btn" href="javascript:newScoring('Python_VTP_OOP')">Answer</a>
+<script type="text/javascript">
+$(function(){
+ prettyPrint();
+});
+</script>

@@ -1,0 +1,68 @@
+<h2 id="statement">7</h2>
+Fill in Blanks 
+<h2 id="code">The Source Code</h2>
+<pre class="prettyprint" id="scoring-res"># A quick-demo of iteration on pandas
+#iteritems(): Helps to iterate over each element of the set, column-wise.
+#iterrows(): Each element of the set, row-wise.
+#itertuple(): Each row and form a tuple out of them.
+''' Assume the csv file includes the following data:
+         City           State         Capital      
+0    Philadelphia    Pennsylvania      No 
+1    Sacramento      California        Yes   
+2    New York         New York         No   
+ '''
+import pandas as pd
+
+#load a dataset 
+df = pd.read_csv(r'D:\testCSV.csv')
+
+# travel and visit each and every value of the dataset.
+for key,values in df.iteritems():
+    print(key, values)
+    
+# visit all the elements of a dataset, row-wise.
+for row_index,row in df.iterrows():
+    print(row_index, row)
+
+# creates a tuple for every row in the dataset and give a tuple of the rows present.
+for row in df.itertuples():
+    print(row)
+
+What is the output of the program?
+City 0    Philadelphia
+1     <input size=2 ans="1e8e89cf071914c3a562bec07f5e7108547d42fc6f86c74d59ae316ccb133ce8" placeholder=1></input>
+<input size=2 ans="1c6c0bb2c7ecdc3be8e134f79b9de45155258c1f554ae7542dce48f5cc8d63f0" placeholder=2></input>        New York
+Name: City, dtype: object
+ State 0    <input size=2 ans="85870c7e2fd5d7effe811f23cc2bc012febd82af592d52cc4e267a3724e930d7" placeholder=3></input>
+1       California
+2         New York
+Name:  State, dtype: object
+ Capital 0      No
+1    <input size=2 ans="a23fbb5c60730a143bdd2ce65b29ddddbfedf2f3f566126b623a491820362fb4" placeholder=4></input>
+2     <input size=2 ans="d53d8c4e45182a23d1abc1e3f05e82471faea45fc0f0776c2ce1e8dea496be94" placeholder=5></input>
+Name:  Capital, dtype: object
+ 0 City             Philadelphia
+ State           Pennsylvania
+ Capital                   No
+ Name: 0, dtype: object
+1 City             Sacramento
+ State           California
+ Capital                Yes
+Name: 1, dtype: object
+2 City                 New York
+ State               New York
+ Capital                   No
+Name: 2, dtype: object
+Pandas(Index=0, City=<input size=2 ans="f76cccf294d13ea5c459d2d46edd4dc12ab789c43cb13b7c60c5b51aec74eda6" placeholder=6></input>, _2=' Pennsylvania', _3=' No')
+Pandas(Index=1, City='Sacramento', _2=<input size=2 ans="8415b1def8f0cfc5214376f66d1a1d0646750ba7caa3949cbf84bce3d5e6a21d" placeholder=7></input>, _3=' Yes')
+Pandas(Index=2, City='New York', _2=' New York', _3=<input size=2 ans="461c114210be4ae31150bfa23453bd0b7388af3a521274d0d652979ad077709d" placeholder=8></input>)
+
+
+</pre>
+<h2 id="answer">Answer</h2>
+<a class="btn" href="javascript:newScoring('Python_VTP_library_Pandas')">Answer</a>
+<script type="text/javascript">
+$(function(){
+ prettyPrint();
+});
+</script>

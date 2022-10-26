@@ -1,0 +1,137 @@
+<style type="text/css">
+            textarea, iframe {
+                border: 1px solid grey;
+                height: 500px;
+                width: 98%;
+                resize: none;   
+            }
+             div.form-popup {
+        background-color: #fed9ff;
+        width: 900px;
+        height: 600px;
+        overflow-x: hidden;
+        overflow-y: auto;
+        padding: 20px;
+      }
+ .form-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px dotted #f1f1f1;
+  text-align:justify;  
+  text-justify:initial;
+
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 900px;
+  padding: 20px;
+  background-color: lightyellow;
+}
+
+
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 10%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: mediumvioletred;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+</style>
+<h2 id="statement">14</h2>
+ <table >
+  <tr>
+     
+
+<td>Input excel file to the source code<br><figure> <img src="/img/P151.JPG" alt="Elephant at sunset"> 
+</figure></td>
+   </tr>  
+   
+ <tr>
+     
+
+<td>Output excel file from the source code<br><figure> <img src="/img/P152.JPG" alt="Elephant at sunset"> 
+</figure></td>
+     
+  </tr>  
+<tr>
+        
+          <td>Output excel file from the modified source code<br><figure> <img src="/img/P153.JPG" alt="Elephant at sunset"> 
+</figure></td>
+        
+     </tr>
+</table>
+<a href="source_codes/Problem14.zip" download> Click Here To Download Source Code</a>
+<br> Please modify the following source code!
+<h4 id="code">Source Code</h4>
+<pre class="prettyprint" id="scoring-res" >01:import pandas as pd
+02:import openpyxl
+03:if __name__ == "__main__":
+04:	# read excel file
+05:	data = pd.read_excel(&#39;D:\Sortingvalues.xlsx&#39;)
+06:	df = pd.DataFrame(data)
+07:	# sorting the required valuses via column names and ascending or descending order
+08:	df=df.sort_values(by=[&#39;Code_no&#39;,&#39;Name&#39;],  ascending = True)
+09:	# saving to new excel file
+10:	df.to_excel(&#39;D:\Sortingvalues1.xlsx&#39;, index=True, header=True)
+
+</pre>
+<h4 id="code1">the output</h4>
+<pre class = "prettyprint" id = "scoring-res" <h2 id="code1"></h2>
+01<input type="text" name="intext" id="mytext1" 0 size=150 ansHint='import pandas as pd^import openpyxl^if __name__ == "__main__":^	# read excel file^	data = pd.read_excel('D:\Sortingvalues.xlsx')^	df = pd.DataFrame(data)^	# sorting the required valuses via column names and ascending or descending order^	df=df.sort_values(by=['No','Name'],  ascending = False)^	# saving to new excel file^	df.to_excel('D:\Sortingvalues2.xlsx', index=True, header=True)' missingele="No^False^Sortingvalues2"  ansSpace="9c970032ce8a72fceff26c1a123a75ff7d4e91bc1686483835a7d813c08b36ce" ans="6552c723dd3d3b0d32ae758ebe35572a524493ca5db1dd209ef3e0ab7cee5196" value='import pandas as pd' onkeydown="myFunction()">  </input>
+02<input type="text" name="intext" id="mytext2" 1 size=150 ansHint='import pandas as pd^import openpyxl^if __name__ == "__main__":^	# read excel file^	data = pd.read_excel('D:\Sortingvalues.xlsx')^	df = pd.DataFrame(data)^	# sorting the required valuses via column names and ascending or descending order^	df=df.sort_values(by=['No','Name'],  ascending = False)^	# saving to new excel file^	df.to_excel('D:\Sortingvalues2.xlsx', index=True, header=True)' missingele="No^False^Sortingvalues2"  ansSpace="bbfb88bd058580c40f62b0c4084451df5365cd55e181b163767a014561e0c86d" ans="95d54f8fd4fb1d2a52dafac169ed70eb0bbf978317dd3a026ee09239eefd737a" value='import openpyxl' onkeydown="myFunction()">  </input>
+03<input type="text" name="intext" id="mytext3" 2 size=150 ansHint='import pandas as pd^import openpyxl^if __name__ == "__main__":^	# read excel file^	data = pd.read_excel('D:\Sortingvalues.xlsx')^	df = pd.DataFrame(data)^	# sorting the required valuses via column names and ascending or descending order^	df=df.sort_values(by=['No','Name'],  ascending = False)^	# saving to new excel file^	df.to_excel('D:\Sortingvalues2.xlsx', index=True, header=True)' missingele="No^False^Sortingvalues2"  ansSpace="1df77477ac80613bbdbe63414108281dd0e284151d2294c91aa6bf50d4431594" ans="a93ff1afe1d4fa4cebb2d04a5197e37b3325b7f8a6a604a4b467e25fb4d53206" value='if __name__ == "__main__":' onkeydown="myFunction()">  </input>
+04<input type="text" name="intext" id="mytext4" 3 size=150 ansHint='import pandas as pd^import openpyxl^if __name__ == "__main__":^	# read excel file^	data = pd.read_excel('D:\Sortingvalues.xlsx')^	df = pd.DataFrame(data)^	# sorting the required valuses via column names and ascending or descending order^	df=df.sort_values(by=['No','Name'],  ascending = False)^	# saving to new excel file^	df.to_excel('D:\Sortingvalues2.xlsx', index=True, header=True)' missingele="No^False^Sortingvalues2"  ansSpace="48281a11e284e27b0facfb820494d932e51ab16b562d10740f02ac000cd25326" ans="72189becb1b69a40df5231d98ba4f98e9ef879775db83ee5d86339d01e045b6f" value='	# read excel file' onkeydown="myFunction()">  </input>
+05<input type="text" name="intext" id="mytext5" 4 size=150 ansHint='import pandas as pd^import openpyxl^if __name__ == "__main__":^	# read excel file^	data = pd.read_excel('D:\Sortingvalues.xlsx')^	df = pd.DataFrame(data)^	# sorting the required valuses via column names and ascending or descending order^	df=df.sort_values(by=['No','Name'],  ascending = False)^	# saving to new excel file^	df.to_excel('D:\Sortingvalues2.xlsx', index=True, header=True)' missingele="No^False^Sortingvalues2"  ansSpace="27ef403ac6e976e70298fa304bc5111c985fcca8d85910199cf8410254c95a8d" ans="834f32796417418356832819f95b46cdd0c8bf2c99f1000587cf4990599afab9" value='	data = pd.read_excel(&#39;D:\Sortingvalues.xlsx&#39;)' onkeydown="myFunction()">  </input>
+06<input type="text" name="intext" id="mytext6" 5 size=150 ansHint='import pandas as pd^import openpyxl^if __name__ == "__main__":^	# read excel file^	data = pd.read_excel('D:\Sortingvalues.xlsx')^	df = pd.DataFrame(data)^	# sorting the required valuses via column names and ascending or descending order^	df=df.sort_values(by=['No','Name'],  ascending = False)^	# saving to new excel file^	df.to_excel('D:\Sortingvalues2.xlsx', index=True, header=True)' missingele="No^False^Sortingvalues2"  ansSpace="4b6a4662efc81da133ea1285d96c30dfcfed7311d60cef71b6e47656dc4f004e" ans="4fadeef3950bef56662f577190cf180ebfc2c194b95e79a271a3c9e98bf11e78" value='	df = pd.DataFrame(data)' onkeydown="myFunction()">  </input>
+07<input type="text" name="intext" id="mytext7" 6 size=150 ansHint='import pandas as pd^import openpyxl^if __name__ == "__main__":^	# read excel file^	data = pd.read_excel('D:\Sortingvalues.xlsx')^	df = pd.DataFrame(data)^	# sorting the required valuses via column names and ascending or descending order^	df=df.sort_values(by=['No','Name'],  ascending = False)^	# saving to new excel file^	df.to_excel('D:\Sortingvalues2.xlsx', index=True, header=True)' missingele="No^False^Sortingvalues2"  ansSpace="8c8b5c97a6037e7baff6ba1cd15f30ca72cf46540e8be7015fd7801da4b4b746" ans="9ac052444a2a04f7fd536f5ecf92be3e45e9474ac42bc3b51a55a7e714411fea" value='	# sorting the required valuses via column names and ascending or descending order' onkeydown="myFunction()">  </input>
+08<input type="text" name="intext" id="mytext8" 7 size=150 ansHint='import pandas as pd^import openpyxl^if __name__ == "__main__":^	# read excel file^	data = pd.read_excel('D:\Sortingvalues.xlsx')^	df = pd.DataFrame(data)^	# sorting the required valuses via column names and ascending or descending order^	df=df.sort_values(by=['No','Name'],  ascending = False)^	# saving to new excel file^	df.to_excel('D:\Sortingvalues2.xlsx', index=True, header=True)' missingele="No^False^Sortingvalues2"  ansSpace="717a484abee32c801a7f13f30d78be9bff096bf40cc1bc3081fe446ee11d90ce" ans="3094dacabad3eb46edeeeaae545ca5edc4641892f90fe2800ccf88eb5e6beebd" value='	df=df.sort_values(by=[&#39;Code_no&#39;,&#39;Name&#39;],  ascending = True)' onkeydown="myFunction()">  </input>
+09<input type="text" name="intext" id="mytext9" 8 size=150 ansHint='import pandas as pd^import openpyxl^if __name__ == "__main__":^	# read excel file^	data = pd.read_excel('D:\Sortingvalues.xlsx')^	df = pd.DataFrame(data)^	# sorting the required valuses via column names and ascending or descending order^	df=df.sort_values(by=['No','Name'],  ascending = False)^	# saving to new excel file^	df.to_excel('D:\Sortingvalues2.xlsx', index=True, header=True)' missingele="No^False^Sortingvalues2"  ansSpace="12a5ec30af3a5ee114c11d3c766d49ecee4311d4c3dd914291e0a287d00e0ef4" ans="a64f900b147589a14cdb24f909a1c778ac4e160be7cb646cd3be42c743b7b39b" value='	# saving to new excel file' onkeydown="myFunction()">  </input>
+10<input type="text" name="intext" id="mytext10" 9 size=150 ansHint='import pandas as pd^import openpyxl^if __name__ == "__main__":^	# read excel file^	data = pd.read_excel('D:\Sortingvalues.xlsx')^	df = pd.DataFrame(data)^	# sorting the required valuses via column names and ascending or descending order^	df=df.sort_values(by=['No','Name'],  ascending = False)^	# saving to new excel file^	df.to_excel('D:\Sortingvalues2.xlsx', index=True, header=True)' missingele="No^False^Sortingvalues2" ansSpace="358848afdc8ddb667a953306c56ea8073262655abcd8dd5d298504baa514c5ac" ans="bed0328017f86d3dcaf0c9076341eb0aca8f3a690c60f8b56290be808457d445" value='	df.to_excel(&#39;D:\Sortingvalues1.xlsx&#39;, index=True, header=True)' onkeydown="myFunction()"></input>
+<script src="myScript.js"></script></div></pre><h2 id="answer">Answer</h2>
+<a class="btn" href="javascript:newScoringCMP('Python_CMP_Pandas_Excel')">Answer</a>
+<a class="btn btn-success" onclick="ansFileSave()">File Save</a>
+<input onclick="openForm();" type="button" value="Hint" class="btn" style="float: right;">
+<div class="form-popup" id="myForm">
+  <form class="form-container">
+    <h1>Hint</h1>
+       <p>1. Read the input excel file:<b>Sortingvalues.xlsx</b>.<br>
+		2. Then, <b>create pandas data frame</b> to use sorting function for the excel file.<br>
+		3. Sort the <b> No and Name </b>columns in decending order. <br>
+		4. Finally, write the sorted values into new excel file:<b>Sortingvalues2.xlsx</b>.
+        <br> If you want to study more about sorting, please visit this link.<a href="source_codes/sorting.html" download> Click Here</a>		
+    
+        <br>
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+  </form>
+</div>
+<script type="text/javascript">
+            
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+</script>
+
+<a id="dldlink"></a>
+<script type="text/javascript" src="allowtab.js"></script>

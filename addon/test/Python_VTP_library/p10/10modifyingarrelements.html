@@ -1,0 +1,44 @@
+<h2 id="statement">10</h2>
+Fill in Blanks 
+<h2 id="code">The Source Code</h2>
+<pre class="prettyprint" id="scoring-res"># A quick-demo of modifying array values by using op_flags 
+#Its default value is read-only, but can be set to read-write or write-only mode. This will enable modifying array elements using the iterator nditer.
+ 
+import numpy as np
+ 
+# creating an array using arrange 
+# method
+a = np.arange(12)
+ 
+# shape array with 3 rows and 
+# 4 columns 
+a = a.reshape(3,4)
+print('Original array is:')
+print(a)
+print()
+ 
+# modifying array values
+for x in np.nditer(a, op_flags = ['readwrite']):
+    x[...] = 5*x
+print('Modified array is:')
+print(a)
+
+Original array is:
+[[ 0  1  2  3]
+<input size=2 ans="a949d6b871e29a431733722194eeb387d758b12984ebb0e86842a69089e7365b" placeholder=1></input>
+[ 8  9 10 11]]
+
+Modified array is:
+[<input size=2 ans="2c20be89abb90b40bd7c0a220d049af830b0514c9828a8160947a12b93317c09" placeholder=2></input>
+ <input size=2 ans="40ab316bb6ab96b231284e550048a0d86f0783e20e244d89007b9d2ef9d77853" placeholder=3></input>
+[40 45 50 55]]
+
+
+</pre>
+<h2 id="answer">Answer</h2>
+<a class="btn" href="javascript:newScoring('Python_VTP_library')">Answer</a>
+<script type="text/javascript">
+$(function(){
+ prettyPrint();
+});
+</script>

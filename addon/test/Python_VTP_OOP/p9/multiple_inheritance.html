@@ -1,0 +1,40 @@
+<h2 id="statement">9</h2>
+<pre class="pfpprettyprint" id="scoring-res">
+<DIV class="fl"># A quick-demo of multiple inheritance
+# Base class1
+class Mother:
+	mothername = ""
+	def mother(self):
+		print(self.mothername)
+
+# Base class2
+class Father:
+	fathername = ""
+	def father(self):
+		print(self.fathername)
+
+# Derived class
+class Daugher(Mother, Father):
+	def parents(self):
+		print("Father :", self.fathername)
+		print("Mother :", self.mothername)
+
+# Driver's code
+d1 = Daugher()
+d1.fathername = "RAM"
+d1.mothername = "SITA"
+d1.parents()
+</DIV>
+<DIV class="fr">
+What is the output of the program!
+<input size=25 ans="47a448d20764fb20a4a52a76be82be551b77070ec364e45d5f7c8e9e73987543" placeholder=1></input>
+<input size=25 ans="8e02793ea31329da762bfa2d367ad31840faad6074ffc6fb14b3b1fa1d881e33" placeholder=2></input>
+</DIV>
+</pre>
+<h2 id="answer">Answer</h2>
+<a class="btn" href="javascript:newScoring('Python_VTP_OOP')">Answer</a>
+<script type="text/javascript">
+$(function(){
+ prettyPrint();
+});
+</script>

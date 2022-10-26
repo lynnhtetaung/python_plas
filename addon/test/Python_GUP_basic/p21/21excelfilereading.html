@@ -1,0 +1,33 @@
+<h2 id="statement">21</h2>
+Fill in Blanks 
+<h2 id="code">The Source Code</h2>
+<pre class="prettyprint" id="scoring-res">1 import pandas as pd 
+2 df = pd.read_excel('D:\Datafile.xlsx') 
+3 print("The headers and the first ten lines:", df.head(10)) 
+4 print("The headers and the last five lines:", df.tail()) 
+5 df_sheet_index = pd.read_excel('D:\Datafile1.xlsx', sheet_name = 0) 
+6 print("Specify the sheet to read with the argument sheet_name by specifying the number (starting at 0)", df_sheet_index) 
+7 df_sheet_name = pd.read_excel('D:\Datafile2.xlsx', sheet_name = 'sheet2') 
+8 print("Specify the sheet by defining sheet name", df_sheet_name) 
+9 df_sheet_multi = pd.read_excel('D:\Datafile3.xlsx', sheet_name = [0, 'sheet2']) 
+10 print("Load multiple data by specifying a number of 0 starting or the sheet name", df_sheet_multi) 
+11 new_df = df_sheet_multi.dropna() 
+12 print("After removing null values from DataFrame", new_df)
+
+Question
+Q1.  Which library is used for analyzing, cleaning, exploring, and manipulating data?<input size=2 ans="9b07f854f90aa8e29d16dd936738858e835dd98f2b1f297184233934c1e1c23e" placeholder=1></input>
+Q2.  Which function is used to read the excel file data into a DataFrame object? <input size=2 ans="5f770f7211863a4d51f90d9daf2216126ad56b0deeb3bc2547f28ba90cf5c6c4" placeholder=2></input>
+Q3.  Which function is used to return the headers and a specified number of rows, starting from the top?<input size=2 ans="64958e1b0e4017b9c741714c3eae296e86f841eac782d3e1ab033bbc5971c451" placeholder=3></input>
+Q4.  Which function is used to return the headers and a specified number of rows, starting from the bottom? <input size=2 ans="392413c648cc71d04b7c8697b443bbdfc867302069520725e9022153964d5f5a" placeholder=4></input>
+Q5.  Which argument is used to specify the sheet by the number or name?<input size=2 ans="f4b0d10e5903b48c5e2405f0250ada964225b6bbab0260d672a6fd1df5207703" placeholder=5></input>
+Q6.  Which function is used to remove missing values?<input size=2 ans="7ada03606739c19096c8a85edf00afc3badd459ce92712a7d38161b8f916e836" placeholder=6></input>
+
+
+</pre>
+<h2 id="answer">Answer</h2>
+<a class="btn" href="javascript:newScoring('Python_GUP_basic')">Answer</a>
+<script type="text/javascript">
+$(function(){
+ prettyPrint();
+});
+</script>

@@ -1,0 +1,72 @@
+<h2 id="statement">16</h2>
+Fill in Blanks 
+<h2 id="code">The Source Code</h2>
+<pre class="prettyprint" id="scoring-res"># A quick-demo of Quick Sort
+
+def quickSort(alist):
+
+    quickSortHelper(alist,0,len(alist)-1)
+    
+def quickSortHelper(alist,first,last):
+
+     if first &lt; last:
+    
+        splitpoint = partition(alist,first,last)
+    
+        quickSortHelper(alist,first,splitpoint-1)
+        quickSortHelper(alist,splitpoint+1,last)
+    
+    
+def partition(alist,first,last):
+
+    pivotvalue = alist[first]
+    
+    leftmark = first+1
+    rightmark = last
+    
+    done = False
+    while not done:
+    
+        while leftmark <= rightmark and alist[leftmark] <= pivotvalue:
+            leftmark = leftmark + 1
+    
+        while alist[rightmark] >= pivotvalue and rightmark >= leftmark:
+            rightmark = rightmark -1
+    
+        if rightmark < leftmark:
+            done = True
+        else:
+            temp = alist[leftmark]
+            alist[leftmark] = alist[rightmark]
+            alist[rightmark] = temp
+    
+    temp = alist[first]
+    alist[first] = alist[rightmark]
+    alist[rightmark] = temp
+    print(alist)
+    
+    
+    return rightmark
+    
+alist = [54,17,93,26]
+quickSort(alist)
+print(alist)
+
+What is the output of this program?
+<input size=2 ans="e162af4ccf112d359544e779ef1408df08c4aaa13ca17977b5858cc994994d48" placeholder=1></input>,<input size=2 ans="4dbcff2fcaf41fd8f29b46e10cf220a509cd2ee4565bce212d7b9530b5a2fe3e" placeholder=2></input>,<input size=2 ans="81bfc80ae82fe279f080f376ca44ddb9e6b9bf2d1f19e00cace03f7f18088c45" placeholder=3></input>,<input size=2 ans="d5dedafd50316f87e03d1dab4ddcf02535a7276633e86b4082a95f6dd59287e8" placeholder=4></input> 
+<input size=2 ans="5fc4e1a5a67873dbeb7b64f793abfa430029a72a93ea9c09c72e8d9807dfbead" placeholder=5></input>,<input size=2 ans="e4afdadb140481a186796985f5bfa1b3a50e96d43a1ce33db5b739bc2b32413e" placeholder=6></input>,<input size=2 ans="d178243d8ad6a229e14e9ee2dc8e66431e5d4563e7e4681a7289926743c08681" placeholder=7></input>,<input size=2 ans="485000782b57597fa9bdb220a2fd44003ff2ddd700b36cc15b2bb0b13e4ee625" placeholder=8></input> 
+<input size=2 ans="34af99ea900e04174e7c74b7ba753ecfbe8dd72bba6fab3e61a186ae2dfef02c" placeholder=9></input>,<input size=2 ans="d85753e8be12fff22378591c9b29fe2761e39181fea891220b301024e4266773" placeholder=10></input>,<input size=2 ans="6b6b328118af7cf40561177b66a17d2920e8e7316b047270bbb4054aeffe73bd" placeholder=11></input>,<input size=2 ans="f4945ed08ec4a6d60c07d54c4b529a7ee18354ccb378d588d7c441bf80efb7bc" placeholder=12></input> 
+
+
+
+
+
+
+</pre>
+<h2 id="answer">Answer</h2>
+<a class="btn" href="javascript:newScoring('Python_VTP_algorithm')">Answer</a>
+<script type="text/javascript">
+$(function(){
+ prettyPrint();
+});
+</script>

@@ -1,0 +1,52 @@
+<h2 id="statement">1</h2>
+Fill in Blanks 
+<h2 id="code">The Source Code</h2>
+<pre class="prettyprint" id="scoring-res"># A quick demo of data frame creation
+import pandas as pd
+
+# a single list into a pandas dataframe
+data = [1,2,3]
+df = pd.DataFrame(data)
+print(df)
+
+# n dimentional array into a pandas dataframe
+data = [['Axel',32], ['Alice', 26], ['Alex', 45]]
+df = pd.DataFrame(data,columns=['Name','Age'])
+print(df)
+
+# from dictionary into a pandas dataframe
+d = {'one':[1,2,3], 'two':[2,3,4], 'three':[3,4,5] }
+df = pd.DataFrame(d)
+print(df)
+
+# from dataframe into a dataframe by copying parts of a dataframe into a new dataframe.
+df1 = df[['one','two']].copy()
+print(df1)
+
+What is the output of the program?
+   0
+0  1
+<input size=2 ans="f6e0a1e2ac41945a9aa7ff8a8aaa0cebc12a3bcc981a929ad5cf810a090e11ae" placeholder=1></input> 2
+2  <input size=2 ans="865736a1c30a82dc67aba820360a01b1d9d0da5643234cd07c4d60b06eb530c5" placeholder=2></input>
+    Name  Age
+0   Axel   32
+1  Alice   26
+<input size=2 ans="d48ff4b2f68a10fd7c86f185a6ccede0dc0f2c48538d697cb33b6ada3f1e85db" placeholder=3></input> Alex <input size=2 ans="6bb731a8009cb35b9e9e3f95860e1cde3409e67e20a421d4a769000e9ed06fa0" placeholder=4></input>
+   one   <input size=2 ans="24c968d0f736d8f02df38295c6ea0e5a6bc1780d79685095b657caa4a1d99e78" placeholder=5></input>  two
+0    1      3     2
+1    2      4     3
+2    3      <input size=2 ans="4771bef2c04a34b548b77ea7581cf821152d9dea9c2c85151a07856fe3639314" placeholder=6></input> 4
+    one  two
+0    1    2
+1    2    3
+2    3    4
+
+
+</pre>
+<h2 id="answer">Answer</h2>
+<a class="btn" href="javascript:newScoring('Python_VTP_library_Pandas')">Answer</a>
+<script type="text/javascript">
+$(function(){
+ prettyPrint();
+});
+</script>

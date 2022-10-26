@@ -1,0 +1,19 @@
+{
+  "1objCreationnoconstr" : "Object Creation",
+  "2objCreationwithDefaultcon" : "Object Creation using Default Constructor",
+  "3objCreationwithParacon" : "Object Creation using Parameterized Constructor",
+  "4objectandclass" :  "Accessing Object Information",
+  "5arraycreation" : "Array Creation",
+  "6arrayaddition" : "Adding elements on Array",
+  "7arrayaccessing" : "Accessing Elements on Array",
+  "8arrayremoving" : "Removing Elements on Array",
+  "9arrayslicing" : "Slicing Elements on Array",
+  "10arraysearching" : "Searching Elements on Array",
+  "11arrayupdating" : "Updating Elements on Array",
+  "12jsontostring" : "Json to Dictionary Conversion",
+  "13filejson" : "Data Reading from Json file",
+  "14filecategoryjson" : "Json File Reading for each Category",
+  "15varioustojson" : "Conversion of different Primitive types into Json strings",
+  "16dictTojson" : "Conversion of Dictionary to JSON",
+  "17updatingjson" : "Updating Json String"
+}

@@ -1,0 +1,138 @@
+<style type="text/css">
+            textarea, iframe {
+                border: 1px solid grey;
+                height: 500px;
+                width: 98%;
+                resize: none;   
+            }
+             div.form-popup {
+        background-color: #fed9ff;
+        width: 900px;
+        height: 600px;
+        overflow-x: hidden;
+        overflow-y: auto;
+        padding: 20px;
+      }
+ .form-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px dotted #f1f1f1;
+  text-align:justify;  
+  text-justify:initial;
+
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 900px;
+  padding: 20px;
+  background-color: lightyellow;
+}
+
+
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 10%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: mediumvioletred;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+</style>
+<h2 id="statement">13</h2>
+ <table >
+  <tr>
+     
+
+<td>Input excel file to the source code<br><figure> <img src="/img/P141.JPG" alt="Elephant at sunset"> 
+</figure></td>
+   </tr>  
+   
+ <tr>
+     
+
+<td>Output excel file from the source code<br><figure> <img src="/img/P142.JPG" alt="Elephant at sunset"> 
+</figure></td>
+     
+  </tr>  
+<tr>
+        
+          <td>Output excel file from the modified source code<br><figure> <img src="/img/P143.JPG" alt="Elephant at sunset"> 
+</figure></td>
+        
+     </tr>
+</table>
+
+<a href="source_codes/Problem13.zip" download> Click Here To Download Source Code</a>
+<br> Please modify the following source code!
+<h4 id="code">Source Code</h4>
+<pre class="prettyprint" id="scoring-res" >01:import pandas as pd
+02:import numpy as np
+03:# reading excel file
+04:data = pd.read_excel(&#39;D:\Replacingmultivalues.xlsx&#39;)
+05:df=pd.DataFrame(data)
+06:# replacing multiple values with specific values
+07:df = df.replace(1, &#39;One&#39;)
+08:df = df.replace(&#39;y&#39;, &#39;Yes&#39;)
+09:# saving to new excel file
+10:df.to_excel(&#39;D:\Replacingmultivalues1.xlsx&#39;, index=True, header=True)
+
+</pre>
+<h4 id="code1">the output</h4>
+<pre class = "prettyprint" id = "scoring-res" <h2 id="code1"></h2>
+01<input type="text" name="intext" id="mytext1" 0 size=150 ansHint='import pandas as pd^import numpy as np^# reading excel file^data = pd.read_excel('D:\Replacingmultivalues.xlsx')^df=pd.DataFrame(data)^# replacing multiple values with specific values^df = df.replace(0, 'Zero')^df = df.replace('high', 'HIGH')^# saving to new excel file^df.to_excel('D:\Replacingmultivalues2.xlsx', index=True, header=True)' missingele="0^Zero^High^Replacingmultivalues2"  ansSpace="f2d38ff203008c855fa947c98d04aa3ee3f8370215d27978cb0f411782e10af4" ans="87b85c53c0ed1de0b90b44b40d1ba692445c2bf08f3bcf416f560077f368a8df" value='import pandas as pd' onkeydown="myFunction()">  </input>
+02<input type="text" name="intext" id="mytext2" 1 size=150 ansHint='import pandas as pd^import numpy as np^# reading excel file^data = pd.read_excel('D:\Replacingmultivalues.xlsx')^df=pd.DataFrame(data)^# replacing multiple values with specific values^df = df.replace(0, 'Zero')^df = df.replace('high', 'HIGH')^# saving to new excel file^df.to_excel('D:\Replacingmultivalues2.xlsx', index=True, header=True)' missingele="0^Zero^High^Replacingmultivalues2"  ansSpace="909d223c8172e8a6def52e773d0d876a8f266bc34c4e6c7e4a101ba971fc2d57" ans="564306c0a46f7a12319e1606205aab08ae922c163751d32a28fa714616805b24" value='import numpy as np' onkeydown="myFunction()">  </input>
+03<input type="text" name="intext" id="mytext3" 2 size=150 ansHint='import pandas as pd^import numpy as np^# reading excel file^data = pd.read_excel('D:\Replacingmultivalues.xlsx')^df=pd.DataFrame(data)^# replacing multiple values with specific values^df = df.replace(0, 'Zero')^df = df.replace('high', 'HIGH')^# saving to new excel file^df.to_excel('D:\Replacingmultivalues2.xlsx', index=True, header=True)' missingele="0^Zero^High^Replacingmultivalues2"  ansSpace="18b97c0268fc09d3ed6692400a9a72b5bf1b15969f4f85296afd95f5fc49cb1d" ans="10b678ed30105b967f06a772547fe2f1d3a6733bb15ae9f86323c03257f06379" value='# reading excel file' onkeydown="myFunction()">  </input>
+04<input type="text" name="intext" id="mytext4" 3 size=150 ansHint='import pandas as pd^import numpy as np^# reading excel file^data = pd.read_excel('D:\Replacingmultivalues.xlsx')^df=pd.DataFrame(data)^# replacing multiple values with specific values^df = df.replace(0, 'Zero')^df = df.replace('high', 'HIGH')^# saving to new excel file^df.to_excel('D:\Replacingmultivalues2.xlsx', index=True, header=True)' missingele="0^Zero^High^Replacingmultivalues2"  ansSpace="94bd63c761485f3269877700b85d2e877e3de74bb141b8bb28662584b34fe9a2" ans="d53717618be1d3f6dfe56ecaf872ab6048220d56a8671e9b013781f4f4234634" value='data = pd.read_excel(&#39;D:\Replacingmultivalues.xlsx&#39;)' onkeydown="myFunction()">  </input>
+05<input type="text" name="intext" id="mytext5" 4 size=150 ansHint='import pandas as pd^import numpy as np^# reading excel file^data = pd.read_excel('D:\Replacingmultivalues.xlsx')^df=pd.DataFrame(data)^# replacing multiple values with specific values^df = df.replace(0, 'Zero')^df = df.replace('high', 'HIGH')^# saving to new excel file^df.to_excel('D:\Replacingmultivalues2.xlsx', index=True, header=True)' missingele="0^Zero^High^Replacingmultivalues2"  ansSpace="b6faa09e649fbc95019f27e98d8b0f2c4f9a5b1d8eb7c79458a67b68f42d8aa0" ans="b6faa09e649fbc95019f27e98d8b0f2c4f9a5b1d8eb7c79458a67b68f42d8aa0" value='df=pd.DataFrame(data)' onkeydown="myFunction()">  </input>
+06<input type="text" name="intext" id="mytext6" 5 size=150 ansHint='import pandas as pd^import numpy as np^# reading excel file^data = pd.read_excel('D:\Replacingmultivalues.xlsx')^df=pd.DataFrame(data)^# replacing multiple values with specific values^df = df.replace(0, 'Zero')^df = df.replace('high', 'HIGH')^# saving to new excel file^df.to_excel('D:\Replacingmultivalues2.xlsx', index=True, header=True)' missingele="0^Zero^High^Replacingmultivalues2"  ansSpace="26a8d019effb9ce95dfbd54023592a1de0b3b1716a0473bba690044381fbf7b4" ans="781a42da0ad8fd9612850b2aa715ceeea309818df40d6917f758a9b8fb913e33" value='# replacing multiple values with specific values' onkeydown="myFunction()">  </input>
+07<input type="text" name="intext" id="mytext7" 6 size=150 ansHint='import pandas as pd^import numpy as np^# reading excel file^data = pd.read_excel('D:\Replacingmultivalues.xlsx')^df=pd.DataFrame(data)^# replacing multiple values with specific values^df = df.replace(0, 'Zero')^df = df.replace('high', 'HIGH')^# saving to new excel file^df.to_excel('D:\Replacingmultivalues2.xlsx', index=True, header=True)' missingele="0^Zero^High^Replacingmultivalues2"  ansSpace="1238c1ed55f7cd658b3da87d964426ee3ab69f51986e94f969e88109d348a25d" ans="e6341352ee1dc4931476fdb386bf141daa127fc0afcd34daa6630f6ae537e987" value='df = df.replace(1, &#39;One&#39;)' onkeydown="myFunction()">  </input>
+08<input type="text" name="intext" id="mytext8" 7 size=150 ansHint='import pandas as pd^import numpy as np^# reading excel file^data = pd.read_excel('D:\Replacingmultivalues.xlsx')^df=pd.DataFrame(data)^# replacing multiple values with specific values^df = df.replace(0, 'Zero')^df = df.replace('high', 'HIGH')^# saving to new excel file^df.to_excel('D:\Replacingmultivalues2.xlsx', index=True, header=True)' missingele="0^Zero^High^Replacingmultivalues2"  ansSpace="6211c1bae119ea15e6751193104bb08009ce77ba45e063fc44420a6af8be9466" ans="496ddf7c2c40c30fb18ea05e5b4cf3faf121b3fa5eb0adef9f83b44f88322dca" value='df = df.replace(&#39;y&#39;, &#39;Yes&#39;)' onkeydown="myFunction()">  </input>
+09<input type="text" name="intext" id="mytext9" 8 size=150 ansHint='import pandas as pd^import numpy as np^# reading excel file^data = pd.read_excel('D:\Replacingmultivalues.xlsx')^df=pd.DataFrame(data)^# replacing multiple values with specific values^df = df.replace(0, 'Zero')^df = df.replace('high', 'HIGH')^# saving to new excel file^df.to_excel('D:\Replacingmultivalues2.xlsx', index=True, header=True)' missingele="0^Zero^High^Replacingmultivalues2"  ansSpace="fe3e4d6ca5f5d8edea983a762f375c23c3b14c260c4f629624ae4780a2cd26bb" ans="15b0b9a85ea4ed7f36d35e282b50d7715a7efa15e5a3dc3c866c4c14085181bf" value='# saving to new excel file' onkeydown="myFunction()">  </input>
+10<input type="text" name="intext" id="mytext10" 9 size=150 ansHint='import pandas as pd^import numpy as np^# reading excel file^data = pd.read_excel('D:\Replacingmultivalues.xlsx')^df=pd.DataFrame(data)^# replacing multiple values with specific values^df = df.replace(0, 'Zero')^df = df.replace('high', 'HIGH')^# saving to new excel file^df.to_excel('D:\Replacingmultivalues2.xlsx', index=True, header=True)' missingele="0^Zero^High^Replacingmultivalues2" ansSpace="b2bfe84ed8a8d155ecaea9917474ead7583a88c5037c71f92bef0f71b0aa5738" ans="e843bdfe6b02fe5962742eb0f21aa2180958428b89c00fe8329636a4d5cfde62" value='df.to_excel(&#39;D:\Replacingmultivalues1.xlsx&#39;, index=True, header=True)' onkeydown="myFunction()"></input>
+<script src="myScript.js"></script></div></pre><h2 id="answer">Answer</h2>
+<a class="btn" href="javascript:newScoringCMP('Python_CMP_Pandas_Excel')">Answer</a>
+<a class="btn btn-success" onclick="ansFileSave()">File Save</a>
+<input onclick="openForm();" type="button" value="Hint" class="btn" style="float: right;">
+<div class="form-popup" id="myForm">
+  <form class="form-container">
+    <h1>Hint</h1>
+       <p>1. Read the input excel file:<b>Replacingmultivalues.xlsx</b>.<br>
+		2. Then, <b>create pandas data frame</b> to use replacing function for excel file.<br>
+		3. Replace<b> 0 and high with 'Zero', and 'HIGH',</b> respectively.<br>
+		4. Finally, write the modified values into new excel file:<b>Replacingmultivalues2.xlsx</b>.
+        <br> If you want to study more about replacing multiple values, please visit this link.<a href="source_codes/Replace_Multiple_Values.html" download> Click Here</a>		
+    
+        <br>
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+  </form>
+</div>
+<script type="text/javascript">
+            
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+</script>
+
+<a id="dldlink"></a>
+<script type="text/javascript" src="allowtab.js"></script>

@@ -1,0 +1,43 @@
+<h2 id="statement">13</h2>
+Fill in Blanks 
+<h2 id="code">The Source Code</h2>
+<pre class="prettyprint" id="scoring-res"># A quick-demo of insertion sort
+
+def insertionSort(alist):
+    for index in range(1,len(alist)):
+    
+        currentvalue = alist[index]
+        position = index
+    
+        while position>0 and alist[position-1]>currentvalue:
+            alist[position]=alist[position-1]
+            position = position-1
+             
+    
+        alist[position]=currentvalue
+        print(alist)
+    
+alist = [54,26,13,17]
+insertionSort(alist)
+print(alist)
+
+What is the output of this program? 
+<input size=2 ans="698476bb4d2db18618ebc0006c5196b3a2e16fa0d4e6c376707ccde0e31c79d2" placeholder=1></input>,<input size=2 ans="f281b37958cc0862413a4d273443adb15e71bce32fa712eec4c023090d670078" placeholder=2></input>,<input size=2 ans="c356394c08c13b6bf119487d0b3e62cbac803a01598a210f82ddc664ce08d298" placeholder=3></input>,<input size=2 ans="2f46aedcae9a2053200fdeae5ce91bdb8d39fe9f0fe0e4f19beb2df071a31b85" placeholder=4></input>
+<input size=2 ans="e000afdbac0d5dafd86ee413897077b586bb24789fc4954a31adc8aca1ebf8f9" placeholder=5></input>,<input size=2 ans="a1993a082e177f5c6b0929d1ac83afefbc7f738e7c8fc3015ed5d92f108eef11" placeholder=6></input>, 54, 17]
+[13,<input size=2 ans="05a07e7d7b3f42eb9d1aed3f8c1c5e42d22c03f4d7f4068151b30b3ab3769f3f" placeholder=7></input>, 26,<input size=2 ans="0089a596d73c5a4c42d9e8e5701d90b504b4e95e13d10b00b5aedadeb281e766" placeholder=8></input>
+<input size=2 ans="6204c5c4c4a3f7d03b63f619a3d57ef58aa73fabf536b19403fdec4833101c85" placeholder=9></input>,<input size=2 ans="65be373d186b3e6e04d16efee8245df228c3fd8c7adb51443367566917a5c1af" placeholder=10></input>,<input size=2 ans="b30b2dac104b9792635ce7dc4941810a571e76a4c374a38452bcfe7124aca5fc" placeholder=11></input>,<input size=2 ans="c5f96989c2764e3e4fbe79b663d3864102e536c69ec11bfefdacce975982fc76" placeholder=12></input>
+
+
+
+
+
+
+
+</pre>
+<h2 id="answer">Answer</h2>
+<a class="btn" href="javascript:newScoring('Python_VTP_algorithm')">Answer</a>
+<script type="text/javascript">
+$(function(){
+ prettyPrint();
+});
+</script>

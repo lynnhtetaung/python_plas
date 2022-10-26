@@ -1,0 +1,46 @@
+<h2 id="statement">4</h2>
+Fill in Blanks 
+<h2 id="code">The Source Code</h2>
+<pre class="prettyprint" id="scoring-res"># A quick-demo of Converting Decimal Numbers to Binary Numbers using stack
+
+from pythonds.basic import Stack
+    
+def divideBy2(decNumber):
+    remstack = Stack()
+    binString1 = ""
+                           
+    while decNumber > 0:
+        rem = decNumber % 2
+        remstack.push(rem)
+        binString1 = binString1 + str(remstack.peek())
+        decNumber = decNumber // 2
+        print("The decimal number is", decNumber)
+                               
+    print("The push data in the stack is", binString1)
+                  
+    binString2 = ""
+    while not remstack.isEmpty():
+        binString2 = binString2 + str(remstack.pop())
+                
+    return binString2
+               
+print("The binary number for decimal value(42) is:", divideBy2(42))
+
+The decimal number is <input size=2 ans="1744784df13e160509c06d101c96cb212fe482375338f537e65c2d41b5d8d548" placeholder=1></input>
+The decimal number is <input size=2 ans="216da54b5931a6d37cca8e29953361fe02c680bbd8b482343f508e32e8e9cc3b" placeholder=2></input>
+The decimal number is <input size=2 ans="18beb4813723e788a1d79bcbf80802538ec813aa19ded2e9c21cbf08bed6bee3" placeholder=3></input>
+The decimal number is <input size=2 ans="82c01ce15b431d420eb6a1febfba7d7a2b69e5bcdcb929cb42cd3e9179d43fc4" placeholder=4></input>
+The decimal number is <input size=2 ans="be47addbcb8f60566a3d7fd5a36f8195798e2848b368195d9a5d20e007c59a0c" placeholder=5></input>
+The decimal number is <input size=2 ans="b2d084ae2bd0f4b38953ea3adb009b4f059816f93392addbcfb373399f183e88" placeholder=6></input>
+The push data in the stack is <input size=2 ans="962213be144519b72c690f9e61b569d939f2d851e8a71433f27fc836f11f5e7e" placeholder=7></input>
+The binary number for decimal value(42) is: <input size=2 ans="92bbaf25b0b2353185cbcad08e57db88018f95f3f15ef830d27e9fc2c1b0293d" placeholder=8></input>
+
+
+</pre>
+<h2 id="answer">Answer</h2>
+<a class="btn" href="javascript:newScoring('Python_VTP_algorithm')">Answer</a>
+<script type="text/javascript">
+$(function(){
+ prettyPrint();
+});
+</script>

@@ -1,0 +1,149 @@
+<style type="text/css">
+            textarea, iframe {
+                border: 1px solid grey;
+                height: 500px;
+                width: 98%;
+                resize: none;   
+            }
+             div.form-popup {
+        background-color: #fed9ff;
+        width: 900px;
+        height: 600px;
+        overflow-x: hidden;
+        overflow-y: auto;
+        padding: 20px;
+      }
+ .form-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px dotted #f1f1f1;
+  text-align:justify;  
+  text-justify:initial;
+
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 900px;
+  padding: 20px;
+  background-color: lightyellow;
+}
+
+
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 10%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: mediumvioletred;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+</style>
+<h2 id="statement">16</h2>
+<table >
+  <tr>
+     
+
+<td>Input excel file to the source code<br><figure> <img src="/img/P171.JPG" alt="Elephant at sunset"> 
+</figure></td>
+   </tr>  
+   
+ <tr>
+     
+
+<td>Output excel file from the source code<br><figure> <img src="/img/P172.JPG" alt="Elephant at sunset"> 
+</figure></td>
+     
+  </tr>  
+<tr>
+        
+          <td>Output excel file from the modified source code<br><figure> <img src="/img/P173.JPG" alt="Elephant at sunset"> 
+</figure></td>
+        
+     </tr>
+</table>
+
+<a href="source_codes/Problem16.zip" download> Click Here To Download Source Code</a>
+<br> Please modify the following source code!
+<h4 id="code">Source Code</h4>
+<pre class="prettyprint" id="scoring-res" >01:import pandas as pd
+02:import openpyxl
+03:if __name__ == "__main__":
+04:    data = pd.read_excel(&#39;D:\Seperatefiles.xlsx&#39;)
+05:    df = pd.DataFrame(data)
+06:    df[&#39;Seperate&#39;] = None#create a new column
+07:    index_check = df.columns.get_loc(&#39;Location&#39;)#get index column location in excel file
+08:    index_seperate = df.columns.get_loc(&#39;Seperate&#39;)#get index column location in excel file
+09:    for row in range(0, len(df)):
+10:        if (df.iat[row, index_check] == &#39;Japan&#39;):
+11:            df.iat[row, index_seperate] = 1
+12:    df1 = df[df[&#39;Seperate&#39;] == 1]#selected only rows that has Seperate column is 1
+13:    # copying only required columns to another new excel file
+14:    df1 = df1[[&#39;Code_no&#39;,&#39;Customer&#39;,&#39;Purchase&#39;,&#39;Date&#39;,&#39;Record&#39;,&#39;Location&#39;]].copy()
+15:    df1.to_excel(&#39;D:\Seperatefiles1.xlsx&#39;, index=True, header=True)
+
+</pre>
+<h4 id="code1">the output</h4>
+<pre class = "prettyprint" id = "scoring-res" <h2 id="code1"></h2>
+01<input type="text" name="intext" id="mytext1" 0 size=150 ansHint='import pandas as pd^import openpyxl^if __name__ == "__main__":^    data = pd.read_excel('D:\Seperatefiles.xlsx')^    df = pd.DataFrame(data)^    df['Seperate'] = None#create a new column^    index_check = df.columns.get_loc('Location')#get index column location in excel file^    index_seperate = df.columns.get_loc('Seperate')#get index column location in excel file^    for row in range(0, len(df)):^        if (df.iat[row, index_check] == 'Paris'):^            df.iat[row, index_seperate] = 1^    df1 = df[df['Seperate'] == 1]#selected only rows that has Seperate column is 1^    # copying only required columns to another new excel file^    df1 = df1[['Code_no','Customer','Purchase','Date','Record','Location']].copy()^    df1.to_excel('D:\Seperatefiles2.xlsx', index=True, header=True)' missingele="Paris^Seperatefiles2"  ansSpace="9d14d0a5d9f34c9a55b4bb4b776aecc5b3435c738acc41fb9850fe01d08c4d3d" ans="8f0509e7cbe26b6daa69ab1898a9ed99612416564ed04a785e382f66c9e2aa8f" value='import pandas as pd' onkeydown="myFunction()">  </input>
+02<input type="text" name="intext" id="mytext2" 1 size=150 ansHint='import pandas as pd^import openpyxl^if __name__ == "__main__":^    data = pd.read_excel('D:\Seperatefiles.xlsx')^    df = pd.DataFrame(data)^    df['Seperate'] = None#create a new column^    index_check = df.columns.get_loc('Location')#get index column location in excel file^    index_seperate = df.columns.get_loc('Seperate')#get index column location in excel file^    for row in range(0, len(df)):^        if (df.iat[row, index_check] == 'Paris'):^            df.iat[row, index_seperate] = 1^    df1 = df[df['Seperate'] == 1]#selected only rows that has Seperate column is 1^    # copying only required columns to another new excel file^    df1 = df1[['Code_no','Customer','Purchase','Date','Record','Location']].copy()^    df1.to_excel('D:\Seperatefiles2.xlsx', index=True, header=True)' missingele="Paris^Seperatefiles2"  ansSpace="dfae9d79afe9152a975c79a1f13ad312355b271bcbd7cc2051baeac18e2b169f" ans="8373991929dba7fc1a15eb11fa27b52ec228a37e68a899cd9e7df71e04525e47" value='import openpyxl' onkeydown="myFunction()">  </input>
+03<input type="text" name="intext" id="mytext3" 2 size=150 ansHint='import pandas as pd^import openpyxl^if __name__ == "__main__":^    data = pd.read_excel('D:\Seperatefiles.xlsx')^    df = pd.DataFrame(data)^    df['Seperate'] = None#create a new column^    index_check = df.columns.get_loc('Location')#get index column location in excel file^    index_seperate = df.columns.get_loc('Seperate')#get index column location in excel file^    for row in range(0, len(df)):^        if (df.iat[row, index_check] == 'Paris'):^            df.iat[row, index_seperate] = 1^    df1 = df[df['Seperate'] == 1]#selected only rows that has Seperate column is 1^    # copying only required columns to another new excel file^    df1 = df1[['Code_no','Customer','Purchase','Date','Record','Location']].copy()^    df1.to_excel('D:\Seperatefiles2.xlsx', index=True, header=True)' missingele="Paris^Seperatefiles2"  ansSpace="ae0ca07e006bb092cffc19fbcebbab4d48145acb144c0bcd3c09ba27891f2134" ans="85bb72e823745f4bfe00f1dffcf80ee00a2bc36f0a0302250c895cbe2b466582" value='if __name__ == "__main__":' onkeydown="myFunction()">  </input>
+04<input type="text" name="intext" id="mytext4" 3 size=150 ansHint='import pandas as pd^import openpyxl^if __name__ == "__main__":^    data = pd.read_excel('D:\Seperatefiles.xlsx')^    df = pd.DataFrame(data)^    df['Seperate'] = None#create a new column^    index_check = df.columns.get_loc('Location')#get index column location in excel file^    index_seperate = df.columns.get_loc('Seperate')#get index column location in excel file^    for row in range(0, len(df)):^        if (df.iat[row, index_check] == 'Paris'):^            df.iat[row, index_seperate] = 1^    df1 = df[df['Seperate'] == 1]#selected only rows that has Seperate column is 1^    # copying only required columns to another new excel file^    df1 = df1[['Code_no','Customer','Purchase','Date','Record','Location']].copy()^    df1.to_excel('D:\Seperatefiles2.xlsx', index=True, header=True)' missingele="Paris^Seperatefiles2"  ansSpace="439842bf829f02a81bba2c14468ace8907457cddf265b9d2845e6c8efc15bc5d" ans="961cadb77023b3fdba8cd1474c6178ae49ae6a7dd3217260942eb5edc0cf38da" value='    data = pd.read_excel(&#39;D:\Seperatefiles.xlsx&#39;)' onkeydown="myFunction()">  </input>
+05<input type="text" name="intext" id="mytext5" 4 size=150 ansHint='import pandas as pd^import openpyxl^if __name__ == "__main__":^    data = pd.read_excel('D:\Seperatefiles.xlsx')^    df = pd.DataFrame(data)^    df['Seperate'] = None#create a new column^    index_check = df.columns.get_loc('Location')#get index column location in excel file^    index_seperate = df.columns.get_loc('Seperate')#get index column location in excel file^    for row in range(0, len(df)):^        if (df.iat[row, index_check] == 'Paris'):^            df.iat[row, index_seperate] = 1^    df1 = df[df['Seperate'] == 1]#selected only rows that has Seperate column is 1^    # copying only required columns to another new excel file^    df1 = df1[['Code_no','Customer','Purchase','Date','Record','Location']].copy()^    df1.to_excel('D:\Seperatefiles2.xlsx', index=True, header=True)' missingele="Paris^Seperatefiles2"  ansSpace="8402ee56c870010e207eeec98743a56c6783f8277a99f7697e2c0902a5030416" ans="b1eb7a2f675a4e4fc9ce0e92da7da0a28d4b864133d1ba1e359fd6e3a0f102a4" value='    df = pd.DataFrame(data)' onkeydown="myFunction()">  </input>
+06<input type="text" name="intext" id="mytext6" 5 size=150 ansHint='import pandas as pd^import openpyxl^if __name__ == "__main__":^    data = pd.read_excel('D:\Seperatefiles.xlsx')^    df = pd.DataFrame(data)^    df['Seperate'] = None#create a new column^    index_check = df.columns.get_loc('Location')#get index column location in excel file^    index_seperate = df.columns.get_loc('Seperate')#get index column location in excel file^    for row in range(0, len(df)):^        if (df.iat[row, index_check] == 'Paris'):^            df.iat[row, index_seperate] = 1^    df1 = df[df['Seperate'] == 1]#selected only rows that has Seperate column is 1^    # copying only required columns to another new excel file^    df1 = df1[['Code_no','Customer','Purchase','Date','Record','Location']].copy()^    df1.to_excel('D:\Seperatefiles2.xlsx', index=True, header=True)' missingele="Paris^Seperatefiles2"  ansSpace="03062da819290066ab4bb7f83d87a796f93c0453813ccacac9dbf4aece74578e" ans="ce722910cb2bf56c1cfb97356fd8e0d36b5bec23ba85442969570eaf85422a26" value='    df[&#39;Seperate&#39;] = None#create a new column' onkeydown="myFunction()">  </input>
+07<input type="text" name="intext" id="mytext7" 6 size=150 ansHint='import pandas as pd^import openpyxl^if __name__ == "__main__":^    data = pd.read_excel('D:\Seperatefiles.xlsx')^    df = pd.DataFrame(data)^    df['Seperate'] = None#create a new column^    index_check = df.columns.get_loc('Location')#get index column location in excel file^    index_seperate = df.columns.get_loc('Seperate')#get index column location in excel file^    for row in range(0, len(df)):^        if (df.iat[row, index_check] == 'Paris'):^            df.iat[row, index_seperate] = 1^    df1 = df[df['Seperate'] == 1]#selected only rows that has Seperate column is 1^    # copying only required columns to another new excel file^    df1 = df1[['Code_no','Customer','Purchase','Date','Record','Location']].copy()^    df1.to_excel('D:\Seperatefiles2.xlsx', index=True, header=True)' missingele="Paris^Seperatefiles2"  ansSpace="13cd09f2d3b8145cb0cc7c3fc67c77a96d64a242613961820d21942e5f65cace" ans="ef7aab0f4f58294f1a61959c71dd05475f5543a87a051bc9e87adb83f06f3738" value='    index_check = df.columns.get_loc(&#39;Location&#39;)#get index column location in excel file' onkeydown="myFunction()">  </input>
+08<input type="text" name="intext" id="mytext8" 7 size=150 ansHint='import pandas as pd^import openpyxl^if __name__ == "__main__":^    data = pd.read_excel('D:\Seperatefiles.xlsx')^    df = pd.DataFrame(data)^    df['Seperate'] = None#create a new column^    index_check = df.columns.get_loc('Location')#get index column location in excel file^    index_seperate = df.columns.get_loc('Seperate')#get index column location in excel file^    for row in range(0, len(df)):^        if (df.iat[row, index_check] == 'Paris'):^            df.iat[row, index_seperate] = 1^    df1 = df[df['Seperate'] == 1]#selected only rows that has Seperate column is 1^    # copying only required columns to another new excel file^    df1 = df1[['Code_no','Customer','Purchase','Date','Record','Location']].copy()^    df1.to_excel('D:\Seperatefiles2.xlsx', index=True, header=True)' missingele="Paris^Seperatefiles2"  ansSpace="09525d7c26ed1137cb210dac9a4eb3167f83280fb647e706a55070ce61b63095" ans="2007b52b1dcef3d6a6393e1aea423d032b77c6debe6c5702118262efd4d8c378" value='    index_seperate = df.columns.get_loc(&#39;Seperate&#39;)#get index column location in excel file' onkeydown="myFunction()">  </input>
+09<input type="text" name="intext" id="mytext9" 8 size=150 ansHint='import pandas as pd^import openpyxl^if __name__ == "__main__":^    data = pd.read_excel('D:\Seperatefiles.xlsx')^    df = pd.DataFrame(data)^    df['Seperate'] = None#create a new column^    index_check = df.columns.get_loc('Location')#get index column location in excel file^    index_seperate = df.columns.get_loc('Seperate')#get index column location in excel file^    for row in range(0, len(df)):^        if (df.iat[row, index_check] == 'Paris'):^            df.iat[row, index_seperate] = 1^    df1 = df[df['Seperate'] == 1]#selected only rows that has Seperate column is 1^    # copying only required columns to another new excel file^    df1 = df1[['Code_no','Customer','Purchase','Date','Record','Location']].copy()^    df1.to_excel('D:\Seperatefiles2.xlsx', index=True, header=True)' missingele="Paris^Seperatefiles2"  ansSpace="37bbaf2d7c9acd1d063d08b53620d259cb8f546d6966be80b99b6dad4ece6302" ans="dbb0f2911c43b315bf1179ed44e928efe25a8206d589e9b3bc96f9c09283e624" value='    for row in range(0, len(df)):' onkeydown="myFunction()">  </input>
+10<input type="text" name="intext" id="mytext10" 9 size=150 ansHint='import pandas as pd^import openpyxl^if __name__ == "__main__":^    data = pd.read_excel('D:\Seperatefiles.xlsx')^    df = pd.DataFrame(data)^    df['Seperate'] = None#create a new column^    index_check = df.columns.get_loc('Location')#get index column location in excel file^    index_seperate = df.columns.get_loc('Seperate')#get index column location in excel file^    for row in range(0, len(df)):^        if (df.iat[row, index_check] == 'Paris'):^            df.iat[row, index_seperate] = 1^    df1 = df[df['Seperate'] == 1]#selected only rows that has Seperate column is 1^    # copying only required columns to another new excel file^    df1 = df1[['Code_no','Customer','Purchase','Date','Record','Location']].copy()^    df1.to_excel('D:\Seperatefiles2.xlsx', index=True, header=True)' missingele="Paris^Seperatefiles2" ansSpace="5d140ed839f24155864a8ad57e69c7c1d1408cce4e619ba0edc76cb1ce8c89a2" ans="c6225715323e3ae340b563d840d67792fb4adbc766bfc8b2a2a20208ac9b8318" value='        if (df.iat[row, index_check] == &#39;Japan&#39;):' onkeydown="myFunction()"></input>
+11<input type="text" name="intext" id="mytext11" 10 size=150 ansHint='import pandas as pd^import openpyxl^if __name__ == "__main__":^    data = pd.read_excel('D:\Seperatefiles.xlsx')^    df = pd.DataFrame(data)^    df['Seperate'] = None#create a new column^    index_check = df.columns.get_loc('Location')#get index column location in excel file^    index_seperate = df.columns.get_loc('Seperate')#get index column location in excel file^    for row in range(0, len(df)):^        if (df.iat[row, index_check] == 'Paris'):^            df.iat[row, index_seperate] = 1^    df1 = df[df['Seperate'] == 1]#selected only rows that has Seperate column is 1^    # copying only required columns to another new excel file^    df1 = df1[['Code_no','Customer','Purchase','Date','Record','Location']].copy()^    df1.to_excel('D:\Seperatefiles2.xlsx', index=True, header=True)' missingele="Paris^Seperatefiles2" ansSpace="acb29f2c2a7f613fe2640e6d83e307239e721cce3958cb952e3fbcd1c2ecae89" ans="06d8130b914762f96e98a9deb92c8470d0623ae2608cd9e49a2c0f0baa9875f9" value='            df.iat[row, index_seperate] = 1' onkeydown="myFunction()"></input>
+12<input type="text" name="intext" id="mytext12" 11 size=150 ansHint='import pandas as pd^import openpyxl^if __name__ == "__main__":^    data = pd.read_excel('D:\Seperatefiles.xlsx')^    df = pd.DataFrame(data)^    df['Seperate'] = None#create a new column^    index_check = df.columns.get_loc('Location')#get index column location in excel file^    index_seperate = df.columns.get_loc('Seperate')#get index column location in excel file^    for row in range(0, len(df)):^        if (df.iat[row, index_check] == 'Paris'):^            df.iat[row, index_seperate] = 1^    df1 = df[df['Seperate'] == 1]#selected only rows that has Seperate column is 1^    # copying only required columns to another new excel file^    df1 = df1[['Code_no','Customer','Purchase','Date','Record','Location']].copy()^    df1.to_excel('D:\Seperatefiles2.xlsx', index=True, header=True)' missingele="Paris^Seperatefiles2" ansSpace="5d1af6dc5a83376b1fd7ac4f465ba14d1857e18d1504e1d8ec878a206e0c575d" ans="addee09addd5bf0712d3152bc4150437b9298a6861442ebe7aca615c3e681bf3" value='    df1 = df[df[&#39;Seperate&#39;] == 1]#selected only rows that has Seperate column is 1' onkeydown="myFunction()"></input>
+13<input type="text" name="intext" id="mytext13" 12 size=150 ansHint='import pandas as pd^import openpyxl^if __name__ == "__main__":^    data = pd.read_excel('D:\Seperatefiles.xlsx')^    df = pd.DataFrame(data)^    df['Seperate'] = None#create a new column^    index_check = df.columns.get_loc('Location')#get index column location in excel file^    index_seperate = df.columns.get_loc('Seperate')#get index column location in excel file^    for row in range(0, len(df)):^        if (df.iat[row, index_check] == 'Paris'):^            df.iat[row, index_seperate] = 1^    df1 = df[df['Seperate'] == 1]#selected only rows that has Seperate column is 1^    # copying only required columns to another new excel file^    df1 = df1[['Code_no','Customer','Purchase','Date','Record','Location']].copy()^    df1.to_excel('D:\Seperatefiles2.xlsx', index=True, header=True)' missingele="Paris^Seperatefiles2" ansSpace="388616e47a8dd06296055eb02eb03eddceb1fc310053438fc723d5797f15c298" ans="c265c1e17fb00836d9fe2efcc55df0c2df1fcf0482b0440b271b4f63af7df7b2" value='    # copying only required columns to another new excel file' onkeydown="myFunction()"></input>
+14<input type="text" name="intext" id="mytext14" 13 size=150 ansHint='import pandas as pd^import openpyxl^if __name__ == "__main__":^    data = pd.read_excel('D:\Seperatefiles.xlsx')^    df = pd.DataFrame(data)^    df['Seperate'] = None#create a new column^    index_check = df.columns.get_loc('Location')#get index column location in excel file^    index_seperate = df.columns.get_loc('Seperate')#get index column location in excel file^    for row in range(0, len(df)):^        if (df.iat[row, index_check] == 'Paris'):^            df.iat[row, index_seperate] = 1^    df1 = df[df['Seperate'] == 1]#selected only rows that has Seperate column is 1^    # copying only required columns to another new excel file^    df1 = df1[['Code_no','Customer','Purchase','Date','Record','Location']].copy()^    df1.to_excel('D:\Seperatefiles2.xlsx', index=True, header=True)' missingele="Paris^Seperatefiles2" ansSpace="825e757993c9ba8d79779da6a3e54b031758a3e214f1562c0df7acf67b01eab3" ans="233d36e39072127e5d80af64c46ff6f90350949f8735dd5e8d771bf728b4336b" value='    df1 = df1[[&#39;Code_no&#39;,&#39;Customer&#39;,&#39;Purchase&#39;,&#39;Date&#39;,&#39;Record&#39;,&#39;Location&#39;]].copy()' onkeydown="myFunction()"></input>
+15<input type="text" name="intext" id="mytext15" 14 size=150 ansHint='import pandas as pd^import openpyxl^if __name__ == "__main__":^    data = pd.read_excel('D:\Seperatefiles.xlsx')^    df = pd.DataFrame(data)^    df['Seperate'] = None#create a new column^    index_check = df.columns.get_loc('Location')#get index column location in excel file^    index_seperate = df.columns.get_loc('Seperate')#get index column location in excel file^    for row in range(0, len(df)):^        if (df.iat[row, index_check] == 'Paris'):^            df.iat[row, index_seperate] = 1^    df1 = df[df['Seperate'] == 1]#selected only rows that has Seperate column is 1^    # copying only required columns to another new excel file^    df1 = df1[['Code_no','Customer','Purchase','Date','Record','Location']].copy()^    df1.to_excel('D:\Seperatefiles2.xlsx', index=True, header=True)' missingele="Paris^Seperatefiles2" ansSpace="53b8236818a3f52c30f1b262c17cb4f7f0ccc7ef61cdbaae1540d4125930408a" ans="ccafd61f30ec365237aab914027c7420d881939a790ddee2e0f7422afffdd104" value='    df1.to_excel(&#39;D:\Seperatefiles1.xlsx&#39;, index=True, header=True)' onkeydown="myFunction()"></input>
+<script src="myScript.js"></script></div></pre><h2 id="answer">Answer</h2>
+<a class="btn" href="javascript:newScoringCMP('Python_CMP_Pandas_Excel')">Answer</a>
+<a class="btn btn-success" onclick="ansFileSave()">File Save</a>
+<input onclick="openForm();" type="button" value="Hint" class="btn" style="float: right;">
+<div class="form-popup" id="myForm">
+  <form class="form-container">
+    <h1>Hint</h1>
+       <p>1. Read the input excel file:<b>Seperatefiles.xlsx</b>.<br>
+		2. Then, <b>create pandas data frame</b> to make some operations about separating rows on the excel file.<br>
+		3. Create<b> Seperate</b> column to mark the required rows.<br>
+        4. Then, find the rows which has Location == 'Paris' by looping the whole excel file.<br>		
+		5. Finally, write the seperated rows into new excel file:<b>Seperatefiles2.xlsx</b>.
+        <br> If you want to study more about seperating rows, please visit this link.<a href="source_codes/Delete rows from a dataframe - Python In Office.html" download> Click Here</a>		
+    
+        <br>
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+  </form>
+</div>
+<script type="text/javascript">
+            
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+</script>
+
+<a id="dldlink"></a>
+<script type="text/javascript" src="allowtab.js"></script>

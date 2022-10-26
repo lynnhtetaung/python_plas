@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <% include partials/header %>
+  <link rel="shortcut icon" href="/img/okayama.png" type="image/png" />
+
+    <title>Exercise Programming</title>
+</head>
+
+<body>
+
+  <!--home ================================ -->
+  <!-- <div class="offer-alert">
+    <div class="offer-alert__container container">
+      <a href="/" class="offer-alert__btn">HOME</a>
+      <a href="/c_programming" class="offer-alert__btn">C and C++ Programming</a>
+      <a href="/java_programming" class="offer-alert__btn">Java Programming</a>
+      <a href="/js_programming" class="offer-alert__btn">JavaScript Programming</a>
+      <a href="/python_programming" class="offer-alert__btn">Python Programming</a>
+    </div>
+  </div> -->
+
+  <!--Hero ====================================== -->
+  <header class="hero container-fluid border-bottom">
+
+    <button onclick="document.querySelector('#hero-menu').classList.toggle('ft-menu--js-show')"
+      class="ft-menu__close-btn animated">
+      <svg class="bi bi-x" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor"
+        xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" d="M11.854 4.146a.5.5 0 010 .708l-7 7a.5.5 0 01-.708-.708l7-7a.5.5 0 01.708 0z"
+          clip-rule="evenodd" />
+        <path fill-rule="evenodd" d="M4.146 4.146a.5.5 0 000 .708l7 7a.5.5 0 00.708-.708l-7-7a.5.5 0 00-.708 0z"
+          clip-rule="evenodd" />
+      </svg>
+    </button>
+    </li>
+    <li class="d-lg-none flex-grow-1 d-flex flex-row-reverse hero-nav__item">
+      <button onclick="document.querySelector('#hero-menu').classList.toggle('ft-menu--js-show')"
+        class="text-center px-2">
+        <i class="fas fa-bars"></i>
+      </button>
+    </li>
+    </ul>
+    </nav>
+    <div class="hero__content container mx-auto">
+      <div class="row px-0 mx-0 align-items-center">
+        <div class="col-lg-6 px-0">
+          <h1 class="hero__title mb-3">
+            <span class="highlight">P</span>rogramming
+            <span class="highlight">L</span>earning
+            <span class="highlight">A</span>ssistant
+            <span class="highlight">S</span>ystem
+            <span class="highlight">(PLAS)</span>
+
+            <br><br>
+            <span class="highlight">IMPROVE</span> your programming skills
+          </h1>
+          <!--<p class="hero__paragraph mb-5">
+            
+          </p>-->
+          <div class="hero__btns-container">
+            <a class="hero__btn btn btn-primary mb-2 mb-lg-0" href="menu">
+              Online Exercise
+            </a>
+            <!--
+            <a class="hero__btn btn btn-secondary mx-lg-3" href="#">
+              Download Offline Exercise
+            </a>
+            -->
+          </div>
+          
+        </div>
+        <div class="col-lg-5 mt-5 mt-lg-0 mx-0">
+          <div class="hero__img-container">
+            <img src="/img/img-1.png" class="hero__img w-100">
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <% include partials/footer %>
+
+</body>
+
+</html>

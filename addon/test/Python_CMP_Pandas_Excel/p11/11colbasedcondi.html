@@ -1,0 +1,135 @@
+<style type="text/css">
+            textarea, iframe {
+                border: 1px solid grey;
+                height: 500px;
+                width: 98%;
+                resize: none;   
+            }
+             div.form-popup {
+        background-color: #fed9ff;
+        width: 900px;
+        height: 600px;
+        overflow-x: hidden;
+        overflow-y: auto;
+        padding: 20px;
+      }
+ .form-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px dotted #f1f1f1;
+  text-align:justify;  
+  text-justify:initial;
+
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 900px;
+  padding: 20px;
+  background-color: lightyellow;
+}
+
+
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 10%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: mediumvioletred;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+</style>
+<h2 id="statement">11</h2>
+  <table >
+  <tr>
+     
+
+<td>Input excel file to the source code<br><figure> <img src="/img/P121.JPG" alt="Elephant at sunset"> 
+</figure></td>
+   </tr>  
+   
+ <tr>
+     
+
+<td>Output excel file from the source code<br><figure> <img src="/img/P122.JPG" alt="Elephant at sunset"> 
+</figure></td>
+     
+  </tr>  
+<tr>
+        
+          <td>Output excel file from the modified source code<br><figure> <img src="/img/P123.JPG" alt="Elephant at sunset"> 
+</figure></td>
+        
+     </tr>
+</table>
+
+<a href="source_codes/Problem11.zip" download> Click Here To Download Source Code</a>
+<br> Please modify the following source code!
+<h4 id="code">Source Code</h4>
+<pre class="prettyprint" id="scoring-res" >01:# import libraries
+02:import pandas as pd
+03:import numpy as np
+04:# read excel file
+05:data = pd.read_excel(&#39;D:\Addingcolbasecon.xlsx&#39;)
+06:df=pd.DataFrame(data)
+07:# creating new column based on condition
+08:df["O_Blood"] = np.where(df["Blood_Type"]==&#39;O&#39;, "yes", "no")
+09:df.to_excel(&#39;D:\Addingcolbasecon1.xlsx&#39;, index=True, header=True)
+
+</pre>
+<h4 id="code1">the output</h4>
+<pre class = "prettyprint" id = "scoring-res" <h2 id="code1"></h2>
+01<input type="text" name="intext" id="mytext1" 0 size=150 ansHint='# import libraries^import pandas as pd^import numpy as np^# read excel file^data = pd.read_excel('D:\Addingcolbasecon.xlsx')^df=pd.DataFrame(data)^# creating new column based on condition^df["B_Blood"] = np.where(df["Blood_Type"]=='B', "yes", "no")^df.to_excel('D:\Addingcolbasecon2.xlsx', index=True, header=True)' missingele="B_Blood^50^Addingcolbasecon2"  ansSpace="ed4e81457d4ea17e9f8a95705877a5303000bb35cd67aca612a845c18001614d" ans="1e8dd0b5d9417ff157a1ac5e81e814376972ecfb8d8c9bb1ee91107390c41346" value='# import libraries' onkeydown="myFunction()">  </input>
+02<input type="text" name="intext" id="mytext2" 1 size=150 ansHint='# import libraries^import pandas as pd^import numpy as np^# read excel file^data = pd.read_excel('D:\Addingcolbasecon.xlsx')^df=pd.DataFrame(data)^# creating new column based on condition^df["B_Blood"] = np.where(df["Blood_Type"]=='B', "yes", "no")^df.to_excel('D:\Addingcolbasecon2.xlsx', index=True, header=True)' missingele="B_Blood^50^Addingcolbasecon2"  ansSpace="1efb139fddf06bbb1953102e01a262376fe67fdfd2600ebcb41e05df0909c871" ans="1ea932379ff64a66f0eb025fa044d7e3126fd8ef6a8299c1d4dfec4f1d5c8fd8" value='import pandas as pd' onkeydown="myFunction()">  </input>
+03<input type="text" name="intext" id="mytext3" 2 size=150 ansHint='# import libraries^import pandas as pd^import numpy as np^# read excel file^data = pd.read_excel('D:\Addingcolbasecon.xlsx')^df=pd.DataFrame(data)^# creating new column based on condition^df["B_Blood"] = np.where(df["Blood_Type"]=='B', "yes", "no")^df.to_excel('D:\Addingcolbasecon2.xlsx', index=True, header=True)' missingele="B_Blood^50^Addingcolbasecon2"  ansSpace="d8ca724817554d6fb2d7a9e372cacd764178980d5b1db615c29b580697ad1567" ans="df584c60a2fae3f257f1a459cf2fb78fd4f5e4b16c988beb4a063b0950ba54b6" value='import numpy as np' onkeydown="myFunction()">  </input>
+04<input type="text" name="intext" id="mytext4" 3 size=150 ansHint='# import libraries^import pandas as pd^import numpy as np^# read excel file^data = pd.read_excel('D:\Addingcolbasecon.xlsx')^df=pd.DataFrame(data)^# creating new column based on condition^df["B_Blood"] = np.where(df["Blood_Type"]=='B', "yes", "no")^df.to_excel('D:\Addingcolbasecon2.xlsx', index=True, header=True)' missingele="B_Blood^50^Addingcolbasecon2"  ansSpace="f7ebf74c66785e3dc28250f411dbaba4eddafa2d7ddeb512b84994b4a93d85fc" ans="4f1d4dd4f770857abf356f4ea115f2d79e77fa4147f0ccc2a2669410917ffc87" value='# read excel file' onkeydown="myFunction()">  </input>
+05<input type="text" name="intext" id="mytext5" 4 size=150 ansHint='# import libraries^import pandas as pd^import numpy as np^# read excel file^data = pd.read_excel('D:\Addingcolbasecon.xlsx')^df=pd.DataFrame(data)^# creating new column based on condition^df["B_Blood"] = np.where(df["Blood_Type"]=='B', "yes", "no")^df.to_excel('D:\Addingcolbasecon2.xlsx', index=True, header=True)' missingele="B_Blood^50^Addingcolbasecon2"  ansSpace="e735977d766f497ded29a61c6b3939f3731050bb2bd124459a9f67e0c0b33576" ans="54b5c061321db01864cd5050f753142d52aa5c6db63b91083ce40186520f71a6" value='data = pd.read_excel(&#39;D:\Addingcolbasecon.xlsx&#39;)' onkeydown="myFunction()">  </input>
+06<input type="text" name="intext" id="mytext6" 5 size=150 ansHint='# import libraries^import pandas as pd^import numpy as np^# read excel file^data = pd.read_excel('D:\Addingcolbasecon.xlsx')^df=pd.DataFrame(data)^# creating new column based on condition^df["B_Blood"] = np.where(df["Blood_Type"]=='B', "yes", "no")^df.to_excel('D:\Addingcolbasecon2.xlsx', index=True, header=True)' missingele="B_Blood^50^Addingcolbasecon2"  ansSpace="c783eb68f65c5e951da0de92a8d07ebc7e20b40cba21485dcc7735e2391c53ed" ans="c783eb68f65c5e951da0de92a8d07ebc7e20b40cba21485dcc7735e2391c53ed" value='df=pd.DataFrame(data)' onkeydown="myFunction()">  </input>
+07<input type="text" name="intext" id="mytext7" 6 size=150 ansHint='# import libraries^import pandas as pd^import numpy as np^# read excel file^data = pd.read_excel('D:\Addingcolbasecon.xlsx')^df=pd.DataFrame(data)^# creating new column based on condition^df["B_Blood"] = np.where(df["Blood_Type"]=='B', "yes", "no")^df.to_excel('D:\Addingcolbasecon2.xlsx', index=True, header=True)' missingele="B_Blood^50^Addingcolbasecon2"  ansSpace="1fbab9fe01a4bc639b6d7b7efe0181ef94855ea00e878983e94cd9dcfeacc431" ans="c1562906d3952bfb05e037e7216360136f8822a8370afa450d99c641852cb00b" value='# creating new column based on condition' onkeydown="myFunction()">  </input>
+08<input type="text" name="intext" id="mytext8" 7 size=150 ansHint='# import libraries^import pandas as pd^import numpy as np^# read excel file^data = pd.read_excel('D:\Addingcolbasecon.xlsx')^df=pd.DataFrame(data)^# creating new column based on condition^df["B_Blood"] = np.where(df["Blood_Type"]=='B', "yes", "no")^df.to_excel('D:\Addingcolbasecon2.xlsx', index=True, header=True)' missingele="B_Blood^50^Addingcolbasecon2"  ansSpace="7ce25fbe6612f542d7d9d012e7a7176004a57a28f2bc246c2ed7c10d6edb45b1" ans="1e72d60b9cd29c596cb530c68c34f0b41d5836b4326b25d1027dfd276a1eafb1" value='df["O_Blood"] = np.where(df["Blood_Type"]==&#39;O&#39;, "yes", "no")' onkeydown="myFunction()">  </input>
+09<input type="text" name="intext" id="mytext9" 8 size=150 ansHint='# import libraries^import pandas as pd^import numpy as np^# read excel file^data = pd.read_excel('D:\Addingcolbasecon.xlsx')^df=pd.DataFrame(data)^# creating new column based on condition^df["B_Blood"] = np.where(df["Blood_Type"]=='B', "yes", "no")^df.to_excel('D:\Addingcolbasecon2.xlsx', index=True, header=True)' missingele="B_Blood^50^Addingcolbasecon2"  ansSpace="6a1afc864305c8f2b5d26811a20b2f88172feb6de2751021e3f6c4f2e957e609" ans="5cfe094515afa0b651026e546955fcda5d7ba6ff9de3017c3d87549126127976" value='df.to_excel(&#39;D:\Addingcolbasecon1.xlsx&#39;, index=True, header=True)' onkeydown="myFunction()">  </input>
+<script src="myScript.js"></script></div></pre><h2 id="answer">Answer</h2>
+<a class="btn" href="javascript:newScoringCMP('Python_CMP_Pandas_Excel')">Answer</a>
+<a class="btn btn-success" onclick="ansFileSave()">File Save</a>
+<input onclick="openForm();" type="button" value="Hint" class="btn" style="float: right;">
+<div class="form-popup" id="myForm">
+  <form class="form-container">
+    <h1>Hint</h1>
+       <p>1. Read the input excel file:<b>Addingcolbasecon.xlsx</b>.<br>
+		2. Then, <b>create pandas data frame</b> to create new column in excel file.<br>
+		3. Create the new column <b>B_Blood</b> based on the Blood_Type column.<br>
+		4. Finally, write the modified values into new excel file:<b>Addingcolbasecon2.xlsx</b>.
+        <br> If you want to study more about adding new columns, please visit this link.<a href="source_codes/Add a Column in a Pandas DataFrame Based on an If-Else Condition.html" download> Click Here</a>		
+    
+        <br>
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+  </form>
+</div>
+<script type="text/javascript">
+    function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+</script>
+
+<a id="dldlink"></a>
+<script type="text/javascript" src="allowtab.js"></script>

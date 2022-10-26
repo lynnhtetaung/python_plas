@@ -1,0 +1,31 @@
+<h2 id="statement">23</h2>
+Fill in Blanks 
+<h2 id="code">The Source Code</h2>
+<pre class="prettyprint" id="scoring-res">1 import pandas as pd 
+2 df = pd.DataFrame() 
+3 df = df.assign(Name = ['John','Smith','Bom','Merry','Yuki','Tanaka','Thia']) 
+4 df = df.assign(Zip_Code = [101,106,201,222,303,233,105]) 
+5 df = df.assign(Work_type = ['Teaching','Research','Study','Study','Study','Teaching','Research']) 
+6 print("Printing the original dataframe", df) 
+7 df = df.sort_values(by=['Zip_Code'],  ascending = True) 
+8 df.rename(columns={'Work_type':'Position'}, inplace=True) 
+9 print("Printing the modified dataframe after sorting and renaming", df) 
+10 df = df['Zip_Code'].where(df['Name'] == 'John') 
+11 print("Finding Zip code for John", df) 
+
+Question
+Q1.  Which library is used for analyzing, cleaning, exploring, and manipulating data?<input size=2 ans="6ee7bc43adcba1d973e407bb43ee242697913beac08b09ec3cfd531e8d5d9a6d" placeholder=1></input>
+Q2.  Which function is used for assigning new columns to the data frame? <input size=2 ans="73884874ba3cce3faad5c7a397c158652a9987fe805849386d08b803761e9bd3" placeholder=2></input>
+Q3.  Which function is used for sorting the DataFrame in ascending or descending order of the specified columns?<input size=2 ans="47000db99a8dddc5dde701f7b5280f6dc9751fc81a62f6242454822d8053d3c5" placeholder=3></input>
+Q4.  Which function is used for renaming any index, column, or row?<input size=2 ans="cbee3791ca75a0765d4c32014ce267a9ef90321b6284903ee74f78c3e6615ab9" placeholder=4></input>
+Q5.  Which function is used to find the result in the DataFrame based on one or more conditions?<input size=2 ans="74fc1713823025d83322e20056d48a09634bbb18b1043599cbe6d68b5237db0d" placeholder=5></input>
+
+
+</pre>
+<h2 id="answer">Answer</h2>
+<a class="btn" href="javascript:newScoring('Python_GUP_basic')">Answer</a>
+<script type="text/javascript">
+$(function(){
+ prettyPrint();
+});
+</script>

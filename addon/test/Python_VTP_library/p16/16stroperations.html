@@ -1,0 +1,45 @@
+<h2 id="statement">16</h2>
+Fill in Blanks 
+<h2 id="code">The Source Code</h2>
+<pre class="prettyprint" id="scoring-res"># A quick-demo of String Operations on NumPy
+# numpy.lower() function:This function returns the lowercase string from the given string.
+# numpy.upper() function:This function returns the uppercase string from the given string.
+# numpy.split() function:This function returns a list of strings after breaking the given string by the specified separator.
+# numpy.join() function:This function is a string method and returns a string in which the elements of sequence have been joined by str separator.
+ 
+import numpy as np
+ 
+# converting to lowercase
+print("Converting to lowercase", np.char.lower('HELLO'))
+ 
+# converting to uppercase
+print("Converting to uppercase", np.char.upper('hello'))
+
+# splitting a string
+print("Splitting a string", np.char.split('geeks for geeks'))
+ 
+# splitting a string
+print("Another format for splitting a string",np.char.split('geeks, for, geeks', sep = ','))
+
+# Joining a string
+print("Joining a string with str sperator",np.char.join('-', 'hello'))
+ 
+# Joining a string
+print("Another format for joining by str sperator",np.char.join(['-', ':'], ['geeks', 'for']))
+
+Converting to lowercase <input size=2 ans="f84cb5bc2662cd834fe5fbe1be67ed68d3753f341c75d2926400918a3f8ae315" placeholder=1></input>
+Converting to uppercase <input size=2 ans="f58f544b67357d444ae106cabdb2a84b3570ae065e8d1966ba34c6f8117d062b" placeholder=2></input>
+Splitting a string ['geeks',<input size=2 ans="967d2523bc3ac050c6e86866677776ad459d50f326a3f88e9047275f4b301412" placeholder=3></input>, 'geeks']
+Another format for splitting a string <input size=2 ans="4993b32aa1ee69c0aa78baaf56c5e24f3ea3ec91f69c1d32deaaefc2c205f306" placeholder=4></input>, ' for', ' geeks']
+Joining a string with str sperator h-e<input size=2 ans="60c0353bd3e5601ad40b72f5f5a9f3103142417d956e16f5a2c3addef6a82f36" placeholder=5></input>
+Another format for joining by str sperator ['g-e-e-k-s' '<input size=2 ans="921c92f89e45092b9f5544dd0e22ea757e6da404d26aae1ce48e66ac1e5f7f47" placeholder=6></input>']
+
+
+</pre>
+<h2 id="answer">Answer</h2>
+<a class="btn" href="javascript:newScoring('Python_VTP_library')">Answer</a>
+<script type="text/javascript">
+$(function(){
+ prettyPrint();
+});
+</script>

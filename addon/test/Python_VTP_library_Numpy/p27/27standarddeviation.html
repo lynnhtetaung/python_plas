@@ -1,0 +1,61 @@
+<h2 id="statement">27</h2>
+Fill in Blanks 
+<h2 id="code">The Source Code</h2>
+<pre class="prettyprint" id="scoring-res"># A quick-demo of numpy.std() method
+# numpy.std(arr, axis = None) : Compute the standard deviation of the given data (array elements) along the specified axis(if any).. 
+# axis : axis along which we want to calculate the arithmetic mean. axis = 0 means along the column and axis = 1 means working along the row.
+''' x = 1 1 1 1 1 
+Standard Deviation = 0 . 
+y = 9, 2, 5, 4, 12, 7, 8, 11, 9, 3, 7, 4, 12, 5, 4, 10, 9, 6, 9, 4 
+Step 1 : Mean of distribution 4 = 7
+Step 2 : Summation of (x - x.mean())**2 = 178
+Step 3 : Finding Mean = 178 /20 = 8.9 
+This Result is Variance.
+Step 4 : Standard Deviation = sqrt(Variance) = sqrt(8.9) = 2.983.'''
+
+import numpy as np 
+	
+# 1D array 
+arr = [20, 2, 7, 1, 34] 
+
+print("arr : ", arr) 
+print("std of arr : ", np.std(arr)) 
+
+# 2D array 
+arr = [[4, 1, 0], 
+       [5, 6, 2], 
+       [3, 2, 4]] 
+	
+# std of the flattened array 
+print("\nstd of arr, axis = None : ", np.std(arr)) 
+	
+# std along the axis = 0 
+print("\nstd of arr, axis = 0 : ", np.std(arr, axis = 0)) 
+
+# std along the axis = 1 
+print("\nstd of arr, axis = 1 : ", np.std(arr, axis = 1)) 
+
+# please fill the following blanks with only two decimal places.
+arr :  [20, 2, 7, 1, 34]
+std of arr : <input size=2 ans="67d51edb8e934ace71df4645ff7adb166de9ae238b4258c55fde2554705e157b" placeholder=1></input>
+
+std of arr, axis = None : <input size=2 ans="897feabcfa2ffcd559fc72e133a78041f81df838ff240988d2f2a9433b3adbce" placeholder=2></input>
+
+std of arr, axis = 0 :  [ 0.81  2.16  <input size=2 ans="f34621a4f3969692df73cc7060915bdf9016a2a321c379cfbda0b09a3319284c" placeholder=3></input>]
+
+std of arr, axis = 1 :  [ 1.69  <input size=2 ans="d529828500236e943da35ebb7fb8a11a56d65f8065407f3f2a9ef2ca66f7f741" placeholder=4></input>  0.81]
+
+
+
+
+
+
+
+</pre>
+<h2 id="answer">Answer</h2>
+<a class="btn" href="javascript:newScoring('Python_VTP_library_Numpy')">Answer</a>
+<script type="text/javascript">
+$(function(){
+ prettyPrint();
+});
+</script>

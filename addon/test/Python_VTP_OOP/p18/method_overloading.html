@@ -1,0 +1,27 @@
+<h2 id="statement">18</h2>
+<pre class="pfpprettyprint" id="scoring-res">
+<DIV class="fl"># A quick-demo of method overloading with default arguments
+class Calculate:
+   def add(self, a, b, c = 0):
+     if c > 0:
+         print("a + b + c = {}".format(a + b + c))
+     else:
+         print("a + b = {}".format(a + b))
+
+c1 = Calculate()
+c1.add(10, 20, 30)
+c1.add(10,20)
+</DIV>
+<DIV class="fr">
+What is the output of the program!
+<input size=25 ans="fcf0bb697fd080c6f5906b1b81b31c7ea5b7a14f38737834dc364d046b57e901" placeholder=1></input>
+<input size=25 ans="42c24ccd4bb202839cfafd599bf90023ae223bded92c16433612f6bf2e23e0de" placeholder=2></input>
+</DIV>
+</pre>
+<h2 id="answer">Answer</h2>
+<a class="btn" href="javascript:newScoring('Python_VTP_OOP')">Answer</a>
+<script type="text/javascript">
+$(function(){
+ prettyPrint();
+});
+</script>

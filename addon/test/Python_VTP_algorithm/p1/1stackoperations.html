@@ -1,0 +1,54 @@
+<h2 id="statement">1</h2>
+Fill in Blanks 
+<h2 id="code">The Source Code</h2>
+<pre class="prettyprint" id="scoring-res"># A quick-demo of using stack operations
+
+class Stack:
+    def __init__(self):
+        self.items = []
+
+    def isEmpty(self):
+        return self.items == []
+
+    def push(self, item):
+        self.items.append(item)
+
+    def pop(self):
+        return self.items.pop()
+
+    def peek(self):
+        return self.items[len(self.items)-1]
+
+    def size(self):
+        return len(self.items)
+   
+s=Stack()    
+print("Is the stack empty?", s.isEmpty())
+s.push(4)
+s.push('dog')
+print("What is the peek element?", s.peek())
+s.push(True)
+print("The size of the stack is", s.size())
+print("Is the stack empty?", s.isEmpty())
+s.push(8.4)
+print("The element for the first pop operation is", s.pop())
+print("The element for the second pop operation is", s.pop())
+print("The size of the stack is", s.size())
+
+Is the stack empty? <input size=2 ans="e96dccda70032396358d948bf4cee8c0b469b7b71c4ac524850dfacf170f4c12" placeholder=1></input>
+What is the peek element? <input size=2 ans="6098ec24ebeb668f9c989de6cf8ce6f5c4af24b920752c19e4fc6d9e894a6249" placeholder=2></input>
+The size of the stack is <input size=2 ans="8efbbe9bc19ad2e043c6cdb187c0a0fedde70b6458443ce0b5648ec04ccf4cdf" placeholder=3></input>
+Is the stack empty? <input size=2 ans="e66c2edf7b92f6a667e87a7bde68155d6a8b0a1a542e1a4a5cb656025b24e977" placeholder=4></input>
+The element for the first pop operation is <input size=2 ans="4401ec31f94751cd95449e9c9ba7ff6d61912db2138e607d3a63bb87afd53ac6" placeholder=5></input>
+The element for the second pop operation is <input size=2 ans="dcc0afa996cb87044344568f7508cec6e91e63c6c28dcefd831b474e51546ada" placeholder=6></input>
+The size of the stack is <input size=2 ans="16badfc6202cb3f8889e0f2779b19218af4cbb736e56acadce8148aba9a7a9f8" placeholder=7></input>
+
+
+</pre>
+<h2 id="answer">Answer</h2>
+<a class="btn" href="javascript:newScoring('Python_VTP_algorithm')">Answer</a>
+<script type="text/javascript">
+$(function(){
+ prettyPrint();
+});
+</script>

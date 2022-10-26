@@ -1,0 +1,38 @@
+<h2 id="statement">21</h2>
+Fill in Blanks 
+<h2 id="code">The Source Code</h2>
+<pre class="prettyprint" id="scoring-res"># A quick-demo of shuffling string 
+# The random.shuffle() doesn?t? work with String. And so, shuffle a string can be done using following step by step approaches.
+# Convert String to list
+# Shuffle the list randomly
+# Convert the shuffled list into String
+
+import random
+
+sampleStr = "Hello"
+print("Original String: ", sampleStr)
+
+# convert string into list
+char_list = list(sampleStr)
+
+# shuffle list
+random.shuffle(char_list)
+
+# convert list to string
+finalStr = ''.join(char_list)
+
+# Assume the resulted shuffled string is Hleol
+print("shuffled String is: ", finalStr)
+
+Original String: <input size=2 ans="1c313f738fd44f58e4b59917f09556c8133e4f00077aa8ffd19e5dad407c0a36" placeholder=1></input>
+shuffled String is: <input size=2 ans="d986c17c4c9a282728ac9f14dbb587314a383928576a111c44245054fa4d2ce5" placeholder=2></input>
+
+
+</pre>
+<h2 id="answer">Answer</h2>
+<a class="btn" href="javascript:newScoring('Python_VTP_library_Numpy')">Answer</a>
+<script type="text/javascript">
+$(function(){
+ prettyPrint();
+});
+</script>

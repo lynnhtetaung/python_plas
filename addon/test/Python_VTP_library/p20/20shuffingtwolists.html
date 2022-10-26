@@ -1,0 +1,46 @@
+<h2 id="statement">20</h2>
+Fill in Blanks 
+<h2 id="code">The Source Code</h2>
+<pre class="prettyprint" id="scoring-res"># A quick-demo of Shuffling two lists at once with the same order
+
+import random
+
+list1_names = ['Jon', 'Emma', 'Kelly', 'Jason']
+list2_salary = [7000, 6500, 9000, 10000]
+
+print("Lists before Shuffling")
+print("Employee Names: ", list1_names)
+print("Employee Salaries: ", list2_salary)
+
+# To Shuffle two List at once with the same order
+mapIndexPosition = list(zip(list1_names, list2_salary))
+random.shuffle(mapIndexPosition)
+list1_names, list2_salary = zip(*mapIndexPosition)
+
+print(" \nLists after Shuffling")
+print("Employee Names: ", list1_names)
+print("Employee Salary: ", list2_salary)
+
+print("\nEmployee name and salary present index 3")
+print(list1_names[3], list2_salary[3])
+
+Lists before Shuffling
+Employee Names:  ['Jon', 'Emma', 'Kelly', 'Jason']
+Employee Salaries:  [7000, 6500, 9000, 10000]
+ 
+Lists after Shuffling
+Employee Names:  ('Jason',<input size=2 ans="87c2560f675604c1a2854e33791b7333f9811788711a137249677a939adb3f7b" placeholder=1></input>, 'Emma', 'Jon')
+Employee Salary:  (10000,<input size=2 ans="41bfca4225d3a520afdb5022e299f79286710f64ea6d126766e5e0e055da80a1" placeholder=2></input>, 6500,<input size=2 ans="103b0ffbbd40c1aaa1024bfa4fddcb4ec591908dd5a1ea477aa2ea8af5621ea6" placeholder=3></input>)
+
+Employee name and salary present index 3
+<input size=2 ans="ba720384a82a208751ca6d203f93a104bb12567d07982aaeba4ca9efbc247dbf" placeholder=4></input> 7000
+
+
+</pre>
+<h2 id="answer">Answer</h2>
+<a class="btn" href="javascript:newScoring('Python_VTP_library')">Answer</a>
+<script type="text/javascript">
+$(function(){
+ prettyPrint();
+});
+</script>

@@ -1,0 +1,23 @@
+{
+  "1dataframecreation" : "Data Frame Creation",
+  "2readExcel" : "Reading data from Excel File",
+  "3writeexcel" : "Writing data into Excel File",
+  "4readCSV" : "Reading data from CSV File",
+  "5writeCSV" : "Writing data into CSV Fiile ",
+  "6indexandselection" : "Indexing and Seleting Data in Pandas Data frame",
+  "7iteration" : "Iteration on Pandas Data frame",
+  "8aggregation" : "Aggregation on Pandas Data frame",
+  "9dateTime" : "Date Time Creation",
+  "10options" : "Pandas Options",
+  "Exception1" : "Exception",
+  "Exception2" : "Exception",
+  "Exception3" : "Exception",
+  "Exception4" : "Exception",
+  "Exception1" : "Exception",
+  "Exception2" : "Exception",
+  "Exception3" : "Exception",
+  "Exception4" : "Exception",
+  "Exception1" : "Exception",
+  "Exception2" : "Exception"
+  
+}

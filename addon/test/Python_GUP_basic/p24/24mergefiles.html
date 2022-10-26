@@ -1,0 +1,28 @@
+<h2 id="statement">24</h2>
+Fill in Blanks 
+<h2 id="code">The Source Code</h2>
+<pre class="prettyprint" id="scoring-res">1 import pandas as pd      
+2 data1 = pd.read_excel('D:\Firstdata.xlsx') 
+3 df1 = pd.DataFrame(data1)	 
+4 data2 = pd.read_excel('D:\Seconddata.xlsx') 
+5 df2 = pd.DataFrame(data2)     
+6 df3 = df2.merge(df1[['Name', 'Marks']]) 
+7 print("Combining second dataframe with specific data from first dataframe", df3) 
+8 df3.to_excel('D:\Result.xlsx', index=True, header=True) 
+
+Question
+Q1.  Which keyword is used to create an alias when importing a module?<input size=2 ans="d59bb6865116899b05411feb5c4d2b3ccb6a9520f1a9824f5df6346b1fd9a0a8" placeholder=1></input>
+Q2.  Which function is used for creating two-dimensional data structure like a two-dimensional array, or a table with rows and columns? <input size=2 ans="94da6d659944a37238f428efe42717bb230d4b69459d986fc93002ec1dc94fb2" placeholder=2></input>
+Q3.  Which function is used to read the excel file data into a DataFrame object?<input size=2 ans="29c4c6f0f09d0e04c6ba756a08fc4f4e64e61de2df73b54375f06fd1b431c4c1" placeholder=3></input>
+Q4.  Which function is used for automatically joining two DataFrames using the specified columns as the keys? <input size=2 ans="33b6e33771b0bb145c8a0c255c838a78b2f13c104ec194fddc0ab9a97ba391d4" placeholder=4></input>
+Q5.  Which function is used to write a DataFrame object into the excel file data? <input size=2 ans="6f6827a3cd4f1281e5f09db8cd2282cec810b4ac6040cbcf5cfa971fcf1f66ac" placeholder=5></input>
+
+
+</pre>
+<h2 id="answer">Answer</h2>
+<a class="btn" href="javascript:newScoring('Python_GUP_basic')">Answer</a>
+<script type="text/javascript">
+$(function(){
+ prettyPrint();
+});
+</script>

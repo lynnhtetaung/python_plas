@@ -1,0 +1,39 @@
+<h2 id="statement">3</h2>
+Fill in Blanks 
+<h2 id="code">The Source Code</h2>
+<pre class="prettyprint" id="scoring-res"># A quick demo of writing data to excel file
+import pandas as pd
+import openpyxl
+
+# create data frame
+df = pd.DataFrame([[11, 21, 31], [12, 22, 32], [31, 32, 33]],
+                  index=['one', 'two', 'three'], columns=['a', 'b', 'c'])
+df.to_excel('D:\DataWrite.xlsx', index=True, header=False)
+print(df)
+
+# Write multiple DataFrames to Excel files
+df2 = df[['a', 'c']]
+print(df2)
+with pd.ExcelWriter('D:\pandas_to_excel.xlsx') as writer:
+    df.to_excel(writer, sheet_name='sheet1')
+    df2.to_excel(writer, sheet_name='sheet2') 
+   
+What is the output of the program?
+        a   b   c
+one   <input size=2 ans="af6b495dd2d7c1174d63ec26b36a86cf4bebe478260becafd815b81cdce71b0f" placeholder=1></input> 21 31
+two    12  22  32
+three  31  32 <input size=2 ans="d4192f06768ab0f257c7f5e17ad021b075b995d4a186754a2ca3194ac77df31a" placeholder=2></input>   
+        a <input size=2 ans="2ba8130322ae7d78c7f54f86b92087593fb1321533531541a78a05b61f7d525d" placeholder=3></input>
+one    11 <input size=2 ans="58bc5b2df18ca14a85d770f78757aff41555f6792317ed188395236a06b27ec7" placeholder=4></input>
+two    12  32
+three  31 <input size=2 ans="0457c48d8fc39719542ac36d4b3ae96327a4b84270943287de7ce07424516b32" placeholder=5></input>
+
+
+</pre>
+<h2 id="answer">Answer</h2>
+<a class="btn" href="javascript:newScoring('Python_VTP_library_Pandas')">Answer</a>
+<script type="text/javascript">
+$(function(){
+ prettyPrint();
+});
+</script>

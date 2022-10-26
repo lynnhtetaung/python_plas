@@ -1,0 +1,41 @@
+<h2 id="statement">31</h2>
+Fill in Blanks 
+<h2 id="code">The Source Code</h2>
+<pre class="prettyprint" id="scoring-res"># A quick-demo of mumpy.argsort()
+# numpy.argsort():This function returns the indices that would sort an array.
+
+
+import numpy as np
+ 
+# Numpy array created
+a = np.array([9, 3, 1, 7, 4, 3, 6])
+ 
+# unsorted array print
+print('Original array:\n', a)
+ 
+# Sort array indices
+b = np.argsort(a)
+print('Sorted indices of original array->', b)
+ 
+# To get sorted array using sorted indices
+# c is temp array created of same len as of b
+c = np.zeros(len(b), dtype = int)
+for i in range(0, len(b)):
+    c[i]= a[b[i]]
+print('Sorted array->', c)
+
+The output of this program is as follows:
+Original array:
+ [9 3 1 7 4 3 6]
+Sorted indices of original array-> [2 1 <input size=2 ans="b2d0bf51e62fc7261ec70d74191b0f5cd902de0617014a14eaf257f6689aea09" placeholder=1></input> 4 6 <input size=2 ans="2ee62f16ca41fe7879853975d5fcb4cb858f6edb5fd0355cfb7948d997e6b6a9" placeholder=2></input> 0]
+Sorted array-> [1 <input size=2 ans="a118106a72bf3449088b34688d6d8ed6801b2ef0484ff1d434844367e615800c" placeholder=3></input> 3 4 6 7 <input size=2 ans="a5c7586b7f3252160f7860577660b8c689ef0c1731aaf58c65f44b55b3d29afa" placeholder=4></input>]
+
+
+</pre>
+<h2 id="answer">Answer</h2>
+<a class="btn" href="javascript:newScoring('Python_VTP_library')">Answer</a>
+<script type="text/javascript">
+$(function(){
+ prettyPrint();
+});
+</script>

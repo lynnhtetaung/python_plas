@@ -1,0 +1,49 @@
+<h2 id="statement">25</h2>
+Fill in Blanks 
+<h2 id="code">The Source Code</h2>
+<pre class="prettyprint" id="scoring-res"># A quick-demo of numpy.mean() method
+# numpy.mean(arr, axis = None) : Compute the arithmetic mean (average) of the given data (array elements) along the specified axis.
+# axis : axis along which we want to calculate the arithmetic mean. axis = 0 means along the column and axis = 1 means working along the row.
+
+import numpy as np 
+	
+# 1D array 
+arr = [20, 2, 7, 1, 34] 
+
+print("arr : ", arr) 
+
+# if arr = [2, 3, 4, 5],then (2+3+4+5)/4 = 3.5 and the output will be printed like 3.5.
+print("mean of arr : ", np.mean(arr)) 
+
+# 2D array 
+arr = [[4, 1, 0], 
+       [5, 6, 2], 
+       [3, 2, 4]] 
+	
+# mean of the flattened array, calculate the sum of all values and then divided by 9
+print("\nmean of arr, axis = None : ", np.mean(arr)) 
+	
+# mean along the axis = 0 that calculates mean value along each column
+print("\nmean of arr, axis = 0 : ", np.mean(arr, axis = 0)) 
+
+# mean along the axis = 1 that calculates mean value along each row
+print("\nmean of arr, axis = 1 : ", np.mean(arr, axis = 1)) 
+
+arr :  [20, 2, 7, 1, 34]
+mean of arr : <input size=2 ans="bc100ad65dd0a093a22cf5b4221a487c985e8ac9c615da5b1a41224fec13e378" placeholder=1></input>
+
+mean of arr, axis = None : <input size=2 ans="2e880742a373e3efff08371380a71982c1efc177afd454e0ef4e7862983691e8" placeholder=2></input>
+
+mean of arr, axis = 0 :  [ 4.  <input size=2 ans="1fbb44ac8222e3ae7987cf499bd538ac6ec9f5f24c3863e1b8f27e1c0624ee02" placeholder=3></input>  2.]
+
+mean of arr, axis = 1 :  [ 1.66666667  4.33333333  <input size=2 ans="46acf95765c7c91674d3ab9cfb30226d67fed4a99db91bb27f80af6c73c19143" placeholder=4></input> ]
+
+
+</pre>
+<h2 id="answer">Answer</h2>
+<a class="btn" href="javascript:newScoring('Python_VTP_library_Numpy')">Answer</a>
+<script type="text/javascript">
+$(function(){
+ prettyPrint();
+});
+</script>

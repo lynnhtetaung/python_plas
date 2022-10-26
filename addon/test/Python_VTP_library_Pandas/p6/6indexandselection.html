@@ -1,0 +1,76 @@
+<h2 id="statement">6</h2>
+Fill in Blanks 
+<h2 id="code">The Source Code</h2>
+<pre class="prettyprint" id="scoring-res"># A quick demo of indexing and selection on pandas
+
+import pandas as pd
+
+# n dimentional array into a pandas dataframe
+data = [['Axel',32], ['Alice', 26], ['Alex', 45]]
+df = pd.DataFrame(data,columns=['Name','Age'])
+print(df)
+
+# to select a column, the column name can be used.
+print(df['Name'])
+
+# to add a column to a dataframe.
+c = pd.DataFrame([1,2,3], columns=['Example'])
+df['Example'] = c['Example']
+print(df)
+
+# delete a column using the keyword del.
+del df['Example']
+
+# select a row using .loc[label].
+print(df.loc[0])
+
+# another method to select a row using .iloc[label].
+print(df.iloc[2])
+
+# delete the first row. 
+df = df.drop(0)
+print(df)
+
+# .append() appends the row on the dataframe.
+user = pd.DataFrame([['Vivian',33]], columns= ['Name','Age'])
+
+# add it to the existing dataframe.
+df = df.append(user)
+print(df)
+
+What is the output of the program?
+    Name  Age
+0   Axel   32
+1  Alice   26
+2   Alex   45
+0     Axel
+<input size=2 ans="bb668ca95563216088b98a62557fa1e26802563f3919ac78ae30533bb9ed422c" placeholder=1></input>  <input size=2 ans="793f95b11e8143935eb2e68172a16b4578a36c5b4bcd58170ad0e402c509b12a" placeholder=2></input>
+2     Alex
+Name: Name, dtype: object
+    Name  Age  Example
+0   Axel   32    <input size=2 ans="3d3286f7cd19074f04e514b0c6c237e757513fb32820698b790e1dec801d947a" placeholder=3></input>
+1  Alice   26      2
+2   Alex   45    <input size=2 ans="b3dfdc6efe322a6feccb0d081e88ffac20b0f28e8495efa76188c8dc3ada6181" placeholder=4></input>
+Name    Axel
+<input size=2 ans="adfc02c48b6a83c83a86fe206cc9bd15783146daca183125daa1c5fd79fc39a3" placeholder=5></input>      32
+Name: 0, dtype: object
+Name   <input size=2 ans="d19db731cced75e3027569cbbe3577019ff4fb64f8df6a018a2a42c7e344d20b" placeholder=6></input>
+Age    <input size=2 ans="db2e7f1bd5ab9968ae76199b7cc74795ca7404d5a08d78567715ce532f9d2669" placeholder=7></input>
+Name: 2, dtype: object
+    Name  Age
+1  Alice   26
+2   Alex   45
+    Name  Age
+1   Alice   26
+2    Alex   45
+0   <input size=2 ans="c54a4c3f9ae5ec65d98e2b1a2a04ff56e45d3592558c04bea375241daf67d000" placeholder=8></input>   <input size=2 ans="9eb06127e27d1bf4a69a478aecb89c3f8b99dd4beeca843efd903b24586b1f4e" placeholder=9></input>
+
+
+</pre>
+<h2 id="answer">Answer</h2>
+<a class="btn" href="javascript:newScoring('Python_VTP_library_Pandas')">Answer</a>
+<script type="text/javascript">
+$(function(){
+ prettyPrint();
+});
+</script>

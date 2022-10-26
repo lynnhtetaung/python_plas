@@ -1,0 +1,134 @@
+<style type="text/css">
+            textarea, iframe {
+                border: 1px solid grey;
+                height: 500px;
+                width: 98%;
+                resize: none;   
+            }
+             div.form-popup {
+        background-color: #fed9ff;
+        width: 900px;
+        height: 600px;
+        overflow-x: hidden;
+        overflow-y: auto;
+        padding: 20px;
+      }
+ .form-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px dotted #f1f1f1;
+  text-align:justify;  
+  text-justify:initial;
+
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 900px;
+  padding: 20px;
+  background-color: lightyellow;
+}
+
+
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 10%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: mediumvioletred;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+</style>
+<h2 id="statement">17</h2>
+<table >
+  <tr>
+     
+
+<td>Input excel file to the source code<br><figure> <img src="/img/pivottable.JPG" alt="Elephant at sunset"> 
+</figure></td>
+   </tr>  
+   
+ <tr>
+     
+
+<td>Output excel file from the source code<br><figure> <img src="/img/P182.JPG" alt="Elephant at sunset"> 
+</figure></td>
+     
+  </tr>  
+<tr>
+        
+          <td>Output excel file from the modified source code<br><figure> <img src="/img/P183.JPG" alt="Elephant at sunset"> 
+</figure></td>
+        
+     </tr>
+</table>
+
+<a href="source_codes/Problem17.zip" download> Click Here To Download Source Code</a>
+<br> Please modify the following source code!
+<h4 id="code">Source Code</h4>
+<pre class="prettyprint" id="scoring-res" >01:import pandas as pd
+02:import openpyxl
+03:if __name__ == "__main__":
+04:	data = pd.read_excel(&#39;D:\Pivottable.xlsx&#39;)
+05:	df=pd.DataFrame(data)
+06:	#create pivot table according to specific column names
+07:	df = pd.pivot_table(df, index=["Name","University","Measure_Date"], aggfunc="mean")
+08:	df.to_excel(&#39;D:\Pivottable1.xlsx&#39;, index=True, header=True)
+
+</pre>
+<h4 id="code1">the output</h4>
+<pre class = "prettyprint" id = "scoring-res" <h2 id="code1"></h2>
+01<input type="text" name="intext" id="mytext1" 0 size=150 ansHint='import pandas as pd^import openpyxl^if __name__ == "__main__":^	data = pd.read_excel('D:\Pivottable.xlsx')^	df=pd.DataFrame(data)^	#create pivot table according to specific column names^	df = pd.pivot_table(df, index=["Age","Name","University"], aggfunc="mean")^	df.to_excel('D:\Pivottable2.xlsx', index=True, header=True)' missingele="Age^Name^University^Pivottable2"  ansSpace="985657722dfa15692c9428164ba7cc2e30730ef25281c735b36b31dcdb78b9b6" ans="ee235cf0a489fc2d2ecc2db3ce4818d8fa7bf7a4b36e34c97613e1c86c05d654" value='import pandas as pd' onkeydown="myFunction()">  </input>
+02<input type="text" name="intext" id="mytext2" 1 size=150 ansHint='import pandas as pd^import openpyxl^if __name__ == "__main__":^	data = pd.read_excel('D:\Pivottable.xlsx')^	df=pd.DataFrame(data)^	#create pivot table according to specific column names^	df = pd.pivot_table(df, index=["Age","Name","University"], aggfunc="mean")^	df.to_excel('D:\Pivottable2.xlsx', index=True, header=True)' missingele="Age^Name^University^Pivottable2"  ansSpace="638310ae60d2d6032c9e98678139ec6d57b42586bcef45d05245b3ecc5699f0e" ans="89b30944419405ca61dfb8a9531b743e03c6fea1e641625f604b6ed806289bd1" value='import openpyxl' onkeydown="myFunction()">  </input>
+03<input type="text" name="intext" id="mytext3" 2 size=150 ansHint='import pandas as pd^import openpyxl^if __name__ == "__main__":^	data = pd.read_excel('D:\Pivottable.xlsx')^	df=pd.DataFrame(data)^	#create pivot table according to specific column names^	df = pd.pivot_table(df, index=["Age","Name","University"], aggfunc="mean")^	df.to_excel('D:\Pivottable2.xlsx', index=True, header=True)' missingele="Age^Name^University^Pivottable2"  ansSpace="6b75096ae7b992b9b1cc9b3e6217e26a2299a7f1447b3e556a9168bd6f67b485" ans="380268526d80615ca8f22d55f9935fe4a56652f366e54738f5d054bd0cd87c69" value='if __name__ == "__main__":' onkeydown="myFunction()">  </input>
+04<input type="text" name="intext" id="mytext4" 3 size=150 ansHint='import pandas as pd^import openpyxl^if __name__ == "__main__":^	data = pd.read_excel('D:\Pivottable.xlsx')^	df=pd.DataFrame(data)^	#create pivot table according to specific column names^	df = pd.pivot_table(df, index=["Age","Name","University"], aggfunc="mean")^	df.to_excel('D:\Pivottable2.xlsx', index=True, header=True)' missingele="Age^Name^University^Pivottable2"  ansSpace="fad6b7d6f0c9b0b8d79a47ea26dea9d53412a4800877311fa9a9b8ce7fd11436" ans="b7f16c37116525b20412c54ed2072e12714953a802f888b233b1767aea1b0ad0" value='	data = pd.read_excel(&#39;D:\Pivottable.xlsx&#39;)' onkeydown="myFunction()">  </input>
+05<input type="text" name="intext" id="mytext5" 4 size=150 ansHint='import pandas as pd^import openpyxl^if __name__ == "__main__":^	data = pd.read_excel('D:\Pivottable.xlsx')^	df=pd.DataFrame(data)^	#create pivot table according to specific column names^	df = pd.pivot_table(df, index=["Age","Name","University"], aggfunc="mean")^	df.to_excel('D:\Pivottable2.xlsx', index=True, header=True)' missingele="Age^Name^University^Pivottable2"  ansSpace="fd01a33f2b319bd91fd374eae1c1f2d986e559106dba7ff8f6204cd25cc3b465" ans="d85d77c4f3e9e11669e65c555ac09b3d897f65c5a5285051cf825f0080cecdc5" value='	df=pd.DataFrame(data)' onkeydown="myFunction()">  </input>
+06<input type="text" name="intext" id="mytext6" 5 size=150 ansHint='import pandas as pd^import openpyxl^if __name__ == "__main__":^	data = pd.read_excel('D:\Pivottable.xlsx')^	df=pd.DataFrame(data)^	#create pivot table according to specific column names^	df = pd.pivot_table(df, index=["Age","Name","University"], aggfunc="mean")^	df.to_excel('D:\Pivottable2.xlsx', index=True, header=True)' missingele="Age^Name^University^Pivottable2"  ansSpace="39583a613d45607e6e05d1934882a0a32aeea8bdeffb5220af13db2159d3e49a" ans="b4e5982ceadf3f6398e93e23003d4f109c8e1a79ad0e44d8f0c462393e22ebb1" value='	#create pivot table according to specific column names' onkeydown="myFunction()">  </input>
+07<input type="text" name="intext" id="mytext7" 6 size=150 ansHint='import pandas as pd^import openpyxl^if __name__ == "__main__":^	data = pd.read_excel('D:\Pivottable.xlsx')^	df=pd.DataFrame(data)^	#create pivot table according to specific column names^	df = pd.pivot_table(df, index=["Age","Name","University"], aggfunc="mean")^	df.to_excel('D:\Pivottable2.xlsx', index=True, header=True)' missingele="Age^Name^University^Pivottable2"  ansSpace="a1ce250a8efa3bdf5e6d8923612b77f72530d4b7322484a4c95b0165574a00b8" ans="f13c27d3d600c0a77be0a9f0cb3079514c491fc0bd9e17015a95fa597d7126e4" value='	df = pd.pivot_table(df, index=["Name","University","Measure_Date"], aggfunc="mean")' onkeydown="myFunction()">  </input>
+08<input type="text" name="intext" id="mytext8" 7 size=150 ansHint='import pandas as pd^import openpyxl^if __name__ == "__main__":^	data = pd.read_excel('D:\Pivottable.xlsx')^	df=pd.DataFrame(data)^	#create pivot table according to specific column names^	df = pd.pivot_table(df, index=["Age","Name","University"], aggfunc="mean")^	df.to_excel('D:\Pivottable2.xlsx', index=True, header=True)' missingele="Age^Name^University^Pivottable2"  ansSpace="290b9ef2cf968e1fb7b957a65d80f8a5b43307f07d0e3decae4be7822d051cc9" ans="307f3cbf441469789ab88b90fbc07c490f3caa93c1f8a02ca44f57bc4ffd97da" value='	df.to_excel(&#39;D:\Pivottable1.xlsx&#39;, index=True, header=True)' onkeydown="myFunction()">  </input>
+<script src="myScript.js"></script></div></pre><h2 id="answer">Answer</h2>
+<a class="btn" href="javascript:newScoringCMP('Python_CMP_Pandas_Excel')">Answer</a>
+<a class="btn btn-success" onclick="ansFileSave()">File Save</a>
+<input onclick="openForm();" type="button" value="Hint" class="btn" style="float: right;">
+<div class="form-popup" id="myForm">
+  <form class="form-container">
+    <h1>Hint</h1>
+       <p>1. Read the input excel file:<b>Pivottable.xlsx</b>.<br>
+		2. Then, <b>create pandas data frame</b> to create pivot table in excel file.<br>
+		3. Create the <b> pivot table with Age, Name, and University</b> columns.<br>
+		4. Finally, write the created pivot table into new excel file:<b>Pivottable2.xlsx</b>.
+        <br> If you want to study more about the pivot table, please visit this link.<a href="source_codes/Pandas Pivot table   Create Pivot Table Using Pandas in Python.html" download> Click Here</a>		
+    
+        <br>
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+  </form>
+</div>
+<script type="text/javascript">
+          
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+</script>
+
+<a id="dldlink"></a>
+<script type="text/javascript" src="allowtab.js"></script>

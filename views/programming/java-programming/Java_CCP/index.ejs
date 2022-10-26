@@ -1,0 +1,99 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" >
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<link rel="shortcut icon" href="/img/okayama.png" type="image/png" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, width=device-width">
+
+	<title>Offline JPLAS</title>
+
+	<link rel="stylesheet" href="../../css/skyblue.css">
+
+	<link rel="stylesheet" href="/javascripts/demo/css/docs.css">
+	<link rel="stylesheet" href="/javascripts/demo/google-code-prettify/prettify.css">
+  	<link rel="stylesheet" href="jquery-ui-1.11.4.custom/jquery-ui.css">
+
+	<script src="/javascripts/jquery.js"></script>
+	<script src="/javascripts/jplas2015.js"></script>
+	<!-- <script type="text/javascript">
+	baseTxt = location.href.split("?")[1];
+	$(function(){
+		init();
+	});
+	</script> -->
+
+	<!--[if lt IE 9]>
+		<script type="text/javascript" src="demo/ie/htmlshiv.js"></script>
+		<script type="text/javascript" src="demo/ie/respond.src.js"></script>
+	<![endif]-->
+	<script src="/javascripts/sha256.js" type="text/javascript"></script>
+	<script type="text/javascript" src="/javascripts/scoring.js"></script>
+	<script type="text/javascript" src="/javascripts/storage.js"></script>
+	<script type="text/javascript" src="/javascripts/distinction.js"></script>
+	<!-- <script src="javascript/index.js" type="text/javascript" charset="utf-8" ></script> -->
+	<style>
+	h2#statement:before{
+		content:"Problem #";
+	}
+	code.fillinblank input{
+		width:40px;
+	}
+	code{
+		-moz-tab-size: 4 ;
+		-o-tab-size: 4 ;
+		tab-size: 4	 ;
+	}
+	</style>
+
+</head>
+<body>
+
+<div class="bg-dark padding-y-10">
+	<div class="container text-center">
+		<h1>Offline JPLAS</h1>
+
+		<!-- <a class="btn btn-success" onClick="toTop()">TOP</a> -->
+		<a class="btn btn-success" a href="javascript:onclick=goBackToProblemList()" style="text-decoration: none">
+			<!-- <h1 class="mt-3 mb-3 text-white">
+				<%= title %>
+			</h1> -->
+			TOP
+		</a>
+		<a class="btn btn-info" onclick="window.open('about:blank','_self').close()">END</a>
+		<!-- <div class="jplas" src="login/whoami.jsp"></div> -->
+	</div>
+	</div>
+
+<div class="container">
+	<div class="row">
+		 <div class="col md-3" style="display: none;">
+			<div class="sidemenu js-sidemenu">
+				<h5>Sidemenu</h5>
+				<div>
+					<a href="#problems">Problems</a>
+					<a href="#submission">Submission</a>
+					<a href="#end">End</a>
+
+				</div>
+			</div>
+		</div> 
+		
+		<div class="col md-12 float-right jplas">
+			<%- question %>
+			<button class="btn float-right" id="next" value="Next" onclick="onRouteChange('Next')" >Next</button>
+			<button class="btn float-right margin-x-10" id="prev" value="Prev" onclick="onRouteChange('Prev')" >Prev</button>
+		</div>
+		<input type="hidden" id="totalProblems" value="<%= totalProblems %>" />
+	</div>
+</div>
+
+
+<script type="text/javascript" src="/javascripts/programming.general.js"></script>
+<script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+<script src="/javascripts/demo/js/jquery.sticky-kit.min.js"></script>
+<script src="/javascripts/demo/google-code-prettify/prettify.js"></script>
+<script src="/javascripts/demo/js/docs.js"></script>
+</body>
+</html>

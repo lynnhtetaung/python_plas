@@ -1,0 +1,55 @@
+<h2 id="statement">13</h2>
+Fill in Blanks 
+<h2 id="code">The Source Code</h2>
+<pre class="prettyprint" id="scoring-res"># A quick-demo of around() function usage 
+#This mathematical function helps user to evenly round array elements to the given number of decimals.
+
+
+import numpy as np
+ 
+in_array = [.3, 1.2, 2.1, 3.5, 4.4, 10.1]
+print ("Input array : \n", in_array)
+ 
+round_off_values = np.around(in_array)
+print ("\nRounded values : \n", round_off_values)
+ 
+ 
+in_array = [.53, 1.54, .71]
+print ("\nInput array : \n", in_array)
+ 
+round_off_values = np.around(in_array)
+print ("\nRounded values : \n", round_off_values)
+ 
+in_array = [.5538, 1.33354, .71445]
+print ("\nInput array : \n", in_array)
+ 
+round_off_values = np.around(in_array, decimals = 3)
+print ("\nRounded values : \n", round_off_values)
+
+Input array : 
+[0.3, 1.2, 2.1, 3.5, 4.4, 10.1]
+
+Rounded values : 
+[  0.  <input size=2 ans="fb5f8bf650bfaea08ae01d87c3e1d0d3ebf28a1a89b819ebdbecde80fc5e13c4" placeholder=1></input>   2.  <input size=2 ans="203d97387a888c2f417106fce10ae44b0627c8ab1b145ea4c874ed6571c32209" placeholder=2></input>   4.  10.]
+
+Input array : 
+[0.53, 1.54, 0.71]
+
+Rounded values : 
+[ 1.  <input size=2 ans="6cdb3c455dc70d2583b8fe23542dd019b38aea318204a48161b91bb9c14a5946" placeholder=3></input>  1.]
+
+Input array : 
+[0.5538, 1.33354, 0.71445]
+
+Rounded values : 
+[<input size=2 ans="71eb462efd1dd1b04f8f543413c7755bf915d6f1982fd33f9dfccbd39b82cbd7" placeholder=4></input>  1.334  <input size=2 ans="06b6a1f304233e4ed9a64da4068069cd40d1424e1f9de26e1c060a7d8d282cdb" placeholder=5></input>]
+
+
+</pre>
+<h2 id="answer">Answer</h2>
+<a class="btn" href="javascript:newScoring('Python_VTP_library')">Answer</a>
+<script type="text/javascript">
+$(function(){
+ prettyPrint();
+});
+</script>

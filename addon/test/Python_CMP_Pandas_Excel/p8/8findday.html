@@ -1,0 +1,154 @@
+<style type="text/css">
+            textarea, iframe {
+                border: 1px solid grey;
+                height: 500px;
+                width: 98%;
+                resize: none;   
+            }
+             div.form-popup {
+        background-color: #fed9ff;
+        width: 900px;
+        height: 600px;
+        overflow-x: hidden;
+        overflow-y: auto;
+        padding: 20px;
+      }
+ .form-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px dotted #f1f1f1;
+  text-align:justify;  
+  text-justify:initial;
+
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 900px;
+  padding: 20px;
+  background-color: lightyellow;
+}
+
+
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 10%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: mediumvioletred;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+</style>
+<h2 id="statement">8</h2>
+<table >
+  <tr>
+     
+
+<td>Input excel file to the source code<br><figure> <img src="/img/findday.JPG" alt="Elephant at sunset"> 
+</figure></td>
+   </tr>  
+   
+ <tr>
+     
+
+<td>Output excel file from the source code<br><figure> <img src="/img/P92.JPG" alt="Elephant at sunset"> 
+</figure></td>
+     
+  </tr>  
+<tr>        
+ <td>Output excel file from the modified source code<br><figure> <img src="/img/P93.JPG" alt="Elephant at sunset"> 
+</figure></td>
+        
+     </tr>
+</table>
+
+<a href="source_codes/Problem8.zip" download> Click Here To Download Source Code</a>
+<br> Please modify the following source code!
+<h4 id="code">Source Code</h4>
+<pre class="prettyprint" id="scoring-res" >01:# Python program to Find day of  the week for a given date
+02:import datetime
+03:import calendar
+04:import pandas as pd
+05:import openpyxl
+06:def findDay(date):
+07:	born = datetime.datetime.strptime(date, &#39;%d %m %Y&#39;).weekday()
+08:	return (calendar.day_name[born])#return the name of the day
+09:if __name__ == "__main__":
+10:	data = pd.read_excel(&#39;D:\Studentinformation.xlsx&#39;)
+11:	df=pd.DataFrame(data)#create dataframe to make operations
+12:	df[&#39;Day_of_Week&#39;] = None#create a new column
+13:	index_date = df.columns.get_loc(&#39;Birth_Date&#39;)#get index column location in excel file
+14:	index_day = df.columns.get_loc(&#39;Day_of_Week&#39;)#get index column location in excel file
+15:	for row in range(0, len(df)):
+16:		df.iat[row, index_day] = findDay(df.iat[row, index_date])
+17:	df = df[[&#39;Student&#39;,&#39;Birth_Date&#39;,&#39;Day_of_Week&#39;,&#39;Subject&#39;,&#39;Course_Startingdate&#39;]].copy()
+18:	df.to_excel(&#39;D:\Studentinformation1.xlsx&#39;, index=True, header=True)
+
+</pre>
+<h4 id="code1">the output</h4>
+<pre class = "prettyprint" id = "scoring-res" <h2 id="code1"></h2>
+01<input type="text" name="intext" id="mytext1" 0 size=150 ansHint='# Python program to Find day of  the week for a given date^import datetime^import calendar^import pandas as pd^import openpyxl^def findDay(date):^	born = datetime.datetime.strptime(date, '%d %m %Y').weekday()^	return (calendar.day_name[born])#return the name of the day^if __name__ == "__main__":^	data = pd.read_excel('D:\Studentinformation.xlsx')^	df=pd.DataFrame(data)#create dataframe to make operations^	df['Course_Startingday'] = None#create a new column^	index_date = df.columns.get_loc('Course_Startingdate')#get index column location in excel file^	index_day = df.columns.get_loc('Course_Startingday')#get index column location in excel file^	for row in range(0, len(df)):^		df.iat[row, index_day] = findDay(df.iat[row, index_date])^	df = df[['Student','Birth_Date','Subject','Course_Startingdate','Course_Startingday']].copy()^	df.to_excel('D:\Studentinformation2.xlsx', index=True, header=True)' missingele="Course_Startingday^Course_Startingdate^Studentinformation2"  ansSpace="f0db3b64405098044c0a7d90997748f2a907126622004c0e796022ed2ae2f9f1" ans="1fa8a70c62b2d5a5398683199ec1066b19c59e910ae3f4a46ee486209c15a4d7" value='# Python program to Find day of  the week for a given date' onkeydown="myFunction()">  </input>
+02<input type="text" name="intext" id="mytext2" 1 size=150 ansHint='# Python program to Find day of  the week for a given date^import datetime^import calendar^import pandas as pd^import openpyxl^def findDay(date):^	born = datetime.datetime.strptime(date, '%d %m %Y').weekday()^	return (calendar.day_name[born])#return the name of the day^if __name__ == "__main__":^	data = pd.read_excel('D:\Studentinformation.xlsx')^	df=pd.DataFrame(data)#create dataframe to make operations^	df['Course_Startingday'] = None#create a new column^	index_date = df.columns.get_loc('Course_Startingdate')#get index column location in excel file^	index_day = df.columns.get_loc('Course_Startingday')#get index column location in excel file^	for row in range(0, len(df)):^		df.iat[row, index_day] = findDay(df.iat[row, index_date])^	df = df[['Student','Birth_Date','Subject','Course_Startingdate','Course_Startingday']].copy()^	df.to_excel('D:\Studentinformation2.xlsx', index=True, header=True)' missingele="Course_Startingday^Course_Startingdate^Studentinformation2"  ansSpace="e56ebd13d76e46b6506dc69e10740e49e193f720657f74c11bcad1500524e684" ans="16be7fea365572cda20344cd59952654fdbd53beda9dc950a6685c7b6dc92f25" value='import datetime' onkeydown="myFunction()">  </input>
+03<input type="text" name="intext" id="mytext3" 2 size=150 ansHint='# Python program to Find day of  the week for a given date^import datetime^import calendar^import pandas as pd^import openpyxl^def findDay(date):^	born = datetime.datetime.strptime(date, '%d %m %Y').weekday()^	return (calendar.day_name[born])#return the name of the day^if __name__ == "__main__":^	data = pd.read_excel('D:\Studentinformation.xlsx')^	df=pd.DataFrame(data)#create dataframe to make operations^	df['Course_Startingday'] = None#create a new column^	index_date = df.columns.get_loc('Course_Startingdate')#get index column location in excel file^	index_day = df.columns.get_loc('Course_Startingday')#get index column location in excel file^	for row in range(0, len(df)):^		df.iat[row, index_day] = findDay(df.iat[row, index_date])^	df = df[['Student','Birth_Date','Subject','Course_Startingdate','Course_Startingday']].copy()^	df.to_excel('D:\Studentinformation2.xlsx', index=True, header=True)' missingele="Course_Startingday^Course_Startingdate^Studentinformation2"  ansSpace="f32c3b8e44d80d618bd8b29ba0efc5a8e1f711a9d03023eb8a09de8ccab7dab5" ans="4a4974c54e7f34067037c1301d061b53424e046b239f4018d6c2ed60e99dac8b" value='import calendar' onkeydown="myFunction()">  </input>
+04<input type="text" name="intext" id="mytext4" 3 size=150 ansHint='# Python program to Find day of  the week for a given date^import datetime^import calendar^import pandas as pd^import openpyxl^def findDay(date):^	born = datetime.datetime.strptime(date, '%d %m %Y').weekday()^	return (calendar.day_name[born])#return the name of the day^if __name__ == "__main__":^	data = pd.read_excel('D:\Studentinformation.xlsx')^	df=pd.DataFrame(data)#create dataframe to make operations^	df['Course_Startingday'] = None#create a new column^	index_date = df.columns.get_loc('Course_Startingdate')#get index column location in excel file^	index_day = df.columns.get_loc('Course_Startingday')#get index column location in excel file^	for row in range(0, len(df)):^		df.iat[row, index_day] = findDay(df.iat[row, index_date])^	df = df[['Student','Birth_Date','Subject','Course_Startingdate','Course_Startingday']].copy()^	df.to_excel('D:\Studentinformation2.xlsx', index=True, header=True)' missingele="Course_Startingday^Course_Startingdate^Studentinformation2"  ansSpace="377f10905fabf48d72b880f4aa7ae05d4ab0748e6c65c02bea4bf6526bc9f968" ans="0ef9ee95d3ed1e4c5b5fad8c121552e20bd34345fe644e338a85d7c7b9c7ee20" value='import pandas as pd' onkeydown="myFunction()">  </input>
+05<input type="text" name="intext" id="mytext5" 4 size=150 ansHint='# Python program to Find day of  the week for a given date^import datetime^import calendar^import pandas as pd^import openpyxl^def findDay(date):^	born = datetime.datetime.strptime(date, '%d %m %Y').weekday()^	return (calendar.day_name[born])#return the name of the day^if __name__ == "__main__":^	data = pd.read_excel('D:\Studentinformation.xlsx')^	df=pd.DataFrame(data)#create dataframe to make operations^	df['Course_Startingday'] = None#create a new column^	index_date = df.columns.get_loc('Course_Startingdate')#get index column location in excel file^	index_day = df.columns.get_loc('Course_Startingday')#get index column location in excel file^	for row in range(0, len(df)):^		df.iat[row, index_day] = findDay(df.iat[row, index_date])^	df = df[['Student','Birth_Date','Subject','Course_Startingdate','Course_Startingday']].copy()^	df.to_excel('D:\Studentinformation2.xlsx', index=True, header=True)' missingele="Course_Startingday^Course_Startingdate^Studentinformation2"  ansSpace="4837f4d0d18a534d62e5d043ce2bf35a22e8b31e1498063f67b2c460b67d5444" ans="555fd55c188f0151d6df2c1183044092da991e68cbb44489b076e1ef3b0110ef" value='import openpyxl' onkeydown="myFunction()">  </input>
+06<input type="text" name="intext" id="mytext6" 5 size=150 ansHint='# Python program to Find day of  the week for a given date^import datetime^import calendar^import pandas as pd^import openpyxl^def findDay(date):^	born = datetime.datetime.strptime(date, '%d %m %Y').weekday()^	return (calendar.day_name[born])#return the name of the day^if __name__ == "__main__":^	data = pd.read_excel('D:\Studentinformation.xlsx')^	df=pd.DataFrame(data)#create dataframe to make operations^	df['Course_Startingday'] = None#create a new column^	index_date = df.columns.get_loc('Course_Startingdate')#get index column location in excel file^	index_day = df.columns.get_loc('Course_Startingday')#get index column location in excel file^	for row in range(0, len(df)):^		df.iat[row, index_day] = findDay(df.iat[row, index_date])^	df = df[['Student','Birth_Date','Subject','Course_Startingdate','Course_Startingday']].copy()^	df.to_excel('D:\Studentinformation2.xlsx', index=True, header=True)' missingele="Course_Startingday^Course_Startingdate^Studentinformation2"  ansSpace="765f90f1cf33d32ae2941448a0a49944e9cc3a686a1b412d7f008d2a0522e4bd" ans="765f90f1cf33d32ae2941448a0a49944e9cc3a686a1b412d7f008d2a0522e4bd" value='def findDay(date):' onkeydown="myFunction()">  </input>
+07<input type="text" name="intext" id="mytext7" 6 size=150 ansHint='# Python program to Find day of  the week for a given date^import datetime^import calendar^import pandas as pd^import openpyxl^def findDay(date):^	born = datetime.datetime.strptime(date, '%d %m %Y').weekday()^	return (calendar.day_name[born])#return the name of the day^if __name__ == "__main__":^	data = pd.read_excel('D:\Studentinformation.xlsx')^	df=pd.DataFrame(data)#create dataframe to make operations^	df['Course_Startingday'] = None#create a new column^	index_date = df.columns.get_loc('Course_Startingdate')#get index column location in excel file^	index_day = df.columns.get_loc('Course_Startingday')#get index column location in excel file^	for row in range(0, len(df)):^		df.iat[row, index_day] = findDay(df.iat[row, index_date])^	df = df[['Student','Birth_Date','Subject','Course_Startingdate','Course_Startingday']].copy()^	df.to_excel('D:\Studentinformation2.xlsx', index=True, header=True)' missingele="Course_Startingday^Course_Startingdate^Studentinformation2"  ansSpace="0530c4d9e8e723353597088b158e1c708e979652967c19d34c3ae26a913320e9" ans="9197e1af8dcdc314142ec139aba0611a3dfd749a4d88b0f04e1eaebe57b98879" value='	born = datetime.datetime.strptime(date, &#39;%d %m %Y&#39;).weekday()' onkeydown="myFunction()">  </input>
+08<input type="text" name="intext" id="mytext8" 7 size=150 ansHint='# Python program to Find day of  the week for a given date^import datetime^import calendar^import pandas as pd^import openpyxl^def findDay(date):^	born = datetime.datetime.strptime(date, '%d %m %Y').weekday()^	return (calendar.day_name[born])#return the name of the day^if __name__ == "__main__":^	data = pd.read_excel('D:\Studentinformation.xlsx')^	df=pd.DataFrame(data)#create dataframe to make operations^	df['Course_Startingday'] = None#create a new column^	index_date = df.columns.get_loc('Course_Startingdate')#get index column location in excel file^	index_day = df.columns.get_loc('Course_Startingday')#get index column location in excel file^	for row in range(0, len(df)):^		df.iat[row, index_day] = findDay(df.iat[row, index_date])^	df = df[['Student','Birth_Date','Subject','Course_Startingdate','Course_Startingday']].copy()^	df.to_excel('D:\Studentinformation2.xlsx', index=True, header=True)' missingele="Course_Startingday^Course_Startingdate^Studentinformation2"  ansSpace="b9c0eb73be0d3e5970c8a4b8cff22b71e3c362c00c3821584c763f03b418cbdf" ans="2209e23b1701f26c9e1f96ae20872311ed7c7c905a53d058b9bc07cafaa97b0c" value='	return (calendar.day_name[born])#return the name of the day' onkeydown="myFunction()">  </input>
+09<input type="text" name="intext" id="mytext9" 8 size=150 ansHint='# Python program to Find day of  the week for a given date^import datetime^import calendar^import pandas as pd^import openpyxl^def findDay(date):^	born = datetime.datetime.strptime(date, '%d %m %Y').weekday()^	return (calendar.day_name[born])#return the name of the day^if __name__ == "__main__":^	data = pd.read_excel('D:\Studentinformation.xlsx')^	df=pd.DataFrame(data)#create dataframe to make operations^	df['Course_Startingday'] = None#create a new column^	index_date = df.columns.get_loc('Course_Startingdate')#get index column location in excel file^	index_day = df.columns.get_loc('Course_Startingday')#get index column location in excel file^	for row in range(0, len(df)):^		df.iat[row, index_day] = findDay(df.iat[row, index_date])^	df = df[['Student','Birth_Date','Subject','Course_Startingdate','Course_Startingday']].copy()^	df.to_excel('D:\Studentinformation2.xlsx', index=True, header=True)' missingele="Course_Startingday^Course_Startingdate^Studentinformation2"  ansSpace="c922fa272caab3c25909a648780573cd932b3ad17de468d3be8e8892e5b7a8f9" ans="9ff48b9cf6e0b190bb4aa1fde271627edc741e6b8707d97ea5da31d6c4523d21" value='if __name__ == "__main__":' onkeydown="myFunction()">  </input>
+10<input type="text" name="intext" id="mytext10" 9 size=150 ansHint='# Python program to Find day of  the week for a given date^import datetime^import calendar^import pandas as pd^import openpyxl^def findDay(date):^	born = datetime.datetime.strptime(date, '%d %m %Y').weekday()^	return (calendar.day_name[born])#return the name of the day^if __name__ == "__main__":^	data = pd.read_excel('D:\Studentinformation.xlsx')^	df=pd.DataFrame(data)#create dataframe to make operations^	df['Course_Startingday'] = None#create a new column^	index_date = df.columns.get_loc('Course_Startingdate')#get index column location in excel file^	index_day = df.columns.get_loc('Course_Startingday')#get index column location in excel file^	for row in range(0, len(df)):^		df.iat[row, index_day] = findDay(df.iat[row, index_date])^	df = df[['Student','Birth_Date','Subject','Course_Startingdate','Course_Startingday']].copy()^	df.to_excel('D:\Studentinformation2.xlsx', index=True, header=True)' missingele="Course_Startingday^Course_Startingdate^Studentinformation2" ansSpace="12ab127e21150a1e4fcb04c75d98f167e9d89f767125045010f3297d72934258" ans="7580d3a121c57a2f2c9f6ed5bfa91dcb37c7cfba1ef80f2b34e175d0d88cacb9" value='	data = pd.read_excel(&#39;D:\Studentinformation.xlsx&#39;)' onkeydown="myFunction()"></input>
+11<input type="text" name="intext" id="mytext11" 10 size=150 ansHint='# Python program to Find day of  the week for a given date^import datetime^import calendar^import pandas as pd^import openpyxl^def findDay(date):^	born = datetime.datetime.strptime(date, '%d %m %Y').weekday()^	return (calendar.day_name[born])#return the name of the day^if __name__ == "__main__":^	data = pd.read_excel('D:\Studentinformation.xlsx')^	df=pd.DataFrame(data)#create dataframe to make operations^	df['Course_Startingday'] = None#create a new column^	index_date = df.columns.get_loc('Course_Startingdate')#get index column location in excel file^	index_day = df.columns.get_loc('Course_Startingday')#get index column location in excel file^	for row in range(0, len(df)):^		df.iat[row, index_day] = findDay(df.iat[row, index_date])^	df = df[['Student','Birth_Date','Subject','Course_Startingdate','Course_Startingday']].copy()^	df.to_excel('D:\Studentinformation2.xlsx', index=True, header=True)' missingele="Course_Startingday^Course_Startingdate^Studentinformation2" ansSpace="c2cd30263b1f3ea803d5ebdbd564b4b95e7be3100999a831d61e899d5b0d6583" ans="ac3846d0b6d69a66a40543ddcbb09101afbd7f861861ef7ad6c5d4f64c94d474" value='	df=pd.DataFrame(data)#create dataframe to make operations' onkeydown="myFunction()"></input>
+12<input type="text" name="intext" id="mytext12" 11 size=150 ansHint='# Python program to Find day of  the week for a given date^import datetime^import calendar^import pandas as pd^import openpyxl^def findDay(date):^	born = datetime.datetime.strptime(date, '%d %m %Y').weekday()^	return (calendar.day_name[born])#return the name of the day^if __name__ == "__main__":^	data = pd.read_excel('D:\Studentinformation.xlsx')^	df=pd.DataFrame(data)#create dataframe to make operations^	df['Course_Startingday'] = None#create a new column^	index_date = df.columns.get_loc('Course_Startingdate')#get index column location in excel file^	index_day = df.columns.get_loc('Course_Startingday')#get index column location in excel file^	for row in range(0, len(df)):^		df.iat[row, index_day] = findDay(df.iat[row, index_date])^	df = df[['Student','Birth_Date','Subject','Course_Startingdate','Course_Startingday']].copy()^	df.to_excel('D:\Studentinformation2.xlsx', index=True, header=True)' missingele="Course_Startingday^Course_Startingdate^Studentinformation2" ansSpace="34f20d0d88627c35ae531f2ec91a6c667b798c526c83e95ceaa9583f7732416c" ans="a76942b7a96a0fec12d96d6a47a1c1f1ce3e4f6489534ad07b8b1d0ae33fba3d" value='	df[&#39;Day_of_Week&#39;] = None#create a new column' onkeydown="myFunction()"></input>
+13<input type="text" name="intext" id="mytext13" 12 size=150 ansHint='# Python program to Find day of  the week for a given date^import datetime^import calendar^import pandas as pd^import openpyxl^def findDay(date):^	born = datetime.datetime.strptime(date, '%d %m %Y').weekday()^	return (calendar.day_name[born])#return the name of the day^if __name__ == "__main__":^	data = pd.read_excel('D:\Studentinformation.xlsx')^	df=pd.DataFrame(data)#create dataframe to make operations^	df['Course_Startingday'] = None#create a new column^	index_date = df.columns.get_loc('Course_Startingdate')#get index column location in excel file^	index_day = df.columns.get_loc('Course_Startingday')#get index column location in excel file^	for row in range(0, len(df)):^		df.iat[row, index_day] = findDay(df.iat[row, index_date])^	df = df[['Student','Birth_Date','Subject','Course_Startingdate','Course_Startingday']].copy()^	df.to_excel('D:\Studentinformation2.xlsx', index=True, header=True)' missingele="Course_Startingday^Course_Startingdate^Studentinformation2" ansSpace="93d95827fe12ccd56305b112564473acbe075c696bd95ad2cde4be9fa5d52bfe" ans="c8357935be66230f1d7804b7de70cd03cae6b8f6b405190630d7345168617552" value='	index_date = df.columns.get_loc(&#39;Birth_Date&#39;)#get index column location in excel file' onkeydown="myFunction()"></input>
+14<input type="text" name="intext" id="mytext14" 13 size=150 ansHint='# Python program to Find day of  the week for a given date^import datetime^import calendar^import pandas as pd^import openpyxl^def findDay(date):^	born = datetime.datetime.strptime(date, '%d %m %Y').weekday()^	return (calendar.day_name[born])#return the name of the day^if __name__ == "__main__":^	data = pd.read_excel('D:\Studentinformation.xlsx')^	df=pd.DataFrame(data)#create dataframe to make operations^	df['Course_Startingday'] = None#create a new column^	index_date = df.columns.get_loc('Course_Startingdate')#get index column location in excel file^	index_day = df.columns.get_loc('Course_Startingday')#get index column location in excel file^	for row in range(0, len(df)):^		df.iat[row, index_day] = findDay(df.iat[row, index_date])^	df = df[['Student','Birth_Date','Subject','Course_Startingdate','Course_Startingday']].copy()^	df.to_excel('D:\Studentinformation2.xlsx', index=True, header=True)' missingele="Course_Startingday^Course_Startingdate^Studentinformation2" ansSpace="83e68e01974b86398924f7db8444c14c8c42efaa9dafd8ed9061c23a02f79ab6" ans="80ed901d27c6d09b31aa5b26c6c03b4f998d38663c799e31bc1fe3a8d9c8807d" value='	index_day = df.columns.get_loc(&#39;Day_of_Week&#39;)#get index column location in excel file' onkeydown="myFunction()"></input>
+15<input type="text" name="intext" id="mytext15" 14 size=150 ansHint='# Python program to Find day of  the week for a given date^import datetime^import calendar^import pandas as pd^import openpyxl^def findDay(date):^	born = datetime.datetime.strptime(date, '%d %m %Y').weekday()^	return (calendar.day_name[born])#return the name of the day^if __name__ == "__main__":^	data = pd.read_excel('D:\Studentinformation.xlsx')^	df=pd.DataFrame(data)#create dataframe to make operations^	df['Course_Startingday'] = None#create a new column^	index_date = df.columns.get_loc('Course_Startingdate')#get index column location in excel file^	index_day = df.columns.get_loc('Course_Startingday')#get index column location in excel file^	for row in range(0, len(df)):^		df.iat[row, index_day] = findDay(df.iat[row, index_date])^	df = df[['Student','Birth_Date','Subject','Course_Startingdate','Course_Startingday']].copy()^	df.to_excel('D:\Studentinformation2.xlsx', index=True, header=True)' missingele="Course_Startingday^Course_Startingdate^Studentinformation2" ansSpace="0b6b1a19d1bac5228be705e9e6869bd01242173237cd9c9fda3ab3ba81b79c4d" ans="8173d808e8bdd8fbfb259bcae38492a5d715790ed68c93ef12aee31f14eab55c" value='	for row in range(0, len(df)):' onkeydown="myFunction()"></input>
+16<input type="text" name="intext" id="mytext16" 15 size=150 ansHint='# Python program to Find day of  the week for a given date^import datetime^import calendar^import pandas as pd^import openpyxl^def findDay(date):^	born = datetime.datetime.strptime(date, '%d %m %Y').weekday()^	return (calendar.day_name[born])#return the name of the day^if __name__ == "__main__":^	data = pd.read_excel('D:\Studentinformation.xlsx')^	df=pd.DataFrame(data)#create dataframe to make operations^	df['Course_Startingday'] = None#create a new column^	index_date = df.columns.get_loc('Course_Startingdate')#get index column location in excel file^	index_day = df.columns.get_loc('Course_Startingday')#get index column location in excel file^	for row in range(0, len(df)):^		df.iat[row, index_day] = findDay(df.iat[row, index_date])^	df = df[['Student','Birth_Date','Subject','Course_Startingdate','Course_Startingday']].copy()^	df.to_excel('D:\Studentinformation2.xlsx', index=True, header=True)' missingele="Course_Startingday^Course_Startingdate^Studentinformation2" ansSpace="947a659384324f615fbd1a564780354a9be65676901c9156b236c30a88f34b21" ans="82979181709494cad2a58c513d717bdde22fa12b8de9c62ff8ca66dcbcbdec37" value='		df.iat[row, index_day] = findDay(df.iat[row, index_date])' onkeydown="myFunction()"></input>
+17<input type="text" name="intext" id="mytext17" 16 size=150 ansHint='# Python program to Find day of  the week for a given date^import datetime^import calendar^import pandas as pd^import openpyxl^def findDay(date):^	born = datetime.datetime.strptime(date, '%d %m %Y').weekday()^	return (calendar.day_name[born])#return the name of the day^if __name__ == "__main__":^	data = pd.read_excel('D:\Studentinformation.xlsx')^	df=pd.DataFrame(data)#create dataframe to make operations^	df['Course_Startingday'] = None#create a new column^	index_date = df.columns.get_loc('Course_Startingdate')#get index column location in excel file^	index_day = df.columns.get_loc('Course_Startingday')#get index column location in excel file^	for row in range(0, len(df)):^		df.iat[row, index_day] = findDay(df.iat[row, index_date])^	df = df[['Student','Birth_Date','Subject','Course_Startingdate','Course_Startingday']].copy()^	df.to_excel('D:\Studentinformation2.xlsx', index=True, header=True)' missingele="Course_Startingday^Course_Startingdate^Studentinformation2" ansSpace="ca78efe67cc7440a6f4af81a3ce1559f167250423a953b2c6a4d663a8decf319" ans="1db542e903030cf51c61fc8db17e12b74b5e2c4ab3e435c78ae94f74f7b4a747" value='	df = df[[&#39;Student&#39;,&#39;Birth_Date&#39;,&#39;Day_of_Week&#39;,&#39;Subject&#39;,&#39;Course_Startingdate&#39;]].copy()' onkeydown="myFunction()"></input>
+18<input type="text" name="intext" id="mytext18" 17 size=150 ansHint='# Python program to Find day of  the week for a given date^import datetime^import calendar^import pandas as pd^import openpyxl^def findDay(date):^	born = datetime.datetime.strptime(date, '%d %m %Y').weekday()^	return (calendar.day_name[born])#return the name of the day^if __name__ == "__main__":^	data = pd.read_excel('D:\Studentinformation.xlsx')^	df=pd.DataFrame(data)#create dataframe to make operations^	df['Course_Startingday'] = None#create a new column^	index_date = df.columns.get_loc('Course_Startingdate')#get index column location in excel file^	index_day = df.columns.get_loc('Course_Startingday')#get index column location in excel file^	for row in range(0, len(df)):^		df.iat[row, index_day] = findDay(df.iat[row, index_date])^	df = df[['Student','Birth_Date','Subject','Course_Startingdate','Course_Startingday']].copy()^	df.to_excel('D:\Studentinformation2.xlsx', index=True, header=True)' missingele="Course_Startingday^Course_Startingdate^Studentinformation2" ansSpace="d62410eccbfc5f044a3266a1663e786256ba937cae1a9dd899fafc822d89c8a5" ans="7958b47266952423432d0cd78f9dddd24fef70f503f42de4094ad03d3e0632f2" value='	df.to_excel(&#39;D:\Studentinformation1.xlsx&#39;, index=True, header=True)' onkeydown="myFunction()"></input>
+<script src="myScript.js"></script></div></pre><h2 id="answer">Answer</h2>
+<a class="btn" href="javascript:newScoringCMP('Python_CMP_Pandas_Excel')">Answer</a>
+<a class="btn btn-success" onclick="ansFileSave()">File Save</a>
+<input onclick="openForm();" type="button" value="Hint" class="btn" style="float: right;">
+<div class="form-popup" id="myForm">
+  <form class="form-container">
+    <h1>Hint</h1>
+       <p>1. Read the input excel file:<b>Studentinformation.xlsx</b>.<br>
+		2. Then, <b>create pandas data frame</b> to find day of a week on the given date of excel file.<br>
+		3. Create the new column<b> Course_Startingday </b>to put day of the week from the Course_Startingdate column.<br>
+		4. Find day of the week for each date from Course_Startingdate column by calling the function <b>findDay</b>.<br>			
+		5. Finally, write the modified values into new excel file:<b>Studentinformation2.xlsx</b>.
+        <br> If you want to study more about finding day of a week on a given date, please visit this link.<a href="source_codes/Python program to find day of the week for a given date - GeeksforGeeks.html" download> Click Here</a>		
+    
+        <br>
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+  </form>
+</div>
+<script type="text/javascript">
+            
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+</script>
+
+<a id="dldlink"></a>
+<script type="text/javascript" src="allowtab.js"></script>

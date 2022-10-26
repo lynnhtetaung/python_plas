@@ -1,0 +1,77 @@
+<h2 id="statement">29</h2>
+Fill in Blanks 
+<h2 id="code">The Source Code</h2>
+<pre class="prettyprint" id="scoring-res"># A quick-demo of numpy.append() function
+# numpy.append:appends values along the mentioned axis at the end of the array
+
+import numpy as np 
+
+#Working on 1D 
+arr1 = np.arange(5) 
+print("1D arr1 : ", arr1) 
+
+arr2 = np.arange(8, 12) 
+print("\n1D arr2 : ", arr2) 
+
+# appending the arrays 
+arr3 = np.append(arr1, arr2) 
+print("\nAppended arr3 : ", arr3) 
+
+#Working on 2D 
+arr1 = np.arange(8).reshape(2, 4) 
+print("2D arr1 : \n", arr1) 
+
+arr2 = np.arange(8, 16).reshape(2, 4) 
+print("\n2D arr2 : \n", arr2) 
+
+# appending the arrays 
+arr3 = np.append(arr1, arr2) 
+print("\nAppended arr3 by flattened : ", arr3) 
+
+# appending the arrays with axis = 0 
+arr3 = np.append(arr1, arr2, axis = 0) 
+print("\nAppended arr3 with axis 0 : \n", arr3) 
+
+# appending the arrays with axis = 1 
+arr3 = np.append(arr1, arr2, axis = 1) 
+print("\nAppended arr3 with axis 1 : \n", arr3) 
+
+The output is as follows:
+1D arr1 :  [0 1 2 3 4]
+1D arr2 :  [ 8  9 10 11]
+Appended arr3 :  [ 0  1  2  3  4 <input size=2 ans="1c753160f146c373c539040c119db2a019d58f51f226f1e009763326e8a7c302" placeholder=1></input>  <input size=2 ans="86853ece4e2ce6de7f3516048b854f9c3779cbaf5bf17a99a2f2a825b53b4d62" placeholder=2></input> <input size=2 ans="d9adc0ef69e941f005a7a6069f92fd70c13b328a61eb6722405a53451093b84c" placeholder=3></input> 11]
+
+2D arr1 : 
+[[0 1 2 3]
+[4 5 6 7]]
+2D arr2 : 
+[[ 8  9 10 11]
+[12 13 14 15]]
+Appended arr3 by flattened :  [ 0  1  2  3  4  5  6  7 <input size=2 ans="cd4dc3be25929d87a6011db29e253d6ce02e88bb9f45742a969eb5b5b0125203" placeholder=4></input> <input size=2 ans="c05b79d959e2e32c57d847112c3f1d317ce69a97196ce1cf662836537979770b" placeholder=5></input> 10 11 12 13 14 15]
+
+Appended arr3 with axis 0 : 
+[[ 0  1  2  3]
+[ 4  5  6  7]
+<input size=2 ans="e5eaaad8c2d3c98655709f9a1e8c464512560a89a4835feb0363437ec2e3125b" placeholder=6></input>
+[12 13 14 15]]
+
+Appended arr3 with axis 1 : 
+[[ 0  1  2  3  8  9 10 11]
+[ 4  5  6  7 <input size=2 ans="7c1f689c149d16beb9e51faed58f5745d85f154c5eec2d8a65431fa32a130ff8" placeholder=7></input> <input size=2 ans="94b3b73fcc9c16739f1513cfbeb6fe01783c7eda5f4370f59ee601faa0cfb378" placeholder=8></input> <input size=2 ans="7c5665f1b83d38a9b2f9360ebc52bbcc7a0d65309cdbfafa8b360c4a8d37cebb" placeholder=9></input> <input size=2 ans="63a7e0e0b04dc7842c01783c147c1a0e065135f2419e980e30cf16aaac1fb777" placeholder=10></input>]]
+
+
+
+
+
+
+
+
+
+</pre>
+<h2 id="answer">Answer</h2>
+<a class="btn" href="javascript:newScoring('Python_VTP_library_Numpy')">Answer</a>
+<script type="text/javascript">
+$(function(){
+ prettyPrint();
+});
+</script>

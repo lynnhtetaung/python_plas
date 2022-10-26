@@ -1,0 +1,53 @@
+<h2 id="statement">9</h2>
+Fill in Blanks 
+<h2 id="code">The Source Code</h2>
+<pre class="prettyprint" id="scoring-res"># A quick-demo of silicing of elements in a Array
+  
+# importing array module 
+import array as arr 
+  
+# creating a list  
+l = [1, 2, 3, 4, 5] 
+  
+a = arr.array('i', l) 
+print("Intial Array: ") 
+for j in (a): 
+    print(j, end =",") 
+  
+# Print elements of a range using Slice operation 
+Sliced_array = a[1:3] 
+print("\nSlicing elements in a range 1-3: ") 
+print(Sliced_array) 
+  
+# Print elements from a pre-defined point to end 
+Sliced_array = a[2:] 
+print("\nElements sliced from 2nd "
+      "element till the end: ") 
+print(Sliced_array) 
+  
+# Printing elements from beginning till end 
+Sliced_array = a[:] 
+print("\nPrinting all elements using slice operation: ") 
+print(Sliced_array) 
+
+Intial Array: 
+1,2,3,4,5, 
+Slicing elements in a range 1-3: 
+array('i', [<input size=2 ans="33512007840ced1bb0aab68f47cb5f702abd494a15f26bcbe26a1e47af03d841" placeholder=1></input>,<input size=2 ans="6332a13f5d1b4c5ef93fd7771661391bf5bf5ff3ff2b0561fbbf26f641e07a02" placeholder=2></input>])
+
+Elements sliced from 2nd element till the end: 
+array('i', [<input size=2 ans="99a0b871c9047c4f5555fcf062e0623174bae38746fece6efdf032d80fb2221a" placeholder=3></input>,<input size=2 ans="d8db1b157279c357101190450d1c26db441a0054cec690389a0373106016fce9" placeholder=4></input>,<input size=2 ans="63b997b12a45605bc4989d31d407fe12361164a91c6700b76207ecf9329809a0" placeholder=5></input>])
+
+Printing all elements using slice operation: 
+ <input size=2 ans="21e8423c58108824172f27035f34c30550f83a17c450cd3cd3374f5a93e26385" placeholder=6></input>, [1, 2, 3,<input size=2 ans="94a4635eb143a04ac0bf4416229d9135e41b09676e4d0e4d90734da683b78dfd" placeholder=7></input>,<input size=2 ans="42e963f4b56fe6671db06400e6ca5f424d50e941045482759e0e44ac8a766e22" placeholder=8></input>
+
+
+
+</pre>
+<h2 id="answer">Answer</h2>
+<a class="btn" href="javascript:newScoring('Python_VTP_advance')">Answer</a>
+<script type="text/javascript">
+$(function(){
+ prettyPrint();
+});
+</script>

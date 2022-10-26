@@ -1,0 +1,65 @@
+<h2 id="statement">18</h2>
+Fill in Blanks 
+<h2 id="code">The Source Code</h2>
+<pre class="prettyprint" id="scoring-res"># A quick-demo of string Comparision usage on Numpy
+# numpy.equal() function: This function checks for string1 == string2 elementwise.
+# numpy.not_equal(): This function checks whether two string is unequal or not.
+# numpy.greater(): This function checks whether string1 is greater than string2 or not.
+# numpy.greater_equal(): It checks whether string1 >= string2 or not.
+# numpy.less_equal() 	It checks whether string1 is <= string2 or not.
+# numpy.less() 	It check whether string1 is lesser than string2 or not.
+ 
+import numpy as np
+ 
+# comparing a string elementwise using equal() method
+a=np.char.equal('geeks','for')
+ 
+print("'geek' and 'for' are the equal:",a)
+
+# comparing a string elementwise using not_equal() method
+a=np.char.not_equal('geeks','for')
+ 
+print("'geek' and 'for' are not the equal:",a)
+
+# comparing a string elementwise using greater() method
+a=np.char.greater('geeks','for')
+ 
+print("'geek' is greater than 'for':",a)
+
+a  = np.greater_equal([8., 2.], [5., 3.]) 
+print("Greater_Equal :", a)   
+
+a = np.array([4,2]) 
+b = np.array([6,2]) 
+  
+print("Is a greater_equal than b :", a >= b)
+
+a  = np.less_equal([8., 2.], [5., 3.]) 
+print("Less_Equal :", a)
+  
+a  = np.less([8., 2.], [5., 3.]) 
+print("Less :", a) 
+  
+a = np.array([4,2]) 
+b = np.array([6,2]) 
+  
+print("Is a lesser than b :", a < b) 
+
+'geek' and 'for' are the equal: <input size=2 ans="83cc97e8f36ff250e0dd021efa7b08b08b1d9944f5d45b714e42825b7947d3fc" placeholder=1></input>
+'geek' and 'for' are not the equal: <input size=2 ans="f8000951247a7403c60d8170a4996fd1c70c248ea963e5d9c95b7576d26d2e97" placeholder=2></input>
+'geek' is greater than 'for': <input size=2 ans="73a29307c2ff4bd329245edeb430374fe2ff967a7c8b5c5f09112bd322d13bde" placeholder=3></input>
+Greater_Equal : [ True <input size=2 ans="0422ac17b98a6948576916f20fb976bc05b76e57a9458ca325c610c8c7007741" placeholder=4></input>]
+Is a greater_equal than b : [<input size=2 ans="124efb086f636f716fa386dd25958635177e297dfb04bfb59435528283a09614" placeholder=5></input>  True]
+Less_Equal : [<input size=2 ans="999e547f1a09bb2bcf2aa9f90e5a18fd98dacc5ace82b47a4be3427e1e681003" placeholder=6></input>  True]
+Less : [<input size=2 ans="9c2d93dc50164a8bd81bbf4a1fb1e84f7c18696a8604d5effc71fda35106a2a4" placeholder=7></input>  <input size=2 ans="90e1be7c047223b2a2b4f0381336eb9f5dd9adbabd0883dc543379f775ae1663" placeholder=8></input>]
+Is a lesser than b : [ True False]
+
+
+</pre>
+<h2 id="answer">Answer</h2>
+<a class="btn" href="javascript:newScoring('Python_VTP_library_Numpy')">Answer</a>
+<script type="text/javascript">
+$(function(){
+ prettyPrint();
+});
+</script>

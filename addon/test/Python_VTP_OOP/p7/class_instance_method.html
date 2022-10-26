@@ -1,0 +1,54 @@
+<h2 id="statement">7</h2>
+<pre class="pfpprettyprint" id="scoring-res">
+<DIV class="fl"># A quick-demo of class and instance methods
+class Student:
+    # class variable
+    school_name = 'Sakura School'
+
+    # constructor
+    def __init__(self, name, age):
+        # instance variables
+        self.name = name
+        self.age = age
+
+    # instance method
+    def show(self):
+        # access instance variables and class variables
+        print('Student:', self.name, self.age, Student.school_name)
+
+    # instance method
+    def change_age(self, new_age):
+        # modify instance variable
+        self.age = new_age
+
+    # class method
+    @classmethod
+    def modify_school_name(cls, new_name):
+        # modify class variable
+        cls.school_name = new_name
+
+s1 = Student("Merry", 14)
+
+# call instance methods
+s1.show()
+s1.change_age(16)
+
+# call class method
+Student.modify_school_name('Wisdom School')
+# call instance methods
+s1.show()
+</DIV>
+<DIV class="fr">
+What is the output of the program!
+<input size=25 ans="56c613655ad62d2cd2162602f62cb01a7854cc55065be2f4d34359fda9331b5d" placeholder=1></input>
+<input size=25 ans="cb1fa0c01ef3110c81dcf398f099f13fe6509a220edda211bc45610a33c9e1d0" placeholder=2></input>
+</DIV>
+
+</pre>
+<h2 id="answer">Answer</h2>
+<a class="btn" href="javascript:newScoring('Python_VTP_OOP')">Answer</a>
+<script type="text/javascript">
+$(function(){
+ prettyPrint();
+});
+</script>

@@ -1,0 +1,58 @@
+<h2 id="statement">9</h2>
+Fill in Blanks 
+<h2 id="code">The Source Code</h2>
+<pre class="prettyprint" id="scoring-res"># A quick-demo of iterating over numpy array
+#The order of iteration is chosen to match the memory layout of an array, 
+#without considering a particular ordering.This can be seen by iterating over the transpose of the array.
+ 
+import numpy as np
+ 
+# creating an array using arrange method
+a = np.arange(12)
+ 
+# shape array with 3 rows and 4 columns
+a = a.reshape(3,4)
+ 
+print('Original array is:')
+print(a)
+print()
+ 
+print('Modified array is:')
+ 
+# iterating  an array
+for x in np.nditer(a):
+    print(x, end = ",")
+
+# Transpose of original array
+b = a.T 
+
+print('\nTranspose array is: \n',b)
+        
+print('Print the values fron transpose array is:')
+for x in np.nditer(b): 
+    print(x, end = ",")    
+
+Original array is:
+[[ 0  1  2  3]
+<input size=2 ans="85e22fe1a3ca8dd0ca1ebd1676a2ca1e14184b944c5fc65e3a72c030a64f109e" placeholder=1></input>
+[ 8  9 10 11]]
+
+Modified array is:
+<input size=2 ans="16e5cb32123fe4bfa76277dc73f874bfedc3db7f49c5a1b8fdf7f784b64e970b" placeholder=2></input>,<input size=2 ans="684fe39f03758de6a882ae61fa62312b67e5b1e665928cbf3dc3d8f4f53e3562" placeholder=3></input>,<input size=2 ans="2cfc8ccbd7c0b17615323b41e815651ff2ae9ffae45a4599c0499b98ff940429" placeholder=4></input>,<input size=2 ans="a3af7b3808c4cf72478d05c9bab9c0d47e31c1d2cb3a29e7481669f7ea278c4e" placeholder=5></input>,<input size=2 ans="35bbce4007c5cd57a4c6dcabbdf5b347c9557ec11898111c280a788f8396e2c5" placeholder=6></input>,<input size=2 ans="fcf1e4bf9cc9c1083647b91463e86f49c6961406c37055c7eb8ad13937a519db" placeholder=7></input>,<input size=2 ans="e4c6a9f38e8e4d127290cf104ac1f46d0649c7db6c89f4bc10be7447bf1f514c" placeholder=8></input>,<input size=2 ans="ce02d4b6d1aceeea96a562c10923d590607df6182b4a3405ad10be85b6354787" placeholder=9></input>,<input size=2 ans="90363681060467cef1c7ac85c946522ef3cb00b5fc386064de79faf5df57a547" placeholder=10></input>,<input size=2 ans="eef557c8d2be0744e03becf0215bbf82f71801308e5d89e3598ac45a2fa58e8c" placeholder=11></input>,<input size=2 ans="23cedca9324761ed7d0bfd5bdffe0fe441dbb00673e96b46403e8ddae2945476" placeholder=12></input>,<input size=2 ans="8f33959f58a495c3010fca6135f08ce5d10f43c6d79a1c24bb9fbf82d73f0c89" placeholder=13></input>,
+Transpose array is: 
+[<input size=2 ans="7241e3a328b272c3d53c63f144fa1e4312132db225cb1a17a588abaffa239047" placeholder=14></input>
+[ 1  5  9]
+<input size=2 ans="013ef6d41f51b820fc9a85e93d0c842e6c5db0ea09c4c574423f33118a50d7bf" placeholder=15></input>
+[ 3  7 11]]
+Print the values fron transpose array is:
+<input size=2 ans="a2be3213e1e7041cd2e0a0a3a9e02226e92932feced74f26f973548252a1a4d0" placeholder=16></input>,1,2,3,4,5,<input size=2 ans="30332d66f3ddf1ced8fd978136e88dc7cbbdb9e40c570f4e81f875408fd3ad24" placeholder=17></input>,7,8,9,10,<input size=2 ans="720dd037736a8d89aa24f90ea3568fd4e7f2ba1dad3e266ff50639d92040881d" placeholder=18></input>,
+
+
+</pre>
+<h2 id="answer">Answer</h2>
+<a class="btn" href="javascript:newScoring('Python_VTP_library')">Answer</a>
+<script type="text/javascript">
+$(function(){
+ prettyPrint();
+});
+</script>

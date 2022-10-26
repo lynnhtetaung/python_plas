@@ -1,0 +1,59 @@
+<h2 id="statement">10</h2>
+Fill in Blanks 
+<h2 id="code">The Source Code</h2>
+<pre class="prettyprint" id="scoring-res"># A quick-demo of changing the default pandas values: the followings are default parameters
+#display.max_rows and display.max_columns which shows the default number of rows and columns.
+#display.max_colwidth which gives us the maximum width of the column
+#display.expand_frame_repr which gives us DataFrames that is spread across numerous pages.
+#display.precision gives us the precision of the decimal numbers
+
+import pandas as pd
+
+#.get_option define parameter with a particular detail about the default values in pandas.
+
+df1= pd.get_option("display.max_rows")
+print("The maximum number of rows ", df1)
+
+df2= pd.get_option("display.max_columns")
+print("The maximum number of columns ",df2)
+
+# .set_option() allows to change a default value to desired something.
+pd.set_option("display.max_columns",10)
+df3= pd.get_option("display.max_columns")
+print("The updated maximum number of columns ",df3)
+
+# .reset_option can get back the default values which may change previously.
+pd.reset_option("display.max_columns")
+df4= pd.get_option("display.max_columns")
+print("The current maximum number of rows ", df4)
+
+#.describe_option describes the parameter with details
+pd.describe_option("display.max_rows")
+
+What is the output of the program?
+The maximum number of rows  60
+The maximum number of columns  20
+The updated maximum number of columns <input size=2 ans="1ac6d62156549c474e950ab50f862197cfcb362f12541897f1a2fbe4ec310068" placeholder=1></input>
+The current maximum number of columns <input size=2 ans="b39df6b510adbc87de51b969e1b9491c3091285fde82d729944d825e38270f7f" placeholder=2></input>
+display.max_rows : int
+    If max_rows is exceeded, switch to truncate view. Depending on
+    `large_repr`, objects are either centrally truncated or printed as
+    a summary view. 'None' value means unlimited.
+
+    In case python/IPython is running in a terminal and `large_repr`
+    equals 'truncate' this can be set to 0 and pandas will auto-detect
+    the height of the terminal and print a truncated object which fits
+    the screen height. The IPython notebook, IPython qtconsole, or
+    IDLE do not run in a terminal and hence it is not possible to do
+    correct auto-detection.
+    [default: 60] [currently: 60]
+
+
+</pre>
+<h2 id="answer">Answer</h2>
+<a class="btn" href="javascript:newScoring('Python_VTP_library_Pandas')">Answer</a>
+<script type="text/javascript">
+$(function(){
+ prettyPrint();
+});
+</script>

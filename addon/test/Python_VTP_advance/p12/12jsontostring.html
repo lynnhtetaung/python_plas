@@ -1,0 +1,40 @@
+<h2 id="statement">12</h2>
+Fill in Blanks 
+<h2 id="code">The Source Code</h2>
+<pre class="prettyprint" id="scoring-res"># A quick-demo of json.loads() usage for conversion of JSON string to a dictionary
+
+import json
+
+''' 
+person1 = '{"name": "Jame", "languages": ["Japanese", "Chinese"]}'
+person_dict1 = json.loads(person1)
+print(person_dict1)
+Then the output is printed like this format: {'name': 'Jame', 'languages': ['Japanese', 'Chinese']}
+print(person_dict1['languages'])
+Then the output is printed like this format: ['Japanese', 'Chinese']
+'''
+# JSON Strng
+person = '{"name": "Bob", "languages": ["English", "French"]}'
+
+# json,loads() is used for conversion of JSON string to a dictionary
+person_dict = json.loads(person)
+
+# The output will be printed like this format: {'name': 'Jame', 'languages': ['Japanese', 'Chinese']}
+print( person_dict)
+
+# The output will be printed like this format: ['Japanese', 'Chinese']
+print(person_dict['languages'])
+
+#Please do not forget in the answer to include " " (space), " { " (curly bracket),  " ' " (single quotation).
+What is the output of this program?<input size=2 ans="18731ca89f28674a6f7403aabbce485b6e8710165a6575adc07b981fca26c8e4" placeholder=1></input>,<input size=2 ans="ceb20fbde254735c02696816235acaa8dea924cf38cee9e18b660a03c13a734c" placeholder=2></input>,<input size=2 ans="53939dbc3b84e2903cee3a6d9ff4c51909ab68b3f68ae00aa690f4cc4da87ab7" placeholder=3></input>
+                                   <input size=2 ans="08cffde167a30cd355cea9c9bfe2f54267b41be8c9fff97168784c9e86470086" placeholder=4></input>,<input size=2 ans="dcd765c5e234faf1320bcc948296b542b4e91b1fb175c3c4ab28613b26821679" placeholder=5></input>
+
+
+</pre>
+<h2 id="answer">Answer</h2>
+<a class="btn" href="javascript:newScoring('Python_VTP_advance')">Answer</a>
+<script type="text/javascript">
+$(function(){
+ prettyPrint();
+});
+</script>

@@ -1,0 +1,66 @@
+<h2 id="statement">15</h2>
+Fill in Blanks 
+<h2 id="code">The Source Code</h2>
+<pre class="prettyprint" id="scoring-res"># A quick-demo of Merge Sort
+
+def mergeSort(alist):
+    print("Splitting ",alist)
+    if len(alist)>1:
+        mid = len(alist)//2
+        lefthalf = alist[:mid]
+        righthalf = alist[mid:]
+    
+        mergeSort(lefthalf)
+        mergeSort(righthalf)
+    
+        i=0
+        j=0
+        k=0
+        while i < len(lefthalf) and j < len(righthalf):
+            if lefthalf[i] <= righthalf[j]:
+                alist[k]=lefthalf[i]
+                i=i+1
+            else:
+                alist[k]=righthalf[j]
+                j=j+1
+            k=k+1
+    
+            while i < len(lefthalf):
+                alist[k]=lefthalf[i]
+                i=i+1
+                k=k+1
+    
+        while j < len(righthalf):
+            alist[k]=righthalf[j]
+            j=j+1
+            k=k+1
+    print("Merging ",alist)
+    
+alist = [54,26,93]
+mergeSort(alist)
+print(alist)
+
+Splitting  <input size=2 ans="3060e997b7cba901b90e205197a555d0e0c1fc6839b618c5122a42fe407ee8c4" placeholder=1></input>,<input size=2 ans="a669094ee2e62c103a895bdecad9ad4d248fdaddcc6d9bb44d9a1c3809d56d7a" placeholder=2></input>,<input size=2 ans="fdd4f28f6636103dca3886f3a31348f6eb3fdda3480046a30ac5975842cfbb32" placeholder=3></input> 
+Splitting  [54]
+Merging <input size=2 ans="f0075997e6cbdc7b3cf26cf568de4b96d6ee399558aaec81b4945fb864ade9d0" placeholder=4></input>
+Splitting  [26, 93]
+Splitting <input size=2 ans="9a7b215389f1ca1e4a14883da3f1c2a2a0c01f7ee9b6f200573970339e53d737" placeholder=5></input>
+Merging  [26]
+Splitting  [93]
+Merging <input size=2 ans="b28f6fa0c9cec36dbab98ba3cb4487fcc7d69dd4de83829f0b1c385e4a1ea784" placeholder=6></input>
+Merging  [26, 93]
+Merging  <input size=2 ans="aaff51e37d1fb459ed61b23a919c3643eb9254d4535c07066c8bace10dacc2a1" placeholder=7></input>,<input size=2 ans="1b4246591c3dd88efadbd42c4db088ab86263e512e5d0bfe229c2db162f045db" placeholder=8></input>,<input size=2 ans="746e960ee0f493e21c4ee7147f31e72bd229f13500ef373cf1781450f22109f9" placeholder=9></input>
+<input size=2 ans="ebe305d60c72a28e04969a22346bc4b4595c7f6314941f8f68555badb735347c" placeholder=10></input>,<input size=2 ans="c999a5f4ebf3d34c96f10859187e449f42e6754a66fe5708c8fa622f611b1e77" placeholder=11></input>, 93]
+
+
+
+
+
+</pre>
+<h2 id="answer">Answer</h2>
+<a class="btn" href="javascript:newScoring('Python_VTP_algorithm')">Answer</a>
+<script type="text/javascript">
+$(function(){
+ prettyPrint();
+});
+</script>

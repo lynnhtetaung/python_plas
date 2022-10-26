@@ -1,0 +1,32 @@
+<h2 id="statement">18</h2>
+Fill in Blanks 
+<h2 id="code">The Source Code</h2>
+<pre class="prettyprint" id="scoring-res">1 import numpy as np 
+2 arr = np.array([1, 2, 3, 4, 5]) 
+3 x = arr.copy() 
+4 arr[0] = 42 
+5 print("The original array:", arr) 
+6 print("The copy array in which any changes made to the original array will not affect:", x)  
+7 y = arr.view() 
+8 arr[0] = 42 
+9 print("The original array:", arr) 
+10 print("The view array in which any changes made to the original array will affect:", x)  
+11 print("Printing base attribute of copy", x.base) 
+12 print("Printing base attribute of view", y.base)
+
+Question
+Q1.  Which keyword is used to create an alias when importing a module?<input size=2 ans="266e1902f8a3fdd35ec4a15376c0dd18f270512eba3b005bc26bb05720ecf5f4" placeholder=1></input>
+Q2.  Which function is used to create the array object? <input size=2 ans="b4cb9538ae212e940249396309fafda6c7683254602553edc98ed6253c9cdd9d" placeholder=2></input>
+Q3.  Which function is used to create a completely new array <input size=2 ans="c047ec10da49c7a5c1222a41a24d04de643f205c006e3b4ccce6af8895f8a29c" placeholder=3></input>
+Q4.  Which function is used to make the view of the original array?<input size=2 ans="0b609f36cab6de1a06edc7ae36426fa4d3c566f06a99caa98404b71ef71d92d0" placeholder=4></input>
+Q5.  Which keyword is used to determine whether the Numpy array is a view or a copy?<input size=2 ans="870cb28078b1501843b6a3b36867035f087c5a85d02458b6c748cb6a36f90f39" placeholder=5></input>
+
+
+</pre>
+<h2 id="answer">Answer</h2>
+<a class="btn" href="javascript:newScoring('Python_GUP_basic')">Answer</a>
+<script type="text/javascript">
+$(function(){
+ prettyPrint();
+});
+</script>

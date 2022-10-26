@@ -1,0 +1,46 @@
+<h2 id="statement">17</h2>
+Fill in Blanks 
+<h2 id="code">The Source Code</h2>
+<pre class="prettyprint" id="scoring-res"># A quick-demo of String Informatin Usage
+# numpy.count() function:This function returns the number of occurrences of a substring in the given string.
+# numpy.rfind() : This function returns the highest index of the substring if found in given string. If not found then it returns -1.
+# numpy.isnumeric() : This function returns ?True? if all characters in the string are numeric characters, Otherwise, It returns ?False?.
+ 
+import numpy as np
+ 
+a=np.array(['geeks', 'for', 'geeks'])
+ 
+# counting a substring and the output will be printed like [0 0 1]
+print("Counting a substring 'geek' in array a:",np.char.count(a,'geek'))
+ 
+# counting a substring and the output will be printed like [0 0 1]
+print("Counting a substring 'fo' in array a:",np.char.count(a, 'fo'))
+
+# Finding a substring and the output will be printed like [0 -1 0]
+print("Finding a substring 'geek' in array a:",np.char.rfind(a,'geek'))
+ 
+# counting a substring and the output will be printed like [0 -1 0]
+print("Finding a substring 'fo' in array a:",np.char.rfind(a, 'fo'))
+
+# Checking numeric or not and the ouput will be printed as True or False
+print("Is 'geeks' numeric?",np.char.isnumeric('geeks'))
+ 
+# Checking numeric or not and the ouput will be printed as True or False
+print("Is '12' numeric?",np.char.isnumeric('12'))
+
+Counting a substring 'geek' in array a: <input size=2 ans="9ea7f8915347c1131b2dd27c448ef6160d9132e20ef8f6e41b7fe1a0506795e0" placeholder=1></input>
+Counting a substring 'fo' in array a: <input size=2 ans="b2f437005cc4579c2a8573ff8acf476394044165c562ef43832640beb075e778" placeholder=2></input>
+Finding a substring 'geek' in array a: <input size=2 ans="3a5d18a438b1bb125131769e7151991b26955ea0b606cbd2c43c775d9db5f068" placeholder=3></input>
+Finding a substring 'fo' in array a: <input size=2 ans="fd7e1d579f92382af8630fb01947c74cb78e5dc6d863b13abf889cf45d7f42bf" placeholder=4></input>
+Is 'geeks' numeric? <input size=2 ans="e4edb126c7e36bc478f69baf81d98c0d35fc34e4d9642b3ca5399d229b660038" placeholder=5></input>
+Is '12' numeric? <input size=2 ans="efa88b74db3130bb878f1d4841bbd954fc293f8ec9bab301f651de3df59fa436" placeholder=6></input>
+
+
+</pre>
+<h2 id="answer">Answer</h2>
+<a class="btn" href="javascript:newScoring('Python_VTP_library')">Answer</a>
+<script type="text/javascript">
+$(function(){
+ prettyPrint();
+});
+</script>
