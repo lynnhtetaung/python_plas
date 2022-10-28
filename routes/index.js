@@ -194,6 +194,8 @@ const ls3 = spawn('python', [__dirname + '/../addon/submits/MembershipOperaTest.
 const ls2 = spawn('python', [__dirname + '/../addon/submits/ArithmeticOperationTest.py']);
 const ls1 = spawn('python', [__dirname + '/../addon/submits/StandardIOTest.py']);
 
+//EEH log test
+const ls13 = spawn('python', [__dirname + '/../addon/submits/Addition.py']);
 
 ls1.stdout.on('data', (data) => {
   console.log(`stdout: ${data}`);

@@ -66,7 +66,8 @@
 
     <div class="form-group">
         <div class="row ml-5 mr-5">
-            <div class="col-10">
+            <!-- Ei Ei Htet -->
+            <!-- <div class="col-10">
                 <div class="input-group w-25 mb-3">
                     <div class="input-group-prepend">
                         <label class="input-group-text" for="inputGroupSelect01">Theme: </label>
@@ -81,7 +82,13 @@
             <div class="col-2">
                 <input type="submit" id="btn-submit" value="Submit" onclick="onSubmit()"
                     class="float-right mr-3 btn btn-primary" />
-            </div>                
+            </div>    -->
+            
+            <!--EEH RUN button added -->
+            <!-- <div class="col-2">
+                <input type="RUN" id="btn-submit" value="RUN" onclick="onSubmit()"
+                    class="float-left mr-3 btn btn-primary" />
+            </div>   -->
                        
             
 <script>
@@ -94,29 +101,117 @@ function myFunction(){
         </div>
     </div>
 
-    <div class="row ml-5 mr-5 bg-dark border border-warning">
-        <div class="col-6 pt-3 pb-3">
+    <div class="row ml-1 mr-1 border border-warning">
+        <div class="col-5 pt-3 pb-3">
             <h2 class="text-center mb-3">Source Code</h2>
-            <textarea id="sourceCode" name="sourceCode"><%= p1Source %></textarea>
+            <textarea id="sourceCode" name="sourceCode">
+                <%= p1Source %>
+            </textarea>
+            <input type="submit" id="btn-submit" value="Run" onclick="onSubmit()" class="float-left mt-3 btn btn-primary">
         </div>
 
-        <div class="col-6 pt-3 pb-3">
+        <div class="col-7 pt-3 pb-3">
+            <fieldset>
+                <legend>Select a maintenance drone:</legend>
+            
+                <div>
+                <input type="radio" id="huey" name="drone" value="huey" checked="">
+                <label for="huey">Huey</label>
+                </div>
+            
+                <div>
+                <input type="radio" id="dewey" name="drone" value="dewey">
+                <label for="dewey">Dewey</label>
+                </div>
+            
+                <div>
+                <input type="radio" id="louie" name="drone" value="louie">
+                <label for="louie">Louie</label>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Select a maintenance drone:</legend>
+            
+                <div>
+                <input type="radio" id="huey" name="drone" value="huey" checked="">
+                <label for="huey">Huey</label>
+                </div>
+            
+                <div>
+                <input type="radio" id="dewey" name="drone" value="dewey">
+                <label for="dewey">Dewey</label>
+                </div>
+            
+                <div>
+                <input type="radio" id="louie" name="drone" value="louie">
+                <label for="louie">Louie</label>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Select a maintenance drone:</legend>
+            
+                <div>
+                    <input type="radio" id="huey" name="drone" value="huey" checked="">
+                    <label for="huey">Huey fgdfrtgrtygtdyhdtyytghfdgdfghtytyt7tyrtyggfhdfgjhgfjjhjfjhfjkhjkfkjfjkfjhfh Huey fgdfrtgrtygtdyhdtyytghfdgdfghtytyt7tyrtyggfhdfgjhgfjjhjfjhfjkhjkfkjfjkfjhfh</label>
+                </div>
+            
+                <div>
+                    <input type="radio" id="dewey" name="drone" value="dewey">
+                    <label for="dewey">Dewey</label>
+                </div>
+            
+                <div>
+                <input type="radio" id="louie" name="drone" value="louie">
+                <label for="louie">Louie</label>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Select a maintenance drone:</legend>
+            
+                <div>
+                <input type="radio" id="huey" name="drone" value="huey" checked="">
+                <label for="huey">Huey</label>
+                </div>
+            
+                <div>
+                <input type="radio" id="dewey" name="drone" value="dewey">
+                <label for="dewey">Dewey</label>
+                </div>
+            
+                <div>
+                <input type="radio" id="louie" name="drone" value="louie">
+                <label for="louie">Louie</label>
+                </div>
+            </fieldset>
+
+            <input type="submit" id="btn-submit" value="Submit" onclick="onSubmit()" class="float-left mt-5 btn btn-success">
+
+        </div>
+
+        <!--EEH commented-->
+        <!-- <div class="col-6 pt-3 pb-3">
             <h2 class="text-center mb-3">Test Code</h2>
             <textarea id="testCode" name="testCode" readonly><%= p1Test %></textarea>
-        </div>
+        </div> -->
     </div>
     </br>
 
     <input type="hidden" id="resultField" value="<%= resultField %>" />
     <input type="hidden" id="totalProblems" value="<%= totalProblems %>" />
 
-    <div id="result-table" class="row ml-5 mr-5">
+    <div id="result-table" class="row">
         <div class="col">
             <table id="submit-result" class="table table-bordered table-hover">
                 <tbody>
                     <tr>
-                        <th colspan="2" align="left"><textarea rows="7" id="submit-result-value"
-                                class="form-control bg-dark text-white" readonly="true"><%= resultField %></textarea>
+                        <th colspan="2" align="left">
+                            <textarea rows="7" id="submit-result-value"
+                                class="form-control bg-dark text-white" readonly="true">
+                                <%= resultField %>
+                            </textarea>
                         </th>
                     </tr>
                 </tbody>
